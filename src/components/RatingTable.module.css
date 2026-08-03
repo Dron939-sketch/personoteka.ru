@@ -1,0 +1,86 @@
+.scroller {
+  /* Широкая таблица прокручивается внутри себя, страница по горизонтали — никогда. */
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--small);
+}
+
+.caption {
+  margin-bottom: var(--sp-3);
+  text-align: left;
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.table th,
+.table td {
+  padding: var(--sp-3) var(--sp-3);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  border-bottom: 1px solid var(--line-strong);
+  font-size: var(--caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.rank {
+  width: 3rem;
+  color: var(--ink-3);
+}
+
+.person {
+  font-weight: 400;
+}
+
+.person a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: var(--sp-2);
+}
+
+.person a:hover {
+  color: var(--accent-700);
+  text-decoration: underline;
+}
+
+.tagline {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-3);
+  font-size: var(--caption);
+}
+
+.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.up {
+  color: var(--success);
+}
+
+.down {
+  color: var(--danger);
+}
+
+.flat {
+  color: var(--ink-3);
+}
+
+@media (max-width: 640px) {
+  .sphereCol {
+    display: none;
+  }
+}

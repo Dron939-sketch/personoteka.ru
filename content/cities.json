@@ -1,0 +1,40 @@
+[
+  { "slug": "moskva", "name": "Москва", "name_prepositional": "Москве", "region": "Москва" },
+  {
+    "slug": "sankt-peterburg",
+    "name": "Санкт-Петербург",
+    "name_prepositional": "Санкт-Петербурге",
+    "region": "Санкт-Петербург"
+  },
+  {
+    "slug": "novosibirsk",
+    "name": "Новосибирск",
+    "name_prepositional": "Новосибирске",
+    "region": "Новосибирская область"
+  },
+  {
+    "slug": "ekaterinburg",
+    "name": "Екатеринбург",
+    "name_prepositional": "Екатеринбурге",
+    "region": "Свердловская область"
+  },
+  { "slug": "kazan", "name": "Казань", "name_prepositional": "Казани", "region": "Татарстан" },
+  {
+    "slug": "nizhnij-novgorod",
+    "name": "Нижний Новгород",
+    "name_prepositional": "Нижнем Новгороде",
+    "region": "Нижегородская область"
+  },
+  {
+    "slug": "krasnodar",
+    "name": "Краснодар",
+    "name_prepositional": "Краснодаре",
+    "region": "Краснодарский край"
+  },
+  {
+    "slug": "vladivostok",
+    "name": "Владивосток",
+    "name_prepositional": "Владивостоке",
+    "region": "Приморский край"
+  }
+]

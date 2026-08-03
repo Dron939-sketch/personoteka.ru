@@ -1,0 +1,36 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.name {
+  margin: 0 0 var(--sp-1);
+  font-size: var(--h3);
+}
+
+.role {
+  margin: 0 0 var(--sp-3);
+}
+
+.bio {
+  margin: 0 0 var(--sp-3);
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.count {
+  margin: 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}

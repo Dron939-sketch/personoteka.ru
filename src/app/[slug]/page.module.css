@@ -1,0 +1,173 @@
+/* Страница персоны — §8.1 */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: var(--sp-8);
+  padding-bottom: var(--sp-8);
+  border-bottom: 1px solid var(--line);
+}
+
+.portraitCol {
+  position: relative;
+}
+
+.portrait {
+  position: sticky;
+  top: calc(var(--header-h) + var(--sp-6));
+}
+
+.heroBody {
+  min-width: 0;
+}
+
+.nameRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+
+.name {
+  margin: 0;
+}
+
+.tagline {
+  margin: 0 0 var(--sp-6);
+  font-size: var(--body-l);
+  color: var(--ink-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-6);
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--radius-s);
+  font-size: var(--small);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primaryAction {
+  background: var(--accent-600);
+  color: #fff;
+}
+
+[data-theme='dark'] .primaryAction {
+  color: #14181e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .primaryAction {
+    color: #14181e;
+  }
+}
+
+.primaryAction:hover {
+  background: var(--accent-700);
+}
+
+.secondaryAction {
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.secondaryAction:hover {
+  border-color: var(--accent-600);
+  color: var(--accent-700);
+}
+
+.lead {
+  padding-block: var(--sp-8);
+  font-size: var(--body-l);
+}
+
+/* ---------- Тело: оглавление слева от текста на десктопе ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+.tocCol {
+  order: 2;
+}
+
+.contentCol {
+  order: 1;
+  min-width: 0;
+}
+
+.section {
+  padding-bottom: var(--sp-12);
+}
+
+.section h2 {
+  margin-bottom: var(--sp-6);
+}
+
+.colophon {
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--line);
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.colophon p {
+  margin: 0 0 var(--sp-2);
+}
+
+.colophonLinks a {
+  color: var(--ink-2);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+
+.relatedMore {
+  margin: var(--sp-6) 0 0;
+  font-size: var(--small);
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    gap: var(--sp-6);
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .tocCol {
+    order: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    position: static;
+    max-width: 240px;
+  }
+}

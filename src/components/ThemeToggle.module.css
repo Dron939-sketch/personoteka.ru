@@ -1,0 +1,23 @@
+.button,
+.placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+}
+
+.button {
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  background: none;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--surface-alt);
+  color: var(--ink);
+}

@@ -1,0 +1,111 @@
+/* Главная — §8.2 */
+
+.hero {
+  padding-block: var(--sp-16) var(--sp-12);
+  border-bottom: 1px solid var(--line);
+}
+
+.heroKicker {
+  margin: 0 0 var(--sp-3);
+  color: var(--accent-700);
+}
+
+.heroTitle {
+  margin: 0 0 var(--sp-4);
+  max-width: 16ch;
+}
+
+.heroLead {
+  margin-bottom: var(--sp-8);
+}
+
+.heroSearch {
+  max-width: 34rem;
+}
+
+.heroHint {
+  margin: var(--sp-3) 0 0;
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+
+.sectionHead h2 {
+  margin: 0;
+}
+
+.more {
+  font-size: var(--small);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--sp-4);
+}
+
+/* «Родились сегодня» — горизонтальная лента (§8.2, блок 6) */
+.strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 280px);
+  gap: var(--sp-4);
+  overflow-x: auto;
+  padding-bottom: var(--sp-3);
+  scroll-snap-type: x proximity;
+}
+
+.stripItem {
+  scroll-snap-align: start;
+}
+
+.muted {
+  margin: 0;
+  color: var(--ink-3);
+  font-size: var(--small);
+}
+
+/* Полоса доверия (§8.2, блок 8) */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--sp-6);
+  margin: 0;
+  padding-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--line);
+}
+
+.trust dt {
+  font-size: var(--caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.trust dd {
+  margin: var(--sp-2) 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--h3);
+  color: var(--ink);
+}
+
+.trust dd a {
+  font-family: var(--font-sans);
+  font-size: var(--body);
+}
+
+.trustNote {
+  margin: var(--sp-6) 0 0;
+  max-width: 72ch;
+  font-size: var(--small);
+  color: var(--ink-3);
+}

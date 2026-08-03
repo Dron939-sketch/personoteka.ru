@@ -1,0 +1,35 @@
+.slot {
+  margin-block: var(--sp-8);
+}
+
+.mark {
+  margin-bottom: var(--sp-2);
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  padding: var(--sp-4);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-s);
+  color: var(--ink-3);
+  font-size: var(--small);
+  text-align: center;
+}
+
+.disclosure {
+  margin: 0 0 var(--sp-4);
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.disclosureLabel {
+  display: inline-flex;
+  padding: 1px var(--sp-2);
+  margin-right: var(--sp-1);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

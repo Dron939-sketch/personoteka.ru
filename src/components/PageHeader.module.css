@@ -1,0 +1,33 @@
+.header {
+  padding-block: var(--sp-6) var(--sp-8);
+}
+
+.title {
+  margin-bottom: var(--sp-4);
+}
+
+.meta {
+  margin: var(--sp-3) 0 0;
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.empty {
+  padding: var(--sp-16) var(--sp-6);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.emptyTitle {
+  margin: 0 0 var(--sp-2);
+  font-family: var(--font-serif);
+  font-size: var(--h3);
+  color: var(--ink);
+}
+
+.emptyHint {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-3);
+}

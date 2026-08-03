@@ -1,0 +1,68 @@
+.banner {
+  position: fixed;
+  left: var(--sp-4);
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  z-index: 150;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: var(--sp-4) var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+
+.text {
+  flex: 1 1 30rem;
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.primary,
+.secondary {
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-s);
+  font-size: var(--small);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.primary {
+  border: 1px solid var(--accent-600);
+  background: var(--accent-600);
+  color: #fff;
+}
+
+[data-theme='dark'] .primary {
+  color: #14181e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .primary {
+    color: #14181e;
+  }
+}
+
+.secondary {
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--ink);
+}
+
+.secondary:hover {
+  border-color: var(--ink-3);
+}

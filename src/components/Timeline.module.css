@@ -1,0 +1,93 @@
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-6);
+}
+
+/* Вертикальная линейка соединяет маркеры; у последнего события её нет. */
+.item::before {
+  content: '';
+  position: absolute;
+  left: calc(4.5rem + var(--sp-4) / 2 - 0.5px);
+  top: 1.1em;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.item:last-child::before {
+  display: none;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  left: calc(4.5rem + var(--sp-4) / 2 - 4px);
+  top: calc(1.1em - 4px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-500);
+}
+
+.year {
+  padding-top: 0.15em;
+  font-size: var(--small);
+  color: var(--ink-3);
+  text-align: right;
+}
+
+.body {
+  padding-left: var(--sp-4);
+}
+
+.title {
+  margin: 0 0 var(--sp-1);
+  font-family: var(--font-sans);
+  font-size: var(--body);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.description {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.source {
+  margin: var(--sp-1) 0 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+@media (max-width: 560px) {
+  .item {
+    grid-template-columns: 3.25rem 1fr;
+    gap: var(--sp-3);
+  }
+
+  .item::before {
+    left: calc(3.25rem + var(--sp-3) / 2 - 0.5px);
+  }
+
+  .item::after {
+    left: calc(3.25rem + var(--sp-3) / 2 - 4px);
+  }
+
+  .body {
+    padding-left: var(--sp-3);
+  }
+}
