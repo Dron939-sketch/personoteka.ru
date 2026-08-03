@@ -78,7 +78,7 @@
     "display_name": "Сергей Шойгу",
     "name_latin": "Sergej Shojgu",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-kravcov",
@@ -96,7 +96,7 @@
     "display_name": "Геннадий Зюганов",
     "name_latin": "Gennadij Zyuganov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-mironov",
@@ -105,7 +105,7 @@
     "display_name": "Сергей Миронов",
     "name_latin": "Sergej Mironov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "dmitrij-patrushev",
@@ -132,7 +132,7 @@
     "display_name": "Вячеслав Володин",
     "name_latin": "Vyacheslav Volodin",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vitalij-milonov",
@@ -159,7 +159,7 @@
     "display_name": "Валентина Матвиенко",
     "name_latin": "Valentina Matvienko",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "denis-manturov",
@@ -195,7 +195,7 @@
     "display_name": "Михаил Мишустин",
     "name_latin": "Mihail Mishustin",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "andrej-lugovoj",
@@ -222,7 +222,7 @@
     "display_name": "Эльвира Набиуллина",
     "name_latin": "Elvira Nabiullina",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "tatyana-golikova",
@@ -888,7 +888,7 @@
     "display_name": "Даниил Медведев",
     "name_latin": "Daniil Medvedev",
     "sphere": "sport",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "aleksej-nemov",
@@ -1356,7 +1356,7 @@
     "display_name": "Герман Греф",
     "name_latin": "German Gref",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "evgenij-kasperskij",
