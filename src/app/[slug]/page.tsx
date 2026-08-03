@@ -6,6 +6,7 @@ import { AdDisclosure, AdSlot } from '@/components/AdSlot'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CTAStrip } from '@/components/CTAStrip'
 import { FactCards } from '@/components/FactCards'
+import { ForeignAgentNotice } from '@/components/ForeignAgentNotice'
 import { Gallery } from '@/components/Gallery'
 import { JsonLd } from '@/components/JsonLd'
 import { MetaList } from '@/components/MetaList'
@@ -92,6 +93,8 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
 
   const sections = buildSections(person)
   const toc: TocItem[] = sections.map((s) => ({ id: s.id, label: s.label }))
+  const hasPublications =
+    (person.publications?.length ?? 0) + (person.media_mentions?.length ?? 0) > 0
 
   const age = person.birth_date && person.birth_date_public !== false
     ? calcAge(person.birth_date)
@@ -125,6 +128,8 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
             </div>
 
             <div className={styles.heroBody}>
+              {/* Обе маркировки идут перед содержанием материала — этого требует закон. */}
+              <ForeignAgentNotice person={person} />
               <AdDisclosure erid={person.erid} advertiser={person.advertiser} />
 
               <div className={styles.nameRow}>
@@ -192,9 +197,13 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                 <a className={styles.primaryAction} href={`/api/dose/${person.slug}`} download>
                   Скачать досье (PDF)
                 </a>
-                <Link className={styles.secondaryAction} href={`/${person.slug}/publikacii/`}>
-                  Публикации и упоминания
-                </Link>
+                {/* Подстраница генерируется только при наличии материалов —
+                    ссылка на неё появляется по тому же условию, иначе это 404. */}
+                {hasPublications && (
+                  <Link className={styles.secondaryAction} href={`/${person.slug}/publikacii/`}>
+                    Публикации и упоминания
+                  </Link>
+                )}
               </div>
             </div>
           </header>

@@ -70,7 +70,13 @@ export function computeRating(
   computedAt: string,
   previous?: RatingSnapshot,
 ): RatingSnapshot {
-  const active = metrics.filter((m) => !m.excluded)
+  // Персоны без единого сигнала в рейтинг не попадают. Иначе на старте, когда
+  // аналитика ещё не набрана, минимакс присвоил бы всем одинаковые 0.5, и витрина
+  // показывала бы одинаковый «индекс внимания» у всех — число, не значащее ничего.
+  const active = metrics.filter(
+    (m) =>
+      !m.excluded && (m.searches > 0 || m.views > 0 || m.outbound_clicks > 0 || m.read_depth > 0),
+  )
 
   const byCohort = new Map<string, PersonMetrics[]>()
   for (const m of active) {

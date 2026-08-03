@@ -1,119 +1,47 @@
 [
   {
-    "slug": "alla-terenteva",
-    "sphere": "psihologiya",
-    "searches": 61,
-    "views": 735,
-    "read_depth": 0.56,
-    "outbound_clicks": 22,
-    "days_since_update": 210
-  },
-  {
-    "slug": "artem-vagner",
-    "sphere": "kultura",
-    "searches": 43,
-    "views": 1295,
-    "read_depth": 0.67,
-    "outbound_clicks": 33,
-    "days_since_update": 9
-  },
-  {
-    "slug": "darya-kolcova",
-    "sphere": "biznes",
-    "searches": 117,
-    "views": 1050,
-    "read_depth": 0.32,
-    "outbound_clicks": 84,
-    "days_since_update": 9
-  },
-  {
-    "slug": "elena-bahmeteva",
-    "sphere": "medicina",
-    "searches": 111,
-    "views": 1357,
-    "read_depth": 0.53,
-    "outbound_clicks": 21,
-    "days_since_update": 95
-  },
-  {
-    "slug": "ivan-ivanov",
-    "sphere": "medicina",
-    "searches": 66,
-    "views": 1377,
-    "read_depth": 0.52,
-    "outbound_clicks": 44,
-    "days_since_update": 95
-  },
-  {
-    "slug": "ivan-sokolov",
-    "sphere": "pravo",
-    "searches": 47,
-    "views": 692,
-    "read_depth": 0.41,
-    "outbound_clicks": 82,
-    "days_since_update": 15
-  },
-  {
-    "slug": "kseniya-abramova",
-    "sphere": "obrazovanie",
-    "searches": 18,
-    "views": 533,
-    "read_depth": 0.36,
-    "outbound_clicks": 10,
-    "days_since_update": 9
-  },
-  {
-    "slug": "marina-vereschagina",
-    "sphere": "kultura",
-    "searches": 80,
-    "views": 1342,
-    "read_depth": 0.49,
-    "outbound_clicks": 59,
-    "days_since_update": 61
-  },
-  {
-    "slug": "nikita-zhuravlev",
-    "sphere": "pravo",
-    "searches": 30,
-    "views": 723,
-    "read_depth": 0.44,
-    "outbound_clicks": 15,
-    "days_since_update": 15
-  },
-  {
-    "slug": "olga-nechaeva",
-    "sphere": "media",
-    "searches": 91,
-    "views": 856,
-    "read_depth": 0.53,
-    "outbound_clicks": 58,
-    "days_since_update": 61
-  },
-  {
-    "slug": "petr-dementev",
-    "sphere": "tehnologii",
-    "searches": 93,
-    "views": 913,
-    "read_depth": 0.7,
-    "outbound_clicks": 25,
-    "days_since_update": 95
-  },
-  {
-    "slug": "rustam-gajnutdinov",
-    "sphere": "nauka",
-    "searches": 49,
-    "views": 983,
-    "read_depth": 0.68,
-    "outbound_clicks": 50,
-    "days_since_update": 9
-  },
-  {
-    "slug": "sergej-ilin",
+    "slug": "aleksandr-ovechkin",
     "sphere": "sport",
-    "searches": 96,
-    "views": 1282,
-    "read_depth": 0.66,
-    "outbound_clicks": 41,
-    "days_since_update": 61
+    "searches": 0,
+    "views": 0,
+    "read_depth": 0.0,
+    "outbound_clicks": 0,
+    "days_since_update": 0
+  },
+  {
+    "slug": "artemij-lebedev",
+    "sphere": "biznes",
+    "searches": 0,
+    "views": 0,
+    "read_depth": 0.0,
+    "outbound_clicks": 0,
+    "days_since_update": 0
+  },
+  {
+    "slug": "evgenij-kasperskij",
+    "sphere": "biznes",
+    "searches": 0,
+    "views": 0,
+    "read_depth": 0.0,
+    "outbound_clicks": 0,
+    "days_since_update": 0
+  },
+  {
+    "slug": "nikolaj-drozdov",
+    "sphere": "obrazovanie",
+    "searches": 0,
+    "views": 0,
+    "read_depth": 0.0,
+    "outbound_clicks": 0,
+    "days_since_update": 0
+  },
+  {
+    "slug": "sergej-lavrov",
+    "sphere": "gosudarstvo",
+    "searches": 0,
+    "views": 0,
+    "read_depth": 0.0,
+    "outbound_clicks": 0,
+    "days_since_update": 0
   }
 ]

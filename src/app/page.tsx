@@ -38,8 +38,10 @@ export default function HomePage() {
   const spheres = getSpheres()
 
   // «Персона недели» — верх рейтинга: витрина строится на собственных данных (§2.1.6).
+  // Пока рейтинг пуст (аналитика не набрана), показываем самую свежую биографию —
+  // блок не должен исчезать с главной из-за отсутствия статистики.
   const featuredEntry = rating.entries[0]
-  const featured = featuredEntry ? getPerson(featuredEntry.slug) : undefined
+  const featured = featuredEntry ? getPerson(featuredEntry.slug) : getNewestPersons(1)[0]
 
   const newest = getNewestPersons(8).filter((p) => p.slug !== featured?.slug)
 
@@ -75,7 +77,7 @@ export default function HomePage() {
             <SearchBar />
           </div>
           <p className={styles.heroHint}>
-            Например: <Link href="/ivan-ivanov/">Иван Иванов</Link> ·{' '}
+            Например: <Link href="/sergej-lavrov/">Сергей Лавров</Link> ·{' '}
             <Link href="/katalog/">весь каталог</Link>
           </p>
         </div>

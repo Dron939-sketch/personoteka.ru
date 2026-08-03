@@ -14,7 +14,8 @@
     "rating": "tsx scripts/compute-rating.ts",
     "check:content": "tsx scripts/check-content.ts",
     "check:contrast": "tsx scripts/check-contrast.ts",
-    "check": "npm run check:content && npm run check:contrast && npm run typecheck"
+    "check": "npm run check:content && npm run check:contrast && npm run typecheck",
+    "queue": "tsx scripts/build-queue.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
-import { PageHeader } from '@/components/PageHeader'
+import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { RatingTable } from '@/components/RatingTable'
 import { getPerson, getRating, getSpheres } from '@/lib/content'
 import { formatDate } from '@/lib/format'
@@ -61,11 +61,25 @@ export default function RatingPage() {
       />
 
       <section className={styles.section}>
-        <RatingTable
-          rows={rows}
-          spheres={spheres}
-          caption="Общий рейтинг. Значение индекса — от 0 до 100."
-        />
+        {rows.length === 0 ? (
+          <EmptyState
+            title="Рейтинг ещё не рассчитан"
+            hint={
+              <>
+                Индекс считается по поведению аудитории за 30 дней. Пока данных
+                недостаточно, места не присваиваются: показывать одинаковое число у всех
+                значило бы выдавать отсутствие статистики за результат. Методика расчёта —
+                ниже на этой странице.
+              </>
+            }
+          />
+        ) : (
+          <RatingTable
+            rows={rows}
+            spheres={spheres}
+            caption="Общий рейтинг. Значение индекса — от 0 до 100."
+          />
+        )}
       </section>
 
       {bySphere.map(({ sphere, rows: sphereRows }) => (

@@ -90,6 +90,14 @@ for (const { file, data: person } of persons) {
     errors.push(`${where}: указан erid без рекламодателя — маркировка неполная (§11.4)`)
   }
 
+  // Сверка с реестром иностранных агентов (255-ФЗ) обязательна перед публикацией:
+  // без записи о проверке неизвестно, нужна маркировка или нет.
+  if (!person.foreign_agent) {
+    warnings.push(`${where}: нет отметки о сверке с реестром иностранных агентов`)
+  } else if (person.foreign_agent.listed && !person.foreign_agent.registry_url) {
+    errors.push(`${where}: пометка об иностранном агенте без ссылки на запись реестра`)
+  }
+
   const bodyLength = person.body.reduce(
     (sum, section) =>
       sum +
@@ -97,7 +105,10 @@ for (const { file, data: person } of persons) {
       (section.subsections?.reduce((s, sub) => s + sub.paragraphs.join(' ').length, 0) ?? 0),
     0,
   )
+  // Границы объёма из §5.3 — это обязательства перед плательщиком. У редакционных
+  // материалов свой, более широкий коридор: там объём диктует материал, а не тариф.
   const limits: Record<string, [number, number]> = {
+    editorial: [1200, 12000],
     free: [0, 600],
     base: [2500, 4000],
     extended: [6000, 10000],

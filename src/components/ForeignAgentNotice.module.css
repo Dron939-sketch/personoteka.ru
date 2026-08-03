@@ -1,0 +1,13 @@
+.notice {
+  margin: 0 0 var(--sp-6);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: var(--surface-alt);
+  /* Закон требует заметного выделения — отсюда рамка, подложка и увеличенный трекинг. */
+  font-size: var(--caption);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
