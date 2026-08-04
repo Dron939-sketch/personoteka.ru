@@ -10,7 +10,7 @@
     "dev": "npm run build:search && next dev",
     "prebuild": "npm run build:search",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "build:search": "tsx scripts/build-search-index.ts",
