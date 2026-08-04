@@ -20,6 +20,10 @@
  *
  * Запускать нужно там, где открыт доступ в сеть, — например в GitHub Actions
  * (см. .github/workflows/photos.yml).
+ *
+ * Запускать через `npm run photos:fetch`: там выставлен NODE_USE_ENV_PROXY=1.
+ * `fetch` в Node, в отличие от curl и npm, сам прокси-переменные не читает,
+ * и в среде с прокси все запросы упираются в отказ, хотя сеть открыта.
  */
 import fs from 'node:fs'
 import path from 'node:path'
