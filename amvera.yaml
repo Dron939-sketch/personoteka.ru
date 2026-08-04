@@ -1,0 +1,33 @@
+# Конфигурация развёртывания на Amvera.
+#
+# Имя файла обязано быть amvera.yaml. Вариант amvera.yml платформа не находит
+# и молча уходит на настройки по умолчанию: запускает скрипт `dev` вместо `start`,
+# слушает не тот порт и получает SIGTERM, не дождавшись готовности.
+#
+# Сборка выполняется как `npm install && npm run build`. typescript, tsx и @types/*
+# лежат в dependencies, а не в devDependencies: сборка идёт на сервере, и если
+# окружение ставит зависимости с NODE_ENV=production, devDependencies были бы
+# пропущены и сборка упала бы на «Cannot find module 'typescript'».
+#
+# Скрипт `prebuild` в package.json сам пересобирает индекс поиска
+# (public/search-index.json) перед `next build` — отдельная команда не нужна.
+#
+# Набор ключей намеренно минимальный: чем меньше необязательных полей,
+# тем меньше шансов, что схема отвергнет файл целиком и настройки снова
+# подменятся значениями по умолчанию.
+
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    # Next 16 требует Node >= 20.9. Ставить версию ниже нельзя — сборка упадёт.
+    version: 20
+
+build:
+  additionalCommands: npm run build
+
+run:
+  command: npm run start
+  # `next start` слушает порт из $PORT, по умолчанию 3000 (см. скрипт start).
+  # Значение обязано совпадать с портом, который слушает приложение.
+  containerPort: 3000
