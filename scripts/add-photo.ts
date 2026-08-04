@@ -26,7 +26,7 @@ function parseArgs() {
   if (!slug || !file) {
     console.error(
       'Использование: npx tsx scripts/add-photo.ts <slug> <файл> ' +
-        '[--author="…"] [--license="…"] [--source="…"] [--caption="…"] [--gravity=attention]',
+        '[--author="…"] [--license="…"] [--source="…"] [--caption="…"] [--gravity=attention] [--zoom=1.6]',
     )
     process.exit(1)
   }
@@ -38,8 +38,11 @@ function parseArgs() {
   return { slug, file, opts }
 }
 
-function position(gravity?: string) {
-  if (!gravity || gravity === 'attention') return sharp.strategy.attention
+/** Без явного указания — `undefined`: только так включается редакционное
+ *  кадрирование из lib/portrait (лицо на верхней трети), а не «умный» центр sharp. */
+function position(gravity?: string): string | number | undefined {
+  if (!gravity) return undefined
+  if (gravity === 'attention') return sharp.strategy.attention
   if (gravity === 'entropy') return sharp.strategy.entropy
   return gravity
 }
@@ -66,7 +69,13 @@ async function main() {
     process.exit(1)
   }
 
-  const result = await makePortrait(file, slug, root, position(opts.gravity))
+  const result = await makePortrait(
+    file,
+    slug,
+    root,
+    position(opts.gravity),
+    opts.zoom ? Number(opts.zoom) : undefined,
+  )
   if (result.upscaled) {
     console.warn(
       `  внимание: оригинал ${result.sourceWidth}×${result.sourceHeight} меньше требуемых ` +

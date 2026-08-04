@@ -43,6 +43,12 @@ interface BaseSource {
    * ушло за границу. Тогда помогает `centre`, `north`, `west`, `east`.
    */
   gravity?: string
+  /**
+   * Приближение кадра: 1 — весь кадр 4:5, 2 — лицо вдвое крупнее.
+   * Нужно для съёмок в полный рост, где человек в кадре мелкий и карточка
+   * выпадает из общего ряда. Больше 3 не имеет смысла — начинается каша.
+   */
+  zoom?: number
 }
 interface CommonsSource extends BaseSource {
   commons: string
@@ -75,8 +81,18 @@ const OWN_RIGHTS = new Set([
   'по договору с правообладателем',
 ])
 
-function position(gravity?: string): string | number {
-  if (!gravity || gravity === 'attention') return sharp.strategy.attention
+/**
+ * Перевод поля `gravity` в то, что понимает sharp.
+ *
+ * Когда поле не задано, вернуть надо именно `undefined`, а не «сообразительный»
+ * `attention`: только на `undefined` включается редакционное кадрирование
+ * из lib/portrait — лицо на верхней трети, приближение, ограничение сдвига.
+ * Стратегия `attention` знает лишь, где в кадре больше деталей, и ставит эту
+ * область по центру — отсюда портреты с обрезанным лбом.
+ */
+function position(gravity?: string): string | number | undefined {
+  if (!gravity) return undefined
+  if (gravity === 'attention') return sharp.strategy.attention
   if (gravity === 'entropy') return sharp.strategy.entropy
   return gravity
 }
@@ -304,7 +320,13 @@ async function main() {
         }
       }
 
-      const result = await makePortrait(buffer, source.slug, root, position(source.gravity))
+      const result = await makePortrait(
+        buffer,
+        source.slug,
+        root,
+        position(source.gravity),
+        source.zoom,
+      )
       attachPortrait(personPath, source.slug, rights, source.caption)
       if (result.upscaled) {
         problems.push(
@@ -313,9 +335,9 @@ async function main() {
       }
       // Из широкого кадра портрет 4:5 вырезается по горизонтали, и автоматика
       // промахивается чаще всего именно тут. Такой кадр надо посмотреть глазами.
-      if (!source.gravity && result.sourceWidth > result.sourceHeight) {
+      if (!source.gravity && result.originalWidth > result.originalHeight) {
         problems.push(
-          `${source.slug}: исходник горизонтальный (${result.sourceWidth}×${result.sourceHeight}) — ` +
+          `${source.slug}: исходник горизонтальный (${result.originalWidth}×${result.originalHeight}) — ` +
             'проверьте кадр, при промахе задайте gravity',
         )
       }

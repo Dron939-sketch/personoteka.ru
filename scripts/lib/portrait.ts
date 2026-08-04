@@ -23,6 +23,10 @@ export interface Rights {
 
 export interface ProcessResult {
   outPath: string
+  /** Размер файла-исходника. */
+  originalWidth: number
+  originalHeight: number
+  /** Что из него реально попало в кадр: при приближении меньше исходника. */
   sourceWidth: number
   sourceHeight: number
   upscaled: boolean
@@ -65,11 +69,24 @@ async function findSubject(
   return { x: Math.abs(left) + probe / 2, y: Math.abs(top) + probe / 2 }
 }
 
+/**
+ * Приближение кадра. 1 — самый большой прямоугольник 4:5, какой помещается
+ * в исходник; 2 — вдвое меньший, то есть лицо вдвое крупнее.
+ *
+ * Нужно для съёмок в полный рост: там алгоритм честно находит человека,
+ * но берёт его целиком, и в каталоге такая карточка выпадает из ряда —
+ * у соседей крупный план, а тут фигура на общем плане. Значение задаёт
+ * редактор в photo-sources.json, потому что «сколько тут лишнего воздуха»
+ * машина не решает: это вопрос к тому, как снимок смотрится рядом с другими.
+ */
+const MAX_ZOOM = 3
+
 export async function makePortrait(
   input: string | Buffer,
   slug: string,
   root: string,
   gravity?: string | number,
+  zoom = 1,
 ): Promise<ProcessResult> {
   const meta = await sharp(input).rotate().metadata()
   if (!meta.width || !meta.height) throw new Error('не удалось прочитать размеры изображения')
@@ -79,23 +96,33 @@ export async function makePortrait(
   const outPath = path.join(mediaDir, `${slug}.jpg`)
 
   const pipeline = sharp(input).rotate() // EXIF-ориентация: иначе портрет ляжет набок
+  // Что реально попадает в кадр: по этим размерам, а не по размерам файла,
+  // видно, растянут ли портрет. При приближении вырезка меньше исходника.
+  let takenW = meta.width
+  let takenH = meta.height
 
   if (gravity !== undefined) {
     // Редактор указал сторону явно — автоматика не спорит.
     pipeline.resize(WIDTH, HEIGHT, { fit: 'cover', position: gravity })
   } else {
     const { width: w, height: h } = meta
-    // Наибольший прямоугольник 4:5, помещающийся в исходник.
-    const cropW = Math.min(w, Math.round((h * WIDTH) / HEIGHT))
-    const cropH = Math.min(h, Math.round((w * HEIGHT) / WIDTH))
+    const k = Math.min(Math.max(zoom, 1), MAX_ZOOM)
+    // Наибольший прямоугольник 4:5, помещающийся в исходник, — и он же, делённый
+    // на приближение, если редактор просил взять лицо крупнее.
+    const baseW = Math.min(w, Math.round((h * WIDTH) / HEIGHT))
+    const baseH = Math.min(h, Math.round((w * HEIGHT) / WIDTH))
+    const cropW = Math.round(baseW / k)
+    const cropH = Math.round(baseH / k)
 
     const subject = await findSubject(input, w, h)
 
     // По горизонтали — центр по лицу, но не дальше половины кадра от него:
-    // иначе на групповом снимке рамка уедет к соседу.
+    // иначе на групповом снимке рамка уедет к соседу. Предел считается
+    // от полного кадра, а не от приближенного: иначе зум сам себя запирает
+    // у середины снимка и лицо сбоку в кадр уже не попадает.
     const wanted = subject.x - cropW / 2
     const centred = (w - cropW) / 2
-    const limit = cropW * MAX_SHIFT
+    const limit = baseW * MAX_SHIFT
     const left = Math.round(
       Math.min(Math.max(wanted, centred - limit, 0), centred + limit, w - cropW),
     )
@@ -103,6 +130,8 @@ export async function makePortrait(
     const top = Math.round(Math.min(Math.max(subject.y - cropH * FACE_Y, 0), h - cropH))
 
     pipeline.extract({ left, top, width: cropW, height: cropH }).resize(WIDTH, HEIGHT)
+    takenW = cropW
+    takenH = cropH
   }
 
   await pipeline
@@ -113,9 +142,11 @@ export async function makePortrait(
 
   return {
     outPath,
-    sourceWidth: meta.width,
-    sourceHeight: meta.height,
-    upscaled: meta.width < WIDTH || meta.height < HEIGHT,
+    originalWidth: meta.width,
+    originalHeight: meta.height,
+    sourceWidth: takenW,
+    sourceHeight: takenH,
+    upscaled: takenW < WIDTH || takenH < HEIGHT,
   }
 }
 
