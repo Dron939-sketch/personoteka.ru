@@ -583,5 +583,38 @@
  {
   "slug": "artem-oganov",
   "wikipedia": "Оганов, Артём Ромаевич"
+ },
+ {
+  "slug": "olga-ladyzhenskaya",
+  "wikipedia": "Ладыженская, Ольга Александровна"
+ },
+ {
+  "slug": "maksim-koncevich",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kontsevich-e1740685408112.png",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/maksim-lvovich-kontsevich/"
+ },
+ {
+  "slug": "genrih-altshuller",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/altshuller-e1738954288859.jpg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/genrih-saulovich-altshuller/"
+ },
+ {
+  "slug": "lyudmila-petranovskaya",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/photo_02.jpg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/lyudmila-petranovskaya/"
+ },
+ {
+  "slug": "georgij-schedrovickij",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/schedrovitskiy.jpeg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/georgiy-petrovich-schedrovitskiy/"
+ },
+ {
+  "slug": "mihail-gelfand",
+  "wikipedia": "Гельфанд, Михаил Сергеевич",
+  "gravity": "east"
  }
 ]
