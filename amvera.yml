@@ -1,0 +1,30 @@
+# Конфигурация развёртывания на Amvera.
+#
+# Сборка на стороне Amvera выполняется как `npm install && npm run build`.
+# typescript, tsx и @types/* лежат в dependencies, а не в devDependencies:
+# сборка идёт на сервере, и если окружение ставит зависимости с
+# NODE_ENV=production, devDependencies были бы пропущены и сборка упала бы
+# на «Cannot find module 'typescript'».
+#
+# Скрипт `prebuild` в package.json сам пересобирает индекс поиска
+# (public/search-index.json) перед `next build` — отдельная команда не нужна.
+
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    # Next 16 требует Node >= 20.9. Ставить версию ниже нельзя — сборка упадёт.
+    version: 20
+
+build:
+  # Пропускать сборку нельзя: без неё не будет ни node_modules, ни .next.
+  skip: false
+  additionalCommands: npm run build
+  # artifacts не задаём: приложению нужны и .next, и node_modules, и content —
+  # проще оставить рабочую директорию целиком.
+
+run:
+  command: npm run start
+  # `next start` слушает порт из $PORT, по умолчанию 3000 (см. скрипт start).
+  containerPort: 3000
+  persistenceMount: /data
