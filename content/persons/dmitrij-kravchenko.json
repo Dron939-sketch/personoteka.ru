@@ -104,7 +104,17 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/dmitrij-kravchenko.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Дмитрий Кравченко, поэт и сценарист, мастер спорта по греко-римской борьбе",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/dmitriy-kravchenko/"
+    }
+  ],
   "sources": [
     {
       "title": "Личности.ру: биография Дмитрия Кравченко",
@@ -117,7 +127,7 @@
   "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-04T17:00:00+03:00",
-  "updated_at": "2026-08-04T17:00:00+03:00",
+  "updated_at": "2026-08-04T12:47:49.778Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

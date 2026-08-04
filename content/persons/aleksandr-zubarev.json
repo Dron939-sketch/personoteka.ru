@@ -92,7 +92,17 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/aleksandr-zubarev.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Александр Зубарев, тиктокер и стример, в прошлом хореограф",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/aleksandr-zubarev/"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: «Зубарев, Александр (тиктокер)»",
@@ -110,7 +120,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T17:00:00+03:00",
-  "updated_at": "2026-08-04T17:00:00+03:00",
+  "updated_at": "2026-08-04T12:47:45.024Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

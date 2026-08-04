@@ -117,7 +117,17 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/mihail-sizokrylov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Михаил Сизокрылов, блогер, поэт и общественный деятель",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/kuleshov-mihail-aleksandrovich/"
+    }
+  ],
   "sources": [
     {
       "title": "Личности.ру: биография Михаила Кулешова",
@@ -130,7 +140,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T17:00:00+03:00",
-  "updated_at": "2026-08-04T17:00:00+03:00",
+  "updated_at": "2026-08-04T12:48:02.310Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

@@ -63,6 +63,18 @@ type Source = CommonsSource | WikipediaSource | DirectSource
 const root = process.cwd()
 const force = process.argv.includes('--force')
 
+/**
+ * Основания публиковать снимок помимо свободной лицензии. Это не лазейка:
+ * каждое означает, что права у издателя уже есть — либо снимок передал сам
+ * герой, либо он лежит в архиве редакции, либо получен по договору.
+ * Всё, чего в этом списке нет, скрипт отклоняет.
+ */
+const OWN_RIGHTS = new Set([
+  'предоставлено героем',
+  'архив редакции',
+  'по договору с правообладателем',
+])
+
 function position(gravity?: string): string | number {
   if (!gravity || gravity === 'attention') return sharp.strategy.attention
   if (gravity === 'entropy') return sharp.strategy.entropy
@@ -281,7 +293,7 @@ async function main() {
         }
         console.log(`  ${source.slug}: ${info.width}×${info.height}, ${info.license}`)
       } else {
-        if (!isFreeLicense(source.license) && source.license !== 'предоставлено героем') {
+        if (!isFreeLicense(source.license) && !OWN_RIGHTS.has(source.license)) {
           throw new Error(`лицензия «${source.license}» не разрешает публикацию`)
         }
         buffer = await download(source.url)

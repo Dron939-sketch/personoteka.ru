@@ -89,7 +89,17 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/erik-davidych.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Эрик Давидыч, автоблогер, основатель сообщества smotra.ru",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/erik-davidych/"
+    }
+  ],
   "sources": [
     {
       "title": "Личности.ру: биография Эрика Давидыча",
@@ -111,7 +121,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T16:00:00+03:00",
-  "updated_at": "2026-08-04T16:00:00+03:00",
+  "updated_at": "2026-08-04T12:47:51.661Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false
