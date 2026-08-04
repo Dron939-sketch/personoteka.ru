@@ -4,6 +4,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
 import { PersonCard } from '@/components/PersonCard'
+import { PromoLektorij } from '@/components/PromoLektorij'
 import { RatingTable } from '@/components/RatingTable'
 import { SearchBar } from '@/components/SearchBar'
 import { SphereGrid } from '@/components/SphereGrid'
@@ -132,6 +133,11 @@ export default function HomePage() {
         <h2 className="ruled">Сферы деятельности</h2>
         <SphereGrid spheres={spheres} persons={persons} />
       </section>
+
+      {/* 5а. Собственный проект издателя — не реклама, см. PromoLektorij. */}
+      <div className="container deferred">
+        <PromoLektorij />
+      </div>
 
       {/* 6. Родились сегодня */}
       <section className="container section deferred">

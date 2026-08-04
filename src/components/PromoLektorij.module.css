@@ -1,0 +1,112 @@
+/**
+ * Полоса строится как одна сетка: картинка и текст лежат в одной ячейке,
+ * друг поверх друга. Так текст остаётся на своём месте при любой ширине,
+ * а не уезжает от изображения, как было бы у двух соседних колонок.
+ */
+.promo {
+  position: relative;
+  display: grid;
+  isolation: isolate;
+  min-height: 22rem;
+  margin-block: var(--space-xl, 3rem);
+  border-radius: var(--radius-l, 12px);
+  overflow: hidden;
+  background: #10141a; /* фон под картинкой: виден, пока она грузится */
+}
+
+.media,
+.body {
+  grid-area: 1 / 1;
+}
+
+.media {
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+  object-position: right center;
+}
+
+/**
+ * Затемнение слева. Снимок сделан с пустой левой третью специально под текст,
+ * но на узком экране видимая часть кадра смещается, поэтому подложка нужна
+ * всегда — иначе светлый текст рискует лечь на светлый участок.
+ */
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, #0d1116 0%, rgba(13, 17, 22, 0.92) 34%, rgba(13, 17, 22, 0) 66%);
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 30rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  color: #f3f1ec;
+}
+
+.kicker {
+  color: #b8862b;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.slogan {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  color: #e8c98a;
+}
+
+.text {
+  margin: 0;
+  max-width: 26rem;
+  color: #cfcbc3;
+}
+
+.action {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-m, 8px);
+  background: var(--accent-600, #8a6216);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.action:hover {
+  background: var(--accent-500, #b8862b);
+}
+
+.action:focus-visible {
+  outline: 3px solid #e3edf8;
+  outline-offset: 2px;
+}
+
+/* На узком экране кадр почти не виден, и полоса работает как тёмная карточка. */
+@media (max-width: 40rem) {
+  .promo {
+    min-height: 0;
+  }
+
+  .media::after {
+    background: linear-gradient(180deg, rgba(13, 17, 22, 0.72) 0%, rgba(13, 17, 22, 0.94) 55%);
+  }
+
+  .body {
+    max-width: none;
+    padding-block: 2rem;
+  }
+}
