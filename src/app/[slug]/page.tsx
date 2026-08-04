@@ -11,6 +11,7 @@ import { Gallery } from '@/components/Gallery'
 import { JsonLd } from '@/components/JsonLd'
 import { MetaList } from '@/components/MetaList'
 import { PersonCard } from '@/components/PersonCard'
+import { PhotoCredit } from '@/components/PhotoCredit'
 import { Portrait } from '@/components/Portrait'
 import { AchievementList, PublicationList } from '@/components/PublicationList'
 import { QuoteBlock } from '@/components/QuoteBlock'
@@ -125,6 +126,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                 sizes="(min-width: 1024px) 340px, (min-width: 768px) 40vw, 100vw"
                 className={styles.portrait}
               />
+              <PhotoCredit photo={person.photos?.find((p) => p.portrait) ?? person.photos?.[0]} />
             </div>
 
             <div className={styles.heroBody}>

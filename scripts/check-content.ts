@@ -83,6 +83,12 @@ for (const { file, data: person } of persons) {
   if (!person.photos?.length) {
     warnings.push(`${where}: нет портрета — на странице показывается монограмма`)
   }
+  // Без основания снимок публиковать нельзя: права на фотографию у фотографа.
+  for (const photo of person.photos ?? []) {
+    if (!photo.license) {
+      errors.push(`${where}: у фотографии ${photo.src} не указана лицензия или основание`)
+    }
+  }
   if (person.verified && !person.verified_scope?.length) {
     errors.push(`${where}: значок «Проверено» без указания, что именно проверялось (§6.4)`)
   }

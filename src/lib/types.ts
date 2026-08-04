@@ -68,6 +68,16 @@ export interface Photo {
   height: number
   alt?: string
   caption?: string
+  /**
+   * Происхождение снимка. Права на фотографию принадлежат фотографу, поэтому без
+   * основания публиковать её нельзя, а свободные лицензии (CC BY, CC BY-SA)
+   * требуют указывать автора рядом с изображением.
+   *
+   * `license` — короткое обозначение: «CC BY 4.0», «фотобанк», «предоставлено героем».
+   */
+  author?: string
+  license?: string
+  source_url?: string
 }
 
 export interface VideoEmbed {
