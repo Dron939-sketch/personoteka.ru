@@ -101,6 +101,35 @@ async function fetchCommons(title: string): Promise<CommonsInfo> {
   }
 }
 
+async function wikiApi(params: Record<string, string>): Promise<unknown> {
+  const api = new URL('https://ru.wikipedia.org/w/api.php')
+  api.searchParams.set('format', 'json')
+  for (const [key, value] of Object.entries(params)) api.searchParams.set(key, value)
+
+  const response = await fetch(api, {
+    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+  })
+  if (!response.ok) throw new Error(`Википедия ответила ${response.status}`)
+  return response.json()
+}
+
+async function wikibaseItem(title: string): Promise<string | undefined> {
+  const data = (await wikiApi({ action: 'query', prop: 'pageprops', titles: title })) as {
+    query?: { pages?: Record<string, { pageprops?: { wikibase_item?: string } }> }
+  }
+  return Object.values(data.query?.pages ?? {})[0]?.pageprops?.wikibase_item
+}
+
+async function searchWikipedia(query: string): Promise<string | undefined> {
+  const data = (await wikiApi({
+    action: 'query',
+    list: 'search',
+    srsearch: query,
+    srlimit: '1',
+  })) as { query?: { search?: { title?: string }[] } }
+  return data.query?.search?.[0]?.title
+}
+
 /**
  * Название статьи в Википедии → файл на Викискладе.
  *
@@ -109,20 +138,16 @@ async function fetchCommons(title: string): Promise<CommonsInfo> {
  * почти всегда пригоден, а имя файла не приходится угадывать.
  */
 async function resolveViaWikipedia(title: string): Promise<string> {
-  const wiki = new URL('https://ru.wikipedia.org/w/api.php')
-  wiki.searchParams.set('action', 'query')
-  wiki.searchParams.set('format', 'json')
-  wiki.searchParams.set('prop', 'pageprops')
-  wiki.searchParams.set('titles', title)
-
-  const wikiResponse = await fetch(wiki, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
-  if (!wikiResponse.ok) throw new Error(`Википедия ответила ${wikiResponse.status}`)
-  const wikiData = (await wikiResponse.json()) as {
-    query?: { pages?: Record<string, { pageprops?: { wikibase_item?: string } }> }
+  let qid = await wikibaseItem(title)
+  if (!qid) {
+    // Точное название статьи угадать трудно: отчество, уточнение в скобках,
+    // псевдоним вместо имени. Поиск по Википедии снимает эту проблему —
+    // редактору достаточно написать имя так, как его знают.
+    const found = await searchWikipedia(title)
+    if (!found) throw new Error(`в Википедии не нашлось статьи по запросу «${title}»`)
+    console.log(`  «${title}» → статья «${found}»`)
+    qid = await wikibaseItem(found)
   }
-  const qid = Object.values(wikiData.query?.pages ?? {})[0]?.pageprops?.wikibase_item
   if (!qid) throw new Error(`для статьи «${title}» не найден элемент Викиданных`)
 
   const wd = new URL('https://www.wikidata.org/w/api.php')

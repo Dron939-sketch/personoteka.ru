@@ -1410,7 +1410,7 @@
     "display_name": "Амиран Сардаров",
     "name_latin": "Amiran Sardarov",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "mihail-sizokrylov",
@@ -1428,7 +1428,7 @@
     "display_name": "Юрий Дудь",
     "name_latin": "Yurij Dud",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "drafting"
   },
   {
     "slug": "slava-buster",
@@ -1509,7 +1509,7 @@
     "display_name": "Сергей Дружко",
     "name_latin": "Sergej Druzhko",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "klava-koka",
@@ -1554,7 +1554,7 @@
     "display_name": "Антон Лапенко",
     "name_latin": "Anton Lapenko",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "dmitrij-kravchenko",
@@ -1590,7 +1590,7 @@
     "display_name": "Саша Спилберг",
     "name_latin": "Sasha Spilberg",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "nikolaj-sobolev",
@@ -1608,7 +1608,7 @@
     "display_name": "Валентин Петухов",
     "name_latin": "Valentin Petuhov",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "anastasiya-ivleeva",
@@ -1617,7 +1617,7 @@
     "display_name": "Анастасия Ивлеева",
     "name_latin": "Anastasiya Ivleeva",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "ida-galich",
@@ -1644,7 +1644,7 @@
     "display_name": "Максим Голополосов",
     "name_latin": "Maksim Golopolosov",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "dmitrij-kuplinov",
@@ -1653,7 +1653,7 @@
     "display_name": "Дмитрий Куплинов",
     "name_latin": "Dmitrij Kuplinov",
     "sphere": "blogery",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "maryana-ro",
