@@ -29,7 +29,7 @@ import {
   getRelatedPersons,
   getSpheres,
 } from '@/lib/content'
-import { calcAge, formatDate, truncateForMeta } from '@/lib/format'
+import { calcAge, calcLifespan, formatDate, plural, truncateForMeta } from '@/lib/format'
 import { personJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 import { slugify } from '@/lib/translit'
@@ -100,8 +100,10 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
   const hasPublications =
     (person.publications?.length ?? 0) + (person.media_mentions?.length ?? 0) > 0
 
+  // Для умершего человека считается не возраст «на сегодня», а прожитые годы:
+  // иначе метаданные утверждали бы, что человеку сейчас столько-то лет.
   const age = person.birth_date && person.birth_date_public !== false
-    ? calcAge(person.birth_date)
+    ? (person.death_date ? calcLifespan(person.birth_date, person.death_date) : calcAge(person.birth_date))
     : null
 
   return (
@@ -148,7 +150,9 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
               <MetaList
                 items={[
                   {
-                    label: 'Родился',
+                    // Нейтральная формулировка вместо «Родился»: пола в модели нет,
+                    // а «Родился» на биографии женщины — брак, заметный с первого взгляда.
+                    label: 'Дата рождения',
                     value: person.birth_date && person.birth_date_public !== false && (
                       <>
                         <time dateTime={person.birth_date}>
@@ -156,8 +160,19 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                             withYear: person.birth_year_public !== false,
                           })}
                         </time>
-                        {age !== null && person.birth_year_public !== false ? ` · ${age} лет` : ''}
+                        {age !== null && person.birth_year_public !== false && !person.death_date
+                          ? ` · ${age} лет`
+                          : ''}
                         {birthPlace ? `, ${birthPlace.name}` : ''}
+                      </>
+                    ),
+                  },
+                  {
+                    label: 'Дата смерти',
+                    value: person.death_date && (
+                      <>
+                        <time dateTime={person.death_date}>{formatDate(person.death_date)}</time>
+                        {age !== null ? ` · ${age} ${plural(age, 'год', 'года', 'лет')} жизни` : ''}
                       </>
                     ),
                   },

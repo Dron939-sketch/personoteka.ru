@@ -30,7 +30,11 @@ export function formatDateTime(iso: string): string {
   return formatDate(iso)
 }
 
-/** Возраст на сегодня — для метаданных персоны. */
+/**
+ * Возраст на сегодня — для метаданных персоны.
+ * Для умершего человека вторым аргументом передаётся дата смерти: возраст
+ * должен остановиться на ней, а не расти дальше.
+ */
 export function calcAge(birthIso: string, today = new Date()): number | null {
   const [y, m, d] = birthIso.split('-').map(Number)
   if (!y || !m || !d) return null
@@ -39,6 +43,13 @@ export function calcAge(birthIso: string, today = new Date()): number | null {
     today.getMonth() + 1 < m || (today.getMonth() + 1 === m && today.getDate() < d)
   if (beforeBirthday) age -= 1
   return age
+}
+
+/** Сколько человек прожил. Возвращает null, если одной из дат нет. */
+export function calcLifespan(birthIso?: string, deathIso?: string): number | null {
+  if (!birthIso || !deathIso) return null
+  const death = new Date(deathIso)
+  return Number.isNaN(death.getTime()) ? null : calcAge(birthIso, death)
 }
 
 /** «5 персон» / «1 персона» / «22 персоны». */
