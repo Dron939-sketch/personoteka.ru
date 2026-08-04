@@ -557,5 +557,31 @@
   "slug": "mirra-andreeva",
   "wikipedia": "Андреева, Мирра Александровна",
   "zoom": 1.7
+ },
+ {
+  "slug": "grigorij-perelman",
+  "wikipedia": "Перельман, Григорий Яковлевич",
+  "caption": "Снимок 1993 года: свободных фотографий Григория Перельмана последних лет не существует — он не фотографируется."
+ },
+ {
+  "slug": "vitalij-ginzburg",
+  "wikipedia": "Гинзбург, Виталий Лазаревич"
+ },
+ {
+  "slug": "andrej-zaliznyak",
+  "wikipedia": "Зализняк, Андрей Анатольевич",
+  "gravity": "north"
+ },
+ {
+  "slug": "stanislav-drobyshevskij",
+  "wikipedia": "Дробышевский, Станислав Владимирович"
+ },
+ {
+  "slug": "vladimir-surdin",
+  "wikipedia": "Сурдин, Владимир Георгиевич"
+ },
+ {
+  "slug": "artem-oganov",
+  "wikipedia": "Оганов, Артём Ромаевич"
  }
 ]
