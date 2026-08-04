@@ -482,5 +482,29 @@
   "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anatolij_karachinskij.jpg",
   "license": "архив редакции",
   "source_url": "https://lichnosty.ru/bio/anatoliy-mihaylovich-karachinskiy/"
+ },
+ {
+  "slug": "andrej-belousov",
+  "wikipedia": "Белоусов, Андрей Рэмович"
+ },
+ {
+  "slug": "tatyana-golikova",
+  "wikipedia": "Голикова, Татьяна Алексеевна"
+ },
+ {
+  "slug": "vladimir-zhirinovskij",
+  "wikipedia": "Жириновский, Владимир Вольфович"
+ },
+ {
+  "slug": "sergej-kirienko",
+  "wikipedia": "Кириенко, Сергей Владиленович"
+ },
+ {
+  "slug": "denis-manturov",
+  "wikipedia": "Мантуров, Денис Валентинович"
+ },
+ {
+  "slug": "aleksandr-novak",
+  "wikipedia": "Новак, Александр Валентинович"
  }
 ]
