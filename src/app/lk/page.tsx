@@ -1,83 +1,133 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { PageHeader } from '@/components/PageHeader'
+import { getPersons } from '@/lib/content'
+import { getPersonGaps, getQueueStats } from '@/lib/lk-data'
+import { formatDate } from '@/lib/format'
 import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
 
 /**
- * Личный кабинет (§8.5) — этап 6 дорожной карты (§15).
- * Пока раздел не реализован, страница объясняет, что будет доступно, и не даёт
- * ложного входа. Раздел закрыт от индексации в robots.txt (§10.1).
+ * Обзор кабинета. Показывает только то, что действительно известно из
+ * репозитория: сколько персон в очереди, сколько опубликовано, чего не хватает
+ * карточкам. Разделы, для которых нужны данные аналитики, честно помечены
+ * как недоступные — выдумывать просмотры и позиции нельзя.
  */
 
 export const metadata: Metadata = {
-  title: 'Личный кабинет',
-  description: 'Личный кабинет владельца профиля и кабинет агентства «Персонотеки».',
+  title: 'Кабинет редакции',
   robots: { index: false, follow: false },
   alternates: { canonical: `${SITE.url}/lk/` },
 }
 
-const ROLES = [
-  {
-    title: 'Владелец профиля',
-    items: [
-      'Статистика просмотров и поисковых запросов к профилю',
-      'Динамика индекса внимания',
-      'Заявка на правку биографии',
-      'Скачивание PDF-досье',
-      'Продление и подключение дополнений',
-    ],
-  },
-  {
-    title: 'Агентство',
-    items: [
-      'Список подопечных персон',
-      'Массовое создание заявок',
-      'Счета и закрывающие документы',
-      'Отчёт для клиента в PDF',
-    ],
-  },
-  {
-    title: 'Редактор и модератор',
-    items: [
-      'Очередь на модерацию',
-      'Чек-лист проверки документов',
-      'История правок с указанием автора',
-    ],
-  },
-]
+export const dynamic = 'force-dynamic'
 
-export default function AccountPage() {
+const STATUS_LABEL: Record<string, string> = {
+  queued: 'в очереди',
+  drafting: 'в работе',
+  published: 'опубликовано',
+  blocked: 'ждёт согласия',
+}
+
+export default function LkOverviewPage() {
+  const stats = getQueueStats()
+  const gaps = getPersonGaps()
+  const published = getPersons()
+
+  const withoutPhoto = gaps.filter((g) => g.gaps.includes('нет портрета')).length
+  const withoutLinks = gaps.filter((g) => g.gaps.includes('нет ссылок (пустой sameAs)')).length
+  const unverified = gaps.filter((g) => g.gaps.includes('не проверено по документам')).length
+  const lastUpdate = published.map((p) => p.updated_at).sort().at(-1)
+
+  const done = stats.byStatus.published ?? 0
+  const percent = stats.total ? Math.round((done / stats.total) * 100) : 0
+
   return (
-    <div className="container">
-      <Breadcrumbs items={[{ label: 'Личный кабинет' }]} />
-
+    <>
       <PageHeader
-        title="Личный кабинет"
-        lead="Раздел в разработке. Ниже — что в нём будет и для кого."
+        title="Кабинет редакции"
+        lead="Состояние наполнения по данным репозитория."
+        meta={lastUpdate ? `Последнее обновление карточки: ${formatDate(lastUpdate)}` : undefined}
       />
 
-      <div className={styles.grid}>
-        {ROLES.map((role) => (
-          <section key={role.title} className={styles.card}>
-            <h2 className={styles.cardTitle}>{role.title}</h2>
-            <ul className={styles.list}>
-              {role.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
+      <section className={styles.tiles}>
+        <div className={styles.tile}>
+          <p className={`caption ${styles.tileLabel}`}>Готово из списка</p>
+          <p className={`tabular ${styles.tileValue}`}>
+            {done} / {stats.total}
+          </p>
+          <p className={styles.tileNote}>{percent} % очереди</p>
+        </div>
+        <div className={styles.tile}>
+          <p className={`caption ${styles.tileLabel}`}>Без портрета</p>
+          <p className={`tabular ${styles.tileValue}`}>{withoutPhoto}</p>
+          <p className={styles.tileNote}>показывается монограмма</p>
+        </div>
+        <div className={styles.tile}>
+          <p className={`caption ${styles.tileLabel}`}>Без внешних ссылок</p>
+          <p className={`tabular ${styles.tileValue}`}>{withoutLinks}</p>
+          <p className={styles.tileNote}>пустой sameAs в разметке</p>
+        </div>
+        <div className={styles.tile}>
+          <p className={`caption ${styles.tileLabel}`}>Не проверено по документам</p>
+          <p className={`tabular ${styles.tileValue}`}>{unverified}</p>
+          <p className={styles.tileNote}>значок «Проверено» не стоит</p>
+        </div>
+      </section>
 
-      <p className={styles.note}>
-        Пока кабинет не запущен, статистику и правки запрашивайте у редактора: заявка — на
-        странице <Link href="/razmestit/">размещения</Link>, исправления —{' '}
-        <Link href="/udalenie-dannyh/">через форму</Link>.
-      </p>
-    </div>
+      <section className={styles.block}>
+        <h2 className="ruled">Очередь по статусам</h2>
+        <ul className={styles.statusList}>
+          {Object.entries(stats.byStatus).map(([status, count]) => (
+            <li key={status}>
+              <span className={styles.statusName}>{STATUS_LABEL[status] ?? status}</span>
+              <span className={`tabular ${styles.statusCount}`}>{count}</span>
+            </li>
+          ))}
+        </ul>
+        <p className={styles.more}>
+          <Link href="/lk/ochered/">Открыть очередь</Link>
+        </p>
+      </section>
+
+      <section className={styles.block}>
+        <h2 className="ruled">По рубрикам</h2>
+        <ul className={styles.spheres}>
+          {stats.bySphere.map((sphere) => (
+            <li key={sphere.slug} className={styles.sphere}>
+              <span className={styles.sphereName}>{sphere.name}</span>
+              <span className={styles.bar} aria-hidden="true">
+                <span
+                  className={styles.barFill}
+                  style={{ width: `${Math.round((sphere.done / sphere.total) * 100)}%` }}
+                />
+              </span>
+              <span className={`tabular ${styles.sphereCount}`}>
+                {sphere.done} / {sphere.total}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={`${styles.block} ${styles.pending}`}>
+        <h2 className="ruled">Чего здесь пока нет</h2>
+        <div className="prose">
+          <p>
+            Разделы владельца профиля и агентства из §8.5 — статистика просмотров,
+            поисковые запросы к профилю, динамика индекса внимания, счета и отчёты —
+            требуют двух вещей, которых в проекте ещё нет: базы пользователей
+            и сбора событий.
+          </p>
+          <p>
+            Показывать эти экраны с придуманными числами нельзя: отчёт клиенту
+            строится ровно из этих данных, и цифра, взятая ниоткуда, обесценивает
+            весь кабинет. Появятся вместе с этапом 6 дорожной карты.
+          </p>
+        </div>
+      </section>
+    </>
   )
 }

@@ -1,52 +1,126 @@
-.grid {
+.tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--sp-4);
 }
 
-.card {
-  padding: var(--sp-6);
-  background: var(--surface);
+.tile {
+  padding: var(--sp-4);
+  background: var(--cool-50);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
-.cardTitle {
-  margin: 0 0 var(--sp-3);
-  padding-bottom: var(--sp-3);
-  border-bottom: 1px solid var(--line);
-  font-size: var(--h3);
+.tileLabel {
+  margin: 0 0 var(--sp-2);
 }
 
-.list {
+.tileValue {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--h2);
+  color: var(--cool-600);
+}
+
+.tileNote {
+  margin: var(--sp-1) 0 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.block {
+  padding-block: var(--sp-12) 0;
+}
+
+.block h2 {
+  margin-bottom: var(--sp-6);
+}
+
+.statusList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-6);
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: grid;
+}
+
+.statusList li {
+  display: flex;
+  align-items: baseline;
   gap: var(--sp-2);
+}
+
+.statusName {
   font-size: var(--small);
   color: var(--ink-2);
 }
 
-.list li {
-  position: relative;
-  padding-left: 1.25em;
+.statusCount {
+  font-size: var(--h3);
+  color: var(--cool-600);
 }
 
-.list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-500);
+.spheres {
+  display: grid;
+  gap: var(--sp-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.note {
-  margin: var(--sp-8) 0 var(--sp-16);
-  max-width: 62ch;
+.sphere {
+  display: grid;
+  grid-template-columns: 10rem 1fr 4.5rem;
+  align-items: center;
+  gap: var(--sp-4);
   font-size: var(--small);
+}
+
+.sphereName {
+  color: var(--ink-2);
+}
+
+.bar {
+  display: block;
+  height: 8px;
+  background: var(--cool-100);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  background: var(--cool-600);
+}
+
+.sphereCount {
+  text-align: right;
   color: var(--ink-3);
+}
+
+.sphereName,
+.sphereCount {
+  white-space: nowrap;
+}
+
+.more {
+  margin: var(--sp-6) 0 0;
+  font-size: var(--small);
+}
+
+.pending {
+  padding-bottom: var(--sp-24);
+}
+
+@media (max-width: 560px) {
+  .sphere {
+    grid-template-columns: 1fr 4.5rem;
+  }
+
+  .bar {
+    grid-column: 1 / -1;
+    order: 3;
+  }
 }
