@@ -10,7 +10,10 @@ import { SITE } from '@/lib/site'
 
 /** Подстраница персоны «Публикации и упоминания» — §4.1. */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 export function generateStaticParams() {
   return getPersons()

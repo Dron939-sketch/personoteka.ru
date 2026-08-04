@@ -44,7 +44,10 @@ import styles from './page.module.css'
  * а реестр зарезервированных слов (§4.1) не даёт создать персону с таким слагом.
  */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 export function generateStaticParams() {
   return getPersons().map((person) => ({ slug: person.slug }))
