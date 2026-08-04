@@ -152,10 +152,14 @@ export function getRelatedPersons(person: Person, limit = 6): Person[] {
     .map((x) => x.p)
 }
 
-/** «Родились сегодня» (§4.1): сравниваем день и месяц по московскому времени. */
+/**
+ * «Родились сегодня» (§4.1): сравниваем день и месяц по московскому времени.
+ * Умершие в подборку не попадают: страница читается как поздравление,
+ * и день рождения покойного в этом ряду выглядит бестактно.
+ */
 export function getBornOn(month: number, day: number): Person[] {
   return getPersons().filter((p) => {
-    if (!p.birth_date || p.birth_date_public === false) return false
+    if (!p.birth_date || p.birth_date_public === false || p.death_date) return false
     const [, m, d] = p.birth_date.split('-').map(Number)
     return m === month && d === day
   })

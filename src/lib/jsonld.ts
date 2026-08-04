@@ -26,6 +26,9 @@ export function personJsonLd(person: Person) {
   if (person.birth_date && person.birth_date_public !== false) {
     node.birthDate = person.birth_date
   }
+  if (person.death_date) {
+    node.deathDate = person.death_date
+  }
   if (birthPlace) {
     node.birthPlace = { '@type': 'Place', name: birthPlace.name }
   }

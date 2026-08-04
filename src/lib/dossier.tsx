@@ -150,7 +150,7 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
   const meta: [string, string][] = []
   if (person.birth_date && person.birth_date_public !== false) {
     meta.push([
-      'Родился',
+      'Дата рождения',
       formatDate(person.birth_date, { withYear: person.birth_year_public !== false }) +
         (birthPlace ? `, ${birthPlace.name}` : ''),
     ])
