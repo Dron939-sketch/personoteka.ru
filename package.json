@@ -22,7 +22,8 @@
     "photo": "tsx scripts/add-photo.ts",
     "icons": "tsx scripts/make-icons.ts",
     "photos:fetch": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-photos.ts",
-    "photo:pick": "NODE_USE_ENV_PROXY=1 tsx scripts/pick-portrait.ts"
+    "photo:pick": "NODE_USE_ENV_PROXY=1 tsx scripts/pick-portrait.ts",
+    "import:lich": "NODE_USE_ENV_PROXY=1 tsx scripts/import-lichnosty.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",

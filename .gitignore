@@ -6,3 +6,6 @@ build/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Рабочий материал для наполнения: тексты-источники, а не контент.
+.import/
