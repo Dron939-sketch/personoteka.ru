@@ -79,7 +79,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/valentin-petuhov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Валентин Петухов, техноблогер, автор канала wylsacom",
+      "author": "Okras",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wylsacom_%D0%BD%D0%B0_%D0%92%D0%B8%D0%B4%D1%84%D0%B5%D1%81%D1%82_2018_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5_(cropped).jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Материалы Wylsacom Media",
@@ -96,7 +107,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:51.880Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

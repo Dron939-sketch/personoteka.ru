@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:31.417Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/mihail-mishustin.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Михаил Мишустин, председатель правительства российской федерации",
+      "author": "duma.gov.ru",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mikhail_Mishustin_(2026-02-25).jpg"
+    }
+  ],
   "links": [],
   "slug": "mihail-mishustin",
   "full_name": "Мишустин Михаил Владимирович",

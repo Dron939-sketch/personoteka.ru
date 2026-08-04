@@ -126,7 +126,18 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/aleksandr-ovechkin.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Александр Овечкин, хоккеист, капитан «вашингтон кэпиталз», лучший снайпер в истории нхл",
+      "author": "Michael Miller",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alex_Ovechkin_2017-05-06.jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Официальный сайт НХЛ, статистика и призы игрока",
@@ -149,7 +160,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-03T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:38.022Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false

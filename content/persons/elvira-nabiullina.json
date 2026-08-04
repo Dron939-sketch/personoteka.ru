@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:34.638Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/elvira-nabiullina.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Эльвира Набиуллина, председатель центрального банка российской федерации",
+      "author": "council.gov.ru",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nabiullina_Federation_Council_2023.jpg"
+    }
+  ],
   "links": [],
   "slug": "elvira-nabiullina",
   "full_name": "Набиуллина Эльвира Сахипзадовна",

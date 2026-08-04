@@ -110,7 +110,18 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/nikolaj-drozdov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Николай Дроздов, зоолог, биогеограф, доктор биологических наук, профессор мгу",
+      "author": "Maksym Kozlenko",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nikolay_Drozdov_in_Australia_2.jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Страница преподавателя на сайте географического факультета МГУ",
@@ -133,7 +144,7 @@
   "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-03T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:42.491Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false

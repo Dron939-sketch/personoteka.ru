@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:33.203Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/valentina-matvienko.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Валентина Матвиенко, председатель совета федерации федерального собрания российской федерации",
+      "author": "Совет Федерации ФС РФ",
+      "license": "CC BY-SA 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%92.%D0%98._%D0%9C%D0%B0%D1%82%D0%B2%D0%B8%D0%B5%D0%BD%D0%BA%D0%BE.jpg"
+    }
+  ],
   "links": [],
   "slug": "valentina-matvienko",
   "full_name": "Матвиенко Валентина Ивановна",

@@ -102,7 +102,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/artemij-lebedev.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Артемий Лебедев, дизайнер, основатель «студии артемия лебедева»",
+      "author": "Маткульт-привет! :: Алексей Савватеев и Ко",
+      "license": "CC BY 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artemy_Lebedev_2020.png"
+    }
+  ],
   "sources": [
     {
       "title": "Материалы «Студии Артемия Лебедева»",
@@ -125,7 +136,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-03T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:41.609Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false

@@ -74,7 +74,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/maksim-golopolosov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Максим Голополосов, автор и ведущий видеошоу «+100500»",
+      "author": "Dmitry Rozhkov",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Maksim_Golopolosov.jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: статья о шоу «+100500»",
@@ -90,7 +101,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:51.031Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

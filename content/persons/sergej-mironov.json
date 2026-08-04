@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:36.750Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/sergej-mironov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Сергей Миронов, председатель партии «справедливая россия», депутат государственной думы",
+      "author": "Совет Федерации",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sergei_Mironov_Predsedatel_Soveta_Federatsii.jpg"
+    }
+  ],
   "links": [],
   "slug": "sergej-mironov",
   "full_name": "Миронов Сергей Михайлович",

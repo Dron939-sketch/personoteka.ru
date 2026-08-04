@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:38.896Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/daniil-medvedev.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Даниил Медведев, теннисист, победитель us open, первая ракетка мира",
+      "author": "LacosteWiki",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Danill_Medvedev_Miami_2019_(cropped).jpg"
+    }
+  ],
   "links": [],
   "slug": "daniil-medvedev",
   "full_name": "Медведев Даниил Сергеевич",

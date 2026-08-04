@@ -74,7 +74,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/sergej-druzhko.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Сергей Дружко, телеведущий и актёр, ведущий «дружко шоу»",
+      "author": "putnik",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Premia_Runeta_2017_0641.jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: «Дружко, Сергей Евгеньевич»",
@@ -91,7 +102,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:48.462Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

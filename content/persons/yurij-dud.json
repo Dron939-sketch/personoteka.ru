@@ -100,7 +100,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/yurij-dud.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Юрий Дудь, журналист, автор интервью-проекта «вдудь»",
+      "author": "Никита Андреев",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%AE%D1%80%D0%B8%D0%B9_%D0%94%D1%83%D0%B4%D1%8C_%D0%B2_2018_%D0%B3%D0%BE%D0%B4%D1%83_(cropped).jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: «Дудь, Юрий Александрович»",
@@ -118,7 +129,7 @@
   "status": "review",
   "editor": "a-mejster",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:43.279Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": true,

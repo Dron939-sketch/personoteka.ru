@@ -3,12 +3,23 @@
   "plan": "editorial",
   "status": "published",
   "published_at": "2026-08-03T11:00:00+03:00",
-  "updated_at": "2026-08-03T11:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:32.183Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
   },
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/sergej-shojgu.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Сергей Шойгу, секретарь совета безопасности российской федерации",
+      "author": "Пресс-служба Президента Российской Федерации",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shoigu_2024-10-10.jpg"
+    }
+  ],
   "links": [],
   "slug": "sergej-shojgu",
   "full_name": "Шойгу Сергей Кужугетович",

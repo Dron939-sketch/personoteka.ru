@@ -111,7 +111,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/evgenij-kasperskij.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Евгений Касперский, основатель и генеральный директор «лаборатории касперского»",
+      "author": "Kaspersky",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eugene_Kaspersky_Headshot.jpg"
+    }
+  ],
   "sources": [
     {
       "title": "Корпоративная биография на сайте «Лаборатории Касперского»",
@@ -134,7 +145,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-03T10:00:00+03:00",
+  "updated_at": "2026-08-04T11:24:40.691Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false
