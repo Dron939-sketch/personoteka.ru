@@ -426,5 +426,33 @@
  {
   "slug": "tatyana-bakalchuk",
   "wikipedia": "Бакальчук, Татьяна Владимировна"
+ },
+ {
+  "slug": "pavel-durov",
+  "wikipedia": "Дуров, Павел Валерьевич"
+ },
+ {
+  "slug": "arkadij-volozh",
+  "wikipedia": "Волож, Аркадий Юрьевич"
+ },
+ {
+  "slug": "arkadij-novikov",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/novikov-e1739093392728.jpg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/arkadiy-novikov/"
+ },
+ {
+  "slug": "nikolaj-storonskij",
+  "wikipedia": "Сторонский, Николай Николаевич"
+ },
+ {
+  "slug": "andrej-romanenko",
+  "wikipedia": "Романенко, Андрей Николаевич"
+ },
+ {
+  "slug": "vladimir-melnikov",
+  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/melnikov-e1740425064987.jpg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/vladimir-melnikov/"
  }
 ]
