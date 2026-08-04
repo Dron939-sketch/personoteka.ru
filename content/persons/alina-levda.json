@@ -81,7 +81,17 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/alina-levda.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Алина Левда, блогер и предпринимательница, известная как ботановна",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/alina-levda/"
+    }
+  ],
   "sources": [
     {
       "title": "Личности.ру: биография Алины Левда",
@@ -94,7 +104,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T17:00:00+03:00",
-  "updated_at": "2026-08-04T17:00:00+03:00",
+  "updated_at": "2026-08-04T12:47:46.460Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

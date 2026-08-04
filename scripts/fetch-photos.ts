@@ -63,6 +63,18 @@ type Source = CommonsSource | WikipediaSource | DirectSource
 const root = process.cwd()
 const force = process.argv.includes('--force')
 
+/**
+ * Основания публиковать снимок помимо свободной лицензии. Это не лазейка:
+ * каждое означает, что права у издателя уже есть — либо снимок передал сам
+ * герой, либо он лежит в архиве редакции, либо получен по договору.
+ * Всё, чего в этом списке нет, скрипт отклоняет.
+ */
+const OWN_RIGHTS = new Set([
+  'предоставлено героем',
+  'архив редакции',
+  'по договору с правообладателем',
+])
+
 function position(gravity?: string): string | number {
   if (!gravity || gravity === 'attention') return sharp.strategy.attention
   if (gravity === 'entropy') return sharp.strategy.entropy
@@ -214,12 +226,24 @@ async function resolveViaWikipedia(title: string, displayName: string): Promise<
   return `File:${file}`
 }
 
-async function download(url: string): Promise<Buffer> {
-  const response = await fetch(url, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
-  if (!response.ok) throw new Error(`${url} → ${response.status}`)
-  return Buffer.from(await response.arrayBuffer())
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+/**
+ * Скачивание с паузой между попытками. Викисклад отвечает 429, когда бот
+ * забирает файлы подряд без передышки, — и это его право: раздача больших
+ * оригиналов бесплатна для нас и не бесплатна для них.
+ */
+async function download(url: string, tries = 4): Promise<Buffer> {
+  for (let attempt = 1; ; attempt += 1) {
+    const response = await fetch(url, {
+      headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+    })
+    if (response.ok) return Buffer.from(await response.arrayBuffer())
+    if (response.status !== 429 || attempt === tries) {
+      throw new Error(`${url} → ${response.status}`)
+    }
+    await wait(2000 * attempt)
+  }
 }
 
 async function main() {
@@ -269,7 +293,7 @@ async function main() {
         }
         console.log(`  ${source.slug}: ${info.width}×${info.height}, ${info.license}`)
       } else {
-        if (!isFreeLicense(source.license) && source.license !== 'предоставлено героем') {
+        if (!isFreeLicense(source.license) && !OWN_RIGHTS.has(source.license)) {
           throw new Error(`лицензия «${source.license}» не разрешает публикацию`)
         }
         buffer = await download(source.url)
@@ -296,6 +320,7 @@ async function main() {
         )
       }
       done += 1
+      await wait(700) // передышка между файлами, чтобы не упереться в 429
     } catch (error) {
       problems.push(`${source.slug}: ${error instanceof Error ? error.message : String(error)}`)
     }

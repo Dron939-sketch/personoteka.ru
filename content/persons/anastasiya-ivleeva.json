@@ -93,7 +93,17 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/anastasiya-ivleeva.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Анастасия Ивлеева, телеведущая и видеоблогер, ведущая travel-шоу",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/anastasiya-ivleeva/"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: «Ивлеева, Анастасия Вячеславовна»",
@@ -115,7 +125,7 @@
   "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T11:24:46.312Z",
+  "updated_at": "2026-08-04T12:47:41.641Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false
