@@ -91,9 +91,12 @@
   ],
   "verified": false,
   "plan": "editorial",
-  "status": "draft",
+  "status": "published",
   "editor": "a-petrova",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:26:36.005Z",
-  "noindex": true
+  "updated_at": "2026-08-04T13:00:00+03:00",
+  "foreign_agent": {
+    "checked_at": "2026-08-04",
+    "listed": false
+  }
 }
