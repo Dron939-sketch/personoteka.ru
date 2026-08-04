@@ -29,7 +29,14 @@ import {
   getRelatedPersons,
   getSpheres,
 } from '@/lib/content'
-import { calcAge, calcLifespan, formatDate, plural, truncateForMeta } from '@/lib/format'
+import {
+  calcAge,
+  calcLifespan,
+  formatDate,
+  lowerFirst,
+  plural,
+  truncateForMeta,
+} from '@/lib/format'
 import { personJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 import { slugify } from '@/lib/translit'
@@ -66,8 +73,11 @@ export async function generateMetadata({
   const description = truncateForMeta(person.lead)
 
   return {
-    // §10.1: «Иван Иванов — врач-кардиолог: биография, карьера, достижения»
-    title: `${person.display_name} — ${person.tagline.toLowerCase()}: биография, карьера, достижения`,
+    // §10.1: «Иван Иванов — врач-кардиолог: биография, карьера, достижения».
+    // Строчная только первая буква: сплошной toLowerCase() ломал каждый
+    // третий заголовок — «губернатор санкт-петербурга», «цска», «триз»,
+    // «лаборатории касперского».
+    title: `${person.display_name} — ${lowerFirst(person.tagline)}: биография, карьера, достижения`,
     description,
     alternates: { canonical: url },
     robots: person.noindex ? { index: false, follow: true } : undefined,

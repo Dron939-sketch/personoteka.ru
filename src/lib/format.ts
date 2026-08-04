@@ -65,6 +65,16 @@ export function personsCount(n: number): string {
   return `${n} ${plural(n, 'персона', 'персоны', 'персон')}`
 }
 
+/**
+ * Строчная первая буква, остальное как есть.
+ * Нужна, чтобы должность вставала в середину заголовка, не теряя имён
+ * собственных и аббревиатур: «Губернатор Санкт-Петербурга» → «губернатор
+ * Санкт-Петербурга», а не «губернатор санкт-петербурга».
+ */
+export function lowerFirst(text: string): string {
+  return text.charAt(0).toLowerCase() + text.slice(1)
+}
+
 /** Обрезка лида до `description` без разрыва слова — §10.1 (150–160 знаков). */
 export function truncateForMeta(text: string, limit = 158): string {
   const clean = text.replace(/\s+/g, ' ').trim()

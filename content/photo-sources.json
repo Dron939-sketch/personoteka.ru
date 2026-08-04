@@ -1,644 +1,704 @@
 [
- {
-  "slug": "sergej-lavrov",
-  "wikipedia": "Лавров, Сергей Викторович"
- },
- {
-  "slug": "mihail-mishustin",
-  "wikipedia": "Мишустин, Михаил Владимирович"
- },
- {
-  "slug": "sergej-shojgu",
-  "wikipedia": "Шойгу, Сергей Кужугетович"
- },
- {
-  "slug": "valentina-matvienko",
-  "wikipedia": "Матвиенко, Валентина Ивановна"
- },
- {
-  "slug": "vyacheslav-volodin",
-  "wikipedia": "Володин, Вячеслав Викторович"
- },
- {
-  "slug": "elvira-nabiullina",
-  "wikipedia": "Набиуллина, Эльвира Сахипзадовна"
- },
- {
-  "slug": "gennadij-zyuganov",
-  "wikipedia": "Зюганов, Геннадий Андреевич"
- },
- {
-  "slug": "sergej-mironov",
-  "wikipedia": "Миронов, Сергей Михайлович"
- },
- {
-  "slug": "aleksandr-ovechkin",
-  "wikipedia": "Овечкин, Александр Михайлович"
- },
- {
-  "slug": "daniil-medvedev",
-  "wikipedia": "Медведев, Даниил Сергеевич"
- },
- {
-  "slug": "german-gref",
-  "wikipedia": "Греф, Герман Оскарович"
- },
- {
-  "slug": "evgenij-kasperskij",
-  "wikipedia": "Касперский, Евгений Валентинович"
- },
- {
-  "slug": "artemij-lebedev",
-  "wikipedia": "Лебедев, Артемий Андреевич"
- },
- {
-  "slug": "nikolaj-drozdov",
-  "wikipedia": "Дроздов, Николай Николаевич"
- },
- {
-  "slug": "yurij-dud",
-  "wikipedia": "Дудь, Юрий Александрович"
- },
- {
-  "slug": "anastasiya-ivleeva",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anastasiya_ivleeva.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/anastasiya-ivleeva/"
- },
- {
-  "slug": "anton-lapenko",
-  "wikipedia": "Лапенко, Антон Вячеславович"
- },
- {
-  "slug": "sergej-druzhko",
-  "wikipedia": "Дружко, Сергей Евгеньевич"
- },
- {
-  "slug": "dmitrij-kuplinov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dmitrij_kuplinov.webp",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/dmitriy-kuplinov/"
- },
- {
-  "slug": "valentin-petuhov",
-  "wikipedia": "Wylsacom"
- },
- {
-  "slug": "sasha-spilberg",
-  "wikipedia": "Спилберг, Саша",
-  "gravity": "centre"
- },
- {
-  "slug": "maksim-golopolosov",
-  "commons": "File:Maksim Golopolosov.jpg"
- },
- {
-  "slug": "anton-shastun",
-  "commons": "File:Антон Шастун.jpg"
- },
- {
-  "slug": "regina-todorenko",
-  "wikipedia": "Тодоренко, Регина Петровна"
- },
- {
-  "slug": "klava-koka",
-  "commons": "File:Клава Кока (пресс-подход) (2) на VK Fest 5 (cropped).jpg"
- },
- {
-  "slug": "slava-marlou",
-  "wikipedia": "Slava Marlow"
- },
- {
-  "slug": "aleksej-scherbakov",
-  "wikipedia": "Щербаков, Алексей Сергеевич (комик)"
- },
- {
-  "slug": "ida-galich",
-  "wikipedia": "Галич, Ида Васильевна"
- },
- {
-  "slug": "dima-maslennikov",
-  "wikipedia": "Масленников, Дима"
- },
- {
-  "slug": "maryana-ro",
-  "wikipedia": "Ро, Марьяна"
- },
- {
-  "slug": "david-manukyan",
-  "wikipedia": "Дава"
- },
- {
-  "slug": "nikolaj-sobolev",
-  "wikipedia": "Соболев, Николай Юрьевич"
- },
- {
-  "slug": "anya-pokrov",
-  "wikipedia": "Покров, Аня"
- },
- {
-  "slug": "habib",
-  "wikipedia": "Хабиб (певец)"
- },
- {
-  "slug": "miya-bojko",
-  "wikipedia": "Mia Boyka"
- },
- {
-  "slug": "slava-buster",
-  "wikipedia": "Бустер (стример)"
- },
- {
-  "slug": "aleksandr-zubarev",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/05/zubchik.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/aleksandr-zubarev/"
- },
- {
-  "slug": "alina-levda",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/botanovna-2.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/alina-levda/"
- },
- {
-  "slug": "denis-kukoyaka",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/kukoyaka-e1742325654642.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/denis-kukoyaka/"
- },
- {
-  "slug": "dmitrij-kravchenko",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/dmitriy-kravchenko.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/dmitriy-kravchenko/"
- },
- {
-  "slug": "erik-davidych",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/04/davidych-e1743599717418.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/erik-davidych/"
- },
- {
-  "slug": "mihail-sizokrylov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2026/06/mihail-aleksandrovich-kuleshov.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/kuleshov-mihail-aleksandrovich/"
- },
- {
-  "slug": "amiran-sardarov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2026/08/amiran-sardarov-3.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/amiran-sardarov/"
- },
- {
-  "slug": "nikolaj-baskov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/nikolaj_baskov.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/nikolay-baskov/"
- },
- {
-  "slug": "dima-bilan",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dima_bilan.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/dima-bilan/"
- },
- {
-  "slug": "olga-buzova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/buzova.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/olga-buzova/"
- },
- {
-  "slug": "maksim-galkin",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/maksim_galkin.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/maksim-galkin/"
- },
- {
-  "slug": "polina-gagarina",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/gagarina-e1739973332558.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/polina-gagarina/"
- },
- {
-  "slug": "valeriya",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/valeriya.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/valeriya/"
- },
- {
-  "slug": "alsu",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/alsu.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/alsu/"
- },
- {
-  "slug": "andrej-malahov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/malahov-scaled.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/andrey-malahov/"
- },
- {
-  "slug": "basta",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/basta-e1739705630967.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/basta/"
- },
- {
-  "slug": "anatolij-vasserman",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/vasserman.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/anatoliy-vasserman/"
- },
- {
-  "slug": "nikas-safronov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/safronov-e1741627116279.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/nikas-safronov/"
- },
- {
-  "slug": "diana-arbenina",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/diana_arbenina.webp",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/diana-arbenina/"
- },
- {
-  "slug": "pavel-priluchnyj",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/priluchnyy-e1741537912345.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/pavel-priluchnyy/"
- },
- {
-  "slug": "maksim-averin",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/averin-maksim-biografiya-aktera.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/maksim-averin/"
- },
- {
-  "slug": "marina-kravec",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kravets-e1739195004550.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/marina-kravets/"
- },
- {
-  "slug": "ekaterina-klimova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/klimova-e1740585277419.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/ekaterina-klimova/"
- },
- {
-  "slug": "oksana-akinshina",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/oksana-akinshina-biografiya.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/oksana-akinshina/"
- },
- {
-  "slug": "konstantin-ivlev",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/ivlev-scaled-e1740157720357.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/konstantin-ivlev/"
- },
- {
-  "slug": "yura-borisov",
-  "wikipedia": "Борисов, Юра"
- },
- {
-  "slug": "sergej-burunov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/burunov-e1740426271828.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/sergey-burunov/"
- },
- {
-  "slug": "nurlan-saburov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/04/saburov1-scaled-e1744276882678.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/nurlan-saburov/",
-  "zoom": 1.4
- },
- {
-  "slug": "irina-dubcova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dubtsova-scaled-e1741016228569.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/irina-dubtsova/"
- },
- {
-  "slug": "marina-aleksandrova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/marina-aleksandrova-2.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/marina-aleksandrova/"
- },
- {
-  "slug": "dzhigan",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dzhigan-e1742992676101.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/dzhigan/"
- },
- {
-  "slug": "renat-agzamov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/agzamov-e1740817166300.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/renat-agzamov/"
- },
- {
-  "slug": "anastasiya-volochkova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/volochkova.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/anastasiya-volochkova/"
- },
- {
-  "slug": "lyubov-aksenova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/aksenova-e1739608127902.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/lyubov-aksenova/"
- },
- {
-  "slug": "mari-kraimbreri",
-  "wikipedia": "Мари Краймбрери"
- },
- {
-  "slug": "lyusya-chebotina",
-  "wikipedia": "Чеботина, Людмила Андреевна"
- },
- {
-  "slug": "paulina-andreeva",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/paulina-andreeva-biografiya.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/paulina-andreeva/"
- },
- {
-  "slug": "kseniya-borodina",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/kseniya_borodina.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/kseniya-borodina/"
- },
- {
-  "slug": "yurij-antonov",
-  "wikipedia": "Антонов, Юрий Михайлович"
- },
- {
-  "slug": "ekaterina-andreeva",
-  "wikipedia": "Андреева, Екатерина Сергеевна"
- },
- {
-  "slug": "zhanna-friske",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/friske-e1739190332163.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/zhanna-friske/"
- },
- {
-  "slug": "bari-alibasov",
-  "wikipedia": "Алибасов, Бари Каримович"
- },
- {
-  "slug": "tambi-masaev",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/04/masaev-e1744281549938.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/tambi-masaev/"
- },
- {
-  "slug": "guram-amaryan",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/03/amaryang-e1742918392861.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/guram-amaryan/"
- },
- {
-  "slug": "vladimir-potanin",
-  "wikipedia": "Потанин, Владимир Олегович"
- },
- {
-  "slug": "sergej-galickij",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/sergej_galickij.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/sergey-nikolaevich-galitskiy/"
- },
- {
-  "slug": "igor-rybakov",
-  "wikipedia": "Рыбаков, Игорь Владимирович"
- },
- {
-  "slug": "aleksej-mordashov",
-  "wikipedia": "Мордашов, Алексей Александрович"
- },
- {
-  "slug": "leonid-mihelson",
-  "wikipedia": "Михельсон, Леонид Викторович"
- },
- {
-  "slug": "tatyana-bakalchuk",
-  "wikipedia": "Бакальчук, Татьяна Владимировна"
- },
- {
-  "slug": "pavel-durov",
-  "wikipedia": "Дуров, Павел Валерьевич"
- },
- {
-  "slug": "arkadij-volozh",
-  "wikipedia": "Волож, Аркадий Юрьевич"
- },
- {
-  "slug": "arkadij-novikov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/novikov-e1739093392728.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/arkadiy-novikov/"
- },
- {
-  "slug": "nikolaj-storonskij",
-  "wikipedia": "Сторонский, Николай Николаевич"
- },
- {
-  "slug": "andrej-romanenko",
-  "wikipedia": "Романенко, Андрей Николаевич"
- },
- {
-  "slug": "vladimir-melnikov",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/melnikov-e1740425064987.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/vladimir-melnikov/"
- },
- {
-  "slug": "oleg-tinkov",
-  "wikipedia": "Тиньков, Олег Юрьевич"
- },
- {
-  "slug": "oleg-deripaska",
-  "wikipedia": "Дерипаска, Олег Владимирович"
- },
- {
-  "slug": "arkadij-rotenberg",
-  "wikipedia": "Ротенберг, Аркадий Романович"
- },
- {
-  "slug": "sergej-brin",
-  "wikipedia": "Брин, Сергей Михайлович"
- },
- {
-  "slug": "nataliya-filyova",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/fileva.png",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/nataliya-valerevna-filyova/"
- },
- {
-  "slug": "anatolij-karachinskij",
-  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anatolij_karachinskij.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/anatoliy-mihaylovich-karachinskiy/"
- },
- {
-  "slug": "andrej-belousov",
-  "wikipedia": "Белоусов, Андрей Рэмович"
- },
- {
-  "slug": "tatyana-golikova",
-  "wikipedia": "Голикова, Татьяна Алексеевна"
- },
- {
-  "slug": "vladimir-zhirinovskij",
-  "wikipedia": "Жириновский, Владимир Вольфович"
- },
- {
-  "slug": "sergej-kirienko",
-  "wikipedia": "Кириенко, Сергей Владиленович"
- },
- {
-  "slug": "denis-manturov",
-  "wikipedia": "Мантуров, Денис Валентинович"
- },
- {
-  "slug": "aleksandr-novak",
-  "wikipedia": "Новак, Александр Валентинович"
- },
- {
-  "slug": "dmitrij-patrushev",
-  "wikipedia": "Патрушев, Дмитрий Николаевич"
- },
- {
-  "slug": "sergej-kravcov",
-  "wikipedia": "Кравцов, Сергей Сергеевич"
- },
- {
-  "slug": "aleksandr-beglov",
-  "wikipedia": "Беглов, Александр Дмитриевич"
- },
- {
-  "slug": "anton-alihanov",
-  "wikipedia": "Алиханов, Антон Андреевич"
- },
- {
-  "slug": "vitalij-milonov",
-  "wikipedia": "Милонов, Виталий Валентинович",
-  "gravity": "east"
- },
- {
-  "slug": "viktoriya-abramchenko",
-  "wikipedia": "Абрамченко, Виктория Валериевна"
- },
- {
-  "slug": "fedor-emelyanenko",
-  "wikipedia": "Емельяненко, Фёдор Владимирович"
- },
- {
-  "slug": "elena-isinbaeva",
-  "wikipedia": "Исинбаева, Елена Гаджиевна"
- },
- {
-  "slug": "evgenij-plyushchenko",
-  "wikipedia": "Плющенко, Евгений Викторович",
-  "zoom": 3
- },
- {
-  "slug": "igor-akinfeev",
-  "wikipedia": "Акинфеев, Игорь Владимирович"
- },
- {
-  "slug": "aleksandr-bolshunov",
-  "wikipedia": "Большунов, Александр Александрович"
- },
- {
-  "slug": "mirra-andreeva",
-  "wikipedia": "Андреева, Мирра Александровна",
-  "zoom": 1.7
- },
- {
-  "slug": "grigorij-perelman",
-  "wikipedia": "Перельман, Григорий Яковлевич",
-  "caption": "Снимок 1993 года: свободных фотографий Григория Перельмана последних лет не существует — он не фотографируется."
- },
- {
-  "slug": "vitalij-ginzburg",
-  "wikipedia": "Гинзбург, Виталий Лазаревич"
- },
- {
-  "slug": "andrej-zaliznyak",
-  "wikipedia": "Зализняк, Андрей Анатольевич",
-  "gravity": "north"
- },
- {
-  "slug": "stanislav-drobyshevskij",
-  "wikipedia": "Дробышевский, Станислав Владимирович"
- },
- {
-  "slug": "vladimir-surdin",
-  "wikipedia": "Сурдин, Владимир Георгиевич"
- },
- {
-  "slug": "artem-oganov",
-  "wikipedia": "Оганов, Артём Ромаевич"
- },
- {
-  "slug": "olga-ladyzhenskaya",
-  "wikipedia": "Ладыженская, Ольга Александровна"
- },
- {
-  "slug": "maksim-koncevich",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kontsevich-e1740685408112.png",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/maksim-lvovich-kontsevich/"
- },
- {
-  "slug": "genrih-altshuller",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/02/altshuller-e1738954288859.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/genrih-saulovich-altshuller/"
- },
- {
-  "slug": "lyudmila-petranovskaya",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/photo_02.jpg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/lyudmila-petranovskaya/"
- },
- {
-  "slug": "georgij-schedrovickij",
-  "url": "https://lichnosty.ru/wp-content/uploads/2025/01/schedrovitskiy.jpeg",
-  "license": "архив редакции",
-  "source_url": "https://lichnosty.ru/bio/georgiy-petrovich-schedrovitskiy/"
- },
- {
-  "slug": "mihail-gelfand",
-  "wikipedia": "Гельфанд, Михаил Сергеевич",
-  "gravity": "east"
- },
- {
-  "slug": "vyacheslav-fetisov",
-  "wikipedia": "Фетисов, Вячеслав Александрович"
- },
- {
-  "slug": "aleksej-yagudin",
-  "wikipedia": "Ягудин, Алексей Константинович"
- },
- {
-  "slug": "kamila-valieva",
-  "wikipedia": "Валиева, Камила Валерьевна"
- },
- {
-  "slug": "alina-kabaeva",
-  "wikipedia": "Кабаева, Алина Маратовна"
- },
- {
-  "slug": "marat-safin",
-  "wikipedia": "Сафин, Марат Мубинович"
- },
- {
-  "slug": "svetlana-horkina",
-  "wikipedia": "Хоркина, Светлана Васильевна"
- }
+  {
+    "slug": "sergej-lavrov",
+    "wikipedia": "Лавров, Сергей Викторович"
+  },
+  {
+    "slug": "mihail-mishustin",
+    "wikipedia": "Мишустин, Михаил Владимирович"
+  },
+  {
+    "slug": "sergej-shojgu",
+    "wikipedia": "Шойгу, Сергей Кужугетович"
+  },
+  {
+    "slug": "valentina-matvienko",
+    "wikipedia": "Матвиенко, Валентина Ивановна"
+  },
+  {
+    "slug": "vyacheslav-volodin",
+    "wikipedia": "Володин, Вячеслав Викторович"
+  },
+  {
+    "slug": "elvira-nabiullina",
+    "wikipedia": "Набиуллина, Эльвира Сахипзадовна"
+  },
+  {
+    "slug": "gennadij-zyuganov",
+    "wikipedia": "Зюганов, Геннадий Андреевич"
+  },
+  {
+    "slug": "sergej-mironov",
+    "wikipedia": "Миронов, Сергей Михайлович"
+  },
+  {
+    "slug": "aleksandr-ovechkin",
+    "wikipedia": "Овечкин, Александр Михайлович"
+  },
+  {
+    "slug": "daniil-medvedev",
+    "wikipedia": "Медведев, Даниил Сергеевич"
+  },
+  {
+    "slug": "german-gref",
+    "wikipedia": "Греф, Герман Оскарович"
+  },
+  {
+    "slug": "evgenij-kasperskij",
+    "wikipedia": "Касперский, Евгений Валентинович"
+  },
+  {
+    "slug": "artemij-lebedev",
+    "wikipedia": "Лебедев, Артемий Андреевич"
+  },
+  {
+    "slug": "nikolaj-drozdov",
+    "wikipedia": "Дроздов, Николай Николаевич"
+  },
+  {
+    "slug": "yurij-dud",
+    "wikipedia": "Дудь, Юрий Александрович"
+  },
+  {
+    "slug": "anastasiya-ivleeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anastasiya_ivleeva.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anastasiya-ivleeva/"
+  },
+  {
+    "slug": "anton-lapenko",
+    "wikipedia": "Лапенко, Антон Вячеславович"
+  },
+  {
+    "slug": "sergej-druzhko",
+    "wikipedia": "Дружко, Сергей Евгеньевич"
+  },
+  {
+    "slug": "dmitrij-kuplinov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dmitrij_kuplinov.webp",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-kuplinov/"
+  },
+  {
+    "slug": "valentin-petuhov",
+    "wikipedia": "Wylsacom"
+  },
+  {
+    "slug": "sasha-spilberg",
+    "wikipedia": "Спилберг, Саша",
+    "gravity": "centre"
+  },
+  {
+    "slug": "maksim-golopolosov",
+    "commons": "File:Maksim Golopolosov.jpg"
+  },
+  {
+    "slug": "anton-shastun",
+    "commons": "File:Антон Шастун.jpg"
+  },
+  {
+    "slug": "regina-todorenko",
+    "wikipedia": "Тодоренко, Регина Петровна"
+  },
+  {
+    "slug": "klava-koka",
+    "commons": "File:Клава Кока (пресс-подход) (2) на VK Fest 5 (cropped).jpg"
+  },
+  {
+    "slug": "slava-marlou",
+    "wikipedia": "Slava Marlow"
+  },
+  {
+    "slug": "aleksej-scherbakov",
+    "wikipedia": "Щербаков, Алексей Сергеевич (комик)"
+  },
+  {
+    "slug": "ida-galich",
+    "wikipedia": "Галич, Ида Васильевна"
+  },
+  {
+    "slug": "dima-maslennikov",
+    "wikipedia": "Масленников, Дима"
+  },
+  {
+    "slug": "maryana-ro",
+    "wikipedia": "Ро, Марьяна"
+  },
+  {
+    "slug": "david-manukyan",
+    "wikipedia": "Дава"
+  },
+  {
+    "slug": "nikolaj-sobolev",
+    "wikipedia": "Соболев, Николай Юрьевич"
+  },
+  {
+    "slug": "anya-pokrov",
+    "wikipedia": "Покров, Аня"
+  },
+  {
+    "slug": "habib",
+    "wikipedia": "Хабиб (певец)"
+  },
+  {
+    "slug": "miya-bojko",
+    "wikipedia": "Mia Boyka"
+  },
+  {
+    "slug": "slava-buster",
+    "wikipedia": "Бустер (стример)"
+  },
+  {
+    "slug": "aleksandr-zubarev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/05/zubchik.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/aleksandr-zubarev/"
+  },
+  {
+    "slug": "alina-levda",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/botanovna-2.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/alina-levda/"
+  },
+  {
+    "slug": "denis-kukoyaka",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/kukoyaka-e1742325654642.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/denis-kukoyaka/"
+  },
+  {
+    "slug": "dmitrij-kravchenko",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/dmitriy-kravchenko.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-kravchenko/"
+  },
+  {
+    "slug": "erik-davidych",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/davidych-e1743599717418.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/erik-davidych/"
+  },
+  {
+    "slug": "mihail-sizokrylov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/06/mihail-aleksandrovich-kuleshov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/kuleshov-mihail-aleksandrovich/"
+  },
+  {
+    "slug": "amiran-sardarov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/08/amiran-sardarov-3.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/amiran-sardarov/"
+  },
+  {
+    "slug": "nikolaj-baskov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/nikolaj_baskov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nikolay-baskov/"
+  },
+  {
+    "slug": "dima-bilan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dima_bilan.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dima-bilan/"
+  },
+  {
+    "slug": "olga-buzova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/buzova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/olga-buzova/"
+  },
+  {
+    "slug": "maksim-galkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/maksim_galkin.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-galkin/"
+  },
+  {
+    "slug": "polina-gagarina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/gagarina-e1739973332558.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/polina-gagarina/"
+  },
+  {
+    "slug": "valeriya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/valeriya.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/valeriya/"
+  },
+  {
+    "slug": "alsu",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/alsu.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/alsu/"
+  },
+  {
+    "slug": "andrej-malahov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/malahov-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/andrey-malahov/"
+  },
+  {
+    "slug": "basta",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/basta-e1739705630967.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/basta/"
+  },
+  {
+    "slug": "anatolij-vasserman",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/vasserman.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anatoliy-vasserman/"
+  },
+  {
+    "slug": "nikas-safronov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/safronov-e1741627116279.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nikas-safronov/"
+  },
+  {
+    "slug": "diana-arbenina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/diana_arbenina.webp",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/diana-arbenina/"
+  },
+  {
+    "slug": "pavel-priluchnyj",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/priluchnyy-e1741537912345.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/pavel-priluchnyy/"
+  },
+  {
+    "slug": "maksim-averin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/averin-maksim-biografiya-aktera.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-averin/"
+  },
+  {
+    "slug": "marina-kravec",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kravets-e1739195004550.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/marina-kravets/"
+  },
+  {
+    "slug": "ekaterina-klimova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/klimova-e1740585277419.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/ekaterina-klimova/"
+  },
+  {
+    "slug": "oksana-akinshina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/oksana-akinshina-biografiya.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/oksana-akinshina/"
+  },
+  {
+    "slug": "konstantin-ivlev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/ivlev-scaled-e1740157720357.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/konstantin-ivlev/"
+  },
+  {
+    "slug": "yura-borisov",
+    "wikipedia": "Борисов, Юра"
+  },
+  {
+    "slug": "sergej-burunov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/burunov-e1740426271828.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-burunov/"
+  },
+  {
+    "slug": "nurlan-saburov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/saburov1-scaled-e1744276882678.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nurlan-saburov/",
+    "zoom": 1.4
+  },
+  {
+    "slug": "irina-dubcova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dubtsova-scaled-e1741016228569.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/irina-dubtsova/"
+  },
+  {
+    "slug": "marina-aleksandrova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/marina-aleksandrova-2.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/marina-aleksandrova/"
+  },
+  {
+    "slug": "dzhigan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dzhigan-e1742992676101.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dzhigan/"
+  },
+  {
+    "slug": "renat-agzamov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/agzamov-e1740817166300.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/renat-agzamov/"
+  },
+  {
+    "slug": "anastasiya-volochkova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/volochkova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anastasiya-volochkova/"
+  },
+  {
+    "slug": "lyubov-aksenova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/aksenova-e1739608127902.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lyubov-aksenova/"
+  },
+  {
+    "slug": "mari-kraimbreri",
+    "wikipedia": "Мари Краймбрери"
+  },
+  {
+    "slug": "lyusya-chebotina",
+    "wikipedia": "Чеботина, Людмила Андреевна"
+  },
+  {
+    "slug": "paulina-andreeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/paulina-andreeva-biografiya.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/paulina-andreeva/"
+  },
+  {
+    "slug": "kseniya-borodina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/kseniya_borodina.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/kseniya-borodina/"
+  },
+  {
+    "slug": "yurij-antonov",
+    "wikipedia": "Антонов, Юрий Михайлович"
+  },
+  {
+    "slug": "ekaterina-andreeva",
+    "wikipedia": "Андреева, Екатерина Сергеевна"
+  },
+  {
+    "slug": "zhanna-friske",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/friske-e1739190332163.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/zhanna-friske/"
+  },
+  {
+    "slug": "bari-alibasov",
+    "wikipedia": "Алибасов, Бари Каримович"
+  },
+  {
+    "slug": "tambi-masaev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/masaev-e1744281549938.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/tambi-masaev/"
+  },
+  {
+    "slug": "guram-amaryan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/amaryang-e1742918392861.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/guram-amaryan/"
+  },
+  {
+    "slug": "vladimir-potanin",
+    "wikipedia": "Потанин, Владимир Олегович"
+  },
+  {
+    "slug": "sergej-galickij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/sergej_galickij.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-nikolaevich-galitskiy/"
+  },
+  {
+    "slug": "igor-rybakov",
+    "wikipedia": "Рыбаков, Игорь Владимирович"
+  },
+  {
+    "slug": "aleksej-mordashov",
+    "wikipedia": "Мордашов, Алексей Александрович"
+  },
+  {
+    "slug": "leonid-mihelson",
+    "wikipedia": "Михельсон, Леонид Викторович"
+  },
+  {
+    "slug": "tatyana-bakalchuk",
+    "wikipedia": "Бакальчук, Татьяна Владимировна"
+  },
+  {
+    "slug": "pavel-durov",
+    "wikipedia": "Дуров, Павел Валерьевич"
+  },
+  {
+    "slug": "arkadij-volozh",
+    "wikipedia": "Волож, Аркадий Юрьевич"
+  },
+  {
+    "slug": "arkadij-novikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/novikov-e1739093392728.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/arkadiy-novikov/"
+  },
+  {
+    "slug": "nikolaj-storonskij",
+    "wikipedia": "Сторонский, Николай Николаевич"
+  },
+  {
+    "slug": "andrej-romanenko",
+    "wikipedia": "Романенко, Андрей Николаевич"
+  },
+  {
+    "slug": "vladimir-melnikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/melnikov-e1740425064987.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vladimir-melnikov/"
+  },
+  {
+    "slug": "oleg-tinkov",
+    "wikipedia": "Тиньков, Олег Юрьевич"
+  },
+  {
+    "slug": "oleg-deripaska",
+    "wikipedia": "Дерипаска, Олег Владимирович"
+  },
+  {
+    "slug": "arkadij-rotenberg",
+    "wikipedia": "Ротенберг, Аркадий Романович"
+  },
+  {
+    "slug": "sergej-brin",
+    "wikipedia": "Брин, Сергей Михайлович"
+  },
+  {
+    "slug": "nataliya-filyova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/fileva.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nataliya-valerevna-filyova/"
+  },
+  {
+    "slug": "anatolij-karachinskij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anatolij_karachinskij.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anatoliy-mihaylovich-karachinskiy/"
+  },
+  {
+    "slug": "andrej-belousov",
+    "wikipedia": "Белоусов, Андрей Рэмович"
+  },
+  {
+    "slug": "tatyana-golikova",
+    "wikipedia": "Голикова, Татьяна Алексеевна"
+  },
+  {
+    "slug": "vladimir-zhirinovskij",
+    "wikipedia": "Жириновский, Владимир Вольфович"
+  },
+  {
+    "slug": "sergej-kirienko",
+    "wikipedia": "Кириенко, Сергей Владиленович"
+  },
+  {
+    "slug": "denis-manturov",
+    "wikipedia": "Мантуров, Денис Валентинович"
+  },
+  {
+    "slug": "aleksandr-novak",
+    "wikipedia": "Новак, Александр Валентинович"
+  },
+  {
+    "slug": "dmitrij-patrushev",
+    "wikipedia": "Патрушев, Дмитрий Николаевич"
+  },
+  {
+    "slug": "sergej-kravcov",
+    "wikipedia": "Кравцов, Сергей Сергеевич"
+  },
+  {
+    "slug": "aleksandr-beglov",
+    "wikipedia": "Беглов, Александр Дмитриевич"
+  },
+  {
+    "slug": "anton-alihanov",
+    "wikipedia": "Алиханов, Антон Андреевич"
+  },
+  {
+    "slug": "vitalij-milonov",
+    "wikipedia": "Милонов, Виталий Валентинович",
+    "gravity": "east"
+  },
+  {
+    "slug": "viktoriya-abramchenko",
+    "wikipedia": "Абрамченко, Виктория Валериевна"
+  },
+  {
+    "slug": "fedor-emelyanenko",
+    "wikipedia": "Емельяненко, Фёдор Владимирович"
+  },
+  {
+    "slug": "elena-isinbaeva",
+    "wikipedia": "Исинбаева, Елена Гаджиевна"
+  },
+  {
+    "slug": "evgenij-plyushchenko",
+    "wikipedia": "Плющенко, Евгений Викторович",
+    "zoom": 3
+  },
+  {
+    "slug": "igor-akinfeev",
+    "wikipedia": "Акинфеев, Игорь Владимирович"
+  },
+  {
+    "slug": "aleksandr-bolshunov",
+    "wikipedia": "Большунов, Александр Александрович"
+  },
+  {
+    "slug": "mirra-andreeva",
+    "wikipedia": "Андреева, Мирра Александровна",
+    "zoom": 1.7
+  },
+  {
+    "slug": "grigorij-perelman",
+    "wikipedia": "Перельман, Григорий Яковлевич",
+    "caption": "Снимок 1993 года: свободных фотографий Григория Перельмана последних лет не существует — он не фотографируется."
+  },
+  {
+    "slug": "vitalij-ginzburg",
+    "wikipedia": "Гинзбург, Виталий Лазаревич"
+  },
+  {
+    "slug": "andrej-zaliznyak",
+    "wikipedia": "Зализняк, Андрей Анатольевич",
+    "gravity": "north"
+  },
+  {
+    "slug": "stanislav-drobyshevskij",
+    "wikipedia": "Дробышевский, Станислав Владимирович"
+  },
+  {
+    "slug": "vladimir-surdin",
+    "wikipedia": "Сурдин, Владимир Георгиевич"
+  },
+  {
+    "slug": "artem-oganov",
+    "wikipedia": "Оганов, Артём Ромаевич"
+  },
+  {
+    "slug": "olga-ladyzhenskaya",
+    "wikipedia": "Ладыженская, Ольга Александровна"
+  },
+  {
+    "slug": "maksim-koncevich",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kontsevich-e1740685408112.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-lvovich-kontsevich/"
+  },
+  {
+    "slug": "genrih-altshuller",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/altshuller-e1738954288859.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/genrih-saulovich-altshuller/"
+  },
+  {
+    "slug": "lyudmila-petranovskaya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/photo_02.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lyudmila-petranovskaya/"
+  },
+  {
+    "slug": "georgij-schedrovickij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/schedrovitskiy.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/georgiy-petrovich-schedrovitskiy/"
+  },
+  {
+    "slug": "mihail-gelfand",
+    "wikipedia": "Гельфанд, Михаил Сергеевич",
+    "gravity": "east"
+  },
+  {
+    "slug": "vyacheslav-fetisov",
+    "wikipedia": "Фетисов, Вячеслав Александрович"
+  },
+  {
+    "slug": "aleksej-yagudin",
+    "wikipedia": "Ягудин, Алексей Константинович"
+  },
+  {
+    "slug": "kamila-valieva",
+    "wikipedia": "Валиева, Камила Валерьевна"
+  },
+  {
+    "slug": "alina-kabaeva",
+    "wikipedia": "Кабаева, Алина Маратовна"
+  },
+  {
+    "slug": "marat-safin",
+    "wikipedia": "Сафин, Марат Мубинович"
+  },
+  {
+    "slug": "svetlana-horkina",
+    "wikipedia": "Хоркина, Светлана Васильевна"
+  },
+  {
+    "slug": "denis-kotikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/07/kotikov-denis-valerevich-1-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/kotikov-denis-valerevich/"
+  },
+  {
+    "slug": "mariya-dugina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/03/mariya-dugina-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/mariya-dugina/"
+  },
+  {
+    "slug": "egorkina-arina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/arina-egorkina-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/egorkina-arina/"
+  },
+  {
+    "slug": "andrej-sokolov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/andrey-sokolov-1.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sokolov-andrey/"
+  },
+  {
+    "slug": "mariya-belyaeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/mariya-belayaeva.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/belyaeva-mariya/"
+  },
+  {
+    "slug": "palageya-krylova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/palageya-krylova-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/palageya-krylova/"
+  },
+  {
+    "slug": "vasilya-hadeeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/11/hadeeva-vasilya-zufarovna.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/hadeeva-vasilya-zufarovna/"
+  },
+  {
+    "slug": "olga-smirnova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/05/smirnova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/smirnova-olga-vyacheslavovna/"
+  },
+  {
+    "slug": "elizaveta-medvedeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/medvedeva1-scaled-e1742831783192.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/medvedeva-elizaveta-andreevna/"
+  },
+  {
+    "slug": "natalya-lapina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/lapina-e1741174155671.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/natalya-lapina/"
+  }
 ]
