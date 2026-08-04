@@ -182,7 +182,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                     // Моноширинными идут только цифры: кириллица в JetBrains Mono
                     // выбивается из набора.
                     value: rating ? (
-                      <Link href="/rejting/">
+                      <Link href="/rejting/" className="link-data">
                         <span className="tabular">{Math.round(rating.attention_index)}</span> ·{' '}
                         <span className="tabular">{rating.rank_in_sphere}</span>-е место
                         {primarySphere ? ` в сфере «${primarySphere.name}»` : ''}

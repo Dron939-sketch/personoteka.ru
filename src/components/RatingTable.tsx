@@ -61,7 +61,9 @@ export function RatingTable({
                 <span className={styles.tagline}>{person.tagline}</span>
               </th>
               <td className={styles.sphereCol}>{sphereName(entry.sphere)}</td>
-              <td className={`tabular ${styles.num}`}>{entry.attention_index.toFixed(1)}</td>
+              <td className={`tabular ${styles.num} ${styles.index}`}>
+                {entry.attention_index.toFixed(1)}
+              </td>
               <td className={`tabular ${styles.num}`}>
                 <Delta value={entry.delta} />
               </td>

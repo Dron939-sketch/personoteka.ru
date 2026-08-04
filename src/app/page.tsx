@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* 4. Индекс внимания: топ-10 */}
       {topRows.length > 0 && (
-        <section className="section section-alt deferred">
+        <section className="section section-data deferred">
           <div className="container">
             <div className={styles.sectionHead}>
               <h2 className="ruled">Индекс внимания: топ-10</h2>
@@ -180,8 +180,8 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* 8. Полоса доверия */}
-      <section className="section section-alt deferred">
+      {/* 8. Полоса доверия — числовая витрина, поэтому холодная секция */}
+      <section className="section section-data deferred">
         <div className="container">
           <dl className={styles.trust}>
             <div>

@@ -1,8 +1,9 @@
+/* Фильтры — служебный инструмент, а не содержание: холодная подложка (§7.2). */
 .panel {
   display: grid;
   gap: var(--sp-4);
   padding: var(--sp-4);
-  background: var(--surface);
+  background: var(--cool-50);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }

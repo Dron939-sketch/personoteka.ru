@@ -1,6 +1,10 @@
+/* Указатель — навигация по данным, поэтому холодная полоса. */
 .wrap {
-  padding-block: var(--sp-4);
-  border-block: 1px solid var(--line);
+  padding: var(--sp-4);
+  margin-block: var(--sp-2);
+  background: var(--cool-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
 }
 
 .list {
@@ -28,9 +32,9 @@
 }
 
 a.letter:hover {
-  border-color: var(--line-strong);
+  border-color: var(--cool-300);
   background: var(--surface);
-  color: var(--ink);
+  color: var(--cool-600);
 }
 
 .current {

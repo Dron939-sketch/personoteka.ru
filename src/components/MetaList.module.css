@@ -32,6 +32,11 @@
   color: var(--accent-700);
 }
 
+/* Ссылка на числовой показатель перебивает латунь: у `.value a` специфичность выше. */
+.value a:global(.link-data) {
+  color: var(--cool-600);
+}
+
 @media (max-width: 480px) {
   .row {
     grid-template-columns: 1fr;

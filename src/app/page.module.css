@@ -1,7 +1,12 @@
 /* Главная — §8.2 */
 
+/*
+ * Герой на холодной подложке: он несёт поиск — служебный инструмент, а не
+ * редакционный текст. Заливка плоская, без градиента (§7.1).
+ */
 .hero {
   padding-block: var(--sp-16) var(--sp-12);
+  background: var(--cool-50);
   border-bottom: 1px solid var(--line);
 }
 
@@ -96,6 +101,12 @@
   font-family: var(--font-serif);
   font-size: var(--h3);
   color: var(--ink);
+}
+
+/* Числа полосы доверия — холодным, как и весь числовой слой.
+   `tabular` — глобальный класс, поэтому :global, иначе имя было бы захешировано. */
+.trust dd:global(.tabular) {
+  color: var(--cool-600);
 }
 
 .trust dd a {
