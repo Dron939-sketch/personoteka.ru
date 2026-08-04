@@ -642,12 +642,6 @@
     "wikipedia": "Хоркина, Светлана Васильевна"
   },
   {
-    "slug": "denis-kotikov",
-    "url": "https://lichnosty.ru/wp-content/uploads/2026/07/kotikov-denis-valerevich-1-scaled.jpg",
-    "license": "архив редакции",
-    "source_url": "https://lichnosty.ru/bio/kotikov-denis-valerevich/"
-  },
-  {
     "slug": "mariya-dugina",
     "url": "https://lichnosty.ru/wp-content/uploads/2026/03/mariya-dugina-2.jpg",
     "license": "архив редакции",
@@ -658,12 +652,6 @@
     "url": "https://lichnosty.ru/wp-content/uploads/2025/12/arina-egorkina-2.jpg",
     "license": "архив редакции",
     "source_url": "https://lichnosty.ru/bio/egorkina-arina/"
-  },
-  {
-    "slug": "andrej-sokolov",
-    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/andrey-sokolov-1.jpg",
-    "license": "архив редакции",
-    "source_url": "https://lichnosty.ru/bio/sokolov-andrey/"
   },
   {
     "slug": "mariya-belyaeva",
@@ -700,5 +688,55 @@
     "url": "https://lichnosty.ru/wp-content/uploads/2025/03/lapina-e1741174155671.jpg",
     "license": "архив редакции",
     "source_url": "https://lichnosty.ru/bio/natalya-lapina/"
+  },
+  {
+    "slug": "aleksej-nemov",
+    "wikipedia": "Немов, Алексей Юрьевич"
+  },
+  {
+    "slug": "irina-sluckaya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/slutskaya-e1740586356204.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/irina-slutskaya/"
+  },
+  {
+    "slug": "mariya-kiseleva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kiseleva-e1740424092253.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/mariya-kiseleva/"
+  },
+  {
+    "slug": "sofya-velikaya",
+    "wikipedia": "Великая, Софья Александровна"
+  },
+  {
+    "slug": "elena-vyalbe",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/vyalbe-scaled-e1739091145948.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/elena-vyalbe/"
+  },
+  {
+    "slug": "nikolaj-valuev",
+    "wikipedia": "Валуев, Николай Сергеевич"
+  },
+  {
+    "slug": "andrej-arshavin",
+    "wikipedia": "Аршавин, Андрей Сергеевич"
+  },
+  {
+    "slug": "andrej-kirilenko",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kirilenko-e1739293927963.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/andrey-kirilenko/"
+  },
+  {
+    "slug": "roman-kostomarov",
+    "wikipedia": "Костомаров, Роман Сергеевич"
+  },
+  {
+    "slug": "evgenij-plyuschenko",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/evgenij_plyushchenko.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgenij-plyushchenko/"
   }
 ]
