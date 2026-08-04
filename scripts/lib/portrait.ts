@@ -3,6 +3,7 @@ import path from 'node:path'
 
 import sharp from 'sharp'
 
+import { lowerFirst } from '../../src/lib/format'
 import type { Person, Photo } from '../../src/lib/types'
 
 /**
@@ -164,7 +165,7 @@ export function attachPortrait(
     portrait: true,
     width: WIDTH,
     height: HEIGHT,
-    alt: `Портрет: ${person.display_name}, ${person.tagline.toLowerCase()}`,
+    alt: `Портрет: ${person.display_name}, ${lowerFirst(person.tagline)}`,
     ...(caption ? { caption } : {}),
     ...(rights.author ? { author: rights.author } : {}),
     license: rights.license,

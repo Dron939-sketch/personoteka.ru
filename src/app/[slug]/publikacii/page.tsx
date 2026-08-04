@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { PublicationList } from '@/components/PublicationList'
 import { getPerson, getPersons } from '@/lib/content'
+import { lowerFirst } from '@/lib/format'
 import { SITE } from '@/lib/site'
 
 /** Подстраница персоны «Публикации и упоминания» — §4.1. */
@@ -57,7 +58,7 @@ export default async function PublicationsPage({
 
       <PageHeader
         title="Публикации и упоминания"
-        lead={`${person.display_name} — ${person.tagline.toLowerCase()}.`}
+        lead={`${person.display_name} — ${lowerFirst(person.tagline)}.`}
         meta={
           <Link href={`/${person.slug}/`}>← Вернуться к биографии</Link>
         }
