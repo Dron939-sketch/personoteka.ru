@@ -506,5 +506,30 @@
  {
   "slug": "aleksandr-novak",
   "wikipedia": "Новак, Александр Валентинович"
+ },
+ {
+  "slug": "dmitrij-patrushev",
+  "wikipedia": "Патрушев, Дмитрий Николаевич"
+ },
+ {
+  "slug": "sergej-kravcov",
+  "wikipedia": "Кравцов, Сергей Сергеевич"
+ },
+ {
+  "slug": "aleksandr-beglov",
+  "wikipedia": "Беглов, Александр Дмитриевич"
+ },
+ {
+  "slug": "anton-alihanov",
+  "wikipedia": "Алиханов, Антон Андреевич"
+ },
+ {
+  "slug": "vitalij-milonov",
+  "wikipedia": "Милонов, Виталий Валентинович",
+  "gravity": "east"
+ },
+ {
+  "slug": "viktoriya-abramchenko",
+  "wikipedia": "Абрамченко, Виктория Валериевна"
  }
 ]
