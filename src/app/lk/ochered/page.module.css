@@ -1,0 +1,115 @@
+.filters {
+  display: grid;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  margin-bottom: var(--sp-6);
+  background: var(--cool-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-3);
+  font-size: var(--small);
+}
+
+.group a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.group a:hover {
+  color: var(--accent-700);
+  text-decoration: underline;
+}
+
+.on {
+  color: var(--ink) !important;
+  box-shadow: inset 0 -2px 0 var(--cool-600);
+}
+
+.scroller {
+  overflow-x: auto;
+  padding-bottom: var(--sp-24);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--small);
+}
+
+.caption {
+  margin-bottom: var(--sp-3);
+  text-align: left;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.table th,
+.table td {
+  padding: var(--sp-3);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: var(--cool-100);
+  border-bottom: 1px solid var(--cool-300);
+  font-size: var(--caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.person {
+  font-weight: 500;
+}
+
+.full {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.slug {
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.sphere {
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.status {
+  display: inline-block;
+  padding: 2px var(--sp-2);
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  font-size: var(--caption);
+  white-space: nowrap;
+}
+
+.published {
+  border-color: color-mix(in srgb, var(--success) 40%, transparent);
+  color: var(--success);
+}
+
+.drafting {
+  border-color: color-mix(in srgb, var(--cool-600) 40%, transparent);
+  color: var(--cool-600);
+}
+
+.blocked {
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
+  color: var(--warning);
+}

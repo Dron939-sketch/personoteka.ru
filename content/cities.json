@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "vladivostok",
+    "name": "Владивосток",
+    "name_prepositional": "Владивостоке",
+    "region": "Приморский край"
+  },
+  {
+    "slug": "ekaterinburg",
+    "name": "Екатеринбург",
+    "name_prepositional": "Екатеринбурге",
+    "region": "Свердловская область"
+  },
+  {
+    "slug": "kazan",
+    "name": "Казань",
+    "name_prepositional": "Казани",
+    "region": "Татарстан"
+  },
+  {
+    "slug": "krasnodar",
+    "name": "Краснодар",
+    "name_prepositional": "Краснодаре",
+    "region": "Краснодарский край"
+  },
+  {
+    "slug": "moskva",
+    "name": "Москва",
+    "name_prepositional": "Москве",
+    "region": "Москва"
+  },
+  {
+    "slug": "nizhnij-novgorod",
+    "name": "Нижний Новгород",
+    "name_prepositional": "Нижнем Новгороде",
+    "region": "Нижегородская область"
+  },
+  {
+    "slug": "novorossijsk",
+    "name": "Новороссийск",
+    "name_prepositional": "Новороссийске",
+    "region": "Краснодарский край"
+  },
+  {
+    "slug": "novosibirsk",
+    "name": "Новосибирск",
+    "name_prepositional": "Новосибирске",
+    "region": "Новосибирская область"
+  },
+  {
+    "slug": "omsk",
+    "name": "Омск",
+    "name_prepositional": "Омске",
+    "region": "Омская область"
+  },
+  {
+    "slug": "perm",
+    "name": "Пермь",
+    "name_prepositional": "Перми",
+    "region": "Пермский край"
+  },
+  {
+    "slug": "rostov-na-donu",
+    "name": "Ростов-на-Дону",
+    "name_prepositional": "Ростове-на-Дону",
+    "region": "Ростовская область"
+  },
+  {
+    "slug": "samara",
+    "name": "Самара",
+    "name_prepositional": "Самаре",
+    "region": "Самарская область"
+  },
+  {
+    "slug": "sankt-peterburg",
+    "name": "Санкт-Петербург",
+    "name_prepositional": "Санкт-Петербурге",
+    "region": "Санкт-Петербург"
+  },
+  {
+    "slug": "sochi",
+    "name": "Сочи",
+    "name_prepositional": "Сочи",
+    "region": "Краснодарский край"
+  },
+  {
+    "slug": "ufa",
+    "name": "Уфа",
+    "name_prepositional": "Уфе",
+    "region": "Башкортостан"
+  },
+  {
+    "slug": "chelyabinsk",
+    "name": "Челябинск",
+    "name_prepositional": "Челябинске",
+    "region": "Челябинская область"
+  }
+]

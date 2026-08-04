@@ -1,0 +1,25 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--ink);
+}
+
+.mark {
+  flex: none;
+  color: var(--ink-2);
+}
+
+.word {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .word {
+    font-size: 1rem;
+  }
+}

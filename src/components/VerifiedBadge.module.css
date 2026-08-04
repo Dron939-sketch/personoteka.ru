@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 3px var(--sp-2);
+  border: 1px solid color-mix(in srgb, var(--verified) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--verified) 10%, transparent);
+  color: var(--verified);
+  font-size: var(--caption);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.compact {
+  padding: 1px var(--sp-1);
+  gap: 2px;
+}
+
+.compact span:first-of-type {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

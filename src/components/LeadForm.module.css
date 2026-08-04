@@ -1,0 +1,133 @@
+.form {
+  display: grid;
+  gap: var(--sp-4);
+  max-width: 34rem;
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--h3);
+}
+
+.field {
+  display: grid;
+  gap: var(--sp-1);
+}
+
+.label {
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.field input,
+.field textarea {
+  padding: var(--sp-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: var(--paper);
+  font-size: var(--body);
+  resize: vertical;
+}
+
+.field input:invalid:not(:placeholder-shown) {
+  border-color: var(--danger);
+}
+
+.consents {
+  display: grid;
+  gap: var(--sp-3);
+  margin: 0;
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--paper);
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: var(--sp-3);
+  align-items: start;
+  font-size: var(--small);
+  line-height: 1.5;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-600);
+}
+
+.note {
+  margin: 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.submit {
+  justify-self: start;
+  padding: var(--sp-3) var(--sp-8);
+  border: 0;
+  border-radius: var(--radius-s);
+  background: var(--accent-600);
+  color: #fff;
+  font-size: var(--body);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+[data-theme='dark'] .submit {
+  color: #14181e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .submit {
+    color: #14181e;
+  }
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-700);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.error {
+  margin: 0;
+  padding: var(--sp-3);
+  border-radius: var(--radius-s);
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+  color: var(--danger);
+  font-size: var(--small);
+}
+
+.done {
+  max-width: 34rem;
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--success) 40%, transparent);
+  border-radius: var(--radius);
+}
+
+.doneTitle {
+  margin: 0 0 var(--sp-2);
+  font-family: var(--font-serif);
+  font-size: var(--h3);
+  color: var(--ink);
+}
+
+.done p:last-child {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: var(--small);
+}

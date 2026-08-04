@@ -1,0 +1,60 @@
+name: Портреты персон
+
+# Скачивание портретов вынесено сюда, потому что среде разработки закрыт
+# доступ в сеть: раннер GitHub Actions ходит куда угодно, а результат
+# возвращается в репозиторий обычным коммитом.
+#
+# Запуск ручной: наполнение — редакционное действие, оно не должно происходить
+# само по себе при каждом пуше.
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Перекачать даже тех, у кого портрет уже есть
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Скачать и обработать портреты
+        run: npx tsx scripts/fetch-photos.ts ${{ inputs.force && '--force' || '' }}
+
+      - name: Проверить целостность контента
+        run: npm run check:content
+
+      - name: Обновить индекс поиска
+        run: npm run build:search
+
+      - name: Зафиксировать результат
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Изменений нет — новых портретов не появилось."
+            exit 0
+          fi
+          git config user.name "personoteka-bot"
+          git config user.email "bot@personoteka.ru"
+          git add public/media content/persons public/search-index.json
+          git commit -m "Портреты персон по списку источников
+
+          Скачано и обработано автоматически: кадр 4:5, 1200×1500, единая
+          коррекция. Автор и лицензия взяты из первоисточника, а не переписаны
+          руками — переписанная атрибуция при свободной лицензии означала бы
+          нарушение её условий."
+          git push

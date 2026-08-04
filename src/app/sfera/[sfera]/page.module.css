@@ -1,0 +1,21 @@
+.cityNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-3);
+  padding-block: var(--sp-4);
+  border-block: 1px solid var(--line);
+  font-size: var(--small);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-4);
+  padding-block: var(--sp-8);
+}
+
+.seo {
+  padding-block: var(--sp-8) var(--sp-16);
+  border-top: 1px solid var(--line);
+}

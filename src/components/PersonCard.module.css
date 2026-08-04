@@ -1,0 +1,150 @@
+.card {
+  position: relative;
+  display: grid;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-1);
+}
+
+.card:focus-within {
+  border-color: var(--cool-600);
+}
+
+.media {
+  display: block;
+  line-height: 0;
+}
+
+.media :global(img),
+.media > div {
+  border: 0;
+  border-radius: 0;
+}
+
+/*
+ * Карточки в ряду выравниваются по самой высокой, и без явных строк grid отбирал
+ * лишнюю высоту у портрета: у соседних карточек монограммы получались разного
+ * размера. `auto 1fr` закрепляет за портретом его пропорцию 4:5, а остаток
+ * отдаёт тексту.
+ */
+.m {
+  grid-template-rows: auto 1fr;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-4);
+}
+
+.sphere {
+  margin: 0;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.link {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.link::after {
+  /* Растянутая область клика — вся карточка. */
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.link:hover {
+  color: var(--accent-700);
+}
+
+.tagline {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.lead {
+  margin: var(--sp-2) 0 0;
+  font-size: var(--small);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: var(--sp-2) 0 0;
+  min-height: 22px;
+}
+
+.index {
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+/* ---------- XL: витрина главной ---------- */
+
+.xl {
+  grid-template-columns: minmax(0, 420px) 1fr;
+  align-items: stretch;
+}
+
+.xl .body {
+  padding: var(--sp-8);
+  justify-content: center;
+}
+
+.xl .name {
+  font-size: var(--h2);
+}
+
+.xl .tagline {
+  font-size: var(--body);
+}
+
+@media (max-width: 767px) {
+  .xl {
+    grid-template-columns: 1fr;
+  }
+
+  .xl .body {
+    padding: var(--sp-6);
+  }
+}
+
+/* ---------- S: компактная строка списка ---------- */
+
+.s {
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  border-radius: var(--radius-s);
+}
+
+.s .body {
+  padding: var(--sp-3) var(--sp-4);
+  gap: 0;
+}
+
+.s .name {
+  font-size: var(--body);
+}
+
+.s .lead {
+  display: none;
+}

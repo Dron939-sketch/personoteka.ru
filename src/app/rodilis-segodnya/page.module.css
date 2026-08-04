@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-4);
+  padding-block: var(--sp-8) var(--sp-16);
+}
+
+.age {
+  margin: var(--sp-2) 0 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+  text-align: center;
+}

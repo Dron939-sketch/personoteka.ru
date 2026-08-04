@@ -1,0 +1,45 @@
+.list {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: var(--sp-4);
+  padding-block: var(--sp-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.label {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.value {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink);
+}
+
+.value a {
+  color: var(--accent-700);
+}
+
+/* Ссылка на числовой показатель перебивает латунь: у `.value a` специфичность выше. */
+.value a:global(.link-data) {
+  color: var(--cool-600);
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

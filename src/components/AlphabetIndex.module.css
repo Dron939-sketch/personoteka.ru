@@ -1,0 +1,49 @@
+/* Указатель — навигация по данным, поэтому холодная полоса. */
+.wrap {
+  padding: var(--sp-4);
+  margin-block: var(--sp-2);
+  background: var(--cool-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding-inline: var(--sp-1);
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  font-family: var(--font-serif);
+  font-size: var(--body);
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+a.letter:hover {
+  border-color: var(--cool-300);
+  background: var(--surface);
+  color: var(--cool-600);
+}
+
+.current {
+  background: var(--accent-100);
+  border-color: color-mix(in srgb, var(--accent-500) 40%, transparent);
+  color: var(--ink);
+}
+
+.empty {
+  color: var(--line-strong);
+  cursor: default;
+}

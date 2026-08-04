@@ -1,0 +1,15 @@
+.credit {
+  margin: var(--sp-2) 0 0;
+  font-size: var(--caption);
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+
+.credit a {
+  color: var(--ink-3);
+  text-decoration-thickness: 1px;
+}
+
+.credit a:hover {
+  color: var(--accent-700);
+}

@@ -1,0 +1,38 @@
+{
+  "name": "personoteka",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "description": "Персонотека — биографический портал (personoteka.ru)",
+  "scripts": {
+    "dev": "npm run build:search && next dev",
+    "prebuild": "npm run build:search",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "build:search": "tsx scripts/build-search-index.ts",
+    "rating": "tsx scripts/compute-rating.ts",
+    "check:content": "tsx scripts/check-content.ts",
+    "check:contrast": "tsx scripts/check-contrast.ts",
+    "check": "npm run check:content && npm run check:contrast && npm run typecheck",
+    "queue": "tsx scripts/build-queue.ts",
+    "photo": "tsx scripts/add-photo.ts",
+    "icons": "tsx scripts/make-icons.ts",
+    "photos:fetch": "tsx scripts/fetch-photos.ts"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.5.1",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "next": "16.3.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "server-only": "^0.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
