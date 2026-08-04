@@ -400,5 +400,31 @@
   "url": "https://lichnosty.ru/wp-content/uploads/2025/03/amaryang-e1742918392861.jpg",
   "license": "архив редакции",
   "source_url": "https://lichnosty.ru/bio/guram-amaryan/"
+ },
+ {
+  "slug": "vladimir-potanin",
+  "wikipedia": "Потанин, Владимир Олегович"
+ },
+ {
+  "slug": "sergej-galickij",
+  "url": "https://lichnosty.ru/wp-content/uploads/2024/06/sergej_galickij.jpg",
+  "license": "архив редакции",
+  "source_url": "https://lichnosty.ru/bio/sergey-nikolaevich-galitskiy/"
+ },
+ {
+  "slug": "igor-rybakov",
+  "wikipedia": "Рыбаков, Игорь Владимирович"
+ },
+ {
+  "slug": "aleksej-mordashov",
+  "wikipedia": "Мордашов, Алексей Александрович"
+ },
+ {
+  "slug": "leonid-mihelson",
+  "wikipedia": "Михельсон, Леонид Викторович"
+ },
+ {
+  "slug": "tatyana-bakalchuk",
+  "wikipedia": "Бакальчук, Татьяна Владимировна"
  }
 ]
