@@ -531,5 +531,31 @@
  {
   "slug": "viktoriya-abramchenko",
   "wikipedia": "Абрамченко, Виктория Валериевна"
+ },
+ {
+  "slug": "fedor-emelyanenko",
+  "wikipedia": "Емельяненко, Фёдор Владимирович"
+ },
+ {
+  "slug": "elena-isinbaeva",
+  "wikipedia": "Исинбаева, Елена Гаджиевна"
+ },
+ {
+  "slug": "evgenij-plyushchenko",
+  "wikipedia": "Плющенко, Евгений Викторович",
+  "zoom": 3
+ },
+ {
+  "slug": "igor-akinfeev",
+  "wikipedia": "Акинфеев, Игорь Владимирович"
+ },
+ {
+  "slug": "aleksandr-bolshunov",
+  "wikipedia": "Большунов, Александр Александрович"
+ },
+ {
+  "slug": "mirra-andreeva",
+  "wikipedia": "Андреева, Мирра Александровна",
+  "zoom": 1.7
  }
 ]
