@@ -468,11 +468,11 @@
     "status": "queued"
   },
   {
-    "slug": "kravec-marina",
+    "slug": "marina-kravec",
     "source_name": "Марина Кравец",
     "full_name": "Марина Кравец",
-    "display_name": "Кравец Марина",
-    "name_latin": "Kravec Marina",
+    "display_name": "Марина Кравец",
+    "name_latin": "Marina Kravec",
     "sphere": "znamenitosti",
     "status": "queued"
   },
@@ -1629,11 +1629,11 @@
     "status": "queued"
   },
   {
-    "slug": "levda-alina",
+    "slug": "alina-levda",
     "source_name": "Алина Левда",
     "full_name": "Алина Левда",
-    "display_name": "Левда Алина",
-    "name_latin": "Levda Alina",
+    "display_name": "Алина Левда",
+    "name_latin": "Alina Levda",
     "sphere": "blogery",
     "status": "queued"
   },
