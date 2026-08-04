@@ -24,33 +24,46 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
+import sharp from 'sharp'
+
 import { attachPortrait, isFreeLicense, makePortrait, type Rights } from './lib/portrait'
 import type { Person } from '../src/lib/types'
 
-interface CommonsSource {
+interface BaseSource {
   slug: string
-  commons: string
   caption?: string
+  /**
+   * Как кадрировать. По умолчанию `attention` — sharp сам ищет значимую область,
+   * и для портрета это почти всегда лицо. На широких кадрах он ошибается:
+   * на снимке с пресс-конференции «вниманием» оказались микрофоны, а лицо
+   * ушло за границу. Тогда помогает `centre`, `north`, `west`, `east`.
+   */
+  gravity?: string
+}
+interface CommonsSource extends BaseSource {
+  commons: string
 }
 /** Название статьи в русской Википедии — самый удобный вход: по нему находится
  *  элемент Викиданных, а у него свойство P18 «изображение» с основным портретом. */
-interface WikipediaSource {
-  slug: string
+interface WikipediaSource extends BaseSource {
   wikipedia: string
-  caption?: string
 }
-interface DirectSource {
-  slug: string
+interface DirectSource extends BaseSource {
   url: string
   author?: string
   license: string
   source_url?: string
-  caption?: string
 }
 type Source = CommonsSource | WikipediaSource | DirectSource
 
 const root = process.cwd()
 const force = process.argv.includes('--force')
+
+function position(gravity?: string): string | number {
+  if (!gravity || gravity === 'attention') return sharp.strategy.attention
+  if (gravity === 'entropy') return sharp.strategy.entropy
+  return gravity
+}
 
 /** Снимает разметку вики из полей атрибуции: там часто приходит HTML со ссылками. */
 function stripMarkup(value: string): string {
@@ -137,7 +150,29 @@ async function searchWikipedia(query: string): Promise<string | undefined> {
  * P18 — это выбранный сообществом основной портрет персоны, поэтому кадр
  * почти всегда пригоден, а имя файла не приходится угадывать.
  */
-async function resolveViaWikipedia(title: string): Promise<string> {
+/**
+ * Найденная поиском статья — про того же человека?
+ *
+ * Поиск возвращает ближайшее совпадение, а не точное: по запросу
+ * «Ивлеева, Анастасия Владимировна» он однажды выдал «Гордеева, Катерина
+ * Владимировна» — совпало отчество. Портрет чужого человека на биографии
+ * хуже, чем отсутствие портрета, поэтому здесь требуется, чтобы в заголовке
+ * нашлись все значимые слова отображаемого имени: и имя, и фамилия.
+ *
+ * Проверка нарочно строгая. Она отклонит и верную статью, названную иначе
+ * («Макс +100500» вместо «Максим Голополосов»), — такие случаи решаются
+ * точным названием статьи или прямым указанием файла в списке источников.
+ */
+function titleMatchesPerson(title: string, displayName: string): boolean {
+  const haystack = title.toLowerCase()
+  return displayName
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((word) => word.length >= 4)
+    .every((word) => haystack.includes(word))
+}
+
+async function resolveViaWikipedia(title: string, displayName: string): Promise<string> {
   let qid = await wikibaseItem(title)
   if (!qid) {
     // Точное название статьи угадать трудно: отчество, уточнение в скобках,
@@ -145,6 +180,12 @@ async function resolveViaWikipedia(title: string): Promise<string> {
     // редактору достаточно написать имя так, как его знают.
     const found = await searchWikipedia(title)
     if (!found) throw new Error(`в Википедии не нашлось статьи по запросу «${title}»`)
+    if (!titleMatchesPerson(found, displayName)) {
+      throw new Error(
+        `поиск по запросу «${title}» привёл к статье «${found}» — она не подтверждается ` +
+          `именем «${displayName}». Укажите точное название статьи или файл на Викискладе`,
+      )
+    }
     console.log(`  «${title}» → статья «${found}»`)
     qid = await wikibaseItem(found)
   }
@@ -208,7 +249,9 @@ async function main() {
 
       if ('commons' in source || 'wikipedia' in source) {
         const title =
-          'commons' in source ? source.commons : await resolveViaWikipedia(source.wikipedia)
+          'commons' in source
+            ? source.commons
+            : await resolveViaWikipedia(source.wikipedia, person.display_name)
         const info = await fetchCommons(title)
         if (!info.license) throw new Error('Викисклад не отдал лицензию')
         if (!isFreeLicense(info.license)) {
@@ -233,11 +276,19 @@ async function main() {
         }
       }
 
-      const result = await makePortrait(buffer, source.slug, root)
+      const result = await makePortrait(buffer, source.slug, root, position(source.gravity))
       attachPortrait(personPath, source.slug, rights, source.caption)
       if (result.upscaled) {
         problems.push(
           `${source.slug}: оригинал ${result.sourceWidth}×${result.sourceHeight} меньше 1200×1500 — портрет растянут`,
+        )
+      }
+      // Из широкого кадра портрет 4:5 вырезается по горизонтали, и автоматика
+      // промахивается чаще всего именно тут. Такой кадр надо посмотреть глазами.
+      if (!source.gravity && result.sourceWidth > result.sourceHeight) {
+        problems.push(
+          `${source.slug}: исходник горизонтальный (${result.sourceWidth}×${result.sourceHeight}) — ` +
+            'проверьте кадр, при промахе задайте gravity',
         )
       }
       done += 1

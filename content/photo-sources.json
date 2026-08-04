@@ -15,12 +15,18 @@
   { "slug": "nikolaj-drozdov", "wikipedia": "Дроздов, Николай Николаевич" },
 
   { "slug": "yurij-dud", "wikipedia": "Дудь, Юрий Александрович" },
-  { "slug": "anastasiya-ivleeva", "wikipedia": "Ивлеева, Анастасия Владимировна" },
-  { "slug": "anton-lapenko", "wikipedia": "Антон Лапенко" },
+  { "slug": "anton-lapenko", "wikipedia": "Лапенко, Антон Вячеславович" },
   { "slug": "sergej-druzhko", "wikipedia": "Дружко, Сергей Евгеньевич" },
-  { "slug": "sasha-spilberg", "wikipedia": "Саша Спилберг" },
-  { "slug": "maksim-golopolosov", "wikipedia": "Максим Голополосов" },
+  { "slug": "dmitrij-kuplinov", "wikipedia": "Куплинов, Дмитрий Алексеевич" },
   { "slug": "valentin-petuhov", "wikipedia": "Wylsacom" },
-  { "slug": "dmitrij-kuplinov", "wikipedia": "Куплинов, Дмитрий" },
-  { "slug": "amiran-sardarov", "wikipedia": "Амиран Сардаров" }
+
+  {
+    "slug": "sasha-spilberg",
+    "wikipedia": "Спилберг, Саша",
+    "gravity": "centre"
+  },
+  {
+    "slug": "maksim-golopolosov",
+    "commons": "File:Maksim Golopolosov.jpg"
+  }
 ]
