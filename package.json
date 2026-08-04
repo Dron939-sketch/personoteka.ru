@@ -20,7 +20,8 @@
     "check": "npm run check:content && npm run check:contrast && npm run typecheck",
     "queue": "tsx scripts/build-queue.ts",
     "photo": "tsx scripts/add-photo.ts",
-    "icons": "tsx scripts/make-icons.ts"
+    "icons": "tsx scripts/make-icons.ts",
+    "photos:fetch": "tsx scripts/fetch-photos.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
