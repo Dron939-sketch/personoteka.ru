@@ -19,7 +19,10 @@ import styles from './page.module.css'
  * вынесенный в статическую SEO-страницу (§8.3).
  */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 /** Рубрики, где промо-полоса Лектория уместна по теме. */
 const PROMO_SPHERES = new Set(['obrazovanie', 'psihologiya'])
