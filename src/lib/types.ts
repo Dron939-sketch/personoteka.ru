@@ -10,7 +10,7 @@
  * обязательства перед плательщиком, и мерить ими редакционный материал нельзя.
  * Рекламы на таких страницах нет, как и на платных.
  */
-export type PersonPlan = 'editorial' | 'base' | 'extended' | 'dossier'
+export type PersonPlan = 'editorial' | 'base' | 'agency' | 'dossier'
 export type PersonStatus = 'draft' | 'review' | 'published' | 'hidden'
 
 export interface EducationBlock {

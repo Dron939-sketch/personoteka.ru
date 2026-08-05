@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function PlacementPage() {
   const examples = getPersons()
-    .filter((p) => p.plan === 'extended' || p.plan === 'base')
+    .filter((p) => p.plan === 'agency' || p.plan === 'base')
     .slice(0, 3)
 
   return (
@@ -156,6 +156,16 @@ export default function PlacementPage() {
             <p>
               Нет. Значок ставится только после сверки документов: личность, должность,
               образование, награды. Отдельно от проверки он не продаётся.
+            </p>
+          </details>
+          <details>
+            <summary>Мы агентство и ведём несколько клиентов. Как удобнее?</summary>
+            <p>
+              Подпиской: 25 000 ₽ в месяц, до десяти биографий, публикация из кабинета
+              агентства по шаблону портала, общий счёт и закрывающие документы. Правки
+              опубликованных страниц лимит не расходуют, а материал, снятый по
+              редполитике, возвращает место в лимит. Условия — на странице{' '}
+              <Link href="/tarify/">тарифов</Link>.
             </p>
           </details>
           <details>

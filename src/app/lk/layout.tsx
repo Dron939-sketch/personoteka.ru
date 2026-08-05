@@ -11,6 +11,7 @@ export default function LkLayout({ children }: { children: React.ReactNode }) {
       <div className={styles.bar}>
         <nav className={styles.nav} aria-label="Разделы кабинета">
           <Link href="/lk/">Обзор</Link>
+          <Link href="/lk/zayavki/">Заявки и запросы</Link>
           <Link href="/lk/ochered/">Очередь</Link>
           <Link href="/lk/kachestvo/">Качество карточек</Link>
         </nav>
