@@ -627,7 +627,7 @@
     "display_name": "Владимир Плохов",
     "name_latin": "Vladimir Plohov",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "nikolaj-drozdov",
@@ -663,7 +663,7 @@
     "display_name": "Евгений Кунин",
     "name_latin": "Evgenij Kunin",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "maksim-koncevich",
@@ -681,7 +681,7 @@
     "display_name": "Милица Нечкина",
     "name_latin": "Milica Nechkina",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vladimir-surdin",
@@ -699,7 +699,7 @@
     "display_name": "Валентин Кумарин",
     "name_latin": "Valentin Kumarin",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "valentin-gaponcev",
@@ -708,7 +708,7 @@
     "display_name": "Валентин Гапонцев",
     "name_latin": "Valentin Gaponcev",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "artem-oganov",
@@ -735,7 +735,7 @@
     "display_name": "Евгений Сатановский",
     "name_latin": "Evgenij Satanovskij",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "viktor-shatalov",
@@ -744,7 +744,7 @@
     "display_name": "Виктор Шаталов",
     "name_latin": "Viktor Shatalov",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "grigorij-perelman",
@@ -762,7 +762,7 @@
     "display_name": "Борис Величковский",
     "name_latin": "Boris Velichkovskij",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "genrih-altshuller",
@@ -807,7 +807,7 @@
     "display_name": "Владимир Коровин",
     "name_latin": "Vladimir Korovin",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "ivan-hickov",
@@ -816,7 +816,7 @@
     "display_name": "Иван Хицков",
     "name_latin": "Ivan Hickov",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "farman-salmanov",
@@ -825,7 +825,7 @@
     "display_name": "Фарман Салманов",
     "name_latin": "Farman Salmanov",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "iosif-sternin",
@@ -834,7 +834,7 @@
     "display_name": "Иосиф Стернин",
     "name_latin": "Iosif Sternin",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "valerij-artyuhov",
@@ -843,7 +843,7 @@
     "display_name": "Валерий Артюхов",
     "name_latin": "Valerij Artyuhov",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vitalij-ginzburg",
@@ -861,7 +861,7 @@
     "display_name": "Людмила Петерсон",
     "name_latin": "Lyudmila Peterson",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-sergeev",
@@ -870,7 +870,7 @@
     "display_name": "Сергей Сергеев",
     "name_latin": "Sergej Sergeev",
     "sphere": "obrazovanie",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "andrej-mejster",
