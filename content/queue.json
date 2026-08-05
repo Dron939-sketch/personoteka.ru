@@ -1095,7 +1095,7 @@
     "display_name": "Лев Деньгов",
     "name_latin": "Lev Dengov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vasilij-palatkin",
@@ -1131,7 +1131,7 @@
     "display_name": "Борис Листов",
     "name_latin": "Boris Listov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "migel-markaryanc",
@@ -1248,7 +1248,7 @@
     "display_name": "Антон Белов",
     "name_latin": "Anton Belov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "andrej-romanenko",
@@ -1392,7 +1392,7 @@
     "display_name": "Наталия Филёва",
     "name_latin": "Nataliya Fileva",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-galickij",
