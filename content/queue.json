@@ -1665,6 +1665,78 @@
     "status": "published"
   },
   {
+    "slug": "vlad-bumaga",
+    "source_name": "Влад Бумага",
+    "full_name": "Влад Бумага",
+    "display_name": "Влад Бумага",
+    "name_latin": "Vlad Bumaga",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-bazhenov",
+    "source_name": "Евгений Баженов",
+    "full_name": "Евгений Баженов",
+    "display_name": "Евгений Баженов",
+    "name_latin": "Evgenij Bazhenov",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "karina-kross",
+    "source_name": "Карина Кросс",
+    "full_name": "Карина Кросс",
+    "display_name": "Карина Кросс",
+    "name_latin": "Karina Kross",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-puchkov",
+    "source_name": "Дмитрий Пучков",
+    "full_name": "Дмитрий Пучков",
+    "display_name": "Дмитрий Пучков",
+    "name_latin": "Dmitrij Puchkov",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "gusejn-gasanov",
+    "source_name": "Гусейн Гасанов",
+    "full_name": "Гусейн Гасанов",
+    "display_name": "Гусейн Гасанов",
+    "name_latin": "Gusejn Gasanov",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "eldar-dzharahov",
+    "source_name": "Эльдар Джарахов",
+    "full_name": "Эльдар Джарахов",
+    "display_name": "Эльдар Джарахов",
+    "name_latin": "Eldar Dzharahov",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "valya-karnaval",
+    "source_name": "Валя Карнавал",
+    "full_name": "Валя Карнавал",
+    "display_name": "Валя Карнавал",
+    "name_latin": "Valya Karnaval",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "artur-babich",
+    "source_name": "Артур Бабич",
+    "full_name": "Артур Бабич",
+    "display_name": "Артур Бабич",
+    "name_latin": "Artur Babich",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
     "slug": "denis-kotikov",
     "source_name": "Котиков Денис Валерьевич",
     "full_name": "Котиков Денис Валерьевич",
