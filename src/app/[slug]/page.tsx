@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { AdDisclosure, AdSlot } from '@/components/AdSlot'
+import { AdDisclosure } from '@/components/AdSlot'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CTAStrip } from '@/components/CTAStrip'
 import { FactCards } from '@/components/FactCards'
@@ -257,8 +257,6 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                   {section.content}
                 </section>
               ))}
-
-              <AdSlot plan={person.plan} />
 
               {/* ---------- Подпись редакции (§3.2, §10.3) ---------- */}
               <footer className={styles.colophon}>

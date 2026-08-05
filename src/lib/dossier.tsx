@@ -138,8 +138,6 @@ export interface DossierInput {
 export async function renderDossier(input: DossierInput): Promise<Buffer> {
   const { person, spheres, city, birthPlace, rating } = input
   const url = `${SITE.url}/${person.slug}/`
-  // Фирменный бланк — признак платного тарифа (§6.3).
-  const branded = person.plan !== 'free'
 
   const initials = person.display_name
     .split(/\s+/)
@@ -177,12 +175,11 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
       creator={SITE.name}
     >
       <Page size="A4" style={styles.page}>
-        {branded && (
-          <View style={styles.header}>
-            <View style={styles.headerRule} />
-            <Text style={styles.headerText}>{SITE.name.toUpperCase()}</Text>
-          </View>
-        )}
+        {/* Фирменный бланк — на всех досье: бесплатного тарифа больше нет (§6.3). */}
+        <View style={styles.header}>
+          <View style={styles.headerRule} />
+          <Text style={styles.headerText}>{SITE.name.toUpperCase()}</Text>
+        </View>
 
         <View style={styles.hero}>
           <View style={styles.monogram}>

@@ -115,7 +115,6 @@ for (const { file, data: person } of persons) {
   // материалов свой, более широкий коридор: там объём диктует материал, а не тариф.
   const limits: Record<string, [number, number]> = {
     editorial: [1200, 12000],
-    free: [0, 600],
     base: [2500, 4000],
     extended: [6000, 10000],
     dossier: [6000, 20000],
