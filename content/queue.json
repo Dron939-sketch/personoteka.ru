@@ -1089,6 +1089,51 @@
     "status": "published"
   },
   {
+    "slug": "matvej-safonov",
+    "source_name": "Матвей Евгеньевич Сафонов",
+    "full_name": "Матвей Евгеньевич Сафонов",
+    "display_name": "Матвей Сафонов",
+    "name_latin": "Matvej Safonov",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-bivol",
+    "source_name": "Дмитрий Юрьевич Бивол",
+    "full_name": "Дмитрий Юрьевич Бивол",
+    "display_name": "Дмитрий Бивол",
+    "name_latin": "Dmitrij Bivol",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "diana-shnajder",
+    "source_name": "Диана Максимовна Шнайдер",
+    "full_name": "Диана Максимовна Шнайдер",
+    "display_name": "Диана Шнайдер",
+    "name_latin": "Diana Shnajder",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "habib-nurmagomedov",
+    "source_name": "Хабиб Абдулманапович Нурмагомедов",
+    "full_name": "Хабиб Абдулманапович Нурмагомедов",
+    "display_name": "Хабиб Нурмагомедов",
+    "name_latin": "Habib Nurmagomedov",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "artem-dzyuba",
+    "source_name": "Артём Сергеевич Дзюба",
+    "full_name": "Артём Сергеевич Дзюба",
+    "display_name": "Артём Дзюба",
+    "name_latin": "Artem Dzyuba",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "lev-dengov",
     "source_name": "Деньгов Лев Леонидович",
     "full_name": "Деньгов Лев Леонидович",
