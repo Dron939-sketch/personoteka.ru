@@ -1,0 +1,123 @@
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-4);
+}
+
+.tile {
+  padding: var(--sp-4);
+  background: var(--cool-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.tileLabel {
+  margin: 0 0 var(--sp-2);
+}
+
+.tileValue {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--h2);
+  color: var(--cool-600);
+}
+
+.tileNote {
+  margin: var(--sp-1) 0 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.block {
+  padding-block: var(--sp-12) 0;
+}
+
+.block h2 {
+  margin-bottom: var(--sp-6);
+}
+
+.headline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+
+.action {
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--accent-600);
+  border-radius: var(--radius-s);
+  background: var(--accent-600);
+  color: #fff;
+  font-size: var(--small);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.action:hover {
+  background: var(--accent-700);
+  border-color: var(--accent-700);
+}
+
+[data-theme='dark'] .action {
+  color: #14181e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .action {
+    color: #14181e;
+  }
+}
+
+.scroller {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--small);
+}
+
+.table th,
+.table td {
+  padding: var(--sp-3);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: var(--cool-100);
+  border-bottom: 1px solid var(--cool-300);
+  font-size: var(--caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.tagline {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.live {
+  color: var(--success);
+  white-space: nowrap;
+}
+
+.hidden {
+  color: var(--warning);
+  white-space: nowrap;
+}

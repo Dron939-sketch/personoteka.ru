@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { AdDisclosure } from '@/components/AdSlot'
+import { ViewBeacon } from '@/components/ViewBeacon'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CTAStrip } from '@/components/CTAStrip'
 import { FactCards } from '@/components/FactCards'
@@ -272,6 +273,16 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                   {' · Опубликовано '}
                   <time dateTime={person.published_at}>{formatDate(person.published_at)}</time>
                 </p>
+                {/* Происхождение материала. Агентская страница написана
+                    представителем героя, а не редакцией, и читатель должен
+                    видеть это рядом с подписью, а не догадываться. */}
+                {person.agency && (
+                  <p className={styles.colophonOrigin}>
+                    Материал подготовлен агентством «{person.agency.name}» по подписке и
+                    опубликован без предварительной проверки редакцией.{' '}
+                    <Link href="/redpolitika/">Как мы проверяем такие страницы</Link>
+                  </p>
+                )}
                 <p className={styles.colophonLinks}>
                   <Link href={`/udalenie-dannyh/?page=/${person.slug}/`}>Сообщить об ошибке</Link>
                   {' · '}
@@ -284,6 +295,8 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           </div>
         </article>
       </div>
+
+      <ViewBeacon slug={person.slug} />
 
       {/* ---------- Похожие персоны ---------- */}
       {related.length > 0 && (

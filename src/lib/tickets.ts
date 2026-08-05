@@ -5,6 +5,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { REMOVAL_SLA, type ConsentRecord } from './consent'
+import { dataDir, storageIsPersistent } from './data-dir'
 import type { TicketKind, TicketState } from './ticket-types'
 
 export { TICKET_STATE_LABEL } from './ticket-types'
@@ -25,11 +26,10 @@ export type { TicketKind, TicketState } from './ticket-types'
  * модуля (`addLead`, `addRemoval`, `readLeads`, `readRemovals`, `setTicketState`)
  * и есть граница замены.
  *
- * ВАЖНО про диск. Каталог берётся из `DATA_DIR`, иначе `/data`, иначе `.data`
- * в корне проекта. Первые два — постоянные тома, третий живёт только до
- * пересборки контейнера. Кабинет показывает, какой путь используется и
- * постоянный ли он: администратор должен видеть, что данные могут пропасть,
- * а не узнавать об этом после пропажи.
+ * ВАЖНО про диск: каталог выбирается в `data-dir.ts`, и он не всегда постоянный.
+ * Кабинет показывает, какой путь используется и переживёт ли он пересборку:
+ * администратор должен видеть, что данные могут пропасть, а не узнавать об
+ * этом после пропажи.
  */
 
 interface TicketBase {
@@ -69,17 +69,7 @@ const LEADS = 'zayavki.jsonl'
 const REMOVALS = 'udalenie.jsonl'
 const EVENTS = 'sobytiya.jsonl'
 
-/** Куда пишем. Порядок: явная переменная, постоянный том Amvera, локальный запасной путь. */
-export function dataDir(): string {
-  if (process.env.DATA_DIR) return process.env.DATA_DIR
-  if (fs.existsSync('/data')) return '/data'
-  return path.join(process.cwd(), '.data')
-}
-
-/** Переживёт ли записанное пересборку контейнера. */
-export function storageIsPersistent(): boolean {
-  return Boolean(process.env.DATA_DIR) || fs.existsSync('/data')
-}
+export { dataDir, storageIsPersistent }
 
 function file(name: string): string {
   const dir = dataDir()

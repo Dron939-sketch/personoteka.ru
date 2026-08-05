@@ -19,6 +19,7 @@
     "check:contrast": "tsx scripts/check-contrast.ts",
     "check": "npm run check:content && npm run check:contrast && npm run typecheck",
     "queue": "tsx scripts/build-queue.ts",
+    "agentstvo": "tsx scripts/add-agency.ts",
     "photo": "tsx scripts/add-photo.ts",
     "icons": "tsx scripts/make-icons.ts",
     "photos:fetch": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-photos.ts",
@@ -34,6 +35,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "server-only": "^0.0.1",
+    "sharp": "^0.35.3",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }

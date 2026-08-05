@@ -136,6 +136,12 @@ export interface Person {
   verified_scope?: ('identity' | 'position' | 'education' | 'awards')[]
   verified_at?: string
   plan: PersonPlan
+  /**
+   * Кто опубликовал материал, если это агентство по подписке. Проверка редакции
+   * здесь постфактум, поэтому происхождение материала указывается на странице —
+   * читатель должен видеть, что текст пришёл от представителя героя.
+   */
+  agency?: { slug: string; name: string }
   status: PersonStatus
   editor: string
   published_at: string
