@@ -8,12 +8,29 @@
   "birth_date": "1999-02-25",
   "birth_date_public": true,
   "city": "krasnodar",
-  "spheres": ["sport"],
-  "occupations": ["футболист", "вратарь"],
+  "spheres": [
+    "sport"
+  ],
+  "occupations": [
+    "футболист",
+    "вратарь"
+  ],
   "career": [
-    { "organization": "ФК «Краснодар»", "position": "Вратарь", "years": "2017—2024" },
-    { "organization": "«Пари Сен-Жермен»", "position": "Вратарь", "years": "с 2024" },
-    { "organization": "Сборная России по футболу", "position": "Вратарь", "years": "с 2020" }
+    {
+      "organization": "ФК «Краснодар»",
+      "position": "Вратарь",
+      "years": "2017—2024"
+    },
+    {
+      "organization": "«Пари Сен-Жермен»",
+      "position": "Вратарь",
+      "years": "с 2024"
+    },
+    {
+      "organization": "Сборная России по футболу",
+      "position": "Вратарь",
+      "years": "с 2020"
+    }
   ],
   "timeline": [
     {
@@ -88,12 +105,26 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/matvej-safonov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Матвей Сафонов, вратарь «Пари Сен-Жермен» и сборной России",
+      "author": "Анна Нэсси",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Matvei_Safonov_2020.jpg"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-05",
-  "updated_at": "2026-08-05",
-  "foreign_agent": { "checked_at": "2026-08-05", "listed": false }
+  "updated_at": "2026-08-05T13:26:08.668Z",
+  "foreign_agent": {
+    "checked_at": "2026-08-05",
+    "listed": false
+  }
 }

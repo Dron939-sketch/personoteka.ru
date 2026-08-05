@@ -8,11 +8,23 @@
   "birth_date": "2004-04-02",
   "birth_date_public": true,
   "city": "moskva",
-  "spheres": ["sport"],
-  "occupations": ["теннисистка"],
+  "spheres": [
+    "sport"
+  ],
+  "occupations": [
+    "теннисистка"
+  ],
   "career": [
-    { "organization": "Профессиональный тур WTA", "position": "Теннисистка", "years": "с 2021" },
-    { "organization": "Университет Северной Каролины", "position": "Студентка, игрок команды NCAA", "years": "2022—2023" }
+    {
+      "organization": "Профессиональный тур WTA",
+      "position": "Теннисистка",
+      "years": "с 2021"
+    },
+    {
+      "organization": "Университет Северной Каролины",
+      "position": "Студентка, игрок команды NCAA",
+      "years": "2022—2023"
+    }
   ],
   "timeline": [
     {
@@ -80,12 +92,26 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/diana-shnajder.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Диана Шнайдер, теннисистка, серебряный призёр Олимпиады в паре",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shnaider_WMQ23_(53062168393).jpg"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-05",
-  "updated_at": "2026-08-05",
-  "foreign_agent": { "checked_at": "2026-08-05", "listed": false }
+  "updated_at": "2026-08-05T13:24:58.216Z",
+  "foreign_agent": {
+    "checked_at": "2026-08-05",
+    "listed": false
+  }
 }

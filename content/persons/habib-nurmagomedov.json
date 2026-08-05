@@ -7,11 +7,24 @@
   "lead": "Хабиб Нурмагомедов — боец смешанных единоборств, бывший чемпион UFC в лёгком весе. Провёл двадцать девять профессиональных поединков и не проиграл ни одного, после чего ушёл непобеждённым. Член Зала славы UFC с 2022 года.",
   "birth_date": "1988-09-20",
   "birth_date_public": true,
-  "spheres": ["sport"],
-  "occupations": ["боец смешанных единоборств", "тренер"],
+  "spheres": [
+    "sport"
+  ],
+  "occupations": [
+    "боец смешанных единоборств",
+    "тренер"
+  ],
   "career": [
-    { "organization": "UFC", "position": "Боец лёгкого веса", "years": "2012—2020" },
-    { "organization": "Команда Eagles MMA", "position": "Основатель", "years": "с 2016" }
+    {
+      "organization": "UFC",
+      "position": "Боец лёгкого веса",
+      "years": "2012—2020"
+    },
+    {
+      "organization": "Команда Eagles MMA",
+      "position": "Основатель",
+      "years": "с 2016"
+    }
   ],
   "timeline": [
     {
@@ -80,12 +93,26 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/habib-nurmagomedov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Хабиб Нурмагомедов, боец смешанных единоборств, чемпион UFC без поражений",
+      "author": "Airotcivss",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Khabib_nurmagomedov.jpg"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-05",
-  "updated_at": "2026-08-05",
-  "foreign_agent": { "checked_at": "2026-08-05", "listed": false }
+  "updated_at": "2026-08-05T13:23:41.295Z",
+  "foreign_agent": {
+    "checked_at": "2026-08-05",
+    "listed": false
+  }
 }

@@ -920,5 +920,27 @@
   {
     "slug": "artur-babich",
     "wikipedia": "Бабич, Артур Самвелович"
+  },
+  {
+    "slug": "matvej-safonov",
+    "commons": "File:Matvei Safonov 2020.jpg"
+  },
+  {
+    "slug": "dmitrij-bivol",
+    "wikipedia": "Бивол, Дмитрий Юрьевич"
+  },
+  {
+    "slug": "diana-shnajder",
+    "wikipedia": "Шнайдер, Диана Максимовна",
+    "zoom": 2.2
+  },
+  {
+    "slug": "habib-nurmagomedov",
+    "wikipedia": "Нурмагомедов, Хабиб Абдулманапович"
+  },
+  {
+    "slug": "artem-dzyuba",
+    "wikipedia": "Дзюба, Артём Сергеевич",
+    "gravity": "north"
   }
 ]
