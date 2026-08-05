@@ -6,7 +6,7 @@
     "display_name": "Никита Коньков",
     "name_latin": "Nikita Konkov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "drafting"
   },
   {
     "slug": "aleksandr-grechischev",
@@ -15,7 +15,7 @@
     "display_name": "Александр Гречищев",
     "name_latin": "Aleksandr Grechischev",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "rustam-temirgaliev",
@@ -24,7 +24,7 @@
     "display_name": "Рустам Темиргалиев",
     "name_latin": "Rustam Temirgaliev",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "elchin-safarov",
@@ -33,7 +33,7 @@
     "display_name": "Эльчин Сафаров",
     "name_latin": "Elchin Safarov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "evgenij-danchikov",
@@ -42,7 +42,7 @@
     "display_name": "Евгений Данчиков",
     "name_latin": "Evgenij Danchikov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "aleksandr-novak",
@@ -60,7 +60,7 @@
     "display_name": "Борис Грызлов",
     "name_latin": "Boris Gryzlov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-lavrov",
@@ -177,7 +177,7 @@
     "display_name": "Оксана Лут",
     "name_latin": "Oksana Lut",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "dmitrij-hurtov",
@@ -186,7 +186,7 @@
     "display_name": "Дмитрий Хуртов",
     "name_latin": "Dmitrij Hurtov",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "mihail-mishustin",
@@ -204,7 +204,7 @@
     "display_name": "Андрей Луговой",
     "name_latin": "Andrej Lugovoj",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-kirienko",
@@ -240,7 +240,7 @@
     "display_name": "Александр Вяткин",
     "name_latin": "Aleksandr Vyatkin",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "aleksandr-beglov",
@@ -258,7 +258,7 @@
     "display_name": "Александр Богомаз",
     "name_latin": "Aleksandr Bogomaz",
     "sphere": "gosudarstvo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "anton-alihanov",

@@ -738,5 +738,51 @@
     "url": "https://lichnosty.ru/wp-content/uploads/2024/06/evgenij_plyushchenko.jpg",
     "license": "архив редакции",
     "source_url": "https://lichnosty.ru/bio/evgenij-plyushchenko/"
+  },
+  {
+    "slug": "oksana-lut",
+    "wikipedia": "Лут, Оксана Николаевна"
+  },
+  {
+    "slug": "aleksandr-bogomaz",
+    "wikipedia": "Богомаз, Александр Васильевич"
+  },
+  {
+    "slug": "andrej-lugovoj",
+    "wikipedia": "Луговой, Андрей Константинович"
+  },
+  {
+    "slug": "boris-gryzlov",
+    "wikipedia": "Грызлов, Борис Вячеславович"
+  },
+  {
+    "slug": "aleksandr-grechischev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/grechischev-aleksandr-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/grechischev-aleksandr-vladimirovich/"
+  },
+  {
+    "slug": "elchin-safarov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/safarov-elchin-alekper-ogly.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/safarov-elchin-alekper-ogly-2/"
+  },
+  {
+    "slug": "evgenij-danchikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/danchikov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgeniy-danchikov/"
+  },
+  {
+    "slug": "aleksandr-vyatkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/2024-10-27-11.30.43.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vyatkin-aleksandr-igorevich/"
+  },
+  {
+    "slug": "dmitrij-hurtov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/07/dmitrij_hurtov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-nikolaevich-hurtov/"
   }
 ]
