@@ -6,6 +6,7 @@ import { getPersons } from '@/lib/content'
 import { getPersonGaps, getQueueStats } from '@/lib/lk-data'
 import { formatDate } from '@/lib/format'
 import { SITE } from '@/lib/site'
+import { readLeads, readRemovals, ticketStates } from '@/lib/tickets'
 
 import styles from './page.module.css'
 
@@ -44,6 +45,14 @@ export default function LkOverviewPage() {
   const done = stats.byStatus.published ?? 0
   const percent = stats.total ? Math.round((done / stats.total) * 100) : 0
 
+  // Незакрытые обращения выносим на обзор: срок по §11.3 идёт независимо от того,
+  // открыл кто-нибудь раздел заявок или нет.
+  const states = ticketStates()
+  const isOpen = (id: string) => ['open', 'in_work'].includes(states.get(id)?.state ?? 'open')
+  const openRemovals = readRemovals().filter((t) => isOpen(t.id))
+  const openLeads = readLeads().filter((t) => isOpen(t.id))
+  const overdue = openRemovals.filter((t) => Date.parse(t.acknowledge_by) < Date.now()).length
+
   return (
     <>
       <PageHeader
@@ -53,6 +62,17 @@ export default function LkOverviewPage() {
       />
 
       <section className={styles.tiles}>
+        <div className={styles.tile}>
+          <p className={`caption ${styles.tileLabel}`}>Открытых обращений</p>
+          <p className={`tabular ${styles.tileValue}`}>
+            {openRemovals.length + openLeads.length}
+          </p>
+          <p className={styles.tileNote}>
+            {overdue > 0
+              ? `просрочено по сроку §11.3: ${overdue}`
+              : `запросов на удаление: ${openRemovals.length}`}
+          </p>
+        </div>
         <div className={styles.tile}>
           <p className={`caption ${styles.tileLabel}`}>Готово из списка</p>
           <p className={`tabular ${styles.tileValue}`}>
@@ -89,6 +109,8 @@ export default function LkOverviewPage() {
         </ul>
         <p className={styles.more}>
           <Link href="/lk/ochered/">Открыть очередь</Link>
+          {' · '}
+          <Link href="/lk/zayavki/">Заявки и запросы</Link>
         </p>
       </section>
 
@@ -119,7 +141,7 @@ export default function LkOverviewPage() {
             Разделы владельца профиля и агентства из §8.5 — статистика просмотров,
             поисковые запросы к профилю, динамика индекса внимания, счета и отчёты —
             требуют двух вещей, которых в проекте ещё нет: базы пользователей
-            и сбора событий.
+            и сбора событий. Вход тоже общий: роли появятся вместе с базой.
           </p>
           <p>
             Показывать эти экраны с придуманными числами нельзя: отчёт клиенту

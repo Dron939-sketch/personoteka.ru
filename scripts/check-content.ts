@@ -115,9 +115,8 @@ for (const { file, data: person } of persons) {
   // материалов свой, более широкий коридор: там объём диктует материал, а не тариф.
   const limits: Record<string, [number, number]> = {
     editorial: [1200, 12000],
-    free: [0, 600],
     base: [2500, 4000],
-    extended: [6000, 10000],
+    agency: [2500, 10000],
     dossier: [6000, 20000],
   }
   const [min, max] = limits[person.plan] ?? [0, Infinity]
@@ -131,8 +130,10 @@ for (const { file, data: person } of persons) {
     )
   }
 
-  if (person.plan === 'extended' && !person.sources?.length) {
-    errors.push(`${where}: расширенный тариф без блока «Источники» (§5.3)`)
+  // Агентство публикует само, поэтому источники с него спрашиваются строже,
+  // а не мягче: проверять текст постфактум не по чему.
+  if ((person.plan === 'agency' || person.plan === 'dossier') && !person.sources?.length) {
+    errors.push(`${where}: тариф «${person.plan}» без блока «Источники» (§5.3)`)
   }
 }
 

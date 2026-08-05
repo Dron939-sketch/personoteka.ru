@@ -1,5 +1,6 @@
-import { REMOVAL_SLA, buildConsentRecords } from '@/lib/consent'
+import { buildConsentRecords } from '@/lib/consent'
 import { clientIp, rateLimit, verifyCaptcha } from '@/lib/request'
+import { addRemoval } from '@/lib/tickets'
 
 /**
  * Запрос на удаление или исправление данных — §11.3.
@@ -54,17 +55,28 @@ export async function POST(request: Request) {
     source: 'removal',
   })
 
-  // TODO(этап 4): создать тикет в реестре запросов, поставить сроки из REMOVAL_SLA
-  // и отправить уведомление ответственному за обработку ПДн.
-  console.warn('[udalenie] требуется реакция', {
+  const removal = {
     name,
     email,
-    pageUrl,
+    page_url: pageUrl,
     message: message.slice(0, 2000),
-    acknowledge_by_business_days: REMOVAL_SLA.acknowledge_business_days,
-    decide_by_business_days: REMOVAL_SLA.decide_business_days,
+    ip,
     consents,
-  })
+  }
+
+  try {
+    const ticket = addRemoval(removal)
+    // Сроки §11.3 проставлены при записи; кабинет подсвечивает просроченное.
+    console.warn('[udalenie] требуется реакция', ticket.id, 'до', ticket.acknowledge_by)
+  } catch (error) {
+    // Здесь молчаливая потеря хуже всего: срок реакции идёт от момента
+    // получения, а получения, которого никто не увидел, юридически не было.
+    console.error('[udalenie] НЕ ЗАПИСАН', error, removal)
+    return Response.json(
+      { error: 'Не удалось зарегистрировать запрос. Напишите, пожалуйста, на почту редакции.' },
+      { status: 500 },
+    )
+  }
 
   return Response.json({ ok: true })
 }

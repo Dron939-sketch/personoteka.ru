@@ -6,8 +6,12 @@ export interface Plan {
   id: string
   name: string
   price: string
+  /** Условие оплаты под ценой — для подписки, где важна периодичность. */
+  period?: string
   summary: string
   features: string[]
+  /** Оговорка под списком: то, что клиент обязан узнать до покупки, а не после. */
+  note?: string
   /** Выделенный тариф — ровно один, иначе выделение теряет смысл. */
   featured?: boolean
 }
@@ -26,12 +30,14 @@ export function PricingTable({ plans }: { plans: Plan[] }) {
         >
           <h3 className={styles.name}>{plan.name}</h3>
           <p className={styles.price}>{plan.price}</p>
+          {plan.period && <p className={styles.period}>{plan.period}</p>}
           <p className={styles.summary}>{plan.summary}</p>
           <ul className={styles.features}>
             {plan.features.map((feature) => (
               <li key={feature}>{feature}</li>
             ))}
           </ul>
+          {plan.note && <p className={styles.note}>{plan.note}</p>}
           <Link href="/razmestit/#zayavka" className={styles.action}>
             Оставить заявку
           </Link>

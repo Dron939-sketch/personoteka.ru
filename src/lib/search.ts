@@ -1,7 +1,8 @@
 /**
  * Клиентский поиск по статическому индексу.
  *
- * MVP: индекс собирается на билде (`scripts/build-search-index.ts`) и грузится лениво.
+ * MVP: индекс собирается на билде (`scripts/build-search-index.ts`), дополняется
+ * опубликованным после сборки (`/api/poisk-index/`) и грузится лениво.
  * В продакшене (§9.1) запросы уходят в Meilisearch/Typesense — морфология и опечатки;
  * тогда меняются только функции этого модуля, компоненты остаются прежними.
  *
@@ -24,7 +25,9 @@ let cache: Promise<SearchDoc[]> | null = null
 
 export function loadSearchIndex(): Promise<SearchDoc[]> {
   if (!cache) {
-    cache = fetch('/search-index.json')
+    // Не сам файл, а обработчик: он добавляет к собранному индексу страницы,
+    // опубликованные агентствами уже после сборки.
+    cache = fetch('/api/poisk-index/')
       .then((r) => (r.ok ? (r.json() as Promise<SearchDoc[]>) : []))
       .catch(() => [])
   }

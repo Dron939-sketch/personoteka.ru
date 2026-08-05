@@ -3,12 +3,20 @@ import 'server-only'
 import fs from 'node:fs'
 import path from 'node:path'
 
+import { dataDir } from './data-dir'
 import type { Article, City, Editor, Person, RatingSnapshot, Sphere } from './types'
 
 /**
  * Слой доступа к контенту. Сейчас источник — файлы в `content/`, страницы собираются
  * статически (§9.1). При переезде на headless CMS меняется только этот модуль:
  * сигнатуры функций остаются, страницы не трогаем.
+ *
+ * Источников персон два. Репозиторий — редакционные материалы, они известны на
+ * сборке и кэшируются на процесс. Каталог `persons` внутри `DATA_DIR` — то, что
+ * агентства публикуют из кабинета уже после сборки; он перечитывается по времени
+ * изменения каталога, иначе новая страница появилась бы только после деплоя.
+ * При совпадении слага побеждает репозиторий: редакционная правка сильнее
+ * агентской, и подменить чужую страницу через кабинет нельзя.
  */
 
 const CONTENT_DIR = path.join(process.cwd(), 'content')
@@ -31,21 +39,52 @@ const loadCities = once<City[]>(() => readJson<City[]>('cities.json'))
 const loadEditors = once<Editor[]>(() => readJson<Editor[]>('editors.json'))
 const loadRating = once<RatingSnapshot>(() => readJson<RatingSnapshot>('rating.json'))
 
-const loadAllPersons = once<Person[]>(() => {
-  const dir = path.join(CONTENT_DIR, 'persons')
+function readPersonDir(dir: string): Person[] {
   if (!fs.existsSync(dir)) return []
-  // Индекс внимания живёт в снапшоте рейтинга (§6.2) и подмешивается сюда,
-  // чтобы значение на карточке и в таблице рейтинга не могли разойтись.
-  const index = new Map(loadRating().entries.map((e) => [e.slug, e.attention_index]))
   return fs
     .readdirSync(dir)
     .filter((f) => f.endsWith('.json'))
-    .map((f) => {
-      const person = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Person
-      return { ...person, attention_index: index.get(person.slug) }
+    .flatMap((f) => {
+      // Одна битая карточка не должна ронять каталог целиком.
+      try {
+        return [JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Person]
+      } catch {
+        return []
+      }
     })
+}
+
+const loadRepoPersons = once<Person[]>(() => readPersonDir(path.join(CONTENT_DIR, 'persons')))
+
+/** Каталог агентских публикаций. Появляется только на работающем сервере. */
+export function runtimePersonsDir(): string {
+  return path.join(dataDir(), 'persons')
+}
+
+let runtimeCache: { stamp: number; persons: Person[] } | null = null
+
+function loadRuntimePersons(): Person[] {
+  const dir = runtimePersonsDir()
+  if (!fs.existsSync(dir)) return []
+  // Время изменения каталога меняется при добавлении и удалении файла; правка
+  // существующей карточки идёт через тот же код, который каталог и трогает.
+  const stamp = fs.statSync(dir).mtimeMs
+  if (runtimeCache?.stamp === stamp) return runtimeCache.persons
+  const persons = readPersonDir(dir)
+  runtimeCache = { stamp, persons }
+  return persons
+}
+
+function loadAllPersons(): Person[] {
+  const repo = loadRepoPersons()
+  const known = new Set(repo.map((p) => p.slug))
+  // Индекс внимания живёт в снапшоте рейтинга (§6.2) и подмешивается сюда,
+  // чтобы значение на карточке и в таблице рейтинга не могли разойтись.
+  const index = new Map(loadRating().entries.map((e) => [e.slug, e.attention_index]))
+  return [...repo, ...loadRuntimePersons().filter((p) => !known.has(p.slug))]
+    .map((person) => ({ ...person, attention_index: index.get(person.slug) }))
     .sort((a, b) => a.full_name.localeCompare(b.full_name, 'ru'))
-})
+}
 
 const loadArticles = once<Article[]>(() => {
   const dir = path.join(CONTENT_DIR, 'articles')

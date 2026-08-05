@@ -1,0 +1,38 @@
+.wrap {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.button {
+  padding: 2px var(--sp-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: var(--caption);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  border-color: var(--cool-600);
+  color: var(--ink);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.error {
+  margin: 0;
+  font-size: var(--caption);
+  color: var(--danger);
+}

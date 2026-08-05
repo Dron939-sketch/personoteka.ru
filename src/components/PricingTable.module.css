@@ -32,10 +32,24 @@
   color: var(--ink);
 }
 
+.period {
+  margin: calc(-1 * var(--sp-2)) 0 0;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
 .summary {
   margin: 0;
   font-size: var(--small);
   color: var(--ink-2);
+}
+
+.note {
+  margin: 0;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--caption);
+  color: var(--ink-3);
 }
 
 .features {
