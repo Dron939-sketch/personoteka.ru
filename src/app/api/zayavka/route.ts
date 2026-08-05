@@ -1,4 +1,5 @@
 import { buildConsentRecords } from '@/lib/consent'
+import { notify } from '@/lib/mail'
 import { clientIp, rateLimit, verifyCaptcha } from '@/lib/request'
 import { addLead } from '@/lib/tickets'
 
@@ -69,6 +70,16 @@ export async function POST(request: Request) {
     // В лог — только идентификатор: сами ПДн лежат в реестре, дублировать их
     // в потоке логов незачем.
     console.info('[zayavka] принята', ticket.id)
+    // Письмо после записи и без ожидания: заявка уже сохранена, и почта
+    // не должна ни задерживать ответ формы, ни ломать его своей ошибкой.
+    void notify(`Заявка на размещение: ${name}`, [
+      `Имя: ${name}`,
+      `Почта: ${email}`,
+      `Сфера: ${sphere}`,
+      lead.contact ? `Ещё контакт: ${lead.contact}` : '',
+      lead.message ? `\nСообщение:\n${lead.message}` : '',
+      `\nЗаявка в кабинете: /lk/zayavki/`,
+    ].filter(Boolean))
   } catch (error) {
     // Реестр недоступен. Заявку нельзя подтвердить молча: человек решит, что
     // она принята, и будет ждать ответа, которого никто не увидит.

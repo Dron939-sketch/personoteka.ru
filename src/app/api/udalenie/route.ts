@@ -1,4 +1,5 @@
 import { buildConsentRecords } from '@/lib/consent'
+import { notify } from '@/lib/mail'
 import { clientIp, rateLimit, verifyCaptcha } from '@/lib/request'
 import { addRemoval } from '@/lib/tickets'
 
@@ -68,6 +69,17 @@ export async function POST(request: Request) {
     const ticket = addRemoval(removal)
     // Сроки §11.3 проставлены при записи; кабинет подсвечивает просроченное.
     console.warn('[udalenie] требуется реакция', ticket.id, 'до', ticket.acknowledge_by)
+    // §11.3: ответственный за обработку ПДн уведомляется о запросе, а не
+    // обнаруживает его при следующем заходе в кабинет.
+    void notify(`Запрос на удаление данных: ${name}`, [
+      `Заявитель: ${name}`,
+      `Почта: ${email}`,
+      `Страница: ${pageUrl}`,
+      `\nСуть запроса:\n${removal.message}`,
+      `\nПодтвердить получение до: ${ticket.acknowledge_by.slice(0, 10)}`,
+      `Мотивированное решение до: ${ticket.decide_by.slice(0, 10)}`,
+      `\nЗапрос в кабинете: /lk/zayavki/`,
+    ])
   } catch (error) {
     // Здесь молчаливая потеря хуже всего: срок реакции идёт от момента
     // получения, а получения, которого никто не увидел, юридически не было.

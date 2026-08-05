@@ -4,6 +4,7 @@ import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { TicketStateSwitch } from '@/components/TicketState'
 import { REMOVAL_SLA } from '@/lib/consent'
 import { formatDate } from '@/lib/format'
+import { mailConfigured, notifyAddress } from '@/lib/mail'
 import { SITE } from '@/lib/site'
 import { TICKET_STATE_LABEL, type TicketState } from '@/lib/ticket-types'
 import {
@@ -64,6 +65,15 @@ export default function TicketsPage() {
           Реестр пишется в <code>{dataDir()}</code> — этот каталог не переживёт пересборку
           контейнера. Задайте <code>DATA_DIR</code> на постоянный том, иначе заявки
           и журнал согласий будут теряться при каждом деплое.
+        </p>
+      )}
+
+      {!mailConfigured() && (
+        <p className={styles.alarm} role="alert">
+          Почта не настроена: уведомления о новых заявках и запросах на{' '}
+          <code>{notifyAddress()}</code> не уходят. Пока не заданы переменные{' '}
+          <code>SMTP_HOST</code>, <code>SMTP_USER</code> и <code>SMTP_PASSWORD</code>,
+          обращения видны только на этой странице.
         </p>
       )}
 
@@ -197,6 +207,10 @@ export default function TicketsPage() {
             же записях, лежит журнал согласий: версия текста, дата, IP и адрес заявителя
             (§11.1). Выгрузка и удаление делаются на файлах — отдельной админки для этого
             пока нет.
+          </p>
+          <p>
+            Уведомления о новых обращениях уходят на <code>{notifyAddress()}</code>. Это
+            внутренний адрес: на сайте для читателей указан другой, редакционный.
           </p>
         </div>
       </section>
