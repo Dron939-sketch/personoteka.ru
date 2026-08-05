@@ -621,6 +621,51 @@
     "status": "published"
   },
   {
+    "slug": "danila-kozlovskij",
+    "source_name": "Данила Валерьевич Козловский",
+    "full_name": "Данила Валерьевич Козловский",
+    "display_name": "Данила Козловский",
+    "name_latin": "Danila Kozlovskij",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-petrov",
+    "source_name": "Александр Андреевич Петров",
+    "full_name": "Александр Андреевич Петров",
+    "display_name": "Александр Петров",
+    "name_latin": "Aleksandr Petrov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-peresild",
+    "source_name": "Юлия Сергеевна Пересильд",
+    "full_name": "Юлия Сергеевна Пересильд",
+    "display_name": "Юлия Пересильд",
+    "name_latin": "Yuliya Peresild",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-bezrukov",
+    "source_name": "Сергей Витальевич Безруков",
+    "full_name": "Сергей Витальевич Безруков",
+    "display_name": "Сергей Безруков",
+    "name_latin": "Sergej Bezrukov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "ivan-yankovskij",
+    "source_name": "Иван Филиппович Янковский",
+    "full_name": "Иван Филиппович Янковский",
+    "display_name": "Иван Янковский",
+    "name_latin": "Ivan Yankovskij",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
