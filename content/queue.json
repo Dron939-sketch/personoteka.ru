@@ -1870,5 +1870,50 @@
     "name_latin": "Natalya Lapina",
     "sphere": "eksperty",
     "status": "published"
+  },
+  {
+    "slug": "pavel-krasheninnikov",
+    "source_name": "Павел Владимирович Крашенинников",
+    "full_name": "Павел Владимирович Крашенинников",
+    "display_name": "Павел Крашенинников",
+    "name_latin": "Pavel Krasheninnikov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "valerij-zorkin",
+    "source_name": "Валерий Дмитриевич Зорькин",
+    "full_name": "Валерий Дмитриевич Зорькин",
+    "display_name": "Валерий Зорькин",
+    "name_latin": "Valerij Zorkin",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "genri-reznik",
+    "source_name": "Генри Маркович Резник",
+    "full_name": "Генри Маркович Резник",
+    "display_name": "Генри Резник",
+    "name_latin": "Genri Reznik",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-roshal",
+    "source_name": "Леонид Михайлович Рошаль",
+    "full_name": "Леонид Михайлович Рошаль",
+    "display_name": "Леонид Рошаль",
+    "name_latin": "Leonid Roshal",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "denis-procenko",
+    "source_name": "Денис Николаевич Проценко",
+    "full_name": "Денис Николаевич Проценко",
+    "display_name": "Денис Проценко",
+    "name_latin": "Denis Procenko",
+    "sphere": "medicina",
+    "status": "published"
   }
 ]

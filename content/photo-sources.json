@@ -942,5 +942,25 @@
     "slug": "artem-dzyuba",
     "wikipedia": "Дзюба, Артём Сергеевич",
     "gravity": "north"
+  },
+  {
+    "slug": "pavel-krasheninnikov",
+    "wikipedia": "Крашенинников, Павел Владимирович"
+  },
+  {
+    "slug": "valerij-zorkin",
+    "wikipedia": "Зорькин, Валерий Дмитриевич"
+  },
+  {
+    "slug": "genri-reznik",
+    "wikipedia": "Резник, Генри Маркович"
+  },
+  {
+    "slug": "leonid-roshal",
+    "wikipedia": "Рошаль, Леонид Михайлович"
+  },
+  {
+    "slug": "denis-procenko",
+    "wikipedia": "Проценко, Денис Николаевич"
   }
 ]
