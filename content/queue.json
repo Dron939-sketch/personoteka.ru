@@ -2232,6 +2232,15 @@
     "status": "published"
   },
   {
+    "slug": "fredi",
+    "source_name": "Фреди",
+    "full_name": "Фреди",
+    "display_name": "Фреди",
+    "name_latin": "Fredi",
+    "sphere": "eksperty",
+    "status": "published"
+  },
+  {
     "slug": "pavel-krasheninnikov",
     "source_name": "Павел Владимирович Крашенинников",
     "full_name": "Павел Владимирович Крашенинников",
