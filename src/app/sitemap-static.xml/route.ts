@@ -1,5 +1,6 @@
 import {
   RU_ALPHABET,
+  getArticles,
   getPersons,
   getPopulatedCities,
   getSpheres,
@@ -25,8 +26,15 @@ export function GET() {
     { loc: `${SITE.url}/katalog/`, changefreq: 'daily', priority: 0.8 },
     { loc: `${SITE.url}/rejting/`, changefreq: 'daily', priority: 0.8 },
     { loc: `${SITE.url}/rodilis-segodnya/`, changefreq: 'daily', priority: 0.6 },
-    { loc: `${SITE.url}/interv-yu/`, changefreq: 'weekly', priority: 0.6 },
-    { loc: `${SITE.url}/novosti/`, changefreq: 'weekly', priority: 0.6 },
+    // Разделы лент попадают в карту только когда в них что-то есть: сами
+    // страницы в этом случае отдают noindex, и звать на них краулера — значит
+    // отправлять его в тупик и получать расхождение в отчёте Вебмастера.
+    ...(getArticles('interview').length
+      ? [{ loc: `${SITE.url}/interv-yu/`, changefreq: 'weekly' as const, priority: 0.6 }]
+      : []),
+    ...(getArticles('news').length
+      ? [{ loc: `${SITE.url}/novosti/`, changefreq: 'weekly' as const, priority: 0.6 }]
+      : []),
     { loc: `${SITE.url}/razmestit/`, changefreq: 'monthly', priority: 0.8 },
     { loc: `${SITE.url}/tarify/`, changefreq: 'monthly', priority: 0.7 },
     { loc: `${SITE.url}/redpolitika/`, changefreq: 'monthly', priority: 0.7 },

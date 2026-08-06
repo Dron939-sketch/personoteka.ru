@@ -9,10 +9,18 @@ import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
 
-export const metadata: Metadata = {
-  title: 'Интервью',
-  description: 'Интервью с героями «Персонотеки»: разговоры о работе, решениях и профессии.',
-  alternates: { canonical: `${SITE.url}/interv-yu/` },
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Интервью',
+    description: 'Интервью с героями «Персонотеки»: разговоры о работе, решениях и профессии.',
+    alternates: { canonical: `${SITE.url}/interv-yu/` },
+    // Пустой раздел закрыт от индекса — §10.1. Страница со списком, в котором
+    // ничего нет, для поисковика неотличима от ошибки: на молодом домене такие
+    // адреса портят оценку качества всего сайта. `follow` оставлен: ссылки
+    // отсюда на каталог и рейтинг обходить нужно. Как только выйдет первый
+    // материал, запрет снимется сам.
+    robots: getArticles('interview').length ? undefined : { index: false, follow: true },
+  }
 }
 
 export default function InterviewsPage() {

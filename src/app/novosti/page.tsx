@@ -9,13 +9,17 @@ import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
 
-export const metadata: Metadata = {
-  title: 'Новости',
-  description: 'Редакционная лента «Персонотеки»: обновления справочника и материалы редакции.',
-  alternates: {
-    canonical: `${SITE.url}/novosti/`,
-    types: { 'application/rss+xml': `${SITE.url}/feed.xml` },
-  },
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Новости',
+    description: 'Редакционная лента «Персонотеки»: обновления справочника и материалы редакции.',
+    alternates: {
+      canonical: `${SITE.url}/novosti/`,
+      types: { 'application/rss+xml': `${SITE.url}/feed.xml` },
+    },
+    // Пока лента пуста — не в индекс (см. пояснение в /interv-yu/).
+    robots: getArticles('news').length ? undefined : { index: false, follow: true },
+  }
 }
 
 export default function NewsPage() {
