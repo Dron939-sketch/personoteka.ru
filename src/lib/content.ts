@@ -47,7 +47,12 @@ function readPersonDir(dir: string): Person[] {
     .flatMap((f) => {
       // Одна битая карточка не должна ронять каталог целиком.
       try {
-        return [JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Person]
+        const person = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Person
+        // `updated_at` проставляет фотоконвейер, и у персоны без портрета
+        // поля может не быть. Страница и карты сайта считают его обязательным,
+        // поэтому по умолчанию дата обновления равна дате публикации.
+        person.updated_at ||= person.published_at
+        return [person]
       } catch {
         return []
       }

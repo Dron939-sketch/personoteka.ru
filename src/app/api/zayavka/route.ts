@@ -1,6 +1,6 @@
 import { buildConsentRecords } from '@/lib/consent'
 import { notify } from '@/lib/mail'
-import { clientIp, rateLimit, verifyCaptcha } from '@/lib/request'
+import { clientIp, looksAutomated, rateLimit, verifyCaptcha } from '@/lib/request'
 import { addLead } from '@/lib/tickets'
 
 /**
@@ -45,6 +45,14 @@ export async function POST(request: Request) {
   }
   if (!(await verifyCaptcha(str(payload.captcha_token)))) {
     return Response.json({ error: 'Не пройдена проверка «я не робот»' }, { status: 400 })
+  }
+  // Тихий отсев роботов, когда капча не подключена (§9.4). Отвечаем как при
+  // успехе и ничего не записываем: робот, получивший внятную ошибку, подберёт
+  // обход, а получивший «спасибо» — уйдёт довольным. В лог пишем, чтобы
+  // отличать тишину «никто не пишет» от тишины «всех отсеяли».
+  if (looksAutomated(payload)) {
+    console.info('[zayavka] отсеяна как автоматическая', ip)
+    return Response.json({ ok: true })
   }
 
   const consents = buildConsentRecords({

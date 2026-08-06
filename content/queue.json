@@ -864,6 +864,42 @@
     "status": "published"
   },
   {
+    "slug": "ivan-urgant",
+    "source_name": "Иван Андреевич Ургант",
+    "full_name": "Иван Андреевич Ургант",
+    "display_name": "Иван Ургант",
+    "name_latin": "Ivan Urgant",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "valerij-meladze",
+    "source_name": "Валерий Шотаевич Меладзе",
+    "full_name": "Валерий Шотаевич Меладзе",
+    "display_name": "Валерий Меладзе",
+    "name_latin": "Valerij Meladze",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "tina-kandelaki",
+    "source_name": "Тина Гивиевна Канделаки",
+    "full_name": "Тина Гивиевна Канделаки",
+    "display_name": "Тина Канделаки",
+    "name_latin": "Tina Kandelaki",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "marina-fedunkiv",
+    "source_name": "Марина Гавриловна Федункив",
+    "full_name": "Марина Гавриловна Федункив",
+    "display_name": "Марина Федункив",
+    "name_latin": "Marina Fedunkiv",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
@@ -1386,6 +1422,24 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-karelin",
+    "source_name": "Александр Александрович Карелин",
+    "full_name": "Александр Александрович Карелин",
+    "display_name": "Александр Карелин",
+    "name_latin": "Aleksandr Karelin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandra-trusova",
+    "source_name": "Александра Вячеславовна Трусова",
+    "full_name": "Александра Вячеславовна Трусова",
+    "display_name": "Александра Трусова",
+    "name_latin": "Aleksandra Trusova",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "lev-dengov",
     "source_name": "Деньгов Лев Леонидович",
     "full_name": "Деньгов Лев Леонидович",
@@ -1715,6 +1769,42 @@
     "full_name": "Сулейман Абусаидович Керимов",
     "display_name": "Сулейман Керимов",
     "name_latin": "Sulejman Kerimov",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "igor-sechin",
+    "source_name": "Игорь Иванович Сечин",
+    "full_name": "Игорь Иванович Сечин",
+    "display_name": "Игорь Сечин",
+    "name_latin": "Igor Sechin",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "alisher-usmanov",
+    "source_name": "Алишер Бурханович Усманов",
+    "full_name": "Алишер Бурханович Усманов",
+    "display_name": "Алишер Усманов",
+    "name_latin": "Alisher Usmanov",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-melnichenko",
+    "source_name": "Андрей Игоревич Мельниченко",
+    "full_name": "Андрей Игоревич Мельниченко",
+    "display_name": "Андрей Мельниченко",
+    "name_latin": "Andrej Melnichenko",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "aleksej-nechaev",
+    "source_name": "Алексей Геннадьевич Нечаев",
+    "full_name": "Алексей Геннадьевич Нечаев",
+    "display_name": "Алексей Нечаев",
+    "name_latin": "Aleksej Nechaev",
     "sphere": "biznes",
     "status": "published"
   },
@@ -2138,6 +2228,15 @@
     "full_name": "Наталья Лапина",
     "display_name": "Наталья Лапина",
     "name_latin": "Natalya Lapina",
+    "sphere": "eksperty",
+    "status": "published"
+  },
+  {
+    "slug": "fredi",
+    "source_name": "Фреди",
+    "full_name": "Фреди",
+    "display_name": "Фреди",
+    "name_latin": "Fredi",
     "sphere": "eksperty",
     "status": "published"
   },

@@ -94,14 +94,14 @@
   "links": [],
   "photos": [
     {
-      "src": "/media/v50b6a653/roman-abramovich.jpg",
+      "src": "/media/vbac1379f/roman-abramovich.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
       "alt": "Портрет: Роман Абрамович, предприниматель, бывший губернатор Чукотки",
-      "author": "Brian Minkoff-London Pixels",
-      "license": "CC BY-SA 4.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Romanchelseaaug2014_(cropped).jpg"
+      "author": "Kobi Gideon / GPO",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Isaac_Herzog_state_visit_to_the_United_Kingdom,_November_2021_(KBG_GPO681).jpg"
     }
   ],
   "verified": false,
@@ -109,7 +109,7 @@
   "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-05",
-  "updated_at": "2026-08-06T07:21:30.278Z",
+  "updated_at": "2026-08-06T20:28:18.496Z",
   "foreign_agent": {
     "checked_at": "2026-08-05",
     "listed": false
