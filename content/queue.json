@@ -288,6 +288,15 @@
     "status": "published"
   },
   {
+    "slug": "sergej-sobyanin",
+    "source_name": "Сергей Семёнович Собянин",
+    "full_name": "Сергей Семёнович Собянин",
+    "display_name": "Сергей Собянин",
+    "name_latin": "Sergej Sobyanin",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -745,6 +754,42 @@
     "name_latin": "Vladimir Solovev",
     "sphere": "znamenitosti",
     "status": "queued"
+  },
+  {
+    "slug": "viktoriya-isakova",
+    "source_name": "Виктория Евгеньевна Исакова",
+    "full_name": "Виктория Евгеньевна Исакова",
+    "display_name": "Виктория Исакова",
+    "name_latin": "Viktoriya Isakova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-zivert",
+    "source_name": "Юлия Дмитриевна Зиверт",
+    "full_name": "Юлия Дмитриевна Зиверт",
+    "display_name": "Юлия Зиверт",
+    "name_latin": "Yuliya Zivert",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "sergej-lazarev",
+    "source_name": "Сергей Вячеславович Лазарев",
+    "full_name": "Сергей Вячеславович Лазарев",
+    "display_name": "Сергей Лазарев",
+    "name_latin": "Sergej Lazarev",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-mashkov",
+    "source_name": "Владимир Львович Машков",
+    "full_name": "Владимир Львович Машков",
+    "display_name": "Владимир Машков",
+    "name_latin": "Vladimir Mashkov",
+    "sphere": "znamenitosti",
+    "status": "published"
   },
   {
     "slug": "vladimir-plohov",
