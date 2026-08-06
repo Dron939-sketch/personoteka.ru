@@ -83,11 +83,49 @@ const nextConfig: NextConfig = {
     const registry = JSON.parse(fs.readFileSync(file, 'utf8')) as { from: string; to: string }[]
     // Слеши на обоих концах: иначе к 301 добавляется ещё пара нормализующих
     // редиректов, и старый адрес приходит к новому цепочкой из трёх переходов.
-    return registry.map((r) => ({
+    const slugMoves = registry.map((r) => ({
       source: `/${r.from}/`,
       destination: `/${r.to}/`,
       permanent: true,
     }))
+
+    // www → основной домен, 301.
+    //
+    // Канонический адрес в разметке и так указывает на домен без www, и для
+    // поисковика этого достаточно. Редирект нужен людям и статистике: без него
+    // у сайта два рабочих адреса, а значит — два набора cookie, разорванные
+    // сессии в Метрике и ссылки, которые расходятся по интернету в двух видах.
+    //
+    // Два правила вместо одного из-за `trailingSlash: true`. Общее правило
+    // `/:path*` на корне даёт пустой `path*`, а на внутренних страницах —
+    // адрес без слеша на конце, который Next тут же нормализует вторым
+    // редиректом. Цепочка из двух переходов вместо одного — потеря на каждом
+    // заходе, поэтому корень вынесен отдельно.
+    const host = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://personoteka.ru')
+    const fromWww = [
+      {
+        source: '/',
+        has: [{ type: 'host' as const, value: `www.${host.hostname}` }],
+        destination: host.origin + '/',
+        permanent: true,
+      },
+      {
+        source: '/:path*/',
+        has: [{ type: 'host' as const, value: `www.${host.hostname}` }],
+        destination: `${host.origin}/:path*/`,
+        permanent: true,
+      },
+      // Всё остальное — адреса без слеша на конце: `robots.txt`, карты сайта,
+      // `feed.xml`. Страницы сюда не доходят, их забрало правило выше.
+      {
+        source: '/:path*',
+        has: [{ type: 'host' as const, value: `www.${host.hostname}` }],
+        destination: `${host.origin}/:path*`,
+        permanent: true,
+      },
+    ]
+
+    return [...fromWww, ...slugMoves]
   },
 }
 
