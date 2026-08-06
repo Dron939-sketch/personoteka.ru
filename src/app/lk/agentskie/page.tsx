@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import { AgencyAccountForm } from '@/components/AgencyAccountForm'
 import { AgencyMaterialActions } from '@/components/AgencyMaterialActions'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { listAgencies } from '@/lib/agencies'
@@ -44,10 +45,18 @@ export default function AgencyMaterialsPage() {
         meta={`Агентств: ${agencies.length} · страниц: ${persons.length}`}
       />
 
+      {/* Заведение доступа — здесь же, где контроль материалов. На хостинге
+          у владельца нет консоли, и CLI-скрипт недоступен; без этой формы
+          тариф «Доступ для агентств» было бы физически некому включить. */}
+      <section className={styles.block}>
+        <h2 className="ruled">Завести доступ агентству</h2>
+        <AgencyAccountForm />
+      </section>
+
       {agencies.length === 0 ? (
         <EmptyState
           title="Агентств пока нет"
-          hint="Учётная запись заводится командой npm run agentstvo — регистрации на сайте нет."
+          hint="Заполните форму выше: логин и пароль передаются агентству, лимит — из договора."
         />
       ) : (
         <section className={styles.block}>
