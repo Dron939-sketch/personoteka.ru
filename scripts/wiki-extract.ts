@@ -11,17 +11,32 @@ import fs from 'node:fs'
 
 const API = 'https://ru.wikipedia.org/w/api.php'
 
+/**
+ * Пауза и повторы. Википедия отвечает 429 на десятке подряд идущих запросов,
+ * а пустая строка в выдаче неотличима от «статьи нет» — редактор решит, что
+ * сверять нечего, и напишет по памяти. Лучше подождать.
+ */
+const DELAY_MS = Number(process.env.WIKI_DELAY_MS ?? 1200)
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
 async function extract(title: string): Promise<string> {
   const url =
     `${API}?action=query&prop=extracts&explaintext=1&redirects=1&format=json&titles=` +
     encodeURIComponent(title)
-  const res = await fetch(url, { headers: { 'User-Agent': 'personoteka-editorial/1.0' } })
-  if (!res.ok) return ''
-  const data = (await res.json()) as {
-    query?: { pages?: Record<string, { extract?: string }> }
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    await sleep(DELAY_MS)
+    const res = await fetch(url, { headers: { 'User-Agent': 'personoteka-editorial/1.0' } })
+    if (res.ok) {
+      const data = (await res.json()) as {
+        query?: { pages?: Record<string, { extract?: string }> }
+      }
+      const pages = data.query?.pages ?? {}
+      return Object.values(pages)[0]?.extract ?? ''
+    }
+    if (res.status !== 429 && res.status < 500) return ''
+    await sleep(2500 * (attempt + 1))
   }
-  const pages = data.query?.pages ?? {}
-  return Object.values(pages)[0]?.extract ?? ''
+  return ''
 }
 
 async function main() {

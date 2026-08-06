@@ -7,6 +7,7 @@ import {
   writePerson,
   type BiographyInput,
 } from '@/lib/agency-publish'
+import { personUrl, submitUrls } from '@/lib/indexnow'
 import { currentAgency, lkSession } from '@/lib/lk-session'
 import { clientIp, rateLimit } from '@/lib/request'
 
@@ -53,6 +54,10 @@ export async function POST(request: Request) {
 
   revalidatePath('/', 'layout')
   console.info('[biografiya] опубликована', person.slug, 'агентством', agency.slug)
+
+  // Заявка в IndexNow — после записи и не блокируя ответ: агентство не должно
+  // ждать поисковик, а страница уже существует, даже если заявка не ушла.
+  void submitUrls([personUrl(person.slug)])
 
   return Response.json({ ok: true, slug: person.slug })
 }

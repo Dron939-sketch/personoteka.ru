@@ -279,6 +279,33 @@
     "status": "published"
   },
   {
+    "slug": "ramzan-kadyrov",
+    "source_name": "Рамзан Ахматович Кадыров",
+    "full_name": "Рамзан Ахматович Кадыров",
+    "display_name": "Рамзан Кадыров",
+    "name_latin": "Ramzan Kadyrov",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-sobyanin",
+    "source_name": "Сергей Семёнович Собянин",
+    "full_name": "Сергей Семёнович Собянин",
+    "display_name": "Сергей Собянин",
+    "name_latin": "Sergej Sobyanin",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-peskov",
+    "source_name": "Дмитрий Сергеевич Песков",
+    "full_name": "Дмитрий Сергеевич Песков",
+    "display_name": "Дмитрий Песков",
+    "name_latin": "Dmitrij Peskov",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -617,6 +644,186 @@
     "full_name": "Екатерина Андреева",
     "display_name": "Екатерина Андреева",
     "name_latin": "Ekaterina Andreeva",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "danila-kozlovskij",
+    "source_name": "Данила Валерьевич Козловский",
+    "full_name": "Данила Валерьевич Козловский",
+    "display_name": "Данила Козловский",
+    "name_latin": "Danila Kozlovskij",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-petrov",
+    "source_name": "Александр Андреевич Петров",
+    "full_name": "Александр Андреевич Петров",
+    "display_name": "Александр Петров",
+    "name_latin": "Aleksandr Petrov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-peresild",
+    "source_name": "Юлия Сергеевна Пересильд",
+    "full_name": "Юлия Сергеевна Пересильд",
+    "display_name": "Юлия Пересильд",
+    "name_latin": "Yuliya Peresild",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-bezrukov",
+    "source_name": "Сергей Витальевич Безруков",
+    "full_name": "Сергей Витальевич Безруков",
+    "display_name": "Сергей Безруков",
+    "name_latin": "Sergej Bezrukov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "ivan-yankovskij",
+    "source_name": "Иван Филиппович Янковский",
+    "full_name": "Иван Филиппович Янковский",
+    "display_name": "Иван Янковский",
+    "name_latin": "Ivan Yankovskij",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yaroslav-dronov",
+    "source_name": "Ярослав Юрьевич Дронов",
+    "full_name": "Ярослав Юрьевич Дронов",
+    "display_name": "Ярослав Дронов",
+    "name_latin": "Yaroslav Dronov",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "dmitrij-nagiev",
+    "source_name": "Дмитрий Владимирович Нагиев",
+    "full_name": "Дмитрий Владимирович Нагиев",
+    "display_name": "Дмитрий Нагиев",
+    "name_latin": "Dmitrij Nagiev",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "filipp-kirkorov",
+    "source_name": "Филипп Бедросович Киркоров",
+    "full_name": "Филипп Бедросович Киркоров",
+    "display_name": "Филипп Киркоров",
+    "name_latin": "Filipp Kirkorov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "nikita-mihalkov",
+    "source_name": "Никита Сергеевич Михалков",
+    "full_name": "Никита Сергеевич Михалков",
+    "display_name": "Никита Михалков",
+    "name_latin": "Nikita Mihalkov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "viktor-pelevin",
+    "source_name": "Виктор Олегович Пелевин",
+    "full_name": "Виктор Олегович Пелевин",
+    "display_name": "Виктор Пелевин",
+    "name_latin": "Viktor Pelevin",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "igor-harlamov",
+    "source_name": "Игорь Юрьевич Харламов",
+    "full_name": "Игорь Юрьевич Харламов",
+    "display_name": "Игорь Харламов",
+    "name_latin": "Igor Harlamov",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "kseniya-sobchak",
+    "source_name": "Ксения Анатольевна Собчак",
+    "full_name": "Ксения Анатольевна Собчак",
+    "display_name": "Ксения Собчак",
+    "name_latin": "Kseniya Sobchak",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-solovev",
+    "source_name": "Владимир Рудольфович Соловьёв",
+    "full_name": "Владимир Рудольфович Соловьёв",
+    "display_name": "Владимир Соловьёв",
+    "name_latin": "Vladimir Solovev",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "viktoriya-isakova",
+    "source_name": "Виктория Евгеньевна Исакова",
+    "full_name": "Виктория Евгеньевна Исакова",
+    "display_name": "Виктория Исакова",
+    "name_latin": "Viktoriya Isakova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-zivert",
+    "source_name": "Юлия Дмитриевна Зиверт",
+    "full_name": "Юлия Дмитриевна Зиверт",
+    "display_name": "Юлия Зиверт",
+    "name_latin": "Yuliya Zivert",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "sergej-lazarev",
+    "source_name": "Сергей Вячеславович Лазарев",
+    "full_name": "Сергей Вячеславович Лазарев",
+    "display_name": "Сергей Лазарев",
+    "name_latin": "Sergej Lazarev",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-mashkov",
+    "source_name": "Владимир Львович Машков",
+    "full_name": "Владимир Львович Машков",
+    "display_name": "Владимир Машков",
+    "name_latin": "Vladimir Mashkov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "alla-pugacheva",
+    "source_name": "Алла Борисовна Пугачёва",
+    "full_name": "Алла Борисовна Пугачёва",
+    "display_name": "Алла Пугачёва",
+    "name_latin": "Alla Pugacheva",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "marina-neelova",
+    "source_name": "Марина Мстиславовна Неёлова",
+    "full_name": "Марина Мстиславовна Неёлова",
+    "display_name": "Марина Неёлова",
+    "name_latin": "Marina Neelova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "yurij-kolokolnikov",
+    "source_name": "Юрий Андреевич Колокольников",
+    "full_name": "Юрий Андреевич Колокольников",
+    "display_name": "Юрий Колокольников",
+    "name_latin": "Yurij Kolokolnikov",
     "sphere": "znamenitosti",
     "status": "published"
   },
@@ -1089,6 +1296,60 @@
     "status": "published"
   },
   {
+    "slug": "matvej-safonov",
+    "source_name": "Матвей Евгеньевич Сафонов",
+    "full_name": "Матвей Евгеньевич Сафонов",
+    "display_name": "Матвей Сафонов",
+    "name_latin": "Matvej Safonov",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-bivol",
+    "source_name": "Дмитрий Юрьевич Бивол",
+    "full_name": "Дмитрий Юрьевич Бивол",
+    "display_name": "Дмитрий Бивол",
+    "name_latin": "Dmitrij Bivol",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "diana-shnajder",
+    "source_name": "Диана Максимовна Шнайдер",
+    "full_name": "Диана Максимовна Шнайдер",
+    "display_name": "Диана Шнайдер",
+    "name_latin": "Diana Shnajder",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "habib-nurmagomedov",
+    "source_name": "Хабиб Абдулманапович Нурмагомедов",
+    "full_name": "Хабиб Абдулманапович Нурмагомедов",
+    "display_name": "Хабиб Нурмагомедов",
+    "name_latin": "Habib Nurmagomedov",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "artem-dzyuba",
+    "source_name": "Артём Сергеевич Дзюба",
+    "full_name": "Артём Сергеевич Дзюба",
+    "display_name": "Артём Дзюба",
+    "name_latin": "Artem Dzyuba",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "islam-mahachev",
+    "source_name": "Ислам Рамазанович Махачев",
+    "full_name": "Ислам Рамазанович Махачев",
+    "display_name": "Ислам Махачев",
+    "name_latin": "Islam Mahachev",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "lev-dengov",
     "source_name": "Деньгов Лев Леонидович",
     "full_name": "Деньгов Лев Леонидович",
@@ -1400,6 +1661,15 @@
     "full_name": "Сергей Николаевич Галицкий",
     "display_name": "Сергей Галицкий",
     "name_latin": "Sergej Galickij",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "roman-abramovich",
+    "source_name": "Роман Аркадьевич Абрамович",
+    "full_name": "Роман Аркадьевич Абрамович",
+    "display_name": "Роман Абрамович",
+    "name_latin": "Roman Abramovich",
     "sphere": "biznes",
     "status": "published"
   },
@@ -1824,6 +2094,51 @@
     "display_name": "Наталья Лапина",
     "name_latin": "Natalya Lapina",
     "sphere": "eksperty",
+    "status": "published"
+  },
+  {
+    "slug": "pavel-krasheninnikov",
+    "source_name": "Павел Владимирович Крашенинников",
+    "full_name": "Павел Владимирович Крашенинников",
+    "display_name": "Павел Крашенинников",
+    "name_latin": "Pavel Krasheninnikov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "valerij-zorkin",
+    "source_name": "Валерий Дмитриевич Зорькин",
+    "full_name": "Валерий Дмитриевич Зорькин",
+    "display_name": "Валерий Зорькин",
+    "name_latin": "Valerij Zorkin",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "genri-reznik",
+    "source_name": "Генри Маркович Резник",
+    "full_name": "Генри Маркович Резник",
+    "display_name": "Генри Резник",
+    "name_latin": "Genri Reznik",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-roshal",
+    "source_name": "Леонид Михайлович Рошаль",
+    "full_name": "Леонид Михайлович Рошаль",
+    "display_name": "Леонид Рошаль",
+    "name_latin": "Leonid Roshal",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "denis-procenko",
+    "source_name": "Денис Николаевич Проценко",
+    "full_name": "Денис Николаевич Проценко",
+    "display_name": "Денис Проценко",
+    "name_latin": "Denis Procenko",
+    "sphere": "medicina",
     "status": "published"
   }
 ]

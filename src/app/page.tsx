@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { ArticleCard } from '@/components/ArticleCard'
@@ -32,6 +33,12 @@ import styles from './page.module.css'
 // Витрины «Родились сегодня» и «Персона недели» зависят от даты,
 // поэтому страница пересобирается раз в час, а не замораживается на билде.
 export const revalidate = 3600
+
+/** Канонический адрес главной. Без него в индекс попадают `/?utm_…` и `/?from=…`
+ *  как отдельные документы: у главной больше всего входящих ссылок с метками. */
+export const metadata: Metadata = {
+  alternates: { canonical: `${SITE.url}/` },
+}
 
 export default function HomePage() {
   const persons = getPersons()

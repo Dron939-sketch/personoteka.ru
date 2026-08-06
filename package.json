@@ -24,14 +24,17 @@
     "icons": "tsx scripts/make-icons.ts",
     "photos:fetch": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-photos.ts",
     "photo:pick": "NODE_USE_ENV_PROXY=1 tsx scripts/pick-portrait.ts",
-    "import:lich": "NODE_USE_ENV_PROXY=1 tsx scripts/import-lichnosty.ts"
+    "import:lich": "NODE_USE_ENV_PROXY=1 tsx scripts/import-lichnosty.ts",
+    "indexnow": "NODE_USE_ENV_PROXY=1 tsx scripts/indexnow.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "next": "16.3.0",
+    "nodemailer": "^9.0.4",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "server-only": "^0.0.1",
