@@ -40,7 +40,7 @@ function Form() {
   }
 
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
+    <form className={`${styles.form} ym-hide-content`} onSubmit={onSubmit}>
       <div className={styles.modes} role="group" aria-label="Кто входит">
         <button
           type="button"

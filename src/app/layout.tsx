@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { CookieBanner } from '@/components/CookieBanner'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { Metrika } from '@/components/Metrika'
 import { ThemeScript } from '@/components/ThemeScript'
 import { SITE } from '@/lib/site'
 import '@/styles/globals.css'
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="content">{children}</main>
         <Footer />
         <CookieBanner />
+        <Metrika />
       </body>
     </html>
   )

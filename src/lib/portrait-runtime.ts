@@ -1,5 +1,6 @@
 import 'server-only'
 
+import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -59,9 +60,13 @@ export async function savePortrait(input: Buffer, slug: string): Promise<SavedPo
     .jpeg({ quality: 82, progressive: true, mozjpeg: true })
     .toFile(out)
 
-  // Без слеша на конце: `trailingSlash: true` не применяется к путям, последний
+  // Версия — отпечаток готового файла: агентство может перезалить портрет,
+  // а кэш оптимизатора и браузера держим год (см. `images.minimumCacheTTL`).
+  const version = crypto.createHash('sha1').update(fs.readFileSync(out)).digest('hex').slice(0, 8)
+
+  // Без слеша перед `?`: `trailingSlash: true` не применяется к путям, последний
   // сегмент которых похож на файл, и адрес со слешом уехал бы в 308-редирект.
-  return { src: `/api/foto/${slug}.jpg`, width: WIDTH, height: HEIGHT }
+  return { src: `/api/foto/${slug}.jpg?v=${version}`, width: WIDTH, height: HEIGHT }
 }
 
 /** Есть ли уже загруженный портрет для слага. */
