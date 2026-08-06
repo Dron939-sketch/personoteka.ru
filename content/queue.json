@@ -306,6 +306,15 @@
     "status": "published"
   },
   {
+    "slug": "mariya-zaharova",
+    "source_name": "Мария Владимировна Захарова",
+    "full_name": "Мария Владимировна Захарова",
+    "display_name": "Мария Захарова",
+    "name_latin": "Mariya Zaharova",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -824,6 +833,33 @@
     "full_name": "Юрий Андреевич Колокольников",
     "display_name": "Юрий Колокольников",
     "name_latin": "Yurij Kolokolnikov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "grigorij-leps",
+    "source_name": "Григорий Викторович Лепс",
+    "full_name": "Григорий Викторович Лепс",
+    "display_name": "Григорий Лепс",
+    "name_latin": "Grigorij Leps",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "darya-doncova",
+    "source_name": "Дарья Аркадьевна Донцова",
+    "full_name": "Дарья Аркадьевна Донцова",
+    "display_name": "Дарья Донцова",
+    "name_latin": "Darya Doncova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "egor-krid",
+    "source_name": "Егор Крид",
+    "full_name": "Егор Крид",
+    "display_name": "Егор Крид",
+    "name_latin": "Egor Krid",
     "sphere": "znamenitosti",
     "status": "published"
   },
@@ -1670,6 +1706,15 @@
     "full_name": "Роман Аркадьевич Абрамович",
     "display_name": "Роман Абрамович",
     "name_latin": "Roman Abramovich",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "sulejman-kerimov",
+    "source_name": "Сулейман Абусаидович Керимов",
+    "full_name": "Сулейман Абусаидович Керимов",
+    "display_name": "Сулейман Керимов",
+    "name_latin": "Sulejman Kerimov",
     "sphere": "biznes",
     "status": "published"
   },
