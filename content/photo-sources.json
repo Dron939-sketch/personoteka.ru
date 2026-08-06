@@ -472,12 +472,6 @@
     "wikipedia": "Брин, Сергей Михайлович"
   },
   {
-    "slug": "nataliya-filyova",
-    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/fileva.png",
-    "license": "архив редакции",
-    "source_url": "https://lichnosty.ru/bio/nataliya-valerevna-filyova/"
-  },
-  {
     "slug": "anatolij-karachinskij",
     "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anatolij_karachinskij.jpg",
     "license": "архив редакции",
@@ -732,12 +726,6 @@
   {
     "slug": "roman-kostomarov",
     "wikipedia": "Костомаров, Роман Сергеевич"
-  },
-  {
-    "slug": "evgenij-plyuschenko",
-    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/evgenij_plyushchenko.jpg",
-    "license": "архив редакции",
-    "source_url": "https://lichnosty.ru/bio/evgenij-plyushchenko/"
   },
   {
     "slug": "oksana-lut",
@@ -1039,5 +1027,21 @@
   {
     "slug": "sergej-sobyanin",
     "wikipedia": "Собянин, Сергей Семёнович"
+  },
+  {
+    "slug": "alla-pugacheva",
+    "commons": "File:Alla Pugacheva on Slavianski Bazaar in Vitebsk 01 (cropped).jpg"
+  },
+  {
+    "slug": "islam-mahachev",
+    "commons": "File:Islam Makhachev and Sergey Melikov 2025 (cropped).jpg"
+  },
+  {
+    "slug": "dmitrij-peskov",
+    "commons": "File:Dmitry Peskov portrait.jpg"
+  },
+  {
+    "slug": "marina-neelova",
+    "commons": "File:Марина Неёлова (2026-06-12) - 02 (cropped).jpg"
   }
 ]
