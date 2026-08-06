@@ -41,6 +41,23 @@
   color: var(--ink-3);
 }
 
+/* Ряд сортировок — это переключатели, а не текст, и промах по ним
+   перестраивает всю выдачу. На тач-устройствах поднимаем высоту цели
+   до 44 px вертикальными отступами: сами подписи не меняются. */
+@media (pointer: coarse) {
+  .sorts {
+    gap: var(--sp-2);
+  }
+
+  .sort,
+  .sortActive,
+  .viewToggle {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 .sort:hover {
   color: var(--accent-700);
   text-decoration: underline;

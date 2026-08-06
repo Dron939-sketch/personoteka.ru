@@ -75,6 +75,16 @@
   color: var(--ink-2);
 }
 
+/* Ссылка на форму отзыва согласия стоит отдельно, а не в тексте: по §11.3
+   она обязана быть заметной и доступной, поэтому цель доводим до 44 px. */
+@media (pointer: coarse) {
+  .removal {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 @media (max-width: 1023px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

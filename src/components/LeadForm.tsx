@@ -70,7 +70,7 @@ export function LeadForm({
   }
 
   return (
-    <form className={styles.form} onSubmit={onSubmit} noValidate={false}>
+    <form className={`${styles.form} ym-hide-content`} onSubmit={onSubmit} noValidate={false}>
       {title && <h2 className={styles.title}>{title}</h2>}
 
       <label className={styles.field}>

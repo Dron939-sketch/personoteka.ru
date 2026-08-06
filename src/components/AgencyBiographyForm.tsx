@@ -176,7 +176,7 @@ export function AgencyBiographyForm({
   }
 
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
+    <form className={`${styles.form} ym-hide-content`} onSubmit={onSubmit}>
       <fieldset className={styles.group}>
         <legend className={styles.legend}>Кто герой</legend>
 
