@@ -53,6 +53,8 @@ export const RESERVED_SLUGS = new Set([
   'robots',
   'robots.txt',
   'llms.txt',
+  'indexnow',
+  'indexnow.txt',
   'feed',
   'rss',
   'login',

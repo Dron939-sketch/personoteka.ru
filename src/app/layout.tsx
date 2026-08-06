@@ -23,6 +23,14 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { types: { 'application/rss+xml': `${SITE.url}/feed.xml` } },
+  // Коды подтверждения прав в Яндекс.Вебмастере и Google Search Console.
+  // Метод «мета-тег» выбран намеренно: файл в корне теряется при первом же
+  // переносе хостинга, а тег живёт в коде и переезжает вместе с проектом.
+  // Переменных нет — теги не выводятся, и это нормально до регистрации.
+  verification: {
+    yandex: process.env.YANDEX_VERIFICATION || undefined,
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+  },
 }
 
 export const viewport: Viewport = {
