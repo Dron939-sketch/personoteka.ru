@@ -279,6 +279,15 @@
     "status": "published"
   },
   {
+    "slug": "ramzan-kadyrov",
+    "source_name": "Рамзан Ахматович Кадыров",
+    "full_name": "Рамзан Ахматович Кадыров",
+    "display_name": "Рамзан Кадыров",
+    "name_latin": "Ramzan Kadyrov",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -700,6 +709,42 @@
     "name_latin": "Nikita Mihalkov",
     "sphere": "znamenitosti",
     "status": "published"
+  },
+  {
+    "slug": "viktor-pelevin",
+    "source_name": "Виктор Олегович Пелевин",
+    "full_name": "Виктор Олегович Пелевин",
+    "display_name": "Виктор Пелевин",
+    "name_latin": "Viktor Pelevin",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "igor-harlamov",
+    "source_name": "Игорь Юрьевич Харламов",
+    "full_name": "Игорь Юрьевич Харламов",
+    "display_name": "Игорь Харламов",
+    "name_latin": "Igor Harlamov",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "kseniya-sobchak",
+    "source_name": "Ксения Анатольевна Собчак",
+    "full_name": "Ксения Анатольевна Собчак",
+    "display_name": "Ксения Собчак",
+    "name_latin": "Kseniya Sobchak",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-solovev",
+    "source_name": "Владимир Рудольфович Соловьёв",
+    "full_name": "Владимир Рудольфович Соловьёв",
+    "display_name": "Владимир Соловьёв",
+    "name_latin": "Vladimir Solovev",
+    "sphere": "znamenitosti",
+    "status": "queued"
   },
   {
     "slug": "vladimir-plohov",
