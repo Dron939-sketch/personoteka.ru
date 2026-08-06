@@ -891,6 +891,15 @@
     "status": "published"
   },
   {
+    "slug": "marina-fedunkiv",
+    "source_name": "Марина Гавриловна Федункив",
+    "full_name": "Марина Гавриловна Федункив",
+    "display_name": "Марина Федункив",
+    "name_latin": "Marina Fedunkiv",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
@@ -1413,6 +1422,24 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-karelin",
+    "source_name": "Александр Александрович Карелин",
+    "full_name": "Александр Александрович Карелин",
+    "display_name": "Александр Карелин",
+    "name_latin": "Aleksandr Karelin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandra-trusova",
+    "source_name": "Александра Вячеславовна Трусова",
+    "full_name": "Александра Вячеславовна Трусова",
+    "display_name": "Александра Трусова",
+    "name_latin": "Aleksandra Trusova",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "lev-dengov",
     "source_name": "Деньгов Лев Леонидович",
     "full_name": "Деньгов Лев Леонидович",
@@ -1760,6 +1787,24 @@
     "full_name": "Алишер Бурханович Усманов",
     "display_name": "Алишер Усманов",
     "name_latin": "Alisher Usmanov",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-melnichenko",
+    "source_name": "Андрей Игоревич Мельниченко",
+    "full_name": "Андрей Игоревич Мельниченко",
+    "display_name": "Андрей Мельниченко",
+    "name_latin": "Andrej Melnichenko",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "aleksej-nechaev",
+    "source_name": "Алексей Геннадьевич Нечаев",
+    "full_name": "Алексей Геннадьевич Нечаев",
+    "display_name": "Алексей Нечаев",
+    "name_latin": "Aleksej Nechaev",
     "sphere": "biznes",
     "status": "published"
   },
