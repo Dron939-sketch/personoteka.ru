@@ -666,6 +666,42 @@
     "status": "published"
   },
   {
+    "slug": "yaroslav-dronov",
+    "source_name": "Ярослав Юрьевич Дронов",
+    "full_name": "Ярослав Юрьевич Дронов",
+    "display_name": "Ярослав Дронов",
+    "name_latin": "Yaroslav Dronov",
+    "sphere": "znamenitosti",
+    "status": "queued"
+  },
+  {
+    "slug": "dmitrij-nagiev",
+    "source_name": "Дмитрий Владимирович Нагиев",
+    "full_name": "Дмитрий Владимирович Нагиев",
+    "display_name": "Дмитрий Нагиев",
+    "name_latin": "Dmitrij Nagiev",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "filipp-kirkorov",
+    "source_name": "Филипп Бедросович Киркоров",
+    "full_name": "Филипп Бедросович Киркоров",
+    "display_name": "Филипп Киркоров",
+    "name_latin": "Filipp Kirkorov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "nikita-mihalkov",
+    "source_name": "Никита Сергеевич Михалков",
+    "full_name": "Никита Сергеевич Михалков",
+    "display_name": "Никита Михалков",
+    "name_latin": "Nikita Mihalkov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
@@ -1490,6 +1526,15 @@
     "full_name": "Сергей Николаевич Галицкий",
     "display_name": "Сергей Галицкий",
     "name_latin": "Sergej Galickij",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "roman-abramovich",
+    "source_name": "Роман Аркадьевич Абрамович",
+    "full_name": "Роман Аркадьевич Абрамович",
+    "display_name": "Роман Абрамович",
+    "name_latin": "Roman Abramovich",
     "sphere": "biznes",
     "status": "published"
   },
