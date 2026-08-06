@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -161,7 +162,7 @@ export function attachPortrait(
   const person = JSON.parse(fs.readFileSync(personPath, 'utf8')) as Person
 
   const photo: Photo = {
-    src: `/media/${slug}.jpg`,
+    src: `/media/v${fileVersion(path.join('public/media', `${slug}.jpg`))}/${slug}.jpg`,
     portrait: true,
     width: WIDTH,
     height: HEIGHT,
@@ -188,4 +189,18 @@ const FREE_LICENSE = /^(cc0|cc[ -]by([ -]sa)?([ -]\d(\.\d)?)?|public domain|pd-)
 
 export function isFreeLicense(license: string): boolean {
   return FREE_LICENSE.test(license.trim())
+}
+
+/**
+ * Короткий отпечаток содержимого файла для адреса портрета.
+ *
+ * Имя файла у портрета постоянное (`/media/<слаг>.jpg`), а заменять портреты
+ * приходится: то нашёлся снимок лучше, то прежний оказался кадром из фильма.
+ * Без версии в адресе кэш браузера и оптимизатора нельзя ставить дольше
+ * нескольких часов — иначе замена не дойдёт до тех, кто уже видел страницу.
+ * С версией адрес меняется вместе с файлом, и кэш можно держать год.
+ */
+export function fileVersion(filePath: string): string {
+  const bytes = fs.readFileSync(filePath)
+  return crypto.createHash('sha1').update(bytes).digest('hex').slice(0, 8)
 }

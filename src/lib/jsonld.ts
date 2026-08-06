@@ -54,9 +54,25 @@ export function personJsonLd(person: Person) {
   if (spheres.length || person.occupations.length) {
     node.knowsAbout = [...new Set([...person.occupations, ...spheres.map((s) => s.name)])]
   }
-  // sameAs — только подтверждённые ссылки самой персоны (§2.1.1).
-  if (person.links?.length) {
-    node.sameAs = person.links.map((l) => l.url)
+  // sameAs — адреса, по которым поисковик опознаёт того же человека.
+  //
+  // Два источника, и они разной природы. Первый — подтверждённые ссылки самой
+  // персоны (§2.1.1): их даёт герой, и ручаемся за них мы. Второй —
+  // энциклопедические статьи из списка источников биографии: Википедия
+  // и Викиданные для поисковых систем работают как удостоверение личности,
+  // и без такой ссылки страница про однофамильца и страница про известного
+  // человека для робота выглядят одинаково. Ссылку на статью мы и так уже
+  // проверили — по ней писался текст.
+  const encyclopedic = (person.sources ?? [])
+    .map((s) => s.url)
+    .filter(
+      (url): url is string =>
+        !!url && /^https:\/\/(ru\.|www\.)?(wikipedia\.org|wikidata\.org)/.test(url),
+    )
+
+  const sameAs = [...new Set([...(person.links ?? []).map((l) => l.url), ...encyclopedic])]
+  if (sameAs.length) {
+    node.sameAs = sameAs
   }
 
   return {
@@ -84,6 +100,15 @@ export function siteJsonLd() {
         name: SITE.name,
         url: SITE.url,
         email: SITE.email,
+        // Логотип нужен, чтобы поисковик мог показать значок издания рядом
+        // с выдачей и в карточке организации. Требование к файлу — растр
+        // не меньше 112 px по короткой стороне; берём готовую иконку 512×512.
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE.url}/icon-512.png`,
+          width: 512,
+          height: 512,
+        },
       },
       {
         '@type': 'WebSite',
