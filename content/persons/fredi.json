@@ -73,14 +73,14 @@
   ],
   "photos": [
     {
-      "src": "/media/v50de9b73/fredi.jpg",
+      "src": "/media/ve7f0b88e/fredi.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
       "alt": "Аватар Фреди — виртуального психолога; сгенерированное изображение, не фотография человека",
-      "author": "Андрей Мейстер / meysternlp.ru",
+      "author": "Архив редакции / личности.ру",
       "license": "архив редакции",
-      "source_url": "https://meysternlp.ru/fredi/"
+      "source_url": "https://lichnosty.ru/bio/fredi-fredi/"
     }
   ],
   "verified": false,
@@ -88,7 +88,7 @@
   "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-06",
-  "updated_at": "2026-08-06T20:42:32.997Z",
+  "updated_at": "2026-08-06T22:30:00.000Z",
   "foreign_agent": {
     "checked_at": "2026-08-06",
     "listed": false
