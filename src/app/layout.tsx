@@ -4,6 +4,7 @@ import { CookieBanner } from '@/components/CookieBanner'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Metrika } from '@/components/Metrika'
+import { MetrikaScript } from '@/components/MetrikaScript'
 import { ThemeScript } from '@/components/ThemeScript'
 import { SITE } from '@/lib/site'
 import '@/styles/globals.css'
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" suppressHydrationWarning>
       <body>
         <ThemeScript />
+        <MetrikaScript />
         <a className="skip-link" href="#content">
           Перейти к содержанию
         </a>
