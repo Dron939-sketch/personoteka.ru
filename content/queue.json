@@ -2268,6 +2268,51 @@
     "status": "published"
   },
   {
+    "slug": "mihail-barschevskij",
+    "source_name": "Михаил Юрьевич Барщевский",
+    "full_name": "Михаил Юрьевич Барщевский",
+    "display_name": "Михаил Барщевский",
+    "name_latin": "Mihail Barschevskij",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "genrih-padva",
+    "source_name": "Генрих Павлович Падва",
+    "full_name": "Генрих Павлович Падва",
+    "display_name": "Генрих Падва",
+    "name_latin": "Genrih Padva",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "tamara-morschakova",
+    "source_name": "Тамара Георгиевна Морщакова",
+    "full_name": "Тамара Георгиевна Морщакова",
+    "display_name": "Тамара Морщакова",
+    "name_latin": "Tamara Morschakova",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "anatolij-kucherena",
+    "source_name": "Анатолий Григорьевич Кучерена",
+    "full_name": "Анатолий Григорьевич Кучерена",
+    "display_name": "Анатолий Кучерена",
+    "name_latin": "Anatolij Kucherena",
+    "sphere": "pravo",
+    "status": "queued"
+  },
+  {
+    "slug": "yurij-pilipenko",
+    "source_name": "Юрий Сергеевич Пилипенко",
+    "full_name": "Юрий Сергеевич Пилипенко",
+    "display_name": "Юрий Пилипенко",
+    "name_latin": "Yurij Pilipenko",
+    "sphere": "pravo",
+    "status": "queued"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2284,5 +2329,50 @@
     "name_latin": "Denis Procenko",
     "sphere": "medicina",
     "status": "published"
+  },
+  {
+    "slug": "aleksandr-gincburg",
+    "source_name": "Александр Леонидович Гинцбург",
+    "full_name": "Александр Леонидович Гинцбург",
+    "display_name": "Александр Гинцбург",
+    "name_latin": "Aleksandr Gincburg",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-gote",
+    "source_name": "Сергей Владимирович Готье",
+    "full_name": "Сергей Владимирович Готье",
+    "display_name": "Сергей Готье",
+    "name_latin": "Sergej Gote",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-shlyahto",
+    "source_name": "Евгений Владимирович Шляхто",
+    "full_name": "Евгений Владимирович Шляхто",
+    "display_name": "Евгений Шляхто",
+    "name_latin": "Evgenij Shlyahto",
+    "sphere": "medicina",
+    "status": "queued"
+  },
+  {
+    "slug": "aleksandr-rumyancev",
+    "source_name": "Александр Григорьевич Румянцев",
+    "full_name": "Александр Григорьевич Румянцев",
+    "display_name": "Александр Румянцев",
+    "name_latin": "Aleksandr Rumyancev",
+    "sphere": "medicina",
+    "status": "queued"
+  },
+  {
+    "slug": "vladimir-porhanov",
+    "source_name": "Владимир Алексеевич Порханов",
+    "full_name": "Владимир Алексеевич Порханов",
+    "display_name": "Владимир Порханов",
+    "name_latin": "Vladimir Porhanov",
+    "sphere": "medicina",
+    "status": "queued"
   }
 ]
