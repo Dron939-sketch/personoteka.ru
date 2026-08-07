@@ -15,19 +15,31 @@
   { "slug": "nikolaj-drozdov", "wikipedia": "Дроздов, Николай Николаевич" },
 
   { "slug": "yurij-dud", "wikipedia": "Дудь, Юрий Александрович" },
-  { "slug": "anastasiya-ivleeva", "wikipedia": "Ивлеева, Анастасия Вячеславовна" },
   { "slug": "anton-lapenko", "wikipedia": "Лапенко, Антон Вячеславович" },
   { "slug": "sergej-druzhko", "wikipedia": "Дружко, Сергей Евгеньевич" },
-  { "slug": "dmitrij-kuplinov", "wikipedia": "Куплинов, Дмитрий Алексеевич" },
   { "slug": "valentin-petuhov", "wikipedia": "Wylsacom" },
 
   {
     "slug": "sasha-spilberg",
     "wikipedia": "Спилберг, Саша",
-    "gravity": "centre"
+    "gravity": "west"
   },
   {
     "slug": "maksim-golopolosov",
     "commons": "File:Maksim Golopolosov.jpg"
+  },
+  {
+    "slug": "amiran-sardarov",
+    "commons": "File:K7o8220.jpg",
+    "caption": "На съёмке футбольного матча, июль 2017 года"
+  },
+
+  {
+    "slug": "anastasiya-ivleeva",
+    "skip": "на Викискладе нет ни одного файла — ни снимка, ни категории; у элемента Викиданных Q48948659 нет свойства P18. Свободного портрета не существует, нужен снимок от героя или по договору"
+  },
+  {
+    "slug": "dmitrij-kuplinov",
+    "skip": "единственный свободный файл — File:Kuplinov animated.jpg, кадр мультипликации, а не фотография; у элемента Q110218511 нет свойства P18. Рисунок вместо портрета вводит читателя в заблуждение"
   }
 ]

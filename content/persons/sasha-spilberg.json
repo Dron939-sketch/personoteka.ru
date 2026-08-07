@@ -74,7 +74,18 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/sasha-spilberg.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Саша Спилберг, видеоблогер и певица, одна из первых звёзд русского youtube",
+      "author": "State Duma",
+      "license": "CC BY 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Alexandra_Balkovskaya_(2017-05-22).JPG"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: статья о персоне",
@@ -90,7 +101,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T11:24:49.648Z",
+  "updated_at": "2026-08-04T12:05:15.636Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

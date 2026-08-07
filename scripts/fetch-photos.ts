@@ -54,7 +54,19 @@ interface DirectSource extends BaseSource {
   license: string
   source_url?: string
 }
-type Source = CommonsSource | WikipediaSource | DirectSource
+/**
+ * Персона, для которой свободного снимка нет, с причиной.
+ *
+ * Просто убрать её из списка было бы хуже: тогда через месяц кто-нибудь
+ * заново пойдёт искать портрет по тем же исчерпанным источникам, а на
+ * странице так и останется монограмма без объяснения. Причина живёт рядом
+ * со списком и снимает вопрос до следующей проверки.
+ */
+interface SkippedSource {
+  slug: string
+  skip: string
+}
+type Source = CommonsSource | WikipediaSource | DirectSource | SkippedSource
 
 const root = process.cwd()
 const force = process.argv.includes('--force')
@@ -127,7 +139,17 @@ async function wikiApi(params: Record<string, string>): Promise<unknown> {
 }
 
 async function wikibaseItem(title: string): Promise<string | undefined> {
-  const data = (await wikiApi({ action: 'query', prop: 'pageprops', titles: title })) as {
+  const data = (await wikiApi({
+    action: 'query',
+    prop: 'pageprops',
+    titles: title,
+    // Перенаправления надо разворачивать здесь, иначе они молча уводят в поиск.
+    // «Ивлеева, Анастасия Вячеславовна» — перенаправление на «Ивлеева, Настя»:
+    // у самой страницы-перенаправления элемента Викиданных нет, и без этого
+    // параметра поиск подбирал по запросу чужую статью. Точное название,
+    // записанное редактором, должно вести к цели, а не к угадыванию.
+    redirects: '1',
+  })) as {
     query?: { pages?: Record<string, { pageprops?: { wikibase_item?: string } }> }
   }
   return Object.values(data.query?.pages ?? {})[0]?.pageprops?.wikibase_item
@@ -229,11 +251,17 @@ async function main() {
   let done = 0
   let skipped = 0
   const problems: string[] = []
+  const known: string[] = []
 
   for (const source of sources) {
     const personPath = path.join(root, 'content/persons', `${source.slug}.json`)
     if (!fs.existsSync(personPath)) {
       problems.push(`${source.slug}: нет такой персоны`)
+      continue
+    }
+
+    if ('skip' in source) {
+      known.push(`${source.slug}: ${source.skip}`)
       continue
     }
 
@@ -298,7 +326,11 @@ async function main() {
   }
 
   for (const problem of problems) console.warn(`  внимание: ${problem}`)
-  console.log(`\nОбработано: ${done}. Пропущено (портрет уже есть): ${skipped}.`)
+  for (const note of known) console.log(`  без портрета намеренно: ${note}`)
+  console.log(
+    `\nОбработано: ${done}. Пропущено (портрет уже есть): ${skipped}. ` +
+      `Осознанно без портрета: ${known.length}.`,
+  )
   if (done === 0 && problems.length > 0) process.exitCode = 1
 }
 
