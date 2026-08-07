@@ -2313,6 +2313,51 @@
     "status": "published"
   },
   {
+    "slug": "sergej-pashin",
+    "source_name": "Сергей Анатольевич Пашин",
+    "full_name": "Сергей Анатольевич Пашин",
+    "display_name": "Сергей Пашин",
+    "name_latin": "Sergej Pashin",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-fedotov",
+    "source_name": "Михаил Александрович Федотов",
+    "full_name": "Михаил Александрович Федотов",
+    "display_name": "Михаил Федотов",
+    "name_latin": "Mihail Fedotov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "pavel-astahov",
+    "source_name": "Павел Алексеевич Астахов",
+    "full_name": "Павел Алексеевич Астахов",
+    "display_name": "Павел Астахов",
+    "name_latin": "Pavel Astahov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "veniamin-yakovlev",
+    "source_name": "Вениамин Фёдорович Яковлев",
+    "full_name": "Вениамин Фёдорович Яковлев",
+    "display_name": "Вениамин Яковлев",
+    "name_latin": "Veniamin Yakovlev",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "konstantin-chujchenko",
+    "source_name": "Константин Анатольевич Чуйченко",
+    "full_name": "Константин Анатольевич Чуйченко",
+    "display_name": "Константин Чуйченко",
+    "name_latin": "Konstantin Chujchenko",
+    "sphere": "pravo",
+    "status": "queued"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2372,6 +2417,51 @@
     "full_name": "Владимир Алексеевич Порханов",
     "display_name": "Владимир Порханов",
     "name_latin": "Vladimir Porhanov",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "leo-bokeriya",
+    "source_name": "Лео Антонович Бокерия",
+    "full_name": "Лео Антонович Бокерия",
+    "display_name": "Лео Бокерия",
+    "name_latin": "Leo Bokeriya",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "renat-akchurin",
+    "source_name": "Ренат Сулейманович Акчурин",
+    "full_name": "Ренат Сулейманович Акчурин",
+    "display_name": "Ренат Акчурин",
+    "name_latin": "Renat Akchurin",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-chuchalin",
+    "source_name": "Александр Григорьевич Чучалин",
+    "full_name": "Александр Григорьевич Чучалин",
+    "display_name": "Александр Чучалин",
+    "name_latin": "Aleksandr Chuchalin",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-murashko",
+    "source_name": "Михаил Альбертович Мурашко",
+    "full_name": "Михаил Альбертович Мурашко",
+    "display_name": "Михаил Мурашко",
+    "name_latin": "Mihail Murashko",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "anna-popova",
+    "source_name": "Анна Юрьевна Попова",
+    "full_name": "Анна Юрьевна Попова",
+    "display_name": "Анна Попова",
+    "name_latin": "Anna Popova",
     "sphere": "medicina",
     "status": "published"
   }
