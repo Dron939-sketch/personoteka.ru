@@ -101,9 +101,10 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T11:24:51.031Z",
+  "updated_at": "2026-08-07T20:11:03.311282Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false
-  }
+  },
+  "birth_date": "1989-11-01"
 }
