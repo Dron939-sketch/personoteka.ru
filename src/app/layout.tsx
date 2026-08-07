@@ -6,7 +6,7 @@ import { Header } from '@/components/Header'
 import { Metrika } from '@/components/Metrika'
 import { MetrikaScript } from '@/components/MetrikaScript'
 import { ThemeScript } from '@/components/ThemeScript'
-import { SITE } from '@/lib/site'
+import { SITE, YANDEX_VERIFICATION } from '@/lib/site'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { types: { 'application/rss+xml': `${SITE.url}/feed.xml` } },
   // Коды подтверждения прав в Яндекс.Вебмастере и Google Search Console.
-  // Метод «мета-тег» выбран намеренно: файл в корне теряется при первом же
-  // переносе хостинга, а тег живёт в коде и переезжает вместе с проектом.
-  // Переменных нет — теги не выводятся, и это нормально до регистрации.
+  // Яндексовский код зашит в `site.ts` — он не секрет и виден в исходном коде
+  // страницы, зато переживает перенос хостинга. Гугловского пока нет: до
+  // регистрации ресурса тег просто не выводится, и это нормально.
   verification: {
-    yandex: process.env.YANDEX_VERIFICATION || undefined,
+    yandex: YANDEX_VERIFICATION || undefined,
     google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
   },
 }
