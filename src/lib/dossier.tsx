@@ -1,10 +1,12 @@
 import 'server-only'
 
+import fs from 'node:fs'
 import path from 'node:path'
 
 import {
   Document,
   Font,
+  Image,
   Page,
   StyleSheet,
   Text,
@@ -12,12 +14,13 @@ import {
   renderToBuffer,
 } from '@react-pdf/renderer'
 
+import { foreignAgentNoticeText } from './foreign-agent'
 import { formatDate } from './format'
 import { SITE } from './site'
-import type { City, Person, RatingEntry, Sphere } from './types'
+import type { City, Person, Photo, RatingEntry, Sphere } from './types'
 
 /**
- * Вёрстка PDF-досье (§6.3): портрет — монограмма, лид, ключевые факты, хронология,
+ * Вёрстка PDF-досье (§6.3): портрет, лид, ключевые факты, хронология,
  * контакты, адрес страницы. Оформление следует дизайн-системе (§7.2): бумага,
  * графит, латунная линейка.
  *
@@ -60,7 +63,36 @@ const styles = StyleSheet.create({
   },
   headerRule: { width: 28, height: 2, backgroundColor: COLORS.accent, marginRight: 8 },
   headerText: { fontSize: 8, letterSpacing: 1.6, color: COLORS.ink3 },
+  /**
+   * Пометка об иностранном агенте: перед основным содержанием, заметно выделена,
+   * не мельче основного текста. Досье уходит третьим лицам отдельным файлом —
+   * пометка обязана уехать вместе с ним, а не остаться на странице сайта.
+   */
+  foreignAgent: {
+    fontSize: 10,
+    lineHeight: 1.35,
+    color: COLORS.ink,
+    backgroundColor: '#F5EFE0',
+    borderWidth: 1,
+    borderColor: COLORS.accent,
+    borderRadius: 3,
+    padding: 8,
+    marginBottom: 18,
+  },
   hero: { flexDirection: 'row', gap: 20, marginBottom: 20 },
+  heroAside: { width: 96 },
+  portrait: {
+    width: 96,
+    height: 120,
+    borderWidth: 1,
+    borderColor: COLORS.line,
+    borderRadius: 4,
+    // Портрет обрезан в 4:5 ещё при загрузке, но кадр из другого источника
+    // мог прийти иным — cover не даёт растянуть лицо по горизонтали.
+    objectFit: 'cover',
+  },
+  /** Автор и лицензия под снимком — условие свободной лицензии, а не подпись для красоты. */
+  photoCredit: { fontSize: 6, lineHeight: 1.3, color: COLORS.ink3, marginTop: 4 },
   monogram: {
     width: 96,
     height: 120,
@@ -96,7 +128,10 @@ const styles = StyleSheet.create({
   bullet: { width: 10, color: COLORS.accent },
   factText: { flex: 1, fontSize: 9.5, color: COLORS.ink2 },
   timelineRow: { flexDirection: 'row', marginBottom: 7 },
-  timelineYear: { width: 42, fontSize: 9, color: COLORS.ink3 },
+  // Ширина под самую длинную датировку: год — не всегда четыре цифры, в хронологии
+  // встречаются «середина 2010-х» и «2008, 2009, 2013». При width: 42 такая запись
+  // переносилась и вплотную упиралась в заголовок события.
+  timelineYear: { width: 74, paddingRight: 8, fontSize: 9, color: COLORS.ink3 },
   timelineBody: { flex: 1 },
   timelineTitle: { fontSize: 9.5, color: COLORS.ink },
   timelineText: { fontSize: 9, color: COLORS.ink3 },
@@ -127,6 +162,20 @@ function SectionTitle({ children }: { children: string }) {
   )
 }
 
+/**
+ * Файл портрета на диске — или `undefined`, если снимка нет.
+ *
+ * Досье собирается статически на сервере, поэтому картинка берётся из `public`
+ * напрямую: тянуть её по сети с собственного же сайта во время сборки незачем.
+ * Отсутствие файла не должно валить генерацию — досье остаётся с монограммой,
+ * как страница персоны без портрета.
+ */
+function portraitFile(photo: Photo | undefined): string | undefined {
+  if (!photo?.src.startsWith('/')) return undefined
+  const file = path.join(process.cwd(), 'public', photo.src)
+  return fs.existsSync(file) ? file : undefined
+}
+
 export interface DossierInput {
   person: Person
   spheres: Sphere[]
@@ -146,6 +195,11 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
     .slice(0, 2)
     .map((w) => w.charAt(0).toUpperCase())
     .join('')
+
+  const portrait = person.photos?.find((p) => p.portrait) ?? person.photos?.[0]
+  const portraitPath = portraitFile(portrait)
+  const credit = [portrait?.author, portrait?.license].filter(Boolean).join(' · ')
+  const foreignAgentNotice = foreignAgentNoticeText(person)
 
   const meta: [string, string][] = []
   if (person.birth_date && person.birth_date_public !== false) {
@@ -184,9 +238,18 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
           </View>
         )}
 
+        {foreignAgentNotice && <Text style={styles.foreignAgent}>{foreignAgentNotice}</Text>}
+
         <View style={styles.hero}>
-          <View style={styles.monogram}>
-            <Text style={styles.initials}>{initials}</Text>
+          <View style={styles.heroAside}>
+            {portraitPath ? (
+              <Image style={styles.portrait} src={portraitPath} />
+            ) : (
+              <View style={styles.monogram}>
+                <Text style={styles.initials}>{initials}</Text>
+              </View>
+            )}
+            {portraitPath && credit && <Text style={styles.photoCredit}>{credit}</Text>}
           </View>
           <View style={styles.heroBody}>
             <Text style={styles.name}>{person.display_name}</Text>
