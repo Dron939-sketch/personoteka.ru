@@ -1,5 +1,14 @@
 [
   {
+    "slug": "ekaterina-mizulina",
+    "source_name": "Екатерина Михайловна Мизулина",
+    "full_name": "Екатерина Михайловна Мизулина",
+    "display_name": "Екатерина Мизулина",
+    "name_latin": "Ekaterina Mizulina",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "nikita-konkov",
     "source_name": "Никита Александрович Коньков",
     "full_name": "Никита Александрович Коньков",
@@ -1440,6 +1449,15 @@
     "status": "published"
   },
   {
+    "slug": "vladislav-bakalchuk",
+    "source_name": "Владислав Сергеевич Бакальчук",
+    "full_name": "Владислав Сергеевич Бакальчук",
+    "display_name": "Владислав Бакальчук",
+    "name_latin": "Vladislav Bakalchuk",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
     "slug": "lev-dengov",
     "source_name": "Деньгов Лев Леонидович",
     "full_name": "Деньгов Лев Леонидович",
@@ -2356,6 +2374,51 @@
     "name_latin": "Konstantin Chujchenko",
     "sphere": "pravo",
     "status": "queued"
+  },
+  {
+    "slug": "elena-kamburova",
+    "source_name": "Елена Антоновна Камбурова",
+    "full_name": "Елена Антоновна Камбурова",
+    "display_name": "Елена Камбурова",
+    "name_latin": "Elena Kamburova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "oleg-gazmanov",
+    "source_name": "Олег Михайлович Газманов",
+    "full_name": "Олег Михайлович Газманов",
+    "display_name": "Олег Газманов",
+    "name_latin": "Oleg Gazmanov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-yarmolnik",
+    "source_name": "Леонид Исаакович Ярмольник",
+    "full_name": "Леонид Исаакович Ярмольник",
+    "display_name": "Леонид Ярмольник",
+    "name_latin": "Leonid Yarmolnik",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "tatyana-vasileva",
+    "source_name": "Татьяна Григорьевна Васильева",
+    "full_name": "Татьяна Григорьевна Васильева",
+    "display_name": "Татьяна Васильева",
+    "name_latin": "Tatyana Vasileva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vanya-dmitrienko",
+    "source_name": "Иван Викторович Дмитриенко = vanya-dmitrienko",
+    "full_name": "Иван Викторович Дмитриенко",
+    "display_name": "Иван Дмитриенко",
+    "name_latin": "Ivan Dmitrienko",
+    "sphere": "kultura",
+    "status": "published"
   },
   {
     "slug": "leonid-roshal",
