@@ -2301,7 +2301,7 @@
     "display_name": "Анатолий Кучерена",
     "name_latin": "Anatolij Kucherena",
     "sphere": "pravo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "yurij-pilipenko",
@@ -2310,7 +2310,7 @@
     "display_name": "Юрий Пилипенко",
     "name_latin": "Yurij Pilipenko",
     "sphere": "pravo",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "leonid-roshal",
@@ -2355,7 +2355,7 @@
     "display_name": "Евгений Шляхто",
     "name_latin": "Evgenij Shlyahto",
     "sphere": "medicina",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "aleksandr-rumyancev",
@@ -2364,7 +2364,7 @@
     "display_name": "Александр Румянцев",
     "name_latin": "Aleksandr Rumyancev",
     "sphere": "medicina",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vladimir-porhanov",
@@ -2373,6 +2373,6 @@
     "display_name": "Владимир Порханов",
     "name_latin": "Vladimir Porhanov",
     "sphere": "medicina",
-    "status": "queued"
+    "status": "published"
   }
 ]
