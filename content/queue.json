@@ -477,13 +477,13 @@
     "status": "published"
   },
   {
-    "slug": "mari-krajmbreri",
-    "source_name": "Мари Краймбрери",
+    "slug": "mari-kraimbreri",
+    "source_name": "Мари Краймбрери = mari-kraimbreri",
     "full_name": "Мари Краймбрери",
     "display_name": "Мари Краймбрери",
     "name_latin": "Mari Krajmbreri",
     "sphere": "znamenitosti",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "alsu",
@@ -702,13 +702,13 @@
     "status": "published"
   },
   {
-    "slug": "yaroslav-dronov",
-    "source_name": "Ярослав Юрьевич Дронов",
+    "slug": "shaman",
+    "source_name": "Ярослав Юрьевич Дронов = shaman",
     "full_name": "Ярослав Юрьевич Дронов",
     "display_name": "Ярослав Дронов",
     "name_latin": "Yaroslav Dronov",
     "sphere": "znamenitosti",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "dmitrij-nagiev",
@@ -747,13 +747,13 @@
     "status": "published"
   },
   {
-    "slug": "igor-harlamov",
-    "source_name": "Игорь Юрьевич Харламов",
+    "slug": "garik-harlamov",
+    "source_name": "Игорь Юрьевич Харламов = garik-harlamov",
     "full_name": "Игорь Юрьевич Харламов",
     "display_name": "Игорь Харламов",
     "name_latin": "Igor Harlamov",
     "sphere": "znamenitosti",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "kseniya-sobchak",
@@ -765,13 +765,13 @@
     "status": "published"
   },
   {
-    "slug": "vladimir-solovev",
-    "source_name": "Владимир Рудольфович Соловьёв",
+    "slug": "vladimir-solovyov",
+    "source_name": "Владимир Рудольфович Соловьёв = vladimir-solovyov",
     "full_name": "Владимир Рудольфович Соловьёв",
     "display_name": "Владимир Соловьёв",
     "name_latin": "Vladimir Solovev",
     "sphere": "znamenitosti",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "viktoriya-isakova",
@@ -783,13 +783,13 @@
     "status": "published"
   },
   {
-    "slug": "yuliya-zivert",
-    "source_name": "Юлия Дмитриевна Зиверт",
+    "slug": "zivert",
+    "source_name": "Юлия Дмитриевна Зиверт = zivert",
     "full_name": "Юлия Дмитриевна Зиверт",
     "display_name": "Юлия Зиверт",
     "name_latin": "Yuliya Zivert",
     "sphere": "znamenitosti",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-lazarev",
@@ -1455,7 +1455,7 @@
     "display_name": "Василий Палаткин",
     "name_latin": "Vasilij Palatkin",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "denis-bikchurin",
@@ -1464,7 +1464,7 @@
     "display_name": "Денис Бикчурин",
     "name_latin": "Denis Bikchurin",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "roman-chichkanov",
@@ -1473,7 +1473,7 @@
     "display_name": "Роман Чичканов",
     "name_latin": "Roman Chichkanov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "boris-listov",
@@ -1491,7 +1491,7 @@
     "display_name": "Мигель Маркарянц",
     "name_latin": "Migel Markaryanc",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "natalya-sinyutkina",
@@ -1500,7 +1500,7 @@
     "display_name": "Наталья Синюткина",
     "name_latin": "Natalya Sinyutkina",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "sergej-gerasimov",
@@ -1509,7 +1509,7 @@
     "display_name": "Сергей Герасимов",
     "name_latin": "Sergej Gerasimov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "vladimir-sokolov",
@@ -1518,7 +1518,7 @@
     "display_name": "Владимир Соколов",
     "name_latin": "Vladimir Sokolov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "anatolij-sulyanov",
@@ -1527,7 +1527,7 @@
     "display_name": "Анатолий Сульянов",
     "name_latin": "Anatolij Sulyanov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "lev-mazaraki",
@@ -1536,7 +1536,7 @@
     "display_name": "Лев Мазараки",
     "name_latin": "Lev Mazaraki",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "nikolaj-storonskij",
@@ -1617,7 +1617,7 @@
     "display_name": "Сергей Амарян",
     "name_latin": "Sergej Amaryan",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "evgenij-kolesov",
@@ -1626,7 +1626,7 @@
     "display_name": "Евгений Колесов",
     "name_latin": "Evgenij Kolesov",
     "sphere": "biznes",
-    "status": "queued"
+    "status": "published"
   },
   {
     "slug": "artemij-lebedev",
