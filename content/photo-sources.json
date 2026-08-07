@@ -1099,5 +1099,29 @@
   {
     "slug": "aleksej-nechaev",
     "wikipedia": "Нечаев, Алексей Геннадьевич"
+  },
+  {
+    "slug": "vasilij-palatkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/07/palatkin-vasiliy-serafimovich.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/palatkin-vasiliy-serafimovich/"
+  },
+  {
+    "slug": "denis-bikchurin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/04/denis-bikchurin-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/denis-bikchurin/"
+  },
+  {
+    "slug": "migel-markaryanc",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/07/vt2_1480-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/migel-rubenovich-markaryants/"
+  },
+  {
+    "slug": "roman-chichkanov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/roman-chichkanov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/roman-chichkanov/"
   }
 ]
