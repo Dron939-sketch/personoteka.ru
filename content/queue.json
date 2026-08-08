@@ -360,6 +360,15 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-brechalov",
+    "source_name": "Александр Владимирович Бречалов = aleksandr-brechalov",
+    "full_name": "Александр Владимирович Бречалов",
+    "display_name": "Александр Бречалов",
+    "name_latin": "Aleksandr Brechalov",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -950,6 +959,24 @@
     "full_name": "Анна Александровна Хилькевич",
     "display_name": "Анна Хилькевич",
     "name_latin": "Anna Hilkevich",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "milla-jovovich",
+    "source_name": "Милла Йовович = milla-jovovich",
+    "full_name": "Милла Йовович",
+    "display_name": "Милла Йовович",
+    "name_latin": "Milla Jovovich",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-gajdulyan",
+    "source_name": "Андрей Сергеевич Гайдулян = andrej-gajdulyan",
+    "full_name": "Андрей Сергеевич Гайдулян",
+    "display_name": "Андрей Гайдулян",
+    "name_latin": "Andrej Gajdulyan",
     "sphere": "znamenitosti",
     "status": "published"
   },
@@ -2930,6 +2957,24 @@
     "full_name": "Александр Викторович Збруев",
     "display_name": "Александр Збруев",
     "name_latin": "Aleksandr Zbruev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "svetlana-nemolyaeva",
+    "source_name": "Светлана Владимировна Немоляева = svetlana-nemolyaeva",
+    "full_name": "Светлана Владимировна Немоляева",
+    "display_name": "Светлана Немоляева",
+    "name_latin": "Svetlana Nemolyaeva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "edita-peha",
+    "source_name": "Эдита Станиславовна Пьеха = edita-peha",
+    "full_name": "Эдита Станиславовна Пьеха",
+    "display_name": "Эдита Пьеха",
+    "name_latin": "Edita Peha",
     "sphere": "kultura",
     "status": "published"
   },
