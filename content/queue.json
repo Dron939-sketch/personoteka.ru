@@ -2781,6 +2781,24 @@
     "status": "published"
   },
   {
+    "slug": "tatyana-bulanova",
+    "source_name": "Татьяна Ивановна Буланова",
+    "full_name": "Татьяна Ивановна Буланова",
+    "display_name": "Татьяна Буланова",
+    "name_latin": "Tatyana Bulanova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "pavel-derevyanko",
+    "source_name": "Павел Юрьевич Деревянко",
+    "full_name": "Павел Юрьевич Деревянко",
+    "display_name": "Павел Деревянко",
+    "name_latin": "Pavel Derevyanko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2913,6 +2931,15 @@
     "display_name": "Леонид Якубович",
     "name_latin": "Leonid Yakubovich",
     "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "anna-kikina",
+    "source_name": "Анна Юрьевна Кикина",
+    "full_name": "Анна Юрьевна Кикина",
+    "display_name": "Анна Кикина",
+    "name_latin": "Anna Kikina",
+    "sphere": "nauka",
     "status": "published"
   }
 ]
