@@ -194,6 +194,11 @@ Mikolas Hard
 Ян Александрович Непомнящий = ian-nepomnyashchij
 Анна Станиславовна Щербакова = anna-shcherbakova
 Евгений Владимирович Малкин = evgenij-malkin
+Алина Ильназовна Загитова = alina-zagitova
+Евгения Армановна Медведева = evgeniya-medvedeva
+Аделина Дмитриевна Сотникова = adelina-sotnikova
+Никита Владимирович Нагорный = nikita-nagornyj
+Абдулрашид Булачевич Садулаев = abdulrashid-sadulaev
 
 ## biznes
 Владислав Сергеевич Бакальчук
