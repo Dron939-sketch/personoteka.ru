@@ -123,6 +123,11 @@ Mikolas Hard
 Анна Александровна Хилькевич
 Милла Йовович = milla-jovovich
 Андрей Сергеевич Гайдулян = andrej-gajdulyan
+Виктория Викторовна Толстоганова = viktoriya-tolstoganova
+Елизавета Михайловна Боярская = elizaveta-boyarskaya
+Анна Никитична Михалкова = anna-mihalkova
+Светлана Викторовна Ходченкова = svetlana-hodchenkova
+Александр Юрьевич Домогаров = aleksandr-domogarov
 
 ## obrazovanie
 Плохов Владимир Николаевич
