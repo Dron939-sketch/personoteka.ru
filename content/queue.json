@@ -3069,6 +3069,51 @@
     "status": "published"
   },
   {
+    "slug": "vyacheslav-butusov",
+    "source_name": "Вячеслав Геннадьевич Бутусов = vyacheslav-butusov",
+    "full_name": "Вячеслав Геннадьевич Бутусов",
+    "display_name": "Вячеслав Бутусов",
+    "name_latin": "Vyacheslav Butusov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "ilya-lagutenko",
+    "source_name": "Илья Игоревич Лагутенко = ilya-lagutenko",
+    "full_name": "Илья Игоревич Лагутенко",
+    "display_name": "Илья Лагутенко",
+    "name_latin": "Ilya Lagutenko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-shnurov",
+    "source_name": "Сергей Владимирович Шнуров = sergej-shnurov",
+    "full_name": "Сергей Владимирович Шнуров",
+    "display_name": "Сергей Шнуров",
+    "name_latin": "Sergej Shnurov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "valeriya-perfilova",
+    "source_name": "Валерия Юрьевна Перфилова = valeriya-perfilova",
+    "full_name": "Валерия Юрьевна Перфилова",
+    "display_name": "Валерия Перфилова",
+    "name_latin": "Valeriya Perfilova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-marshal",
+    "source_name": "Александр Витальевич Маршал = aleksandr-marshal",
+    "full_name": "Александр Витальевич Маршал",
+    "display_name": "Александр Маршал",
+    "name_latin": "Aleksandr Marshal",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
