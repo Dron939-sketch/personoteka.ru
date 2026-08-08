@@ -21,7 +21,9 @@ import { Timeline } from '@/components/Timeline'
 import { Toc, type TocItem } from '@/components/Toc'
 import { VerifiedBadge } from '@/components/VerifiedBadge'
 import { VideoEmbed } from '@/components/VideoEmbed'
+import { articleHref } from '@/lib/article-href'
 import {
+  getArticlesForPerson,
   getCity,
   getEditor,
   getPerson,
@@ -346,10 +348,35 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
         </section>
       )}
 
+      <RelatedArticles slug={person.slug} />
+
       <div className="container section">
         <CTAStrip />
       </div>
     </>
+  )
+}
+
+/**
+ * Материалы, в которых упомянута персона (§5.2). Обратная сторона ссылки из
+ * статьи в каталог: страница с одним именем получает связь с темой, по которой
+ * её иначе никто не найдёт.
+ */
+function RelatedArticles({ slug }: { slug: string }) {
+  const articles = getArticlesForPerson(slug)
+  if (!articles.length) return null
+
+  return (
+    <section className="container section">
+      <h2>Материалы о герое</h2>
+      <ul>
+        {articles.map((article) => (
+          <li key={article.slug}>
+            <Link href={articleHref(article)}>{article.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 

@@ -48,6 +48,9 @@ export function Footer() {
               <Link href="/rodilis-segodnya/">Родились сегодня</Link>
             </li>
             <li>
+              <Link href="/kak-eto-rabotaet/">Как это работает</Link>
+            </li>
+            <li>
               <Link href="/interv-yu/">Интервью</Link>
             </li>
             <li>

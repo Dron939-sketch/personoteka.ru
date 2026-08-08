@@ -1,6 +1,6 @@
 import { getCity, getEditor, getSpheres } from './content'
 import { SITE } from './site'
-import type { Person } from './types'
+import type { Article, Person } from './types'
 
 /**
  * Микроразметка (§10.2). На странице персоны — `ProfilePage` с вложенным `Person`.
@@ -180,5 +180,37 @@ export function itemListJsonLd(persons: Person[], name: string) {
       url: `${SITE.url}/${p.slug}/`,
       name: p.display_name,
     })),
+  }
+}
+
+/**
+ * `Article` для редакционных материалов (§10.2).
+ *
+ * `mentions` перечисляет персон, о которых текст: это связывает статью с
+ * карточками каталога в глазах поисковика — те же сущности, что и в
+ * `personJsonLd`, только с другой стороны.
+ */
+export function articleJsonLd(article: Article, url: string, authorName: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: article.title,
+    description: article.lead,
+    inLanguage: 'ru-RU',
+    datePublished: article.published_at,
+    dateModified: article.updated_at,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    author: { '@type': 'Person', name: authorName },
+    publisher: { '@id': `${SITE.url}/#organization` },
+    ...(article.cover ? { image: `${SITE.url}${article.cover.src}` } : {}),
+    ...(article.mentions.length
+      ? {
+          mentions: article.mentions.map((slug) => ({
+            '@type': 'Person',
+            '@id': `${SITE.url}/${slug}/#person`,
+          })),
+        }
+      : {}),
   }
 }

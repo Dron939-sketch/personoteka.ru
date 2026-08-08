@@ -96,6 +96,7 @@ export function isReservedSlug(slug: string): boolean {
 export const NAV = [
   { href: '/katalog/', label: 'Каталог' },
   { href: '/rejting/', label: 'Рейтинг' },
+  { href: '/kak-eto-rabotaet/', label: 'Как это работает' },
   { href: '/interv-yu/', label: 'Интервью' },
   { href: '/redpolitika/', label: 'Редполитика' },
 ] as const
