@@ -55,6 +55,7 @@
 Ольга Борисовна Любимова = olga-lyubimova
 Григорий Алексеевич Явлинский = grigorij-yavlinskij
 Николай Платонович Патрушев = nikolaj-patrushev
+Дмитрий Анатольевич Медведев = dmitrij-medvedev
 
 ## znamenitosti
 Mikolas Hard
@@ -464,6 +465,10 @@ Mikolas Hard
 Виктор Робертович Цой = viktor-coj
 Фаина Георгиевна Раневская = faina-ranevskaya
 Людмила Марковна Гурченко = lyudmila-gurchenko
+Михаил Николаевич Задорнов = mihail-zadornov
+Олег Иванович Янковский = oleg-yankovskij
+Сергей Анатольевич Курёхин = sergej-kurehin
+Юрий Васильевич Шатунов = yurij-shatunov
 
 ## medicina
 Леонид Михайлович Рошаль
