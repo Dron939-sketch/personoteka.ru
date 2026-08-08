@@ -3357,6 +3357,51 @@
     "status": "published"
   },
   {
+    "slug": "milosh-bikovich",
+    "source_name": "Милош Бикович = milosh-bikovich",
+    "full_name": "Милош Бикович",
+    "display_name": "Милош Бикович",
+    "name_latin": "Milosh Bikovich",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aglaya-tarasova",
+    "source_name": "Аглая Тарасова = aglaya-tarasova",
+    "full_name": "Аглая Тарасова",
+    "display_name": "Аглая Тарасова",
+    "name_latin": "Aglaya Tarasova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "irina-gorbacheva",
+    "source_name": "Ирина Горбачёва = irina-gorbacheva",
+    "full_name": "Ирина Горбачёва",
+    "display_name": "Ирина Горбачёва",
+    "name_latin": "Irina Gorbacheva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "instasamka",
+    "source_name": "Дарья Еропкина = instasamka",
+    "full_name": "Дарья Еропкина",
+    "display_name": "Дарья Еропкина",
+    "name_latin": "Darya Eropkina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "dora",
+    "source_name": "Дарья Шиханова = dora",
+    "full_name": "Дарья Шиханова",
+    "display_name": "Дарья Шиханова",
+    "name_latin": "Darya Shihanova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
