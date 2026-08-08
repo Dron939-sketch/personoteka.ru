@@ -342,6 +342,24 @@
     "status": "published"
   },
   {
+    "slug": "yana-lantratova",
+    "source_name": "Яна Валерьевна Лантратова",
+    "full_name": "Яна Валерьевна Лантратова",
+    "display_name": "Яна Лантратова",
+    "name_latin": "Yana Lantratova",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "aleksej-zhuravlev",
+    "source_name": "Алексей Александрович Журавлёв",
+    "full_name": "Алексей Александрович Журавлёв",
+    "display_name": "Алексей Журавлёв",
+    "name_latin": "Aleksej Zhuravlev",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -2516,6 +2534,33 @@
     "full_name": "Ольга Александровна Будина",
     "display_name": "Ольга Будина",
     "name_latin": "Olga Budina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lyubov-tolkalina",
+    "source_name": "Любовь Николаевна Толкалина",
+    "full_name": "Любовь Николаевна Толкалина",
+    "display_name": "Любовь Толкалина",
+    "name_latin": "Lyubov Tolkalina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lidiya-fedoseeva-shukshina",
+    "source_name": "Лидия Николаевна Федосеева-Шукшина",
+    "full_name": "Лидия Николаевна Федосеева-Шукшина",
+    "display_name": "Лидия Федосеева-Шукшина",
+    "name_latin": "Lidiya Fedoseeva-shukshina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "ivan-ohlobystin",
+    "source_name": "Иван Иванович Охлобыстин",
+    "full_name": "Иван Иванович Охлобыстин",
+    "display_name": "Иван Охлобыстин",
+    "name_latin": "Ivan Ohlobystin",
     "sphere": "kultura",
     "status": "published"
   },
