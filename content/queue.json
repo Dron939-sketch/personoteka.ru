@@ -2979,6 +2979,51 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-rozenbaum",
+    "source_name": "Александр Яковлевич Розенбаум = aleksandr-rozenbaum",
+    "full_name": "Александр Яковлевич Розенбаум",
+    "display_name": "Александр Розенбаум",
+    "name_latin": "Aleksandr Rozenbaum",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "larisa-dolina",
+    "source_name": "Лариса Александровна Долина = larisa-dolina",
+    "full_name": "Лариса Александровна Долина",
+    "display_name": "Лариса Долина",
+    "name_latin": "Larisa Dolina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-agutin",
+    "source_name": "Леонид Николаевич Агутин = leonid-agutin",
+    "full_name": "Леонид Николаевич Агутин",
+    "display_name": "Леонид Агутин",
+    "name_latin": "Leonid Agutin",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "viktor-drobysh",
+    "source_name": "Виктор Яковлевич Дробыш = viktor-drobysh",
+    "full_name": "Виктор Яковлевич Дробыш",
+    "display_name": "Виктор Дробыш",
+    "name_latin": "Viktor Drobysh",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "anton-makarskij",
+    "source_name": "Антон Александрович Макарский = anton-makarskij",
+    "full_name": "Антон Александрович Макарский",
+    "display_name": "Антон Макарский",
+    "name_latin": "Anton Makarskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
