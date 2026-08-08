@@ -2448,6 +2448,51 @@
     "status": "published"
   },
   {
+    "slug": "danila-poperechnyj",
+    "source_name": "Данила Алексеевич Поперечный = danila-poperechnyj",
+    "full_name": "Данила Алексеевич Поперечный",
+    "display_name": "Данила Поперечный",
+    "name_latin": "Danila Poperechnyj",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-litvin",
+    "source_name": "Михаил Андреевич Литвин = mihail-litvin",
+    "full_name": "Михаил Андреевич Литвин",
+    "display_name": "Михаил Литвин",
+    "name_latin": "Mihail Litvin",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "ruslan-usachev",
+    "source_name": "Руслан Эдуардович Вихлянцев = ruslan-usachev",
+    "full_name": "Руслан Эдуардович Вихлянцев",
+    "display_name": "Руслан Вихлянцев",
+    "name_latin": "Ruslan Vihlyancev",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "ivangaj",
+    "source_name": "Иван Романович Рудской = ivangaj",
+    "full_name": "Иван Романович Рудской",
+    "display_name": "Иван Рудской",
+    "name_latin": "Ivan Rudskoj",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
+    "slug": "ilya-maddison",
+    "source_name": "Илья Сергеевич Давыдов = ilya-maddison",
+    "full_name": "Илья Сергеевич Давыдов",
+    "display_name": "Илья Давыдов",
+    "name_latin": "Ilya Davydov",
+    "sphere": "blogery",
+    "status": "published"
+  },
+  {
     "slug": "denis-kotikov",
     "source_name": "Котиков Денис Валерьевич",
     "full_name": "Котиков Денис Валерьевич",
