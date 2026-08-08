@@ -2169,6 +2169,33 @@
     "status": "published"
   },
   {
+    "slug": "mihail-fridman",
+    "source_name": "Михаил Маратович Фридман = mihail-fridman",
+    "full_name": "Михаил Маратович Фридман",
+    "display_name": "Михаил Фридман",
+    "name_latin": "Mihail Fridman",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-chemezov",
+    "source_name": "Сергей Викторович Чемезов = sergej-chemezov",
+    "full_name": "Сергей Викторович Чемезов",
+    "display_name": "Сергей Чемезов",
+    "name_latin": "Sergej Chemezov",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-shohin",
+    "source_name": "Александр Николаевич Шохин = aleksandr-shohin",
+    "full_name": "Александр Николаевич Шохин",
+    "display_name": "Александр Шохин",
+    "name_latin": "Aleksandr Shohin",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
     "slug": "amiran-sardarov",
     "source_name": "Амиран Сардаров",
     "full_name": "Амиран Сардаров",

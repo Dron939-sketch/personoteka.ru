@@ -256,6 +256,9 @@ Mikolas Hard
 Давид Евгеньевич Ян = david-yan
 Вагит Юсуфович Алекперов = vagit-alekperov
 Андрей Леонидович Костин = andrej-kostin
+Михаил Маратович Фридман = mihail-fridman
+Сергей Викторович Чемезов = sergej-chemezov
+Александр Николаевич Шохин = aleksandr-shohin
 
 ## blogery
 Амиран Сардаров
