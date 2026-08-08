@@ -1,0 +1,47 @@
+.section {
+  margin-top: var(--sp-8);
+}
+
+.section h2 {
+  margin: 0 0 var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  scroll-margin-top: var(--sp-8);
+}
+
+.section h3 {
+  margin: var(--sp-6) 0 var(--sp-3);
+  font-size: 1.125rem;
+}
+
+.section p {
+  margin: 0 0 var(--sp-4);
+  max-width: 68ch;
+}
+
+.mentions {
+  margin-top: var(--sp-12);
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.mentions h2 {
+  margin: 0 0 var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.mentions ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.tagline {
+  color: var(--ink-3);
+}

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { articleHref } from '@/lib/article-href'
 import { formatDate } from '@/lib/format'
 import type { Article } from '@/lib/types'
 
@@ -8,6 +9,7 @@ import styles from './ArticleCard.module.css'
 const KIND_LABEL: Record<Article['kind'], string> = {
   interview: 'Интервью',
   news: 'Новость',
+  guide: 'Как это работает',
 }
 
 /**
@@ -15,7 +17,7 @@ const KIND_LABEL: Record<Article['kind'], string> = {
  * Партнёрский материал помечается явно — без пометки такие тексты не публикуются (§2.2).
  */
 export function ArticleCard({ article }: { article: Article }) {
-  const href = article.kind === 'interview' ? `/interv-yu/${article.slug}/` : `/novosti/${article.slug}/`
+  const href = articleHref(article)
 
   return (
     <article className={styles.card}>

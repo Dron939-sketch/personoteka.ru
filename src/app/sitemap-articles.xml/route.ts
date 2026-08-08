@@ -1,3 +1,4 @@
+import { articleHref } from '@/lib/article-href'
 import { getArticles } from '@/lib/content'
 import { SITE } from '@/lib/site'
 import { XML_HEADERS, urlset } from '@/lib/sitemap'
@@ -9,7 +10,7 @@ export const revalidate = 3600
 
 export function GET() {
   const urls = getArticles().map((article) => ({
-    loc: `${SITE.url}/${article.kind === 'interview' ? 'interv-yu' : 'novosti'}/${article.slug}/`,
+    loc: `${SITE.url}${articleHref(article)}`,
     lastmod: article.updated_at,
     changefreq: 'monthly' as const,
     priority: 0.6,

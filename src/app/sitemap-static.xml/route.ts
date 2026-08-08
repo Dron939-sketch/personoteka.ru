@@ -35,6 +35,9 @@ export function GET() {
     ...(getArticles('news').length
       ? [{ loc: `${SITE.url}/novosti/`, changefreq: 'weekly' as const, priority: 0.6 }]
       : []),
+    ...(getArticles('guide').length
+      ? [{ loc: `${SITE.url}/kak-eto-rabotaet/`, changefreq: 'weekly' as const, priority: 0.7 }]
+      : []),
     { loc: `${SITE.url}/razmestit/`, changefreq: 'monthly', priority: 0.8 },
     { loc: `${SITE.url}/tarify/`, changefreq: 'monthly', priority: 0.7 },
     { loc: `${SITE.url}/redpolitika/`, changefreq: 'monthly', priority: 0.7 },
