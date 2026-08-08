@@ -219,6 +219,7 @@ Mikolas Hard
 Эдуард Мкртычевич Сперцян = eduard-spercyan
 Тимофей Константинович Цзю = tim-tszyu
 Артур Валерьевич Дмитриев = artur-dmitriev
+Лев Иванович Яшин = lev-yashin
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -460,6 +461,9 @@ Mikolas Hard
 Анатолий Александрович Васильев = anatolij-vasilev
 Анна Алексеевна Пересильд = anna-peresild
 Владимир Валентинович Меньшов = vladimir-menshov
+Виктор Робертович Цой = viktor-coj
+Фаина Георгиевна Раневская = faina-ranevskaya
+Людмила Марковна Гурченко = lyudmila-gurchenko
 
 ## medicina
 Леонид Михайлович Рошаль
@@ -492,6 +496,7 @@ Mikolas Hard
 Дмитрий Викторович Губерниев = dmitrij-guberniev
 Яна Алексеевна Чурикова = yana-churikova
 Дмитрий Дмитриевич Борисов = dmitrij-borisov
+Александр Васильевич Масляков = aleksandr-maslyakov
 
 ## nauka
 Анна Юрьевна Кикина

@@ -1854,6 +1854,15 @@
     "status": "published"
   },
   {
+    "slug": "lev-yashin",
+    "source_name": "Лев Иванович Яшин = lev-yashin",
+    "full_name": "Лев Иванович Яшин",
+    "display_name": "Лев Яшин",
+    "name_latin": "Lev Yashin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -3924,6 +3933,33 @@
     "status": "published"
   },
   {
+    "slug": "viktor-coj",
+    "source_name": "Виктор Робертович Цой = viktor-coj",
+    "full_name": "Виктор Робертович Цой",
+    "display_name": "Виктор Цой",
+    "name_latin": "Viktor Coj",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "faina-ranevskaya",
+    "source_name": "Фаина Георгиевна Раневская = faina-ranevskaya",
+    "full_name": "Фаина Георгиевна Раневская",
+    "display_name": "Фаина Раневская",
+    "name_latin": "Faina Ranevskaya",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lyudmila-gurchenko",
+    "source_name": "Людмила Марковна Гурченко = lyudmila-gurchenko",
+    "full_name": "Людмила Марковна Гурченко",
+    "display_name": "Людмила Гурченко",
+    "name_latin": "Lyudmila Gurchenko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -4172,6 +4208,15 @@
     "full_name": "Дмитрий Дмитриевич Борисов",
     "display_name": "Дмитрий Борисов",
     "name_latin": "Dmitrij Borisov",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-maslyakov",
+    "source_name": "Александр Васильевич Масляков = aleksandr-maslyakov",
+    "full_name": "Александр Васильевич Масляков",
+    "display_name": "Александр Масляков",
+    "name_latin": "Aleksandr Maslyakov",
     "sphere": "media",
     "status": "published"
   },
