@@ -3195,6 +3195,51 @@
     "status": "published"
   },
   {
+    "slug": "konstantin-habenskij",
+    "source_name": "Константин Юрьевич Хабенский = konstantin-habenskij",
+    "full_name": "Константин Юрьевич Хабенский",
+    "display_name": "Константин Хабенский",
+    "name_latin": "Konstantin Habenskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-mironov",
+    "source_name": "Евгений Витальевич Миронов = evgenij-mironov",
+    "full_name": "Евгений Витальевич Миронов",
+    "display_name": "Евгений Миронов",
+    "name_latin": "Evgenij Mironov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-porechenkov",
+    "source_name": "Михаил Евгеньевич Пореченков = mihail-porechenkov",
+    "full_name": "Михаил Евгеньевич Пореченков",
+    "display_name": "Михаил Пореченков",
+    "name_latin": "Mihail Porechenkov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "gosha-kucenko",
+    "source_name": "Юрий Георгиевич Куценко = gosha-kucenko",
+    "full_name": "Юрий Георгиевич Куценко",
+    "display_name": "Юрий Куценко",
+    "name_latin": "Yurij Kucenko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "nonna-grishaeva",
+    "source_name": "Нонна Валентиновна Гришаева = nonna-grishaeva",
+    "full_name": "Нонна Валентиновна Гришаева",
+    "display_name": "Нонна Гришаева",
+    "name_latin": "Nonna Grishaeva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
