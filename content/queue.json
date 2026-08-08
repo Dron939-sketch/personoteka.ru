@@ -369,6 +369,51 @@
     "status": "published"
   },
   {
+    "slug": "anton-siluanov",
+    "source_name": "Антон Германович Силуанов = anton-siluanov",
+    "full_name": "Антон Германович Силуанов",
+    "display_name": "Антон Силуанов",
+    "name_latin": "Anton Siluanov",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "marat-husnullin",
+    "source_name": "Марат Шакирзянович Хуснуллин = marat-husnullin",
+    "full_name": "Марат Шакирзянович Хуснуллин",
+    "display_name": "Марат Хуснуллин",
+    "name_latin": "Marat Husnullin",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "maksut-shadaev",
+    "source_name": "Максут Игоревич Шадаев = maksut-shadaev",
+    "full_name": "Максут Игоревич Шадаев",
+    "display_name": "Максут Шадаев",
+    "name_latin": "Maksut Shadaev",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-chernyshenko",
+    "source_name": "Дмитрий Николаевич Чернышенко = dmitrij-chernyshenko",
+    "full_name": "Дмитрий Николаевич Чернышенко",
+    "display_name": "Дмитрий Чернышенко",
+    "name_latin": "Dmitrij Chernyshenko",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
+    "slug": "olga-lyubimova",
+    "source_name": "Ольга Борисовна Любимова = olga-lyubimova",
+    "full_name": "Ольга Борисовна Любимова",
+    "display_name": "Ольга Любимова",
+    "name_latin": "Olga Lyubimova",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",

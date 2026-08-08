@@ -48,6 +48,11 @@
 Яна Валерьевна Лантратова
 Алексей Александрович Журавлёв
 Александр Владимирович Бречалов = aleksandr-brechalov
+Антон Германович Силуанов = anton-siluanov
+Марат Шакирзянович Хуснуллин = marat-husnullin
+Максут Игоревич Шадаев = maksut-shadaev
+Дмитрий Николаевич Чернышенко = dmitrij-chernyshenko
+Ольга Борисовна Любимова = olga-lyubimova
 
 ## znamenitosti
 Mikolas Hard
