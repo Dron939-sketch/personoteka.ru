@@ -333,6 +333,15 @@
     "status": "published"
   },
   {
+    "slug": "aleksej-dyumin",
+    "source_name": "Алексей Геннадьевич Дюмин",
+    "full_name": "Алексей Геннадьевич Дюмин",
+    "display_name": "Алексей Дюмин",
+    "name_latin": "Aleksej Dyumin",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -2453,6 +2462,60 @@
     "full_name": "Виталий Евгеньевич Каневский",
     "display_name": "Виталий Каневский",
     "name_latin": "Vitalij Kanevskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-rubanov",
+    "source_name": "Андрей Викторович Рубанов",
+    "full_name": "Андрей Викторович Рубанов",
+    "display_name": "Андрей Рубанов",
+    "name_latin": "Andrej Rubanov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-konchalovskij",
+    "source_name": "Андрей Сергеевич Кончаловский",
+    "full_name": "Андрей Сергеевич Кончаловский",
+    "display_name": "Андрей Кончаловский",
+    "name_latin": "Andrej Konchalovskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "ekaterina-guseva",
+    "source_name": "Екатерина Константиновна Гусева",
+    "full_name": "Екатерина Константиновна Гусева",
+    "display_name": "Екатерина Гусева",
+    "name_latin": "Ekaterina Guseva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-kanevskij",
+    "source_name": "Леонид Семёнович Каневский",
+    "full_name": "Леонид Семёнович Каневский",
+    "display_name": "Леонид Каневский",
+    "name_latin": "Leonid Kanevskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "ravshana-kurkova",
+    "source_name": "Равшана Бахрамовна Куркова",
+    "full_name": "Равшана Бахрамовна Куркова",
+    "display_name": "Равшана Куркова",
+    "name_latin": "Ravshana Kurkova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "olga-budina",
+    "source_name": "Ольга Александровна Будина",
+    "full_name": "Ольга Александровна Будина",
+    "display_name": "Ольга Будина",
+    "name_latin": "Olga Budina",
     "sphere": "kultura",
     "status": "published"
   },
