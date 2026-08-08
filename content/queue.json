@@ -423,6 +423,15 @@
     "status": "published"
   },
   {
+    "slug": "nikolaj-patrushev",
+    "source_name": "Николай Платонович Патрушев = nikolaj-patrushev",
+    "full_name": "Николай Платонович Патрушев",
+    "display_name": "Николай Патрушев",
+    "name_latin": "Nikolaj Patrushev",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -1832,6 +1841,15 @@
     "full_name": "Тимофей Константинович Цзю",
     "display_name": "Тимофей Цзю",
     "name_latin": "Timofej Czyu",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "artur-dmitriev",
+    "source_name": "Артур Валерьевич Дмитриев = artur-dmitriev",
+    "full_name": "Артур Валерьевич Дмитриев",
+    "display_name": "Артур Дмитриев",
+    "name_latin": "Artur Dmitriev",
     "sphere": "sport",
     "status": "published"
   },
@@ -3830,6 +3848,33 @@
     "full_name": "Ираклий Леонидович Пирцхалава",
     "display_name": "Ираклий Пирцхалава",
     "name_latin": "Iraklij Pirchalava",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vera-alentova",
+    "source_name": "Вера Валентиновна Алентова = vera-alentova",
+    "full_name": "Вера Валентиновна Алентова",
+    "display_name": "Вера Алентова",
+    "name_latin": "Vera Alentova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lyudmila-chursina",
+    "source_name": "Людмила Алексеевна Чурсина = lyudmila-chursina",
+    "full_name": "Людмила Алексеевна Чурсина",
+    "display_name": "Людмила Чурсина",
+    "name_latin": "Lyudmila Chursina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "maksim-abrosimova",
+    "source_name": "Марина Сергеевна Абросимова = maksim-abrosimova",
+    "full_name": "Марина Сергеевна Абросимова",
+    "display_name": "Марина Абросимова",
+    "name_latin": "Marina Abrosimova",
     "sphere": "kultura",
     "status": "published"
   },
