@@ -204,6 +204,8 @@ Mikolas Hard
 Аделина Дмитриевна Сотникова = adelina-sotnikova
 Никита Владимирович Нагорный = nikita-nagornyj
 Абдулрашид Булачевич Садулаев = abdulrashid-sadulaev
+Валерий Георгиевич Карпин = valerij-karpin
+Сергей Богданович Семак = sergej-semak
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -417,6 +419,8 @@ Mikolas Hard
 Ирина Горбачёва = irina-gorbacheva
 Дарья Еропкина = instasamka
 Дарья Шиханова = dora
+Мария Андреевна Миронова = mariya-mironova
+Павел Олегович Табаков = pavel-tabakov
 
 ## medicina
 Леонид Михайлович Рошаль

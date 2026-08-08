@@ -1719,6 +1719,24 @@
     "status": "published"
   },
   {
+    "slug": "valerij-karpin",
+    "source_name": "Валерий Георгиевич Карпин = valerij-karpin",
+    "full_name": "Валерий Георгиевич Карпин",
+    "display_name": "Валерий Карпин",
+    "name_latin": "Valerij Karpin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-semak",
+    "source_name": "Сергей Богданович Семак = sergej-semak",
+    "full_name": "Сергей Богданович Семак",
+    "display_name": "Сергей Семак",
+    "name_latin": "Sergej Semak",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -3533,6 +3551,24 @@
     "full_name": "Дарья Шиханова",
     "display_name": "Дарья Шиханова",
     "name_latin": "Darya Shihanova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mariya-mironova",
+    "source_name": "Мария Андреевна Миронова = mariya-mironova",
+    "full_name": "Мария Андреевна Миронова",
+    "display_name": "Мария Миронова",
+    "name_latin": "Mariya Mironova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "pavel-tabakov",
+    "source_name": "Павел Олегович Табаков = pavel-tabakov",
+    "full_name": "Павел Олегович Табаков",
+    "display_name": "Павел Табаков",
+    "name_latin": "Pavel Tabakov",
     "sphere": "kultura",
     "status": "published"
   },
