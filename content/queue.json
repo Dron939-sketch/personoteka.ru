@@ -1503,6 +1503,15 @@
     "status": "published"
   },
   {
+    "slug": "murat-gassiev",
+    "source_name": "Мурат Георгиевич Гассиев",
+    "full_name": "Мурат Георгиевич Гассиев",
+    "display_name": "Мурат Гассиев",
+    "name_latin": "Murat Gassiev",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -2723,6 +2732,24 @@
     "full_name": "Юрий Николаевич Стоянов",
     "display_name": "Юрий Стоянов",
     "name_latin": "Yurij Stoyanov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lyubov-uspenskaya",
+    "source_name": "Любовь Залмановна Успенская",
+    "full_name": "Любовь Залмановна Успенская",
+    "display_name": "Любовь Успенская",
+    "name_latin": "Lyubov Uspenskaya",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-zhukov",
+    "source_name": "Сергей Евгеньевич Жуков",
+    "full_name": "Сергей Евгеньевич Жуков",
+    "display_name": "Сергей Жуков",
+    "name_latin": "Sergej Zhukov",
     "sphere": "kultura",
     "status": "published"
   },
