@@ -3150,6 +3150,51 @@
     "status": "published"
   },
   {
+    "slug": "dmitrij-malikov",
+    "source_name": "Дмитрий Юрьевич Маликов = dmitrij-malikov",
+    "full_name": "Дмитрий Юрьевич Маликов",
+    "display_name": "Дмитрий Маликов",
+    "name_latin": "Dmitrij Malikov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-presnyakov",
+    "source_name": "Владимир Владимирович Пресняков = vladimir-presnyakov",
+    "full_name": "Владимир Владимирович Пресняков",
+    "display_name": "Владимир Пресняков",
+    "name_latin": "Vladimir Presnyakov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "anita-coj",
+    "source_name": "Анита Сергеевна Цой = anita-coj",
+    "full_name": "Анита Сергеевна Цой",
+    "display_name": "Анита Цой",
+    "name_latin": "Anita Coj",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-petrosyan",
+    "source_name": "Евгений Ваганович Петросян = evgenij-petrosyan",
+    "full_name": "Евгений Ваганович Петросян",
+    "display_name": "Евгений Петросян",
+    "name_latin": "Evgenij Petrosyan",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "natasha-koroleva",
+    "source_name": "Наталья Владимировна Порывай = natasha-koroleva",
+    "full_name": "Наталья Владимировна Порывай",
+    "display_name": "Наталья Порывай",
+    "name_latin": "Natalya Poryvaj",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",

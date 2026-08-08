@@ -374,6 +374,11 @@ Mikolas Hard
 Андрей Вадимович Макаревич = andrej-makarevich
 Юрий Юлианович Шевчук = yurij-shevchuk
 Земфира Талгатовна Рамазанова = zemfira
+Дмитрий Юрьевич Маликов = dmitrij-malikov
+Владимир Владимирович Пресняков = vladimir-presnyakov
+Анита Сергеевна Цой = anita-coj
+Евгений Ваганович Петросян = evgenij-petrosyan
+Наталья Владимировна Порывай = natasha-koroleva
 
 ## medicina
 Леонид Михайлович Рошаль
