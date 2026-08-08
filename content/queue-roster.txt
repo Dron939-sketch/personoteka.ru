@@ -216,6 +216,7 @@ Mikolas Hard
 Фёдор Михайлович Смолов = fedor-smolov
 Дарья Сергеевна Касаткина = darya-kasatkina
 Эдуард Мкртычевич Сперцян = eduard-spercyan
+Тимофей Константинович Цзю = tim-tszyu
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -445,6 +446,10 @@ Mikolas Hard
 Александр Сергеевич Зацепин = aleksandr-zacepin
 Наталья Владимировна Варлей = natalya-varley
 Александр Владимирович Олешко = aleksandr-oleshko
+Анастасия Николаевна Немоляева = anastasiya-nemolyaeva
+Татьяна Львовна Пилецкая = tatyana-pileckaya
+Денис Ильич Клявер = denis-klyaver
+Ираклий Леонидович Пирцхалава = irakli-pirchalava
 
 ## medicina
 Леонид Михайлович Рошаль
