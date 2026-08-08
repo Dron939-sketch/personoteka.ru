@@ -2133,6 +2133,42 @@
     "status": "published"
   },
   {
+    "slug": "evgenij-kaspersky",
+    "source_name": "Евгений Валентинович Касперский = evgenij-kaspersky",
+    "full_name": "Евгений Валентинович Касперский",
+    "display_name": "Евгений Касперский",
+    "name_latin": "Evgenij Kasperskij",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "david-yan",
+    "source_name": "Давид Евгеньевич Ян = david-yan",
+    "full_name": "Давид Евгеньевич Ян",
+    "display_name": "Давид Ян",
+    "name_latin": "David Yan",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "vagit-alekperov",
+    "source_name": "Вагит Юсуфович Алекперов = vagit-alekperov",
+    "full_name": "Вагит Юсуфович Алекперов",
+    "display_name": "Вагит Алекперов",
+    "name_latin": "Vagit Alekperov",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-kostin",
+    "source_name": "Андрей Леонидович Костин = andrej-kostin",
+    "full_name": "Андрей Леонидович Костин",
+    "display_name": "Андрей Костин",
+    "name_latin": "Andrej Kostin",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
     "slug": "amiran-sardarov",
     "source_name": "Амиран Сардаров",
     "full_name": "Амиран Сардаров",
