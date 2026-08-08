@@ -1584,6 +1584,33 @@
     "status": "published"
   },
   {
+    "slug": "ian-nepomnyashchij",
+    "source_name": "Ян Александрович Непомнящий = ian-nepomnyashchij",
+    "full_name": "Ян Александрович Непомнящий",
+    "display_name": "Ян Непомнящий",
+    "name_latin": "Yan Nepomnyaschij",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "anna-shcherbakova",
+    "source_name": "Анна Станиславовна Щербакова = anna-shcherbakova",
+    "full_name": "Анна Станиславовна Щербакова",
+    "display_name": "Анна Щербакова",
+    "name_latin": "Anna Scherbakova",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-malkin",
+    "source_name": "Евгений Владимирович Малкин = evgenij-malkin",
+    "full_name": "Евгений Владимирович Малкин",
+    "display_name": "Евгений Малкин",
+    "name_latin": "Evgenij Malkin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -3452,6 +3479,24 @@
     "full_name": "Анна Юрьевна Кикина",
     "display_name": "Анна Кикина",
     "name_latin": "Anna Kikina",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "konstantin-severinov",
+    "source_name": "Константин Викторович Северинов = konstantin-severinov",
+    "full_name": "Константин Викторович Северинов",
+    "display_name": "Константин Северинов",
+    "name_latin": "Konstantin Severinov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-panchin",
+    "source_name": "Александр Юрьевич Панчин = aleksandr-panchin",
+    "full_name": "Александр Юрьевич Панчин",
+    "display_name": "Александр Панчин",
+    "name_latin": "Aleksandr Panchin",
     "sphere": "nauka",
     "status": "published"
   }
