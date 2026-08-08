@@ -365,6 +365,11 @@ Mikolas Hard
 Игорь Юрьевич Николаев = igor-nikolaev
 Лолита Марковна Милявская = lolita-milyavskaya
 Лайма Станиславовна Вайкуле = laima-vajkule
+Вячеслав Геннадьевич Бутусов = vyacheslav-butusov
+Илья Игоревич Лагутенко = ilya-lagutenko
+Сергей Владимирович Шнуров = sergej-shnurov
+Валерия Юрьевна Перфилова = valeriya-perfilova
+Александр Витальевич Маршал = aleksandr-marshal
 
 ## medicina
 Леонид Михайлович Рошаль
