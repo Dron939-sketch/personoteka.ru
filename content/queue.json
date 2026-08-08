@@ -1548,6 +1548,15 @@
     "status": "published"
   },
   {
+    "slug": "sergej-brylin",
+    "source_name": "Сергей Владимирович Брылин",
+    "full_name": "Сергей Владимирович Брылин",
+    "display_name": "Сергей Брылин",
+    "name_latin": "Sergej Brylin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -1922,6 +1931,15 @@
     "full_name": "Алексей Геннадьевич Нечаев",
     "display_name": "Алексей Нечаев",
     "name_latin": "Aleksej Nechaev",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
+    "slug": "gagik-carukyan",
+    "source_name": "Гагик Коляевич Царукян",
+    "full_name": "Гагик Коляевич Царукян",
+    "display_name": "Гагик Царукян",
+    "name_latin": "Gagik Carukyan",
     "sphere": "biznes",
     "status": "published"
   },
@@ -2822,6 +2840,15 @@
     "full_name": "Кристина Эдмундовна Орбакайте",
     "display_name": "Кристина Орбакайте",
     "name_latin": "Kristina Orbakajte",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "elena-borscheva",
+    "source_name": "Елена Сергеевна Борщёва",
+    "full_name": "Елена Сергеевна Борщёва",
+    "display_name": "Елена Борщёва",
+    "name_latin": "Elena Borscheva",
     "sphere": "kultura",
     "status": "published"
   },
