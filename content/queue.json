@@ -1971,6 +1971,15 @@
     "status": "published"
   },
   {
+    "slug": "emin-agalarov",
+    "source_name": "Эмин Араз оглы Агаларов = emin-agalarov",
+    "full_name": "Эмин Араз оглы Агаларов",
+    "display_name": "Араз Эмин",
+    "name_latin": "Araz Emin",
+    "sphere": "biznes",
+    "status": "published"
+  },
+  {
     "slug": "amiran-sardarov",
     "source_name": "Амиран Сардаров",
     "full_name": "Амиран Сардаров",
@@ -3114,6 +3123,33 @@
     "status": "published"
   },
   {
+    "slug": "andrej-makarevich",
+    "source_name": "Андрей Вадимович Макаревич = andrej-makarevich",
+    "full_name": "Андрей Вадимович Макаревич",
+    "display_name": "Андрей Макаревич",
+    "name_latin": "Andrej Makarevich",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "yurij-shevchuk",
+    "source_name": "Юрий Юлианович Шевчук = yurij-shevchuk",
+    "full_name": "Юрий Юлианович Шевчук",
+    "display_name": "Юрий Шевчук",
+    "name_latin": "Yurij Shevchuk",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "zemfira",
+    "source_name": "Земфира Талгатовна Рамазанова = zemfira",
+    "full_name": "Земфира Талгатовна Рамазанова",
+    "display_name": "Земфира Рамазанова",
+    "name_latin": "Zemfira Ramazanova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -3263,6 +3299,15 @@
     "full_name": "Мария Эдуардовна Ситтель",
     "display_name": "Мария Ситтель",
     "name_latin": "Mariya Sittel",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "garik-martirosyan",
+    "source_name": "Гарик Юрьевич Мартиросян = garik-martirosyan",
+    "full_name": "Гарик Юрьевич Мартиросян",
+    "display_name": "Гарик Мартиросян",
+    "name_latin": "Garik Martirosyan",
     "sphere": "media",
     "status": "published"
   },
