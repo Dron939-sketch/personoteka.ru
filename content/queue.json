@@ -1512,6 +1512,24 @@
     "status": "published"
   },
   {
+    "slug": "tatyana-navka",
+    "source_name": "Татьяна Александровна Навка",
+    "full_name": "Татьяна Александровна Навка",
+    "display_name": "Татьяна Навка",
+    "name_latin": "Tatyana Navka",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-usik",
+    "source_name": "Александр Александрович Усик",
+    "full_name": "Александр Александрович Усик",
+    "display_name": "Александр Усик",
+    "name_latin": "Aleksandr Usik",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -2750,6 +2768,15 @@
     "full_name": "Сергей Евгеньевич Жуков",
     "display_name": "Сергей Жуков",
     "name_latin": "Sergej Zhukov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aglaya-shilovskaya",
+    "source_name": "Аглая Ильинична Шиловская",
+    "full_name": "Аглая Ильинична Шиловская",
+    "display_name": "Аглая Шиловская",
+    "name_latin": "Aglaya Shilovskaya",
     "sphere": "kultura",
     "status": "published"
   },
