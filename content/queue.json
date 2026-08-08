@@ -3240,6 +3240,51 @@
     "status": "published"
   },
   {
+    "slug": "sergej-garmash",
+    "source_name": "Сергей Леонидович Гармаш = sergej-garmash",
+    "full_name": "Сергей Леонидович Гармаш",
+    "display_name": "Сергей Гармаш",
+    "name_latin": "Sergej Garmash",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "viktor-suhorukov",
+    "source_name": "Виктор Иванович Сухоруков = viktor-suhorukov",
+    "full_name": "Виктор Иванович Сухоруков",
+    "display_name": "Виктор Сухоруков",
+    "name_latin": "Viktor Suhorukov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "timur-bekmambetov",
+    "source_name": "Тимур Нуруахитович Бекмамбетов = timur-bekmambetov",
+    "full_name": "Тимур Нуруахитович Бекмамбетов",
+    "display_name": "Тимур Бекмамбетов",
+    "name_latin": "Timur Bekmambetov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "fedor-bondarchuk",
+    "source_name": "Фёдор Сергеевич Бондарчук = fedor-bondarchuk",
+    "full_name": "Фёдор Сергеевич Бондарчук",
+    "display_name": "Фёдор Бондарчук",
+    "name_latin": "Fedor Bondarchuk",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "valerij-todorovskij",
+    "source_name": "Валерий Петрович Тодоровский = valerij-todorovskij",
+    "full_name": "Валерий Петрович Тодоровский",
+    "display_name": "Валерий Тодоровский",
+    "name_latin": "Valerij Todorovskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
