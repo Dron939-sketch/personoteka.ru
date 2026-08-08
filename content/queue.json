@@ -2853,6 +2853,24 @@
     "status": "published"
   },
   {
+    "slug": "egor-konchalovskij",
+    "source_name": "Егор Андреевич Кончаловский",
+    "full_name": "Егор Андреевич Кончаловский",
+    "display_name": "Егор Кончаловский",
+    "name_latin": "Egor Konchalovskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksej-vorobev",
+    "source_name": "Алексей Владимирович Воробьёв",
+    "full_name": "Алексей Владимирович Воробьёв",
+    "display_name": "Алексей Воробьёв",
+    "name_latin": "Aleksej Vorobev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2984,6 +3002,15 @@
     "full_name": "Леонид Аркадьевич Якубович",
     "display_name": "Леонид Якубович",
     "name_latin": "Leonid Yakubovich",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-gordon",
+    "source_name": "Александр Гарриевич Гордон",
+    "full_name": "Александр Гарриевич Гордон",
+    "display_name": "Александр Гордон",
+    "name_latin": "Aleksandr Gordon",
     "sphere": "media",
     "status": "published"
   },
