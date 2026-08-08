@@ -3879,6 +3879,51 @@
     "status": "published"
   },
   {
+    "slug": "tatyana-moskvina",
+    "source_name": "Татьяна Владимировна Москвина = tatyana-moskvina",
+    "full_name": "Татьяна Владимировна Москвина",
+    "display_name": "Татьяна Москвина",
+    "name_latin": "Tatyana Moskvina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "stas-mihajlov",
+    "source_name": "Станислав Владимирович Михайлов = stas-mihajlov",
+    "full_name": "Станислав Владимирович Михайлов",
+    "display_name": "Станислав Михайлов",
+    "name_latin": "Stanislav Mihajlov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "anatolij-vasilev",
+    "source_name": "Анатолий Александрович Васильев = anatolij-vasilev",
+    "full_name": "Анатолий Александрович Васильев",
+    "display_name": "Анатолий Васильев",
+    "name_latin": "Anatolij Vasilev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "anna-peresild",
+    "source_name": "Анна Алексеевна Пересильд = anna-peresild",
+    "full_name": "Анна Алексеевна Пересильд",
+    "display_name": "Анна Пересильд",
+    "name_latin": "Anna Peresild",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-menshov",
+    "source_name": "Владимир Валентинович Меньшов = vladimir-menshov",
+    "full_name": "Владимир Валентинович Меньшов",
+    "display_name": "Владимир Меньшов",
+    "name_latin": "Vladimir Menshov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
