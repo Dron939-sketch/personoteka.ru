@@ -45,6 +45,7 @@ export function GET() {
     { loc: `${SITE.url}/pravila/`, changefreq: 'yearly', priority: 0.4 },
     { loc: `${SITE.url}/politika-konfidencialnosti/`, changefreq: 'yearly', priority: 0.4 },
     { loc: `${SITE.url}/udalenie-dannyh/`, changefreq: 'yearly', priority: 0.5 },
+    { loc: `${SITE.url}/ispolzovanie-ii/`, changefreq: 'yearly', priority: 0.4 },
   ]
 
   // Алфавитный указатель

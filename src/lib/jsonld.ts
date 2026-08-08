@@ -1,4 +1,4 @@
-import { getCity, getSpheres } from './content'
+import { getCity, getEditor, getSpheres } from './content'
 import { SITE } from './site'
 import type { Person } from './types'
 
@@ -75,13 +75,50 @@ export function personJsonLd(person: Person) {
     node.sameAs = sameAs
   }
 
-  return {
+  // Источники биографии — в `citation`. Для поисковика это подтверждение того,
+  // что страница написана по проверяемым материалам, а для ИИ-ассистента —
+  // готовая цепочка «утверждение → откуда взято», которую он может показать
+  // вместе с ответом.
+  const citation = (person.sources ?? [])
+    .filter((s) => s.url)
+    .map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url }))
+
+  const page: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
+    '@id': url,
+    url,
+    name: `${person.display_name} — ${person.tagline}`,
+    description: person.tagline,
+    inLanguage: 'ru-RU',
     dateCreated: person.published_at,
     dateModified: person.updated_at,
+    isAccessibleForFree: true,
+    // Условия использования, в том числе ИИ-системами (§10.4). `usageInfo` —
+    // именно то поле, в котором schema.org ждёт ссылку на правила
+    // переиспользования; без него разрешение существует только в тексте.
+    usageInfo: `${SITE.url}/ispolzovanie-ii/`,
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
     mainEntity: node,
   }
+
+  if (citation.length) {
+    page.citation = citation
+  }
+
+  // Подпись редактора. Ассистент, отвечающий про человека, охотнее ссылается
+  // на материал, у которого есть названный автор и дата, чем на анонимный текст.
+  const editor = getEditor(person.editor)
+  if (editor) {
+    page.author = {
+      '@type': 'Person',
+      name: editor.name,
+      jobTitle: editor.role,
+      url: `${SITE.url}/redakciya/`,
+    }
+  }
+
+  return page
 }
 
 /** В карточке занятия пишутся строчными, а в `jobTitle` уходят с заглавной. */

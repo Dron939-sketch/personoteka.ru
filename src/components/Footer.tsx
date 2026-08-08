@@ -86,6 +86,9 @@ export function Footer() {
             <li>
               <Link href="/udalenie-dannyh/">Удаление и исправление данных</Link>
             </li>
+            <li>
+              <Link href="/ispolzovanie-ii/">Использование материалов ИИ</Link>
+            </li>
           </ul>
         </section>
       </div>

@@ -39,6 +39,7 @@ import {
   truncateForMeta,
 } from '@/lib/format'
 import { personJsonLd } from '@/lib/jsonld'
+import { citationLine } from '@/lib/person-markdown'
 import { SITE } from '@/lib/site'
 import { slugify } from '@/lib/translit'
 import type { Person } from '@/lib/types'
@@ -80,7 +81,13 @@ export async function generateMetadata({
     // «лаборатории касперского».
     title: `${person.display_name} — ${lowerFirst(person.tagline)}: биография, карьера, достижения`,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      // Markdown-версия той же страницы (§10.4). Ассистент, разобравший HTML,
+      // находит по этой ссылке текст без разметки — и вместе с ним условие
+      // атрибуции, которое в нём написано прямым текстом.
+      types: { 'text/markdown': `${url}llms.txt` },
+    },
     robots: person.noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: 'profile',
@@ -258,6 +265,26 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                   {section.content}
                 </section>
               ))}
+
+              {/* ---------- Как ссылаться (§10.4) ----------
+                  Готовая строка нужна двоим. Читателю — чтобы сослаться
+                  правильно, не выдумывая формат. ИИ-ассистенту — чтобы он
+                  привёл адрес страницы, а не пересказал биографию без
+                  источника: разобранная страница даёт ему и требование
+                  атрибуции, и уже собранную ссылку. */}
+              <aside className={styles.cite} aria-labelledby="kak-ssylatsya">
+                <p id="kak-ssylatsya">
+                  <strong>Как ссылаться на этот материал</strong>
+                </p>
+                <p className={styles.citeLine}>{citationLine(person)}</p>
+                <p>
+                  Материал можно цитировать и пересказывать, в том числе в ответах
+                  ИИ-ассистентов, при указании названия «{SITE.name}» и ссылки на эту
+                  страницу. <Link href="/ispolzovanie-ii/">Условия использования</Link>
+                  {' · '}
+                  <a href={`/${person.slug}/llms.txt`}>Версия в Markdown</a>
+                </p>
+              </aside>
 
               {/* ---------- Подпись редакции (§3.2, §10.3) ---------- */}
               <footer className={styles.colophon}>
