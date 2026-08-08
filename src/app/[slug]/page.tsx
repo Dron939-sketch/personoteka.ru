@@ -437,7 +437,10 @@ function buildSections(person: Person): Section[] {
   }
 
   // Портрет уже показан в герое — в галерею идут остальные снимки (§8.1).
-  const galleryPhotos = person.photos.filter((photo) => !photo.portrait).slice(0, 12)
+  // Поле необязательное на практике: у персоны без снимков его может не быть
+  // вовсе, и остальные обращения к `photos` в проекте это учитывают. Здесь
+  // защиты не было, и один такой герой ронял сборку всего каталога.
+  const galleryPhotos = (person.photos ?? []).filter((photo) => !photo.portrait).slice(0, 12)
   if (galleryPhotos.length || person.video?.length) {
     sections.push({
       id: 'galereya',
