@@ -379,6 +379,11 @@ Mikolas Hard
 Анита Сергеевна Цой = anita-coj
 Евгений Ваганович Петросян = evgenij-petrosyan
 Наталья Владимировна Порывай = natasha-koroleva
+Константин Юрьевич Хабенский = konstantin-habenskij
+Евгений Витальевич Миронов = evgenij-mironov
+Михаил Евгеньевич Пореченков = mihail-porechenkov
+Юрий Георгиевич Куценко = gosha-kucenko
+Нонна Валентиновна Гришаева = nonna-grishaeva
 
 ## medicina
 Леонид Михайлович Рошаль
