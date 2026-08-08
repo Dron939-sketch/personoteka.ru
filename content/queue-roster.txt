@@ -336,6 +336,8 @@ Mikolas Hard
 Екатерина Викторовна Гордон
 Михаил Юрьевич Барщевский = mihail-barshchevskij
 Илья Сергеевич Новиков = ilya-novikov
+Александр Иванович Бастрыкин = aleksandr-bastrykin
+Игорь Викторович Краснов = igor-krasnov
 
 ## kultura
 Елена Антоновна Камбурова
