@@ -432,6 +432,15 @@
     "status": "published"
   },
   {
+    "slug": "dmitrij-medvedev",
+    "source_name": "Дмитрий Анатольевич Медведев = dmitrij-medvedev",
+    "full_name": "Дмитрий Анатольевич Медведев",
+    "display_name": "Дмитрий Медведев",
+    "name_latin": "Dmitrij Medvedev",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -3956,6 +3965,42 @@
     "full_name": "Людмила Марковна Гурченко",
     "display_name": "Людмила Гурченко",
     "name_latin": "Lyudmila Gurchenko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-zadornov",
+    "source_name": "Михаил Николаевич Задорнов = mihail-zadornov",
+    "full_name": "Михаил Николаевич Задорнов",
+    "display_name": "Михаил Задорнов",
+    "name_latin": "Mihail Zadornov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "oleg-yankovskij",
+    "source_name": "Олег Иванович Янковский = oleg-yankovskij",
+    "full_name": "Олег Иванович Янковский",
+    "display_name": "Олег Янковский",
+    "name_latin": "Oleg Yankovskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-kurehin",
+    "source_name": "Сергей Анатольевич Курёхин = sergej-kurehin",
+    "full_name": "Сергей Анатольевич Курёхин",
+    "display_name": "Сергей Курёхин",
+    "name_latin": "Sergej Kurehin",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "yurij-shatunov",
+    "source_name": "Юрий Васильевич Шатунов = yurij-shatunov",
+    "full_name": "Юрий Васильевич Шатунов",
+    "display_name": "Юрий Шатунов",
+    "name_latin": "Yurij Shatunov",
     "sphere": "kultura",
     "status": "published"
   },
