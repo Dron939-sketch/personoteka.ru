@@ -324,6 +324,15 @@
     "status": "published"
   },
   {
+    "slug": "boris-nadezhdin",
+    "source_name": "Борис Борисович Надеждин",
+    "full_name": "Борис Борисович Надеждин",
+    "display_name": "Борис Надеждин",
+    "name_latin": "Boris Nadezhdin",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -2417,6 +2426,33 @@
     "full_name": "Иван Викторович Дмитриенко",
     "display_name": "Иван Дмитриенко",
     "name_latin": "Ivan Dmitrienko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "diana-vishneva",
+    "source_name": "Диана Викторовна Вишнёва",
+    "full_name": "Диана Викторовна Вишнёва",
+    "display_name": "Диана Вишнёва",
+    "name_latin": "Diana Vishneva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "fedor-dobronravov",
+    "source_name": "Фёдор Викторович Добронравов",
+    "full_name": "Фёдор Викторович Добронравов",
+    "display_name": "Фёдор Добронравов",
+    "name_latin": "Fedor Dobronravov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vitalij-kanevskij",
+    "source_name": "Виталий Евгеньевич Каневский",
+    "full_name": "Виталий Евгеньевич Каневский",
+    "display_name": "Виталий Каневский",
+    "name_latin": "Vitalij Kanevskij",
     "sphere": "kultura",
     "status": "published"
   },

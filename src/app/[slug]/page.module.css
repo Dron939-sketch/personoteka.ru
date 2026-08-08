@@ -133,6 +133,33 @@
   color: var(--ink-2);
 }
 
+/* Блок «Как ссылаться»: готовая строка ссылки для читателя и для ИИ-ассистента. */
+.cite {
+  margin-top: var(--sp-6);
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m, 8px);
+  background: var(--surface-alt);
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.cite p {
+  margin: 0 0 var(--sp-2);
+}
+
+.cite p:last-child {
+  margin-bottom: 0;
+}
+
+.citeLine {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: var(--caption);
+  line-height: 1.5;
+  color: var(--ink);
+  word-break: break-word;
+}
+
 .relatedGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
