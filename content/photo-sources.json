@@ -1277,5 +1277,33 @@
   {
     "slug": "boris-nadezhdin",
     "commons": "File:Boris Nadezhdin.jpg"
+  },
+  {
+    "slug": "andrej-rubanov",
+    "wikipedia": "Рубанов, Андрей Викторович"
+  },
+  {
+    "slug": "andrej-konchalovskij",
+    "wikipedia": "Кончаловский, Андрей Сергеевич"
+  },
+  {
+    "slug": "ekaterina-guseva",
+    "wikipedia": "Гусева, Екатерина Константиновна"
+  },
+  {
+    "slug": "leonid-kanevskij",
+    "wikipedia": "Каневский, Леонид Семёнович"
+  },
+  {
+    "slug": "aleksej-dyumin",
+    "wikipedia": "Дюмин, Алексей Геннадьевич"
+  },
+  {
+    "slug": "ravshana-kurkova",
+    "wikipedia": "Куркова, Равшана Бахрамовна"
+  },
+  {
+    "slug": "olga-budina",
+    "wikipedia": "Будина, Ольга Александровна"
   }
 ]
