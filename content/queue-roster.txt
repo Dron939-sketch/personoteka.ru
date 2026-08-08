@@ -360,6 +360,11 @@ Mikolas Hard
 Леонид Николаевич Агутин = leonid-agutin
 Виктор Яковлевич Дробыш = viktor-drobysh
 Антон Александрович Макарский = anton-makarskij
+София Михайловна Ротару = sofiya-rotaru
+Ирина Александровна Аллегрова = irina-allegrova
+Игорь Юрьевич Николаев = igor-nikolaev
+Лолита Марковна Милявская = lolita-milyavskaya
+Лайма Станиславовна Вайкуле = laima-vajkule
 
 ## medicina
 Леонид Михайлович Рошаль

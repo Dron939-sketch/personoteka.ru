@@ -3024,6 +3024,51 @@
     "status": "published"
   },
   {
+    "slug": "sofiya-rotaru",
+    "source_name": "София Михайловна Ротару = sofiya-rotaru",
+    "full_name": "София Михайловна Ротару",
+    "display_name": "София Ротару",
+    "name_latin": "Sofiya Rotaru",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "irina-allegrova",
+    "source_name": "Ирина Александровна Аллегрова = irina-allegrova",
+    "full_name": "Ирина Александровна Аллегрова",
+    "display_name": "Ирина Аллегрова",
+    "name_latin": "Irina Allegrova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "igor-nikolaev",
+    "source_name": "Игорь Юрьевич Николаев = igor-nikolaev",
+    "full_name": "Игорь Юрьевич Николаев",
+    "display_name": "Игорь Николаев",
+    "name_latin": "Igor Nikolaev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lolita-milyavskaya",
+    "source_name": "Лолита Марковна Милявская = lolita-milyavskaya",
+    "full_name": "Лолита Марковна Милявская",
+    "display_name": "Лолита Милявская",
+    "name_latin": "Lolita Milyavskaya",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "laima-vajkule",
+    "source_name": "Лайма Станиславовна Вайкуле = laima-vajkule",
+    "full_name": "Лайма Станиславовна Вайкуле",
+    "display_name": "Лайма Вайкуле",
+    "name_latin": "Lajma Vajkule",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
