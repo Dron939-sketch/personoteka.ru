@@ -1827,6 +1827,15 @@
     "status": "published"
   },
   {
+    "slug": "tim-tszyu",
+    "source_name": "Тимофей Константинович Цзю = tim-tszyu",
+    "full_name": "Тимофей Константинович Цзю",
+    "display_name": "Тимофей Цзю",
+    "name_latin": "Timofej Czyu",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -3785,6 +3794,42 @@
     "full_name": "Александр Владимирович Олешко",
     "display_name": "Александр Олешко",
     "name_latin": "Aleksandr Oleshko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "anastasiya-nemolyaeva",
+    "source_name": "Анастасия Николаевна Немоляева = anastasiya-nemolyaeva",
+    "full_name": "Анастасия Николаевна Немоляева",
+    "display_name": "Анастасия Немоляева",
+    "name_latin": "Anastasiya Nemolyaeva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "tatyana-pileckaya",
+    "source_name": "Татьяна Львовна Пилецкая = tatyana-pileckaya",
+    "full_name": "Татьяна Львовна Пилецкая",
+    "display_name": "Татьяна Пилецкая",
+    "name_latin": "Tatyana Pileckaya",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "denis-klyaver",
+    "source_name": "Денис Ильич Клявер = denis-klyaver",
+    "full_name": "Денис Ильич Клявер",
+    "display_name": "Денис Клявер",
+    "name_latin": "Denis Klyaver",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "irakli-pirchalava",
+    "source_name": "Ираклий Леонидович Пирцхалава = irakli-pirchalava",
+    "full_name": "Ираклий Леонидович Пирцхалава",
+    "display_name": "Ираклий Пирцхалава",
+    "name_latin": "Iraklij Pirchalava",
     "sphere": "kultura",
     "status": "published"
   },
