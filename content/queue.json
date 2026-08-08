@@ -2871,6 +2871,33 @@
     "status": "published"
   },
   {
+    "slug": "boris-ejfman",
+    "source_name": "Борис Яковлевич Эйфман",
+    "full_name": "Борис Яковлевич Эйфман",
+    "display_name": "Борис Эйфман",
+    "name_latin": "Boris Ejfman",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "alisa-frejndlih",
+    "source_name": "Алиса Бруновна Фрейндлих",
+    "full_name": "Алиса Бруновна Фрейндлих",
+    "display_name": "Алиса Фрейндлих",
+    "name_latin": "Alisa Frejndlih",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "garik-sukachev",
+    "source_name": "Игорь Иванович Сукачёв = garik-sukachev",
+    "full_name": "Игорь Иванович Сукачёв",
+    "display_name": "Игорь Сукачёв",
+    "name_latin": "Igor Sukachev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
