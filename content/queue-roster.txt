@@ -53,6 +53,7 @@
 Максут Игоревич Шадаев = maksut-shadaev
 Дмитрий Николаевич Чернышенко = dmitrij-chernyshenko
 Ольга Борисовна Любимова = olga-lyubimova
+Григорий Алексеевич Явлинский = grigorij-yavlinskij
 
 ## znamenitosti
 Mikolas Hard
@@ -213,6 +214,8 @@ Mikolas Hard
 Валерий Георгиевич Карпин = valerij-karpin
 Сергей Богданович Семак = sergej-semak
 Фёдор Михайлович Смолов = fedor-smolov
+Дарья Сергеевна Касаткина = darya-kasatkina
+Эдуард Мкртычевич Сперцян = eduard-spercyan
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -440,6 +443,8 @@ Mikolas Hard
 Михаил Сергеевич Боярский = mihail-boyarskij
 Наталия Николаевна Белохвостикова = nataliya-belohvostikova
 Александр Сергеевич Зацепин = aleksandr-zacepin
+Наталья Владимировна Варлей = natalya-varley
+Александр Владимирович Олешко = aleksandr-oleshko
 
 ## medicina
 Леонид Михайлович Рошаль

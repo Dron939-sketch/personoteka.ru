@@ -414,6 +414,15 @@
     "status": "published"
   },
   {
+    "slug": "grigorij-yavlinskij",
+    "source_name": "Григорий Алексеевич Явлинский = grigorij-yavlinskij",
+    "full_name": "Григорий Алексеевич Явлинский",
+    "display_name": "Григорий Явлинский",
+    "name_latin": "Grigorij Yavlinskij",
+    "sphere": "gosudarstvo",
+    "status": "published"
+  },
+  {
     "slug": "mikolas-hard",
     "source_name": "Mikolas Hard",
     "full_name": "Mikolas Hard",
@@ -1796,6 +1805,24 @@
     "full_name": "Фёдор Михайлович Смолов",
     "display_name": "Фёдор Смолов",
     "name_latin": "Fedor Smolov",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "darya-kasatkina",
+    "source_name": "Дарья Сергеевна Касаткина = darya-kasatkina",
+    "full_name": "Дарья Сергеевна Касаткина",
+    "display_name": "Дарья Касаткина",
+    "name_latin": "Darya Kasatkina",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "eduard-spercyan",
+    "source_name": "Эдуард Мкртычевич Сперцян = eduard-spercyan",
+    "full_name": "Эдуард Мкртычевич Сперцян",
+    "display_name": "Эдуард Сперцян",
+    "name_latin": "Eduard Spercyan",
     "sphere": "sport",
     "status": "published"
   },
@@ -3740,6 +3767,24 @@
     "full_name": "Александр Сергеевич Зацепин",
     "display_name": "Александр Зацепин",
     "name_latin": "Aleksandr Zacepin",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "natalya-varley",
+    "source_name": "Наталья Владимировна Варлей = natalya-varley",
+    "full_name": "Наталья Владимировна Варлей",
+    "display_name": "Наталья Варлей",
+    "name_latin": "Natalya Varlej",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-oleshko",
+    "source_name": "Александр Владимирович Олешко = aleksandr-oleshko",
+    "full_name": "Александр Владимирович Олешко",
+    "display_name": "Александр Олешко",
+    "name_latin": "Aleksandr Oleshko",
     "sphere": "kultura",
     "status": "published"
   },
