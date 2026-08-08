@@ -2565,6 +2565,60 @@
     "status": "published"
   },
   {
+    "slug": "vasilij-livanov",
+    "source_name": "Василий Борисович Ливанов",
+    "full_name": "Василий Борисович Ливанов",
+    "display_name": "Василий Ливанов",
+    "name_latin": "Vasilij Livanov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-cyganov",
+    "source_name": "Евгений Эдуардович Цыганов",
+    "full_name": "Евгений Эдуардович Цыганов",
+    "display_name": "Евгений Цыганов",
+    "name_latin": "Evgenij Cyganov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-snigir",
+    "source_name": "Юлия Викторовна Снигирь",
+    "full_name": "Юлия Викторовна Снигирь",
+    "display_name": "Юлия Снигирь",
+    "name_latin": "Yuliya Snigir",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "yuliya-menshova",
+    "source_name": "Юлия Владимировна Меньшова",
+    "full_name": "Юлия Владимировна Меньшова",
+    "display_name": "Юлия Меньшова",
+    "name_latin": "Yuliya Menshova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mariya-aronova",
+    "source_name": "Мария Валерьевна Аронова",
+    "full_name": "Мария Валерьевна Аронова",
+    "display_name": "Мария Аронова",
+    "name_latin": "Mariya Aronova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "nadezhda-babkina",
+    "source_name": "Надежда Георгиевна Бабкина",
+    "full_name": "Надежда Георгиевна Бабкина",
+    "display_name": "Надежда Бабкина",
+    "name_latin": "Nadezhda Babkina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
