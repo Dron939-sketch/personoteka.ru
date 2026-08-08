@@ -2898,6 +2898,42 @@
     "status": "published"
   },
   {
+    "slug": "aleksej-guskov",
+    "source_name": "Алексей Геннадьевич Гуськов = aleksej-guskov",
+    "full_name": "Алексей Геннадьевич Гуськов",
+    "display_name": "Алексей Гуськов",
+    "name_latin": "Aleksej Guskov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "irina-rozanova",
+    "source_name": "Ирина Юрьевна Розанова = irina-rozanova",
+    "full_name": "Ирина Юрьевна Розанова",
+    "display_name": "Ирина Розанова",
+    "name_latin": "Irina Rozanova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "igor-kostolevskij",
+    "source_name": "Игорь Матвеевич Костолевский = igor-kostolevskij",
+    "full_name": "Игорь Матвеевич Костолевский",
+    "display_name": "Игорь Костолевский",
+    "name_latin": "Igor Kostolevskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-zbruev",
+    "source_name": "Александр Викторович Збруев = aleksandr-zbruev",
+    "full_name": "Александр Викторович Збруев",
+    "display_name": "Александр Збруев",
+    "name_latin": "Aleksandr Zbruev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -3038,6 +3074,15 @@
     "full_name": "Александр Гарриевич Гордон",
     "display_name": "Александр Гордон",
     "name_latin": "Aleksandr Gordon",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "mariya-sittel",
+    "source_name": "Мария Эдуардовна Ситтель = mariya-sittel",
+    "full_name": "Мария Эдуардовна Ситтель",
+    "display_name": "Мария Ситтель",
+    "name_latin": "Mariya Sittel",
     "sphere": "media",
     "status": "published"
   },
