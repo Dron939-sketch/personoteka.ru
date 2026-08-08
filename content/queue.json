@@ -2439,6 +2439,15 @@
     "status": "published"
   },
   {
+    "slug": "mihail-labkovskij",
+    "source_name": "Михаил Александрович Лабковский = mihail-labkovskij",
+    "full_name": "Михаил Александрович Лабковский",
+    "display_name": "Михаил Лабковский",
+    "name_latin": "Mihail Labkovskij",
+    "sphere": "eksperty",
+    "status": "published"
+  },
+  {
     "slug": "pavel-krasheninnikov",
     "source_name": "Павел Владимирович Крашенинников",
     "full_name": "Павел Владимирович Крашенинников",
@@ -3470,6 +3479,33 @@
     "full_name": "Гарик Юрьевич Мартиросян",
     "display_name": "Гарик Мартиросян",
     "name_latin": "Garik Martirosyan",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-pozner",
+    "source_name": "Владимир Владимирович Познер = vladimir-pozner",
+    "full_name": "Владимир Владимирович Познер",
+    "display_name": "Владимир Познер",
+    "name_latin": "Vladimir Pozner",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-parfenov",
+    "source_name": "Леонид Геннадьевич Парфёнов = leonid-parfenov",
+    "full_name": "Леонид Геннадьевич Парфёнов",
+    "display_name": "Леонид Парфёнов",
+    "name_latin": "Leonid Parfenov",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "valdis-pelsh",
+    "source_name": "Валдис Эйженович Пельш = valdis-pelsh",
+    "full_name": "Валдис Эйженович Пельш",
+    "display_name": "Валдис Пельш",
+    "name_latin": "Valdis Pelsh",
     "sphere": "media",
     "status": "published"
   },
