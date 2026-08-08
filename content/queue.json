@@ -2574,6 +2574,24 @@
     "status": "published"
   },
   {
+    "slug": "mihail-barshchevskij",
+    "source_name": "Михаил Юрьевич Барщевский = mihail-barshchevskij",
+    "full_name": "Михаил Юрьевич Барщевский",
+    "display_name": "Михаил Барщевский",
+    "name_latin": "Mihail Barschevskij",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "ilya-novikov",
+    "source_name": "Илья Сергеевич Новиков = ilya-novikov",
+    "full_name": "Илья Сергеевич Новиков",
+    "display_name": "Илья Новиков",
+    "name_latin": "Ilya Novikov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
     "slug": "elena-kamburova",
     "source_name": "Елена Антоновна Камбурова",
     "full_name": "Елена Антоновна Камбурова",
@@ -3434,6 +3452,24 @@
     "full_name": "Елена Васильевна Малышева",
     "display_name": "Елена Малышева",
     "name_latin": "Elena Malysheva",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-komarovskij",
+    "source_name": "Евгений Олегович Комаровский = evgenij-komarovskij",
+    "full_name": "Евгений Олегович Комаровский",
+    "display_name": "Евгений Комаровский",
+    "name_latin": "Evgenij Komarovskij",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "aleksej-vodovozov",
+    "source_name": "Алексей Валерьевич Водовозов = aleksej-vodovozov",
+    "full_name": "Алексей Валерьевич Водовозов",
+    "display_name": "Алексей Водовозов",
+    "name_latin": "Aleksej Vodovozov",
     "sphere": "medicina",
     "status": "published"
   },
