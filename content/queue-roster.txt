@@ -384,6 +384,11 @@ Mikolas Hard
 Михаил Евгеньевич Пореченков = mihail-porechenkov
 Юрий Георгиевич Куценко = gosha-kucenko
 Нонна Валентиновна Гришаева = nonna-grishaeva
+Сергей Леонидович Гармаш = sergej-garmash
+Виктор Иванович Сухоруков = viktor-suhorukov
+Тимур Нуруахитович Бекмамбетов = timur-bekmambetov
+Фёдор Сергеевич Бондарчук = fedor-bondarchuk
+Валерий Петрович Тодоровский = valerij-todorovskij
 
 ## medicina
 Леонид Михайлович Рошаль
