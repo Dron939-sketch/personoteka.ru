@@ -2826,6 +2826,24 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-bastrykin",
+    "source_name": "Александр Иванович Бастрыкин = aleksandr-bastrykin",
+    "full_name": "Александр Иванович Бастрыкин",
+    "display_name": "Александр Бастрыкин",
+    "name_latin": "Aleksandr Bastrykin",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
+    "slug": "igor-krasnov",
+    "source_name": "Игорь Викторович Краснов = igor-krasnov",
+    "full_name": "Игорь Викторович Краснов",
+    "display_name": "Игорь Краснов",
+    "name_latin": "Igor Krasnov",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
     "slug": "elena-kamburova",
     "source_name": "Елена Антоновна Камбурова",
     "full_name": "Елена Антоновна Камбурова",
