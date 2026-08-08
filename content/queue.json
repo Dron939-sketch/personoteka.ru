@@ -1629,6 +1629,51 @@
     "status": "published"
   },
   {
+    "slug": "alina-zagitova",
+    "source_name": "Алина Ильназовна Загитова = alina-zagitova",
+    "full_name": "Алина Ильназовна Загитова",
+    "display_name": "Алина Загитова",
+    "name_latin": "Alina Zagitova",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "evgeniya-medvedeva",
+    "source_name": "Евгения Армановна Медведева = evgeniya-medvedeva",
+    "full_name": "Евгения Армановна Медведева",
+    "display_name": "Евгения Медведева",
+    "name_latin": "Evgeniya Medvedeva",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "adelina-sotnikova",
+    "source_name": "Аделина Дмитриевна Сотникова = adelina-sotnikova",
+    "full_name": "Аделина Дмитриевна Сотникова",
+    "display_name": "Аделина Сотникова",
+    "name_latin": "Adelina Sotnikova",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "nikita-nagornyj",
+    "source_name": "Никита Владимирович Нагорный = nikita-nagornyj",
+    "full_name": "Никита Владимирович Нагорный",
+    "display_name": "Никита Нагорный",
+    "name_latin": "Nikita Nagornyj",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "abdulrashid-sadulaev",
+    "source_name": "Абдулрашид Булачевич Садулаев = abdulrashid-sadulaev",
+    "full_name": "Абдулрашид Булачевич Садулаев",
+    "display_name": "Абдулрашид Садулаев",
+    "name_latin": "Abdulrashid Sadulaev",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",

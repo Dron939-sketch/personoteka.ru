@@ -1753,5 +1753,25 @@
   {
     "slug": "dora",
     "wikipedia": "Дора (певица)"
+  },
+  {
+    "slug": "alina-zagitova",
+    "commons": "File:Alina Zagitova in 2023.jpg"
+  },
+  {
+    "slug": "evgeniya-medvedeva",
+    "wikipedia": "Медведева, Евгения Армановна"
+  },
+  {
+    "slug": "adelina-sotnikova",
+    "wikipedia": "Сотникова, Аделина Дмитриевна"
+  },
+  {
+    "slug": "nikita-nagornyj",
+    "wikipedia": "Нагорный, Никита Владимирович"
+  },
+  {
+    "slug": "abdulrashid-sadulaev",
+    "wikipedia": "Садулаев, Абдулрашид Булачевич"
   }
 ]
