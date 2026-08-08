@@ -945,6 +945,15 @@
     "status": "published"
   },
   {
+    "slug": "anna-hilkevich",
+    "source_name": "Анна Александровна Хилькевич",
+    "full_name": "Анна Александровна Хилькевич",
+    "display_name": "Анна Хилькевич",
+    "name_latin": "Anna Hilkevich",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
@@ -2682,6 +2691,15 @@
     "status": "published"
   },
   {
+    "slug": "vladimir-kuzmin",
+    "source_name": "Владимир Борисович Кузьмин",
+    "full_name": "Владимир Борисович Кузьмин",
+    "display_name": "Владимир Кузьмин",
+    "name_latin": "Vladimir Kuzmin",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2796,6 +2814,15 @@
     "display_name": "Елена Малышева",
     "name_latin": "Elena Malysheva",
     "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "margarita-simonyan",
+    "source_name": "Маргарита Симоновна Симоньян",
+    "full_name": "Маргарита Симоновна Симоньян",
+    "display_name": "Маргарита Симоньян",
+    "name_latin": "Margarita Simonyan",
+    "sphere": "media",
     "status": "published"
   }
 ]
