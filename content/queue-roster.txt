@@ -439,6 +439,11 @@ Mikolas Hard
 Владимир Владимирович Познер = vladimir-pozner
 Леонид Геннадьевич Парфёнов = leonid-parfenov
 Валдис Эйженович Пельш = valdis-pelsh
+Дмитрий Константинович Киселёв = dmitrij-kiselyov
+Ольга Владимировна Скабеева = olga-skabeeva
+Дмитрий Викторович Губерниев = dmitrij-guberniev
+Яна Алексеевна Чурикова = yana-churikova
+Дмитрий Дмитриевич Борисов = dmitrij-borisov
 
 ## nauka
 Анна Юрьевна Кикина

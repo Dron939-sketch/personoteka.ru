@@ -3699,6 +3699,51 @@
     "status": "published"
   },
   {
+    "slug": "dmitrij-kiselyov",
+    "source_name": "Дмитрий Константинович Киселёв = dmitrij-kiselyov",
+    "full_name": "Дмитрий Константинович Киселёв",
+    "display_name": "Дмитрий Киселёв",
+    "name_latin": "Dmitrij Kiselev",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "olga-skabeeva",
+    "source_name": "Ольга Владимировна Скабеева = olga-skabeeva",
+    "full_name": "Ольга Владимировна Скабеева",
+    "display_name": "Ольга Скабеева",
+    "name_latin": "Olga Skabeeva",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-guberniev",
+    "source_name": "Дмитрий Викторович Губерниев = dmitrij-guberniev",
+    "full_name": "Дмитрий Викторович Губерниев",
+    "display_name": "Дмитрий Губерниев",
+    "name_latin": "Dmitrij Guberniev",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "yana-churikova",
+    "source_name": "Яна Алексеевна Чурикова = yana-churikova",
+    "full_name": "Яна Алексеевна Чурикова",
+    "display_name": "Яна Чурикова",
+    "name_latin": "Yana Churikova",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-borisov",
+    "source_name": "Дмитрий Дмитриевич Борисов = dmitrij-borisov",
+    "full_name": "Дмитрий Дмитриевич Борисов",
+    "display_name": "Дмитрий Борисов",
+    "name_latin": "Dmitrij Borisov",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
     "slug": "anna-kikina",
     "source_name": "Анна Юрьевна Кикина",
     "full_name": "Анна Юрьевна Кикина",
