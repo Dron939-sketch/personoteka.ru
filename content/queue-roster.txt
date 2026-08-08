@@ -128,6 +128,7 @@ Mikolas Hard
 Анна Никитична Михалкова = anna-mihalkova
 Светлана Викторовна Ходченкова = svetlana-hodchenkova
 Александр Юрьевич Домогаров = aleksandr-domogarov
+Ирина Валерьевна Шайхлисламова = irina-shejk
 
 ## obrazovanie
 Плохов Владимир Николаевич
@@ -211,6 +212,7 @@ Mikolas Hard
 Абдулрашид Булачевич Садулаев = abdulrashid-sadulaev
 Валерий Георгиевич Карпин = valerij-karpin
 Сергей Богданович Семак = sergej-semak
+Фёдор Михайлович Смолов = fedor-smolov
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -435,6 +437,9 @@ Mikolas Hard
 Дарья Шиханова = dora
 Мария Андреевна Миронова = mariya-mironova
 Павел Олегович Табаков = pavel-tabakov
+Михаил Сергеевич Боярский = mihail-boyarskij
+Наталия Николаевна Белохвостикова = nataliya-belohvostikova
+Александр Сергеевич Зацепин = aleksandr-zacepin
 
 ## medicina
 Леонид Михайлович Рошаль

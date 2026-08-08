@@ -1071,6 +1071,15 @@
     "status": "published"
   },
   {
+    "slug": "irina-shejk",
+    "source_name": "Ирина Валерьевна Шайхлисламова = irina-shejk",
+    "full_name": "Ирина Валерьевна Шайхлисламова",
+    "display_name": "Ирина Шайхлисламова",
+    "name_latin": "Irina Shajhlislamova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
@@ -1778,6 +1787,15 @@
     "full_name": "Сергей Богданович Семак",
     "display_name": "Сергей Семак",
     "name_latin": "Sergej Semak",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "fedor-smolov",
+    "source_name": "Фёдор Михайлович Смолов = fedor-smolov",
+    "full_name": "Фёдор Михайлович Смолов",
+    "display_name": "Фёдор Смолов",
+    "name_latin": "Fedor Smolov",
     "sphere": "sport",
     "status": "published"
   },
@@ -3695,6 +3713,33 @@
     "full_name": "Павел Олегович Табаков",
     "display_name": "Павел Табаков",
     "name_latin": "Pavel Tabakov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-boyarskij",
+    "source_name": "Михаил Сергеевич Боярский = mihail-boyarskij",
+    "full_name": "Михаил Сергеевич Боярский",
+    "display_name": "Михаил Боярский",
+    "name_latin": "Mihail Boyarskij",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "nataliya-belohvostikova",
+    "source_name": "Наталия Николаевна Белохвостикова = nataliya-belohvostikova",
+    "full_name": "Наталия Николаевна Белохвостикова",
+    "display_name": "Наталия Белохвостикова",
+    "name_latin": "Nataliya Belohvostikova",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-zacepin",
+    "source_name": "Александр Сергеевич Зацепин = aleksandr-zacepin",
+    "full_name": "Александр Сергеевич Зацепин",
+    "display_name": "Александр Зацепин",
+    "name_latin": "Aleksandr Zacepin",
     "sphere": "kultura",
     "status": "published"
   },
