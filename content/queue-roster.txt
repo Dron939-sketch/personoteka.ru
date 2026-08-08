@@ -54,6 +54,7 @@
 Дмитрий Николаевич Чернышенко = dmitrij-chernyshenko
 Ольга Борисовна Любимова = olga-lyubimova
 Григорий Алексеевич Явлинский = grigorij-yavlinskij
+Николай Платонович Патрушев = nikolaj-patrushev
 
 ## znamenitosti
 Mikolas Hard
@@ -217,6 +218,7 @@ Mikolas Hard
 Дарья Сергеевна Касаткина = darya-kasatkina
 Эдуард Мкртычевич Сперцян = eduard-spercyan
 Тимофей Константинович Цзю = tim-tszyu
+Артур Валерьевич Дмитриев = artur-dmitriev
 
 ## biznes
 Владислав Сергеевич Бакальчук
@@ -450,6 +452,9 @@ Mikolas Hard
 Татьяна Львовна Пилецкая = tatyana-pileckaya
 Денис Ильич Клявер = denis-klyaver
 Ираклий Леонидович Пирцхалава = irakli-pirchalava
+Вера Валентиновна Алентова = vera-alentova
+Людмила Алексеевна Чурсина = lyudmila-chursina
+Марина Сергеевна Абросимова = maksim-abrosimova
 
 ## medicina
 Леонид Михайлович Рошаль
