@@ -146,15 +146,24 @@ async function fetchSitelinks(qids: string[]): Promise<Map<string, string>> {
 }
 
 /**
- * Ключи уже написанных персон. Двух слов фамилии и имени хватает для обычной
- * карточки, но каталог наполовину состоит из сценических имён — Zivert, SHAMAN,
- * Баста, — а заголовок в Википедии у них однословный. Поэтому в набор идут и
- * односложные имена: без этого очередь предлагала бы переписать половину
- * рубрики «Блогеры».
+ * Ключи уже написанных персон — в двух видах, и оба нужны.
+ *
+ * Пара «имя + фамилия» закрывает обычную карточку. Но заголовок статьи бывает
+ * однословным: «Emin», «Баста», «Zivert». Сверять такой заголовок с парами
+ * бесполезно — он ни с чем не совпадёт, и скрипт предложит написать человека,
+ * который в каталоге уже есть. Так однажды и вышло: Эмин Агаларов, написанный
+ * в партии 22, вернулся в очередь под заголовком «Emin» и был переписан заново.
+ * Поэтому отдельно собираются одиночные слова всех вариантов имени.
  */
-function writtenKeys(root: string): Set<string> {
+interface Written {
+  pairs: Set<string>
+  singles: Set<string>
+}
+
+function writtenKeys(root: string): Written {
   const dir = path.join(root, 'content/persons')
-  const keys = new Set<string>()
+  const pairs = new Set<string>()
+  const singles = new Set<string>()
   for (const file of fs.readdirSync(dir)) {
     if (!file.endsWith('.json')) continue
     const person = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')) as {
@@ -164,25 +173,39 @@ function writtenKeys(root: string): Set<string> {
     }
     for (const name of [person.full_name, person.display_name, person.name_latin]) {
       if (!name) continue
-      keys.add(nameKey(name))
+      pairs.add(nameKey(name))
+      for (const word of normalize(name)) {
+        // Отчества и служебные части вроде «оглы» ключами быть не должны.
+        if (word.length >= 4 && !/(вич|вна|оглы|кызы)$/.test(word)) singles.add(word)
+      }
     }
   }
-  return keys
+  return { pairs, singles }
+}
+
+function isWritten(title: string, written: Written): boolean {
+  const parts = normalize(title)
+  if (parts.length >= 2) return written.pairs.has(nameKey(title))
+  return parts.length === 1 && written.singles.has(parts[0])
 }
 
 /**
  * Заголовок статьи приводится к сравнимому виду: убираются уточнения в скобках
- * («Баста (музыкант)»), запятая инверсии и регистр, а имя с фамилией
- * сортируются — «Чурсина, Людмила» и «Людмила Чурсина» должны совпасть.
+ * («Баста (музыкант)»), запятая инверсии и регистр.
  */
-function nameKey(title: string): string {
-  const parts = title
+function normalize(title: string): string[] {
+  return title
     .toLowerCase()
     .replace(/ё/g, 'е')
     .replace(/\([^)]*\)/g, '')
     .replace(/[,_]/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
+}
+
+/** Имя и фамилия сортируются: «Чурсина, Людмила» и «Людмила Чурсина» совпадут. */
+function nameKey(title: string): string {
+  const parts = normalize(title)
   return parts.length >= 2 ? [parts[0], parts[1]].sort().join(' ') : parts.join(' ')
 }
 
@@ -220,7 +243,7 @@ async function main() {
         wikidata: e.qid,
         citizenship,
         free_photo: e.hasImage,
-        written: written.has(nameKey(title)),
+        written: isWritten(title, written),
       }
     })
     .filter(Boolean)

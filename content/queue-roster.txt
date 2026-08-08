@@ -455,6 +455,11 @@ Mikolas Hard
 Вера Валентиновна Алентова = vera-alentova
 Людмила Алексеевна Чурсина = lyudmila-chursina
 Марина Сергеевна Абросимова = maksim-abrosimova
+Татьяна Владимировна Москвина = tatyana-moskvina
+Станислав Владимирович Михайлов = stas-mihajlov
+Анатолий Александрович Васильев = anatolij-vasilev
+Анна Алексеевна Пересильд = anna-peresild
+Владимир Валентинович Меньшов = vladimir-menshov
 
 ## medicina
 Леонид Михайлович Рошаль
