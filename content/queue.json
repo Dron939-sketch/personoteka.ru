@@ -2700,6 +2700,33 @@
     "status": "published"
   },
   {
+    "slug": "igor-krutoj",
+    "source_name": "Игорь Яковлевич Крутой",
+    "full_name": "Игорь Яковлевич Крутой",
+    "display_name": "Игорь Крутой",
+    "name_latin": "Igor Krutoj",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "nikolaj-ciskaridze",
+    "source_name": "Николай Максимович Цискаридзе",
+    "full_name": "Николай Максимович Цискаридзе",
+    "display_name": "Николай Цискаридзе",
+    "name_latin": "Nikolaj Ciskaridze",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "yurij-stoyanov",
+    "source_name": "Юрий Николаевич Стоянов",
+    "full_name": "Юрий Николаевич Стоянов",
+    "display_name": "Юрий Стоянов",
+    "name_latin": "Yurij Stoyanov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2822,6 +2849,15 @@
     "full_name": "Маргарита Симоновна Симоньян",
     "display_name": "Маргарита Симоньян",
     "name_latin": "Margarita Simonyan",
+    "sphere": "media",
+    "status": "published"
+  },
+  {
+    "slug": "leonid-yakubovich",
+    "source_name": "Леонид Аркадьевич Якубович",
+    "full_name": "Леонид Аркадьевич Якубович",
+    "display_name": "Леонид Якубович",
+    "name_latin": "Leonid Yakubovich",
     "sphere": "media",
     "status": "published"
   }
