@@ -2646,6 +2646,42 @@
     "status": "published"
   },
   {
+    "slug": "aleksej-rybnikov",
+    "source_name": "Алексей Львович Рыбников",
+    "full_name": "Алексей Львович Рыбников",
+    "display_name": "Алексей Рыбников",
+    "name_latin": "Aleksej Rybnikov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "lajma-vajkule",
+    "source_name": "Лайма Станиславовна Вайкуле",
+    "full_name": "Лайма Станиславовна Вайкуле",
+    "display_name": "Лайма Вайкуле",
+    "name_latin": "Lajma Vajkule",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "oleg-basilashvili",
+    "source_name": "Олег Валерианович Басилашвили",
+    "full_name": "Олег Валерианович Басилашвили",
+    "display_name": "Олег Басилашвили",
+    "name_latin": "Oleg Basilashvili",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-ustyugov",
+    "source_name": "Александр Сергеевич Устюгов",
+    "full_name": "Александр Сергеевич Устюгов",
+    "display_name": "Александр Устюгов",
+    "name_latin": "Aleksandr Ustyugov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
@@ -2750,6 +2786,15 @@
     "full_name": "Анна Юрьевна Попова",
     "display_name": "Анна Попова",
     "name_latin": "Anna Popova",
+    "sphere": "medicina",
+    "status": "published"
+  },
+  {
+    "slug": "elena-malysheva",
+    "source_name": "Елена Васильевна Малышева",
+    "full_name": "Елена Васильевна Малышева",
+    "display_name": "Елена Малышева",
+    "name_latin": "Elena Malysheva",
     "sphere": "medicina",
     "status": "published"
   }
