@@ -1026,6 +1026,51 @@
     "status": "published"
   },
   {
+    "slug": "viktoriya-tolstoganova",
+    "source_name": "Виктория Викторовна Толстоганова = viktoriya-tolstoganova",
+    "full_name": "Виктория Викторовна Толстоганова",
+    "display_name": "Виктория Толстоганова",
+    "name_latin": "Viktoriya Tolstoganova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "elizaveta-boyarskaya",
+    "source_name": "Елизавета Михайловна Боярская = elizaveta-boyarskaya",
+    "full_name": "Елизавета Михайловна Боярская",
+    "display_name": "Елизавета Боярская",
+    "name_latin": "Elizaveta Boyarskaya",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "anna-mihalkova",
+    "source_name": "Анна Никитична Михалкова = anna-mihalkova",
+    "full_name": "Анна Никитична Михалкова",
+    "display_name": "Анна Михалкова",
+    "name_latin": "Anna Mihalkova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "svetlana-hodchenkova",
+    "source_name": "Светлана Викторовна Ходченкова = svetlana-hodchenkova",
+    "full_name": "Светлана Викторовна Ходченкова",
+    "display_name": "Светлана Ходченкова",
+    "name_latin": "Svetlana Hodchenkova",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-domogarov",
+    "source_name": "Александр Юрьевич Домогаров = aleksandr-domogarov",
+    "full_name": "Александр Юрьевич Домогаров",
+    "display_name": "Александр Домогаров",
+    "name_latin": "Aleksandr Domogarov",
+    "sphere": "znamenitosti",
+    "status": "published"
+  },
+  {
     "slug": "vladimir-plohov",
     "source_name": "Плохов Владимир Николаевич",
     "full_name": "Плохов Владимир Николаевич",
