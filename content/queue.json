@@ -1242,6 +1242,24 @@
     "status": "published"
   },
   {
+    "slug": "aleksandr-auzan",
+    "source_name": "Александр Александрович Аузан = aleksandr-auzan",
+    "full_name": "Александр Александрович Аузан",
+    "display_name": "Александр Аузан",
+    "name_latin": "Aleksandr Auzan",
+    "sphere": "obrazovanie",
+    "status": "published"
+  },
+  {
+    "slug": "viktor-sadovnichij",
+    "source_name": "Виктор Антонович Садовничий = viktor-sadovnichij",
+    "full_name": "Виктор Антонович Садовничий",
+    "display_name": "Виктор Садовничий",
+    "name_latin": "Viktor Sadovnichij",
+    "sphere": "obrazovanie",
+    "status": "published"
+  },
+  {
     "slug": "daniil-medvedev",
     "source_name": "Даниил Медведев",
     "full_name": "Даниил Медведев",
@@ -3569,6 +3587,24 @@
     "full_name": "Александр Юрьевич Панчин",
     "display_name": "Александр Панчин",
     "name_latin": "Aleksandr Panchin",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-popov",
+    "source_name": "Сергей Борисович Попов = sergej-popov",
+    "full_name": "Сергей Борисович Попов",
+    "display_name": "Сергей Попов",
+    "name_latin": "Sergej Popov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-markov",
+    "source_name": "Александр Владимирович Марков = aleksandr-markov",
+    "full_name": "Александр Владимирович Марков",
+    "display_name": "Александр Марков",
+    "name_latin": "Aleksandr Markov",
     "sphere": "nauka",
     "status": "published"
   }
