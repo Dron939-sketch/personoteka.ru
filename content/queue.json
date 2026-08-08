@@ -1485,6 +1485,15 @@
     "status": "published"
   },
   {
+    "slug": "natalya-zabiyako",
+    "source_name": "Наталья Александровна Забияко",
+    "full_name": "Наталья Александровна Забияко",
+    "display_name": "Наталья Забияко",
+    "name_latin": "Natalya Zabiyako",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -2412,6 +2421,15 @@
     "status": "queued"
   },
   {
+    "slug": "ekaterina-gordon",
+    "source_name": "Екатерина Викторовна Гордон",
+    "full_name": "Екатерина Викторовна Гордон",
+    "display_name": "Екатерина Гордон",
+    "name_latin": "Ekaterina Gordon",
+    "sphere": "pravo",
+    "status": "published"
+  },
+  {
     "slug": "elena-kamburova",
     "source_name": "Елена Антоновна Камбурова",
     "full_name": "Елена Антоновна Камбурова",
@@ -2615,6 +2633,15 @@
     "full_name": "Надежда Георгиевна Бабкина",
     "display_name": "Надежда Бабкина",
     "name_latin": "Nadezhda Babkina",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "natalya-andrejchenko",
+    "source_name": "Наталья Эдуардовна Андрейченко",
+    "full_name": "Наталья Эдуардовна Андрейченко",
+    "display_name": "Наталья Андрейченко",
+    "name_latin": "Natalya Andrejchenko",
     "sphere": "kultura",
     "status": "published"
   },
