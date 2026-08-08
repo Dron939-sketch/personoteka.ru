@@ -355,6 +355,11 @@ Mikolas Hard
 Александр Викторович Збруев = aleksandr-zbruev
 Светлана Владимировна Немоляева = svetlana-nemolyaeva
 Эдита Станиславовна Пьеха = edita-peha
+Александр Яковлевич Розенбаум = aleksandr-rozenbaum
+Лариса Александровна Долина = larisa-dolina
+Леонид Николаевич Агутин = leonid-agutin
+Виктор Яковлевич Дробыш = viktor-drobysh
+Антон Александрович Макарский = anton-makarskij
 
 ## medicina
 Леонид Михайлович Рошаль
