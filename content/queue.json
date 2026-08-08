@@ -3787,5 +3787,50 @@
     "name_latin": "Aleksandr Markov",
     "sphere": "nauka",
     "status": "published"
+  },
+  {
+    "slug": "aleksej-semihatov",
+    "source_name": "Алексей Михайлович Семихатов = aleksej-semihatov",
+    "full_name": "Алексей Михайлович Семихатов",
+    "display_name": "Алексей Семихатов",
+    "name_latin": "Aleksej Semihatov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "nikolaj-kukushkin",
+    "source_name": "Николай Вадимович Кукушкин = nikolaj-kukushkin",
+    "full_name": "Николай Вадимович Кукушкин",
+    "display_name": "Николай Кукушкин",
+    "name_latin": "Nikolaj Kukushkin",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-sokolov",
+    "source_name": "Александр Борисович Соколов = aleksandr-sokolov",
+    "full_name": "Александр Борисович Соколов",
+    "display_name": "Александр Соколов",
+    "name_latin": "Aleksandr Sokolov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-nikitin",
+    "source_name": "Михаил Александрович Никитин = mihail-nikitin",
+    "full_name": "Михаил Александрович Никитин",
+    "display_name": "Михаил Никитин",
+    "name_latin": "Mihail Nikitin",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "vladimir-arnold",
+    "source_name": "Владимир Игоревич Арнольд = vladimir-arnold",
+    "full_name": "Владимир Игоревич Арнольд",
+    "display_name": "Владимир Арнольд",
+    "name_latin": "Vladimir Arnold",
+    "sphere": "nauka",
+    "status": "published"
   }
 ]

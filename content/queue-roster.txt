@@ -451,3 +451,8 @@ Mikolas Hard
 Александр Юрьевич Панчин = aleksandr-panchin
 Сергей Борисович Попов = sergej-popov
 Александр Владимирович Марков = aleksandr-markov
+Алексей Михайлович Семихатов = aleksej-semihatov
+Николай Вадимович Кукушкин = nikolaj-kukushkin
+Александр Борисович Соколов = aleksandr-sokolov
+Михаил Александрович Никитин = mihail-nikitin
+Владимир Игоревич Арнольд = vladimir-arnold
