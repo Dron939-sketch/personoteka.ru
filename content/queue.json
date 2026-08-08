@@ -1530,6 +1530,24 @@
     "status": "published"
   },
   {
+    "slug": "magomed-ankalaev",
+    "source_name": "Магомед Алибулатович Анкалаев",
+    "full_name": "Магомед Алибулатович Анкалаев",
+    "display_name": "Магомед Анкалаев",
+    "name_latin": "Magomed Ankalaev",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
+    "slug": "roman-safiullin",
+    "source_name": "Роман Ришатович Сафиуллин",
+    "full_name": "Роман Ришатович Сафиуллин",
+    "display_name": "Роман Сафиуллин",
+    "name_latin": "Roman Safiullin",
+    "sphere": "sport",
+    "status": "published"
+  },
+  {
     "slug": "vladislav-bakalchuk",
     "source_name": "Владислав Сергеевич Бакальчук",
     "full_name": "Владислав Сергеевич Бакальчук",
@@ -2795,6 +2813,15 @@
     "full_name": "Павел Юрьевич Деревянко",
     "display_name": "Павел Деревянко",
     "name_latin": "Pavel Derevyanko",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "kristina-orbakajte",
+    "source_name": "Кристина Эдмундовна Орбакайте",
+    "full_name": "Кристина Эдмундовна Орбакайте",
+    "display_name": "Кристина Орбакайте",
+    "name_latin": "Kristina Orbakajte",
     "sphere": "kultura",
     "status": "published"
   },
