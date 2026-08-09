@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { PersonCard } from '@/components/PersonCard'
-import { PromoLektorij } from '@/components/PromoLektorij'
+import { PromoBanner } from '@/components/PromoBanner'
 import { getCities, getPersonsBySphere, getSphere, getSpheres } from '@/lib/content'
 import { personsCount } from '@/lib/format'
 import { itemListJsonLd } from '@/lib/jsonld'
@@ -25,7 +25,7 @@ import styles from './page.module.css'
 export const dynamicParams = true
 
 /** Рубрики, где промо-полоса Лектория уместна по теме. */
-const PROMO_SPHERES = new Set(['obrazovanie', 'psihologiya'])
+const PROMO_SPHERES = new Set(['obrazovanie', 'psihologiya', 'nauka'])
 
 export function generateStaticParams() {
   return getSpheres().map((sphere) => ({ sfera: sphere.slug }))
@@ -98,10 +98,15 @@ export default async function SpherePage({ params }: { params: Promise<{ sfera: 
         </div>
       )}
 
-      {/* Лекторий показывается там, где он по теме: читатель уже смотрит
-          биографии педагогов или психологов. В остальных рубриках полоса
-          была бы посторонней. */}
-      {PROMO_SPHERES.has(sphere.slug) && <PromoLektorij />}
+      {/* Полоса показывается там, где проекты по теме, а какой именно из двух —
+          решает близость рубрики: на «Психологии» это почти всегда Фреди,
+          на «Образовании» и «Науке» — Лекторий (веса в content/banners.json). */}
+      {PROMO_SPHERES.has(sphere.slug) && (
+        <PromoBanner
+          context={{ slug: `sfera:${sphere.slug}`, spheres: [sphere.slug] }}
+          placement="sfera"
+        />
+      )}
 
       {sphere.seo_text && (
         <section className={`${styles.seo} deferred`}>
