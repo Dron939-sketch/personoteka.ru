@@ -23,6 +23,7 @@
     "photo": "tsx scripts/add-photo.ts",
     "icons": "tsx scripts/make-icons.ts",
     "photos:fetch": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-photos.ts",
+    "proverka": "NODE_USE_ENV_PROXY=1 tsx scripts/proverka.ts",
     "photo:pick": "NODE_USE_ENV_PROXY=1 tsx scripts/pick-portrait.ts",
     "import:lich": "NODE_USE_ENV_PROXY=1 tsx scripts/import-lichnosty.ts",
     "indexnow": "NODE_USE_ENV_PROXY=1 tsx scripts/indexnow.ts"
