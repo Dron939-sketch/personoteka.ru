@@ -181,6 +181,21 @@ export function getPopulatedCities(): City[] {
  * Похожие персоны для блока внизу страницы (§8.1):
  * сначала совпадение по сфере и городу, затем только по сфере.
  */
+/**
+ * Слаг основателя проекта. Его карточка ставится первой в «похожих» на каждой
+ * биографии — это редакционное решение владельца, а не результат подсчёта
+ * близости, и стоит понимать, чем оно оплачено.
+ *
+ * Блок «Похожие персоны» — обещание: читатель ждёт, что там люди той же
+ * профессии или города. Постоянная карточка на всех страницах это обещание
+ * частично размывает и для поисковика выглядит сквозным навигационным
+ * элементом, а не тематической перелинковкой. Поэтому сделано аккуратно:
+ * карточка одна, дублей нет (если основатель и так прошёл по близости, второй
+ * раз он не добавляется), на собственной странице его нет, и остальные места
+ * в блоке по-прежнему занимает алгоритм.
+ */
+const FOUNDER_SLUG = 'andrej-mejster'
+
 export function getRelatedPersons(person: Person, limit = 6): Person[] {
   const others = getPersons().filter((p) => p.slug !== person.slug)
   const score = (p: Person) => {
@@ -188,12 +203,16 @@ export function getRelatedPersons(person: Person, limit = 6): Person[] {
     const cityHit = p.city && p.city === person.city ? 1 : 0
     return sphereHits * 2 + cityHit
   }
-  return others
+  const ranked = others
     .map((p) => ({ p, s: score(p) }))
     .filter((x) => x.s > 0)
     .sort((a, b) => b.s - a.s || (b.p.attention_index ?? 0) - (a.p.attention_index ?? 0))
-    .slice(0, limit)
     .map((x) => x.p)
+
+  const founder = person.slug === FOUNDER_SLUG ? undefined : getPerson(FOUNDER_SLUG)
+  if (!founder || founder.status !== 'published') return ranked.slice(0, limit)
+
+  return [founder, ...ranked.filter((p) => p.slug !== FOUNDER_SLUG)].slice(0, limit)
 }
 
 /**
@@ -207,6 +226,31 @@ export function getBornOn(month: number, day: number): Person[] {
     const [, m, d] = p.birth_date.split('-').map(Number)
     return m === month && d === day
   })
+}
+
+/**
+ * Витрина главной — ручной порядок из `content/home-vitrina.txt`.
+ *
+ * Автоматика тут пока не работает: рейтинг пуст, индекс внимания у всех нулевой,
+ * и любая сортировка вырождается в алфавит. А витрине нужно другое — чередование
+ * сфер, узнаваемые лица и хорошие портреты подряд. Это редакторская работа,
+ * и держать её в текстовом файле честнее, чем прятать в коде.
+ *
+ * Опечатка в слаге не роняет главную: неизвестные и неопубликованные строки
+ * молча пропускаются.
+ */
+export function getShowcasePersons(limit = 8): Person[] {
+  const file = path.join(CONTENT_DIR, 'home-vitrina.txt')
+  if (!fs.existsSync(file)) return []
+
+  return fs
+    .readFileSync(file, 'utf8')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'))
+    .map((slug) => getPerson(slug))
+    .filter((p): p is Person => Boolean(p) && p!.status === 'published')
+    .slice(0, limit)
 }
 
 export function getNewestPersons(limit = 8): Person[] {

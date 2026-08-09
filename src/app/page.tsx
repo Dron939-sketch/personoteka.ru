@@ -15,6 +15,7 @@ import {
   getNewestPersons,
   getPerson,
   getPersons,
+  getShowcasePersons,
   getRating,
   getSpheres,
 } from '@/lib/content'
@@ -48,10 +49,21 @@ export default function HomePage() {
   // «Персона недели» — верх рейтинга: витрина строится на собственных данных (§2.1.6).
   // Пока рейтинг пуст (аналитика не набрана), показываем самую свежую биографию —
   // блок не должен исчезать с главной из-за отсутствия статистики.
+  //
+  // Но свежая — обязательно с портретом. Это самый крупный блок страницы, и
+  // монограмма во всю его высоту — первое, что видит посетитель. Портрет есть
+  // не у всех: в нишах вроде ММА и телеюмора свободных снимков почти нет,
+  // и без этого условия главную открывали две буквы на сером поле.
   const featuredEntry = rating.entries[0]
-  const featured = featuredEntry ? getPerson(featuredEntry.slug) : getNewestPersons(1)[0]
+  const featured = featuredEntry
+    ? getPerson(featuredEntry.slug)
+    : (getNewestPersons(40).find((p) => p.photos?.length) ?? getNewestPersons(1)[0])
 
-  const newest = getNewestPersons(8).filter((p) => p.slug !== featured?.slug)
+  // Витрина — ручной порядок из content/home-vitrina.txt. Пока рейтинг пуст,
+  // любая автосортировка вырождается в алфавит, а главной нужны чередование
+  // сфер и узнаваемые лица подряд. Если файла нет, показываем свежие, как раньше.
+  const showcase = getShowcasePersons(8)
+  const newest = showcase.length > 0 ? showcase : getNewestPersons(8).filter((p) => p.slug !== featured?.slug)
 
   const topRows = rating.entries.slice(0, 10).flatMap((entry) => {
     const person = getPerson(entry.slug)
@@ -103,7 +115,7 @@ export default function HomePage() {
       {newest.length > 0 && (
         <section className="container section">
           <div className={styles.sectionHead}>
-            <h2 className="ruled">Новые в «Персонотеке»</h2>
+            <h2 className="ruled">{showcase.length > 0 ? 'Выбор редакции' : 'Новые в «Персонотеке»'}</h2>
             <Link href="/katalog/?sort=novye" className={styles.more}>
               Все новые
             </Link>
