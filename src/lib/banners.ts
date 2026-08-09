@@ -46,12 +46,31 @@ interface BannersFile {
   campaigns: BannerCampaign[]
 }
 
-let cache: BannersFile | null = null
+let cache: BannerCampaign[] | null = null
 
-function load(): BannersFile {
+/** Фон обязателен для показа — см. `load()`. */
+export function hasImage(image: string): boolean {
+  return fs.existsSync(path.join(process.cwd(), 'public', image))
+}
+
+/**
+ * Конфиг, из которого выброшены креативы без отрисованного фона, а следом —
+ * кампании, у которых не осталось ни одного.
+ *
+ * Полоса без фотографии выглядит заметно беднее: тёмный прямоугольник с текстом
+ * вместо кадра. Пока нарисован один фон из восьми, включённая на полную
+ * ротация означала бы, что семь показов из восьми — ухудшение против того,
+ * что на сайте уже стоит. Поэтому креатив выходит в ротацию ровно тогда, когда
+ * под него положили картинку: сегодня показывается то же, что и раньше,
+ * а по мере появления фонов ротация расширяется сама, без правок кода.
+ */
+function load(): BannerCampaign[] {
   if (!cache) {
     const file = path.join(process.cwd(), 'content/banners.json')
-    cache = JSON.parse(fs.readFileSync(file, 'utf8')) as BannersFile
+    const raw = JSON.parse(fs.readFileSync(file, 'utf8')) as BannersFile
+    cache = raw.campaigns
+      .map((campaign) => ({ ...campaign, creatives: campaign.creatives.filter((c) => hasImage(c.image)) }))
+      .filter((campaign) => campaign.creatives.length > 0)
   }
   return cache
 }
@@ -126,7 +145,7 @@ export function bannerHref(campaign: BannerCampaign, creative: BannerCreative, p
  * одной кампании показывали бы один и тот же креатив.
  */
 export function pickBanner(context: BannerContext, placement = 'inline'): BannerPick | null {
-  const { campaigns } = load()
+  const campaigns = load()
   if (campaigns.length === 0) return null
 
   const spheres = context.spheres ?? []
@@ -159,7 +178,7 @@ export function pickBanner(context: BannerContext, placement = 'inline'): Banner
   return { campaign, creative, index, href: bannerHref(campaign, creative, placement) }
 }
 
-/** Весь конфиг — для клиентского слоя и для страницы предпросмотра. */
+/** Кампании, готовые к показу, — для клиентского слоя. */
 export function getCampaigns(): BannerCampaign[] {
-  return load().campaigns
+  return load()
 }

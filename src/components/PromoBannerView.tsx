@@ -29,7 +29,7 @@ interface Creative {
   slogan: string
   text: string
   action: string
-  image: string | null
+  image: string
   href: string
 }
 
@@ -108,15 +108,13 @@ export function PromoBannerView({
   return (
     <section className={styles.promo} aria-labelledby={titleId}>
       <div className={styles.media}>
-        {creative.image ? (
-          <Image
-            src={creative.image}
-            alt=""
-            fill
-            sizes="(max-width: 900px) 100vw, 1200px"
-            className={styles.image}
-          />
-        ) : null}
+        <Image
+          src={creative.image}
+          alt=""
+          fill
+          sizes="(max-width: 900px) 100vw, 1200px"
+          className={styles.image}
+        />
       </div>
 
       <div className={styles.body}>

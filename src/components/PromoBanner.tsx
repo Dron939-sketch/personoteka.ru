@@ -1,6 +1,3 @@
-import fs from 'node:fs'
-import path from 'node:path'
-
 import { bannerHref, getCampaigns, pickBanner, type BannerContext } from '@/lib/banners'
 
 import { PromoBannerView } from './PromoBannerView'
@@ -23,8 +20,9 @@ import { PromoBannerView } from './PromoBannerView'
  * Текст лежит в разметке, а не в картинке: заголовок читается поисковиком
  * и экранным диктором, переводится на тёмную тему и не ломается на узком
  * экране. Изображение — только фон, поэтому у него пустое `alt`. Фон
- * необязателен: пока файла нет, полоса выводится на сплошной тёмной подложке
- * и остаётся рабочей.
+ * В ротацию попадают только креативы с отрисованным фоном — отбор делает
+ * `lib/banners.ts`. Пока нарисован один фон из восьми, на сайте показывается
+ * ровно то же, что и раньше; ротация расширится сама, когда появятся картинки.
  */
 export function PromoBanner({
   context,
@@ -36,8 +34,6 @@ export function PromoBanner({
   const pick = pickBanner(context, placement)
   if (!pick) return null
 
-  const exists = (image: string) => fs.existsSync(path.join(process.cwd(), 'public', image))
-
   const pack = (campaign: (typeof pick)['campaign']) => ({
     campaignId: campaign.id,
     creatives: campaign.creatives.map((creative) => ({
@@ -46,7 +42,7 @@ export function PromoBanner({
       slogan: creative.slogan,
       text: creative.text,
       action: creative.action,
-      image: exists(creative.image) ? creative.image : null,
+      image: creative.image,
       href: bannerHref(campaign, creative, placement),
     })),
   })
