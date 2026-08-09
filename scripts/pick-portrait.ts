@@ -174,13 +174,29 @@ async function sheet(list: Candidate[], slug: string): Promise<string> {
   const composites: OverlayOptions[] = []
 
   for (const [i, c] of list.entries()) {
-    const r = await fetch(c.url, { headers: UA })
-    const buf = Buffer.from(await r.arrayBuffer())
-    const thumb = await sharp(buf).rotate().resize(CELL, CELL_H, { fit: 'contain', background: '#eee' }).toBuffer()
     const x = (i % COLS) * CELL
     const y = Math.floor(i / COLS) * (CELL_H + LABEL)
-    composites.push({ input: thumb, left: x, top: y })
-    const label = `${i + 1}. ${c.width}×${c.height} · ${c.license}`
+    // Викисклад отдаёт и то, что sharp не разбирает: TIFF без поддержки,
+    // многостраничные сканы, битые загрузки. Такой кандидат просто выпадает
+    // из листа — ронять подбор из-за одного файла нельзя, иначе персона
+    // с редкой фотографией остаётся вовсе без вариантов.
+    let thumb: Buffer | undefined
+    // Викисклад придерживает частые обращения: подряд идущие полноразмерные
+    // снимки он начинает обрывать, и лист выходит наполовину пустым. Пара
+    // повторов с паузой лечит это надёжнее, чем ручной перезапуск.
+    for (let attempt = 0; attempt < 3 && !thumb; attempt += 1) {
+      try {
+        const r = await fetch(c.url, { headers: UA })
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        const buf = Buffer.from(await r.arrayBuffer())
+        thumb = await sharp(buf).rotate().resize(CELL, CELL_H, { fit: 'contain', background: '#eee' }).toBuffer()
+      } catch (err) {
+        if (attempt === 2) console.warn(`  не отрисовался: ${c.title} — ${(err as Error).message}`)
+        else await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)))
+      }
+    }
+    if (thumb) composites.push({ input: thumb, left: x, top: y })
+    const label = `${i + 1}. ${c.width}×${c.height} · ${c.license}${thumb ? '' : ' — не открылся'}`
     composites.push({
       input: Buffer.from(
         `<svg width="${CELL}" height="${LABEL}"><rect width="100%" height="100%" fill="#fff"/>` +
