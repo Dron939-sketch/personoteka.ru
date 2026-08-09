@@ -5,7 +5,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
 import { PersonCard } from '@/components/PersonCard'
-import { PromoLektorij } from '@/components/PromoLektorij'
+import { PromoBanner } from '@/components/PromoBanner'
 import { RatingTable } from '@/components/RatingTable'
 import { SearchBar } from '@/components/SearchBar'
 import { SphereGrid } from '@/components/SphereGrid'
@@ -141,9 +141,9 @@ export default function HomePage() {
         <SphereGrid spheres={spheres} persons={persons} />
       </section>
 
-      {/* 5а. Собственный проект издателя — не реклама, см. PromoLektorij. */}
+      {/* 5а. Собственные проекты издателя — не реклама, см. PromoBanner. */}
       <div className="container deferred">
-        <PromoLektorij />
+        <PromoBanner context={{ slug: 'home' }} placement="home" />
       </div>
 
       {/* 6. Родились сегодня */}
