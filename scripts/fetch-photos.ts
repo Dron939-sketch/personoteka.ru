@@ -3,6 +3,7 @@
  *
  *   npx tsx scripts/fetch-photos.ts            # только те, у кого портрета ещё нет
  *   npx tsx scripts/fetch-photos.ts --force    # перекачать все
+ *   npx tsx scripts/fetch-photos.ts --force tatyana-tolstaya   # только этих
  *
  * Список — `content/photo-sources.json`. Два режима записи:
  *
@@ -68,6 +69,16 @@ type Source = CommonsSource | WikipediaSource | DirectSource
 
 const root = process.cwd()
 const force = process.argv.includes('--force')
+
+/**
+ * Ограничение прогона списком слагов: `--force кто-то ещё-кто-то`.
+ *
+ * Без него `--force` перекачивает весь каталог — а это затирает портреты,
+ * которые кадрировались вручную, потому что автоматика на их снимках
+ * промахивалась. Заменить один портрет требуется постоянно, перекачать
+ * все пятьсот — почти никогда, и цена ошибки в этих двух случаях разная.
+ */
+const only = new Set(process.argv.slice(2).filter((a) => !a.startsWith('-')))
 
 /**
  * Основания публиковать снимок помимо свободной лицензии. Это не лазейка:
@@ -275,6 +286,7 @@ async function main() {
   const problems: string[] = []
 
   for (const source of sources) {
+    if (only.size > 0 && !only.has(source.slug)) continue
     const personPath = path.join(root, 'content/persons', `${source.slug}.json`)
     if (!fs.existsSync(personPath)) {
       problems.push(`${source.slug}: нет такой персоны`)
