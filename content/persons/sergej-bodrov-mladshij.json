@@ -122,5 +122,15 @@
     "checked_at": "2026-08-08",
     "listed": false
   },
-  "photos": []
+  "photos": [
+    {
+      "src": "/media/v8ec9d35d/sergej-bodrov-mladshij.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Сергей Бодров — младший, актёр, режиссёр и телеведущий",
+      "license": "Из архива редакции, автор не установлен"
+    }
+  ],
+  "updated_at": "2026-08-09T14:53:15.262Z"
 }

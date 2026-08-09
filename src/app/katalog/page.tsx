@@ -7,7 +7,7 @@ import { FilterPanel, type Filters } from '@/components/FilterPanel'
 import { JsonLd } from '@/components/JsonLd'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { PersonCard } from '@/components/PersonCard'
-import { getCities, getPersons, getSpheres, personLetter } from '@/lib/content'
+import { getCities, getPersons, getShowcasePersons, getSpheres, personLetter } from '@/lib/content'
 import { personsCount } from '@/lib/format'
 import { itemListJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
@@ -179,7 +179,19 @@ function applySort(persons: Person[], sort: string): Person[] {
   if (sort === 'alfavit') {
     return copy.sort((a, b) => a.full_name.localeCompare(b.full_name, 'ru'))
   }
-  return copy.sort((a, b) => (b.attention_index ?? 0) - (a.attention_index ?? 0))
+  // Сортировка по умолчанию — «по индексу внимания». Пока аналитика не набрана,
+  // индекс у всех нулевой, и порядок вырождается в случайный: первыми оказываются
+  // те, кто просто раньше в алфавите. Поэтому голову списка задаёт редакция —
+  // тем же файлом content/home-vitrina.txt, что и витрину главной, чтобы порядок
+  // не пришлось держать в двух местах. Как только индекс начнёт считаться,
+  // хвост списка выстроится сам, а голова останется за редакцией.
+  const priority = new Map(getShowcasePersons(100).map((p, i) => [p.slug, i]))
+  return copy.sort((a, b) => {
+    const ai = priority.get(a.slug) ?? Number.POSITIVE_INFINITY
+    const bi = priority.get(b.slug) ?? Number.POSITIVE_INFINITY
+    if (ai !== bi) return ai - bi
+    return (b.attention_index ?? 0) - (a.attention_index ?? 0)
+  })
 }
 
 /** Фильтры пишутся в URL (§8.3), поэтому ссылку собираем из текущего состояния. */
