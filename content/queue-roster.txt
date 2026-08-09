@@ -469,6 +469,11 @@ Mikolas Hard
 Олег Иванович Янковский = oleg-yankovskij
 Сергей Анатольевич Курёхин = sergej-kurehin
 Юрий Васильевич Шатунов = yurij-shatunov
+Андрей Александрович Миронов = andrej-mironov
+Сергей Сергеевич Бодров = sergej-bodrov-mladshij
+Вера Витальевна Глаголева = vera-glagoleva
+Александр Гавриилович Абдулов = aleksandr-abdulov
+Михаил Юрьевич Горшенёв = mihail-gorshenev
 
 ## medicina
 Леонид Михайлович Рошаль

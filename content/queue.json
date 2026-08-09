@@ -4005,6 +4005,51 @@
     "status": "published"
   },
   {
+    "slug": "andrej-mironov",
+    "source_name": "Андрей Александрович Миронов = andrej-mironov",
+    "full_name": "Андрей Александрович Миронов",
+    "display_name": "Андрей Миронов",
+    "name_latin": "Andrej Mironov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "sergej-bodrov-mladshij",
+    "source_name": "Сергей Сергеевич Бодров = sergej-bodrov-mladshij",
+    "full_name": "Сергей Сергеевич Бодров",
+    "display_name": "Сергей Бодров",
+    "name_latin": "Sergej Bodrov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "vera-glagoleva",
+    "source_name": "Вера Витальевна Глаголева = vera-glagoleva",
+    "full_name": "Вера Витальевна Глаголева",
+    "display_name": "Вера Глаголева",
+    "name_latin": "Vera Glagoleva",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-abdulov",
+    "source_name": "Александр Гавриилович Абдулов = aleksandr-abdulov",
+    "full_name": "Александр Гавриилович Абдулов",
+    "display_name": "Александр Абдулов",
+    "name_latin": "Aleksandr Abdulov",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-gorshenev",
+    "source_name": "Михаил Юрьевич Горшенёв = mihail-gorshenev",
+    "full_name": "Михаил Юрьевич Горшенёв",
+    "display_name": "Михаил Горшенёв",
+    "name_latin": "Mihail Gorshenev",
+    "sphere": "kultura",
+    "status": "published"
+  },
+  {
     "slug": "leonid-roshal",
     "source_name": "Леонид Михайлович Рошаль",
     "full_name": "Леонид Михайлович Рошаль",
