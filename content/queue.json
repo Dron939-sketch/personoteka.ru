@@ -2151,15 +2151,6 @@
     "status": "published"
   },
   {
-    "slug": "evgenij-kasperskij",
-    "source_name": "Евгений Касперский",
-    "full_name": "Евгений Касперский",
-    "display_name": "Евгений Касперский",
-    "name_latin": "Evgenij Kasperskij",
-    "sphere": "biznes",
-    "status": "published"
-  },
-  {
     "slug": "pavel-durov",
     "source_name": "Павел Дуров",
     "full_name": "Павел Дуров",
@@ -2268,8 +2259,8 @@
     "status": "published"
   },
   {
-    "slug": "evgenij-kaspersky",
-    "source_name": "Евгений Валентинович Касперский = evgenij-kaspersky",
+    "slug": "evgenij-kasperskij",
+    "source_name": "Евгений Валентинович Касперский = evgenij-kasperskij",
     "full_name": "Евгений Валентинович Касперский",
     "display_name": "Евгений Касперский",
     "name_latin": "Evgenij Kasperskij",
@@ -2844,15 +2835,6 @@
     "status": "published"
   },
   {
-    "slug": "mihail-barschevskij",
-    "source_name": "Михаил Юрьевич Барщевский",
-    "full_name": "Михаил Юрьевич Барщевский",
-    "display_name": "Михаил Барщевский",
-    "name_latin": "Mihail Barschevskij",
-    "sphere": "pravo",
-    "status": "published"
-  },
-  {
     "slug": "genrih-padva",
     "source_name": "Генрих Павлович Падва",
     "full_name": "Генрих Павлович Падва",
@@ -2943,8 +2925,8 @@
     "status": "published"
   },
   {
-    "slug": "mihail-barshchevskij",
-    "source_name": "Михаил Юрьевич Барщевский = mihail-barshchevskij",
+    "slug": "mihail-barschevskij",
+    "source_name": "Михаил Юрьевич Барщевский = mihail-barschevskij",
     "full_name": "Михаил Юрьевич Барщевский",
     "display_name": "Михаил Барщевский",
     "name_latin": "Mihail Barschevskij",
@@ -3200,15 +3182,6 @@
     "full_name": "Алексей Львович Рыбников",
     "display_name": "Алексей Рыбников",
     "name_latin": "Aleksej Rybnikov",
-    "sphere": "kultura",
-    "status": "published"
-  },
-  {
-    "slug": "lajma-vajkule",
-    "source_name": "Лайма Станиславовна Вайкуле",
-    "full_name": "Лайма Станиславовна Вайкуле",
-    "display_name": "Лайма Вайкуле",
-    "name_latin": "Lajma Vajkule",
     "sphere": "kultura",
     "status": "published"
   },
@@ -3510,8 +3483,8 @@
     "status": "published"
   },
   {
-    "slug": "laima-vajkule",
-    "source_name": "Лайма Станиславовна Вайкуле = laima-vajkule",
+    "slug": "lajma-vajkule",
+    "source_name": "Лайма Станиславовна Вайкуле = lajma-vajkule",
     "full_name": "Лайма Станиславовна Вайкуле",
     "display_name": "Лайма Вайкуле",
     "name_latin": "Lajma Vajkule",
