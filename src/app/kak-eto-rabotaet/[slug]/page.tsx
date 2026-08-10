@@ -30,7 +30,18 @@ export async function generateMetadata({
       description: truncateForMeta(article.lead),
       publishedTime: article.published_at,
       modifiedTime: article.updated_at,
+      // Явный блок `openGraph` перекрывает картинку, унаследованную от корня,
+      // поэтому её приходится называть здесь: без этой строки все разборы
+      // расходились по мессенджерам без превью.
+      images: [
+        {
+          url: `/kak-eto-rabotaet/${article.slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
+    twitter: { card: 'summary_large_image' },
   }
 }
 
