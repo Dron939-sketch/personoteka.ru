@@ -20,9 +20,37 @@
   max-width: 68ch;
 }
 
+/*
+ * Врезка. Воздух вокруг неё больше межабзацного отступа — иначе она читается
+ * как очередной абзац покрупнее, а не как остановка в тексте.
+ */
+.pullquote {
+  margin: var(--sp-8) 0 var(--sp-8);
+  padding: 0 0 0 var(--sp-6);
+  max-width: 56ch;
+  border-left: 3px solid var(--accent-500);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.pullquote strong {
+  font-weight: inherit;
+}
+
+@media (max-width: 640px) {
+  .pullquote {
+    margin: var(--sp-6) 0;
+    font-size: 1.15rem;
+    padding-left: var(--sp-4);
+  }
+}
+
 .figure {
   margin: var(--sp-6) 0;
-  padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  padding: var(--sp-6) var(--sp-6) var(--sp-4);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -44,14 +72,14 @@
   max-width: 68ch;
   font-size: 0.875rem;
   line-height: 1.55;
-  color: var(--muted);
+  color: var(--ink-3);
 }
 
 .credit {
   display: block;
   margin-top: var(--sp-2);
   font-size: 0.8125rem;
-  color: var(--muted);
+  color: var(--ink-3);
 }
 
 .credit a {

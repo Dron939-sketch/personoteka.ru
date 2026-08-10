@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,7 +19,16 @@ export function ArticleBody({ body }: { body: Article['body'] }) {
         <section key={section.heading} className={styles.section}>
           <h2 id={anchor(section.heading)}>{section.heading}</h2>
           {section.paragraphs.map((p, i) => (
-            <p key={i}>{withLinks(p)}</p>
+            <Fragment key={i}>
+              <p>{withLinks(p)}</p>
+              {section.pullquotes
+                ?.filter((q) => q.after === i)
+                .map((q, j) => (
+                  <aside key={j} className={styles.pullquote}>
+                    {withLinks(q.text)}
+                  </aside>
+                ))}
+            </Fragment>
           ))}
           {section.subsections?.map((sub) => (
             <div key={sub.heading}>
