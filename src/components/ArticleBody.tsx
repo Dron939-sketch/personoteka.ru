@@ -78,35 +78,44 @@ function Figure({ figure }: { figure: SectionFigure }) {
 }
 
 /**
- * Ссылки в тексте материала. В JSON абзац — обычная строка, поэтому ссылка
- * пишется как `[текст](адрес)` и разворачивается здесь. Без этого обзор
- * площадок или разбор с отсылкой к документу выходит без единой ссылки —
- * читателю нечем проверить, а нам нечем подтвердить.
+ * Разметка внутри абзаца материала. В JSON абзац — обычная строка, а React
+ * экранирует HTML, поэтому теги в тексте вышли бы на страницу видимыми
+ * угловыми скобками. Значит, размечать можно только тем, что разворачивается
+ * здесь: `[текст](адрес)` для ссылки и `**текст**` для выделения.
+ *
+ * Ссылки нужны, чтобы разбор с отсылкой к документу не выходил без единой
+ * ссылки — читателю нечем проверить, а нам нечем подтвердить. Выделение —
+ * чтобы в длинном разборе были видны опорные утверждения.
  *
  * Внутренние адреса (`/…`) идут через `Link`, внешние — обычной ссылкой
  * с `nofollow`: портал не торгует ссылочным весом (см. `SourceList`).
  */
-const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g
+const MARKUP = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*/g
 
 export function withLinks(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
   let last = 0
 
-  for (const m of text.matchAll(LINK)) {
-    const [full, label, href] = m
+  for (const m of text.matchAll(MARKUP)) {
+    const [full, label, href, bold] = m
     const start = m.index
     if (start > last) parts.push(text.slice(last, start))
-    parts.push(
-      href.startsWith('/') ? (
-        <Link key={start} href={href}>
-          {label}
-        </Link>
-      ) : (
-        <a key={start} href={href} rel="nofollow noopener" target="_blank">
-          {label}
-        </a>
-      ),
-    )
+
+    if (bold !== undefined) {
+      parts.push(<strong key={start}>{bold}</strong>)
+    } else {
+      parts.push(
+        href.startsWith('/') ? (
+          <Link key={start} href={href}>
+            {label}
+          </Link>
+        ) : (
+          <a key={start} href={href} rel="nofollow noopener" target="_blank">
+            {label}
+          </a>
+        ),
+      )
+    }
     last = start + full.length
   }
 
