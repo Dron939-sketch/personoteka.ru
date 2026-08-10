@@ -26,6 +26,7 @@ export function GET() {
     { loc: `${SITE.url}/katalog/`, changefreq: 'daily', priority: 0.8 },
     { loc: `${SITE.url}/rejting/`, changefreq: 'daily', priority: 0.8 },
     { loc: `${SITE.url}/rodilis-segodnya/`, changefreq: 'daily', priority: 0.6 },
+    { loc: `${SITE.url}/proverka-cifrovogo-sleda/`, changefreq: 'monthly', priority: 0.7 },
     // Разделы лент попадают в карту только когда в них что-то есть: сами
     // страницы в этом случае отдают noindex, и звать на них краулера — значит
     // отправлять его в тупик и получать расхождение в отчёте Вебмастера.

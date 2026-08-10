@@ -4,3 +4,32 @@
   gap: var(--sp-4);
   padding-block: var(--sp-4) var(--sp-16);
 }
+
+.tool {
+  margin-top: var(--sp-12);
+  padding: var(--sp-6);
+  max-width: 68ch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--cool-50);
+}
+
+.tool h2 {
+  margin: 0 0 var(--sp-3);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.tool p {
+  margin: 0 0 var(--sp-4);
+  line-height: 1.6;
+}
+
+.toolLink {
+  display: inline-block;
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--radius-s);
+  background: var(--accent-600);
+  color: #fff;
+  text-decoration: none;
+}
