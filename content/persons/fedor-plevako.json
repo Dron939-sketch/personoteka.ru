@@ -123,5 +123,17 @@
     "checked_at": "2026-08-10",
     "listed": false
   },
-  "photos": []
+  "photos": [
+    {
+      "src": "/media/v7fe41921/fedor-plevako.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Фёдор Плевако, адвокат и судебный оратор, «московский златоуст»",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plevako_F_N.jpg"
+    }
+  ],
+  "updated_at": "2026-08-10T18:22:41.271Z"
 }

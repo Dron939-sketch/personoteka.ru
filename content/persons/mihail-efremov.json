@@ -156,5 +156,17 @@
     "checked_at": "2026-08-10",
     "listed": false
   },
-  "photos": []
+  "photos": [
+    {
+      "src": "/media/vcda0dfa6/mihail-efremov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Михаил Ефремов, актёр театра и кино, заслуженный артист России",
+      "author": "Dmitry Rozhkov",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mikhail_Yefremov.jpg"
+    }
+  ],
+  "updated_at": "2026-08-10T18:22:45.510Z"
 }
