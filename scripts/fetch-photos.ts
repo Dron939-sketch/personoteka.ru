@@ -110,11 +110,26 @@ function position(gravity?: string): string | number | undefined {
 
 /** Снимает разметку вики из полей атрибуции: там часто приходит HTML со ссылками. */
 function stripMarkup(value: string): string {
-  return value
+  const text = value
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+  return dedupe(text)
+}
+
+/**
+ * Шаблоны Викисклада часто дают имя дважды: один раз внутри ссылки, второй —
+ * запасным текстом рядом с ней. После снятия тегов остаётся «Unknown author
+ * Unknown author», и это уезжает в подпись под портретом. Схлопываем точное
+ * удвоение: если строка распадается на две одинаковые половины, берём одну.
+ */
+function dedupe(text: string): string {
+  const words = text.split(' ')
+  if (words.length < 2 || words.length % 2 !== 0) return text
+  const half = words.length / 2
+  const first = words.slice(0, half).join(' ')
+  return first === words.slice(half).join(' ') ? first : text
 }
 
 interface CommonsInfo {
