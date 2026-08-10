@@ -106,7 +106,18 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/v01aff45f/yurij-kolokolnikov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Юрий Колокольников, актёр, режиссёр и продюсер",
+      "author": "Mikhail Popov",
+      "license": "CC BY-SA 3.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%D0%AE%D1%80%D0%B8%D0%B9_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%B8%D1%87.jpg"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
@@ -116,5 +127,5 @@
     "checked_at": "2026-08-06",
     "listed": false
   },
-  "updated_at": "2026-08-06T12:54:55.362Z"
+  "updated_at": "2026-08-10T18:22:53.159Z"
 }

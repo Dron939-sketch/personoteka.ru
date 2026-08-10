@@ -2215,10 +2215,6 @@
     "wikipedia": "Collapse (киберспортсмен)"
   },
   {
-    "slug": "deko",
-    "wikipedia": "Deko (киберспортсмен)"
-  },
-  {
     "slug": "dmitrij-zhuravlev",
     "wikipedia": "Журавлёв, Дмитрий Вячеславович"
   },
@@ -2447,5 +2443,44 @@
   {
     "slug": "nikolaj-brusencov",
     "commons": "File:Пионер советской вычислительной техники Н.П.Брусенцов, 10.2009.jpg"
+  },
+  {
+    "slug": "aleksandr-chuchalin",
+    "commons": "File:Chuchalin1.jpg",
+    "zoom": 2.5,
+    "gravity": "north",
+    "caption": "Снимок с выступления: свободных портретных фотографий Чучалина на Викискладе нет"
+  },
+  {
+    "slug": "azamat-musagaliev",
+    "commons": "File:Азамат Мусагалиев.jpg"
+  },
+  {
+    "slug": "fedor-plevako",
+    "commons": "File:Plevako F N.jpg"
+  },
+  {
+    "slug": "hamzat-chimaev",
+    "commons": "File:Khamzat Chimaev 2022.png"
+  },
+  {
+    "slug": "mihail-efremov",
+    "commons": "File:Mikhail Yefremov.jpg"
+  },
+  {
+    "slug": "pavel-volya",
+    "commons": "File:Pavel Volya.jpg"
+  },
+  {
+    "slug": "umar-nurmagomedov",
+    "commons": "File:UmarNurmagomedov.png"
+  },
+  {
+    "slug": "yuliya-ahmedova",
+    "commons": "File:Юлия Ахмедова.jpg"
+  },
+  {
+    "slug": "yurij-kolokolnikov",
+    "commons": "File:Колокольников Юрий Андреевич.jpg"
   }
 ]

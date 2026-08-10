@@ -118,7 +118,19 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/v40f0986d/aleksandr-chuchalin.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Александр Чучалин, пульмонолог, академик РАН, основатель НИИ пульмонологии",
+      "author": "Dr Jorgen",
+      "license": "Public domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chuchalin1.jpg",
+      "caption": "Снимок с выступления: свободных портретных фотографий Чучалина на Викискладе нет"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
@@ -128,5 +140,5 @@
     "checked_at": "2026-08-07",
     "listed": false
   },
-  "updated_at": "2026-08-07T15:40:00.000Z"
+  "updated_at": "2026-08-10T18:23:59.727Z"
 }
