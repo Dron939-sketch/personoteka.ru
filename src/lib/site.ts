@@ -49,6 +49,7 @@ export const RESERVED_SLUGS = new Set([
   'gorod',
   'rejting',
   'rodilis-segodnya',
+  'proverka-cifrovogo-sleda',
   'novosti',
   'interv-yu',
   'poisk',
