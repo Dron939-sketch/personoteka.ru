@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { getPerson } from '@/lib/content'
-import type { Article } from '@/lib/types'
+import type { Article, SectionFigure } from '@/lib/types'
 
 import styles from './ArticleBody.module.css'
 
@@ -26,9 +27,53 @@ export function ArticleBody({ body }: { body: Article['body'] }) {
               ))}
             </div>
           ))}
+          {section.figures?.map((figure, i) => (
+            <Figure key={i} figure={figure} />
+          ))}
         </section>
       ))}
     </>
+  )
+}
+
+/**
+ * Иллюстрация раздела. Схема идёт инлайновым SVG — она часть страницы, а не
+ * внешний файл, поэтому не даёт лишнего запроса и печатается вместе с текстом.
+ * У снимка рядом с подписью обязательно стоят автор и лицензия: без основания
+ * публиковать чужой кадр нельзя, а свободные лицензии требуют указания автора.
+ */
+function Figure({ figure }: { figure: SectionFigure }) {
+  const { svg, photo, caption, alt } = figure
+
+  return (
+    <figure className={styles.figure}>
+      {svg ? (
+        <div role="img" aria-label={alt ?? caption} dangerouslySetInnerHTML={{ __html: svg }} />
+      ) : photo ? (
+        <Image
+          src={photo.src}
+          alt={photo.alt ?? alt ?? caption}
+          width={photo.width}
+          height={photo.height}
+          sizes="(max-width: 720px) 100vw, 720px"
+        />
+      ) : null}
+      <figcaption className={styles.figcaption}>
+        {withLinks(caption)}
+        {photo?.license && (
+          <span className={styles.credit}>
+            {photo.author ? `${photo.author} · ` : ''}
+            {photo.source_url ? (
+              <a href={photo.source_url} rel="nofollow noopener" target="_blank">
+                {photo.license}
+              </a>
+            ) : (
+              photo.license
+            )}
+          </span>
+        )}
+      </figcaption>
+    </figure>
   )
 }
 
