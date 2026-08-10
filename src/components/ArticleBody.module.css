@@ -20,6 +20,44 @@
   max-width: 68ch;
 }
 
+.figure {
+  margin: var(--sp-6) 0;
+  padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.figure svg,
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure img {
+  border-radius: calc(var(--radius) / 2);
+}
+
+.figcaption {
+  margin: var(--sp-4) 0 0;
+  max-width: 68ch;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.credit {
+  display: block;
+  margin-top: var(--sp-2);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.credit a {
+  color: inherit;
+}
+
 .mentions {
   margin-top: var(--sp-12);
   padding: var(--sp-6);

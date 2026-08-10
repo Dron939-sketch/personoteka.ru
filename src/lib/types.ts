@@ -87,6 +87,21 @@ export interface VideoEmbed {
   poster?: string
 }
 
+/**
+ * Иллюстрация внутри раздела: либо схема (готовая разметка SVG), либо снимок.
+ * Подпись обязательна и пишется как самостоятельное утверждение — читатель,
+ * пролиставший текст, должен понять смысл рисунка из одной подписи.
+ */
+export interface SectionFigure {
+  /** Схема: разметка SVG целиком. Взаимоисключима с `photo`. */
+  svg?: string
+  /** Снимок с указанием прав — публиковать чужой кадр без основания нельзя. */
+  photo?: Photo
+  caption: string
+  /** Текстовое описание схемы для тех, кто не видит изображение. */
+  alt?: string
+}
+
 /** Раздел биографии. `body` в ТЗ — rich text; в файловом источнике это массив секций. */
 export interface BodySection {
   /** H2 раздела; используется для оглавления (§8.1). */
@@ -94,6 +109,8 @@ export interface BodySection {
   /** Абзацы. Поддерживаются подзаголовки через `subsections`. */
   paragraphs: string[]
   subsections?: { heading: string; paragraphs: string[] }[]
+  /** Иллюстрации раздела; ставятся после абзацев. */
+  figures?: SectionFigure[]
 }
 
 export interface Person {

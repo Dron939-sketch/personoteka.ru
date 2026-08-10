@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { getPerson } from '@/lib/content'
-import type { Article } from '@/lib/types'
+import type { Article, SectionFigure } from '@/lib/types'
 
 import styles from './ArticleBody.module.css'
 
@@ -26,6 +27,9 @@ export function ArticleBody({ body }: { body: Article['body'] }) {
               ))}
             </div>
           ))}
+          {section.figures?.map((figure, i) => (
+            <Figure key={i} figure={figure} />
+          ))}
         </section>
       ))}
     </>
@@ -33,35 +37,85 @@ export function ArticleBody({ body }: { body: Article['body'] }) {
 }
 
 /**
- * Ссылки в тексте материала. В JSON абзац — обычная строка, поэтому ссылка
- * пишется как `[текст](адрес)` и разворачивается здесь. Без этого обзор
- * площадок или разбор с отсылкой к документу выходит без единой ссылки —
- * читателю нечем проверить, а нам нечем подтвердить.
+ * Иллюстрация раздела. Схема идёт инлайновым SVG — она часть страницы, а не
+ * внешний файл, поэтому не даёт лишнего запроса и печатается вместе с текстом.
+ * У снимка рядом с подписью обязательно стоят автор и лицензия: без основания
+ * публиковать чужой кадр нельзя, а свободные лицензии требуют указания автора.
+ */
+function Figure({ figure }: { figure: SectionFigure }) {
+  const { svg, photo, caption, alt } = figure
+
+  return (
+    <figure className={styles.figure}>
+      {svg ? (
+        <div role="img" aria-label={alt ?? caption} dangerouslySetInnerHTML={{ __html: svg }} />
+      ) : photo ? (
+        <Image
+          src={photo.src}
+          alt={photo.alt ?? alt ?? caption}
+          width={photo.width}
+          height={photo.height}
+          sizes="(max-width: 720px) 100vw, 720px"
+        />
+      ) : null}
+      <figcaption className={styles.figcaption}>
+        {withLinks(caption)}
+        {photo?.license && (
+          <span className={styles.credit}>
+            {photo.author ? `${photo.author} · ` : ''}
+            {photo.source_url ? (
+              <a href={photo.source_url} rel="nofollow noopener" target="_blank">
+                {photo.license}
+              </a>
+            ) : (
+              photo.license
+            )}
+          </span>
+        )}
+      </figcaption>
+    </figure>
+  )
+}
+
+/**
+ * Разметка внутри абзаца материала. В JSON абзац — обычная строка, а React
+ * экранирует HTML, поэтому теги в тексте вышли бы на страницу видимыми
+ * угловыми скобками. Значит, размечать можно только тем, что разворачивается
+ * здесь: `[текст](адрес)` для ссылки и `**текст**` для выделения.
+ *
+ * Ссылки нужны, чтобы разбор с отсылкой к документу не выходил без единой
+ * ссылки — читателю нечем проверить, а нам нечем подтвердить. Выделение —
+ * чтобы в длинном разборе были видны опорные утверждения.
  *
  * Внутренние адреса (`/…`) идут через `Link`, внешние — обычной ссылкой
  * с `nofollow`: портал не торгует ссылочным весом (см. `SourceList`).
  */
-const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g
+const MARKUP = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*/g
 
 export function withLinks(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
   let last = 0
 
-  for (const m of text.matchAll(LINK)) {
-    const [full, label, href] = m
+  for (const m of text.matchAll(MARKUP)) {
+    const [full, label, href, bold] = m
     const start = m.index
     if (start > last) parts.push(text.slice(last, start))
-    parts.push(
-      href.startsWith('/') ? (
-        <Link key={start} href={href}>
-          {label}
-        </Link>
-      ) : (
-        <a key={start} href={href} rel="nofollow noopener" target="_blank">
-          {label}
-        </a>
-      ),
-    )
+
+    if (bold !== undefined) {
+      parts.push(<strong key={start}>{bold}</strong>)
+    } else {
+      parts.push(
+        href.startsWith('/') ? (
+          <Link key={start} href={href}>
+            {label}
+          </Link>
+        ) : (
+          <a key={start} href={href} rel="nofollow noopener" target="_blank">
+            {label}
+          </a>
+        ),
+      )
+    }
     last = start + full.length
   }
 
