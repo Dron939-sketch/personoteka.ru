@@ -64,6 +64,35 @@ export function generateStaticParams() {
   return getPersons().map((person) => ({ slug: person.slug }))
 }
 
+/**
+ * Заголовок страницы персоны.
+ *
+ * Прежний шаблон — «Имя — весь tagline: биография, карьера, достижения» — давал
+ * в среднем 114 знаков при максимуме 155. Выдача обрезает заголовок примерно на
+ * шестидесятом, то есть у всех страниц каталога до читателя доходила половина, а
+ * обрыв приходился на середину профессии. «Карьера, достижения» при этом ничего
+ * не добавляли: по таким словам никто не ищет, а место они занимали.
+ *
+ * Теперь берётся род занятий — одно-два слова из выверенного поля `occupations`,
+ * а не первое попавшееся начало tagline. Полная формулировка никуда не делась:
+ * она стоит в H1, в лиде и в описании страницы.
+ *
+ * Бюджет — 60 знаков вместе с « — Персонотека», которое подставляет макет.
+ * Если имя длинное и род занятий не помещается, он отбрасывается целиком:
+ * обрезанное на полуслове слово хуже, чем его отсутствие.
+ */
+const TITLE_BUDGET = 60
+const TITLE_SUFFIX = ` — ${SITE.name}`.length
+
+export function pageTitle(person: Person): string {
+  const bare = `${person.display_name}: биография`
+  const occupation = person.occupations?.[0]
+  if (!occupation) return bare
+
+  const full = `${person.display_name} — ${lowerFirst(occupation)}: биография`
+  return full.length + TITLE_SUFFIX <= TITLE_BUDGET ? full : bare
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -77,11 +106,7 @@ export async function generateMetadata({
   const description = truncateForMeta(person.lead)
 
   return {
-    // §10.1: «Иван Иванов — врач-кардиолог: биография, карьера, достижения».
-    // Строчная только первая буква: сплошной toLowerCase() ломал каждый
-    // третий заголовок — «губернатор санкт-петербурга», «цска», «триз»,
-    // «лаборатории касперского».
-    title: `${person.display_name} — ${lowerFirst(person.tagline)}: биография, карьера, достижения`,
+    title: pageTitle(person),
     description,
     alternates: {
       canonical: url,
