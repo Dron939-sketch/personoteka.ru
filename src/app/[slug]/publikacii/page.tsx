@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { PublicationList } from '@/components/PublicationList'
+import { lowerFirst } from '@/lib/format'
 import { getPerson, getPersons } from '@/lib/content'
 import { SITE } from '@/lib/site'
 
@@ -54,7 +55,7 @@ export default async function PublicationsPage({
 
       <PageHeader
         title="Публикации и упоминания"
-        lead={`${person.display_name} — ${person.tagline.toLowerCase()}.`}
+        lead={`${person.display_name} — ${lowerFirst(person.tagline)}.`}
         meta={
           <Link href={`/${person.slug}/`}>← Вернуться к биографии</Link>
         }

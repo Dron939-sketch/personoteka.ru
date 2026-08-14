@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { ArticleCard } from '@/components/ArticleCard'
@@ -21,6 +22,17 @@ import { siteJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
+
+/**
+ * Канонический адрес главной. Остальные страницы задают его сами, а главная
+ * своих метаданных не имела и оставалась единственной страницей без canonical.
+ * Для неё это чувствительнее прочих: на главную ведут ссылки с параметрами
+ * (метки кампаний, реферальные хвосты), и без канонического адреса каждый
+ * такой хвост поисковик вправе счесть отдельной страницей.
+ */
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 /**
  * Главная — §8.2. Порядок блоков задан ТЗ и менять его нельзя без пересогласования:

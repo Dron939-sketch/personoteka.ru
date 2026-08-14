@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { lowerFirst } from '@/lib/format'
 import type { Person } from '@/lib/types'
 
 import styles from './Portrait.module.css'
@@ -23,7 +24,7 @@ interface Props {
 export function Portrait({ person, width, priority, sizes, className }: Props) {
   const height = Math.round((width * 5) / 4)
   const portrait = person.photos?.find((p) => p.portrait) ?? person.photos?.[0]
-  const alt = `Портрет: ${person.display_name}, ${person.tagline.toLowerCase()}`
+  const alt = `Портрет: ${person.display_name}, ${lowerFirst(person.tagline)}`
 
   if (!portrait) {
     return (

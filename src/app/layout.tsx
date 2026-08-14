@@ -4,13 +4,14 @@ import { CookieBanner } from '@/components/CookieBanner'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { ThemeScript } from '@/components/ThemeScript'
+import { lowerFirst } from '@/lib/format'
 import { SITE } from '@/lib/site'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.tagline.toLowerCase()}`,
+    default: `${SITE.name} — ${lowerFirst(SITE.tagline)}`,
     template: `%s — ${SITE.name}`,
   },
   description:

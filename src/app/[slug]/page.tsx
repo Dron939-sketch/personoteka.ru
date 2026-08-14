@@ -29,7 +29,7 @@ import {
   getRelatedPersons,
   getSpheres,
 } from '@/lib/content'
-import { calcAge, formatDate, truncateForMeta } from '@/lib/format'
+import { calcAge, formatDate, lowerFirst, personTitle, truncateForMeta } from '@/lib/format'
 import { personJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 import { slugify } from '@/lib/translit'
@@ -64,7 +64,7 @@ export async function generateMetadata({
 
   return {
     // §10.1: «Иван Иванов — врач-кардиолог: биография, карьера, достижения»
-    title: `${person.display_name} — ${person.tagline.toLowerCase()}: биография, карьера, достижения`,
+    title: personTitle(person.display_name, person.tagline, ` — ${SITE.name}`),
     description,
     alternates: { canonical: url },
     robots: person.noindex ? { index: false, follow: true } : undefined,
