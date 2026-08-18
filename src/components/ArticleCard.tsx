@@ -1,26 +1,22 @@
 import Link from 'next/link'
 
+import { ARTICLE_KINDS, articlePath } from '@/lib/articles'
 import { formatDate } from '@/lib/format'
 import type { Article } from '@/lib/types'
 
 import styles from './ArticleCard.module.css'
-
-const KIND_LABEL: Record<Article['kind'], string> = {
-  interview: 'Интервью',
-  news: 'Новость',
-}
 
 /**
  * Карточка материала редакционной ленты.
  * Партнёрский материал помечается явно — без пометки такие тексты не публикуются (§2.2).
  */
 export function ArticleCard({ article }: { article: Article }) {
-  const href = article.kind === 'interview' ? `/interv-yu/${article.slug}/` : `/novosti/${article.slug}/`
+  const href = articlePath(article)
 
   return (
     <article className={styles.card}>
       <p className={`caption ${styles.kind}`}>
-        {KIND_LABEL[article.kind]}
+        {ARTICLE_KINDS[article.kind].one}
         {article.sponsored ? ' · Партнёрский материал' : ''}
       </p>
       <h3 className={styles.title}>

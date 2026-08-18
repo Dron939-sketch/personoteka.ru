@@ -1,3 +1,4 @@
+import { articlePath } from '@/lib/articles'
 import { getArticles, getNewestPersons } from '@/lib/content'
 import { SITE } from '@/lib/site'
 
@@ -24,7 +25,7 @@ export function GET() {
   const items = articles.length
     ? articles.map((article) => ({
         title: article.title,
-        link: `${SITE.url}/${article.kind === 'interview' ? 'interv-yu' : 'novosti'}/${article.slug}/`,
+        link: `${SITE.url}${articlePath(article)}`,
         description: article.lead,
         pubDate: new Date(article.published_at).toUTCString(),
       }))

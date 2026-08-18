@@ -195,12 +195,23 @@ export interface Editor {
  */
 export interface Article {
   slug: string
-  kind: 'news' | 'interview'
+  /**
+   * Рубрика материала. `how` — «Как это работает»: разборы механизмов, а не
+   * новости и не интервью. От двух других отличается тем, что материал не
+   * привязан к поводу и не устаревает, поэтому живёт в отдельном разделе.
+   */
+  kind: 'news' | 'interview' | 'how'
   title: string
   lead: string
   body: BodySection[]
   /** Слаги персон, о которых материал. */
   mentions: string[]
+  /**
+   * Источники материала — по тому же правилу, что и у персоны (§5.3):
+   * проверяемое утверждение сопровождается ссылкой. Здесь же указывается
+   * первоисточник, если материал впервые вышел на другой площадке.
+   */
+  sources?: { title: string; url?: string; note?: string }[]
   cover?: Photo
   author: string
   published_at: string

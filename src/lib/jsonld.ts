@@ -1,6 +1,6 @@
 import { getCity, getSpheres } from './content'
 import { SITE } from './site'
-import type { Person } from './types'
+import type { Article, Editor, Person } from './types'
 
 /**
  * Микроразметка (§10.2). На странице персоны — `ProfilePage` с вложенным `Person`.
@@ -115,5 +115,33 @@ export function itemListJsonLd(persons: Person[], name: string) {
       url: `${SITE.url}/${p.slug}/`,
       name: p.display_name,
     })),
+  }
+}
+
+/**
+ * `Article` для редакционного материала (§10.2).
+ *
+ * `author` — живой человек из редакции, а не сайт: поисковые системы оценивают
+ * авторство отдельно от издателя, и материал без имени автора для них слабее.
+ */
+export function articleJsonLd(article: Article, url: string, author?: Editor) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: article.title,
+    description: article.lead,
+    inLanguage: 'ru-RU',
+    datePublished: article.published_at,
+    dateModified: article.updated_at,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(author
+      ? { author: { '@type': 'Person', name: author.name, url: `${SITE.url}/redakciya/` } }
+      : {}),
+    publisher: { '@id': `${SITE.url}/#organization` },
+    ...(article.cover ? { image: `${SITE.url}${article.cover.src}` } : {}),
+    ...(article.mentions.length
+      ? { about: article.mentions.map((slug) => ({ '@id': `${SITE.url}/${slug}/#person` })) }
+      : {}),
   }
 }
