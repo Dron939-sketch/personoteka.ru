@@ -1,3 +1,4 @@
+import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -24,27 +25,118 @@ export interface Rights {
 
 export interface ProcessResult {
   outPath: string
+  /** Размер файла-исходника. */
+  originalWidth: number
+  originalHeight: number
+  /** Что из него реально попало в кадр: при приближении меньше исходника. */
   sourceWidth: number
   sourceHeight: number
   upscaled: boolean
 }
 
+/**
+ * Куда попадает лицо по вертикали в готовом кадре.
+ *
+ * 0.38 — чуть выше геометрического центра. При таком положении глаза
+ * оказываются примерно на верхней трети, а под подбородком остаётся место
+ * под плечи. Это правило третей в его портретном виде: сажать лицо ровно
+ * в середину неправильно — кадр выглядит так, будто голову прижали к низу.
+ */
+const FACE_Y = 0.38
+
+/** Насколько кадр можно увести от центра лица по горизонтали. */
+const MAX_SHIFT = 0.5
+
+/**
+ * Находит область, которую sharp считает значимой. Для портрета это почти
+ * всегда лицо: алгоритм ищет максимум «интересности» — контраст, детали,
+ * глаза. Нам нужны не сами пиксели, а координаты — по ним строится кадр.
+ */
+async function findSubject(
+  input: string | Buffer,
+  width: number,
+  height: number,
+): Promise<{ x: number; y: number }> {
+  // Пробный кадр квадратом: он не привязан к пропорции результата,
+  // поэтому положение области не смещается заранее выбранной рамкой.
+  const probe = Math.round(Math.min(width, height) * 0.6)
+  const { info } = await sharp(input)
+    .rotate()
+    .resize(probe, probe, { fit: 'cover', position: sharp.strategy.attention })
+    .toBuffer({ resolveWithObject: true })
+
+  const left = (info as { cropOffsetLeft?: number }).cropOffsetLeft ?? 0
+  const top = (info as { cropOffsetTop?: number }).cropOffsetTop ?? 0
+  // cropOffset отрицательный: это сдвиг исходника относительно кадра.
+  return { x: Math.abs(left) + probe / 2, y: Math.abs(top) + probe / 2 }
+}
+
+/**
+ * Приближение кадра. 1 — самый большой прямоугольник 4:5, какой помещается
+ * в исходник; 2 — вдвое меньший, то есть лицо вдвое крупнее.
+ *
+ * Нужно для съёмок в полный рост: там алгоритм честно находит человека,
+ * но берёт его целиком, и в каталоге такая карточка выпадает из ряда —
+ * у соседей крупный план, а тут фигура на общем плане. Значение задаёт
+ * редактор в photo-sources.json, потому что «сколько тут лишнего воздуха»
+ * машина не решает: это вопрос к тому, как снимок смотрится рядом с другими.
+ */
+const MAX_ZOOM = 3
+
 export async function makePortrait(
   input: string | Buffer,
   slug: string,
   root: string,
-  gravity: string | number = sharp.strategy.attention,
+  gravity?: string | number,
+  zoom = 1,
 ): Promise<ProcessResult> {
-  const meta = await sharp(input).metadata()
+  const meta = await sharp(input).rotate().metadata()
   if (!meta.width || !meta.height) throw new Error('не удалось прочитать размеры изображения')
 
   const mediaDir = path.join(root, 'public/media')
   fs.mkdirSync(mediaDir, { recursive: true })
   const outPath = path.join(mediaDir, `${slug}.jpg`)
 
-  await sharp(input)
-    .rotate() // EXIF-ориентация: иначе портрет может лечь набок
-    .resize(WIDTH, HEIGHT, { fit: 'cover', position: gravity })
+  const pipeline = sharp(input).rotate() // EXIF-ориентация: иначе портрет ляжет набок
+  // Что реально попадает в кадр: по этим размерам, а не по размерам файла,
+  // видно, растянут ли портрет. При приближении вырезка меньше исходника.
+  let takenW = meta.width
+  let takenH = meta.height
+
+  if (gravity !== undefined) {
+    // Редактор указал сторону явно — автоматика не спорит.
+    pipeline.resize(WIDTH, HEIGHT, { fit: 'cover', position: gravity })
+  } else {
+    const { width: w, height: h } = meta
+    const k = Math.min(Math.max(zoom, 1), MAX_ZOOM)
+    // Наибольший прямоугольник 4:5, помещающийся в исходник, — и он же, делённый
+    // на приближение, если редактор просил взять лицо крупнее.
+    const baseW = Math.min(w, Math.round((h * WIDTH) / HEIGHT))
+    const baseH = Math.min(h, Math.round((w * HEIGHT) / WIDTH))
+    const cropW = Math.round(baseW / k)
+    const cropH = Math.round(baseH / k)
+
+    const subject = await findSubject(input, w, h)
+
+    // По горизонтали — центр по лицу, но не дальше половины кадра от него:
+    // иначе на групповом снимке рамка уедет к соседу. Предел считается
+    // от полного кадра, а не от приближенного: иначе зум сам себя запирает
+    // у середины снимка и лицо сбоку в кадр уже не попадает.
+    const wanted = subject.x - cropW / 2
+    const centred = (w - cropW) / 2
+    const limit = baseW * MAX_SHIFT
+    const left = Math.round(
+      Math.min(Math.max(wanted, centred - limit, 0), centred + limit, w - cropW),
+    )
+    // По вертикали — лицо на 38 % высоты кадра.
+    const top = Math.round(Math.min(Math.max(subject.y - cropH * FACE_Y, 0), h - cropH))
+
+    pipeline.extract({ left, top, width: cropW, height: cropH }).resize(WIDTH, HEIGHT)
+    takenW = cropW
+    takenH = cropH
+  }
+
+  await pipeline
     .modulate({ saturation: 0.94 }) // насыщенность −6 %
     .linear(1.04, -(128 * 0.04)) // контраст +4 %
     .jpeg({ quality: 86, mozjpeg: true })
@@ -52,9 +144,11 @@ export async function makePortrait(
 
   return {
     outPath,
-    sourceWidth: meta.width,
-    sourceHeight: meta.height,
-    upscaled: meta.width < WIDTH || meta.height < HEIGHT,
+    originalWidth: meta.width,
+    originalHeight: meta.height,
+    sourceWidth: takenW,
+    sourceHeight: takenH,
+    upscaled: takenW < WIDTH || takenH < HEIGHT,
   }
 }
 
@@ -68,7 +162,7 @@ export function attachPortrait(
   const person = JSON.parse(fs.readFileSync(personPath, 'utf8')) as Person
 
   const photo: Photo = {
-    src: `/media/${slug}.jpg`,
+    src: `/media/v${fileVersion(path.join('public/media', `${slug}.jpg`))}/${slug}.jpg`,
     portrait: true,
     width: WIDTH,
     height: HEIGHT,
@@ -95,4 +189,18 @@ const FREE_LICENSE = /^(cc0|cc[ -]by([ -]sa)?([ -]\d(\.\d)?)?|public domain|pd-)
 
 export function isFreeLicense(license: string): boolean {
   return FREE_LICENSE.test(license.trim())
+}
+
+/**
+ * Короткий отпечаток содержимого файла для адреса портрета.
+ *
+ * Имя файла у портрета постоянное (`/media/<слаг>.jpg`), а заменять портреты
+ * приходится: то нашёлся снимок лучше, то прежний оказался кадром из фильма.
+ * Без версии в адресе кэш браузера и оптимизатора нельзя ставить дольше
+ * нескольких часов — иначе замена не дойдёт до тех, кто уже видел страницу.
+ * С версией адрес меняется вместе с файлом, и кэш можно держать год.
+ */
+export function fileVersion(filePath: string): string {
+  const bytes = fs.readFileSync(filePath)
+  return crypto.createHash('sha1').update(bytes).digest('hex').slice(0, 8)
 }

@@ -3,6 +3,7 @@
  *
  *   npx tsx scripts/fetch-photos.ts            # только те, у кого портрета ещё нет
  *   npx tsx scripts/fetch-photos.ts --force    # перекачать все
+ *   npx tsx scripts/fetch-photos.ts --force tatyana-tolstaya   # только этих
  *
  * Список — `content/photo-sources.json`. Два режима записи:
  *
@@ -20,6 +21,10 @@
  *
  * Запускать нужно там, где открыт доступ в сеть, — например в GitHub Actions
  * (см. .github/workflows/photos.yml).
+ *
+ * Запускать через `npm run photos:fetch`: там выставлен NODE_USE_ENV_PROXY=1.
+ * `fetch` в Node, в отличие от curl и npm, сам прокси-переменные не читает,
+ * и в среде с прокси все запросы упираются в отказ, хотя сеть открыта.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -39,6 +44,12 @@ interface BaseSource {
    * ушло за границу. Тогда помогает `centre`, `north`, `west`, `east`.
    */
   gravity?: string
+  /**
+   * Приближение кадра: 1 — весь кадр 4:5, 2 — лицо вдвое крупнее.
+   * Нужно для съёмок в полный рост, где человек в кадре мелкий и карточка
+   * выпадает из общего ряда. Больше 3 не имеет смысла — начинается каша.
+   */
+  zoom?: number
 }
 interface CommonsSource extends BaseSource {
   commons: string
@@ -71,19 +82,66 @@ type Source = CommonsSource | WikipediaSource | DirectSource | SkippedSource
 const root = process.cwd()
 const force = process.argv.includes('--force')
 
-function position(gravity?: string): string | number {
-  if (!gravity || gravity === 'attention') return sharp.strategy.attention
+/**
+ * Ограничение прогона списком слагов: `--force кто-то ещё-кто-то`.
+ *
+ * Без него `--force` перекачивает весь каталог — а это затирает портреты,
+ * которые кадрировались вручную, потому что автоматика на их снимках
+ * промахивалась. Заменить один портрет требуется постоянно, перекачать
+ * все пятьсот — почти никогда, и цена ошибки в этих двух случаях разная.
+ */
+const only = new Set(process.argv.slice(2).filter((a) => !a.startsWith('-')))
+
+/**
+ * Основания публиковать снимок помимо свободной лицензии. Это не лазейка:
+ * каждое означает, что права у издателя уже есть — либо снимок передал сам
+ * герой, либо он лежит в архиве редакции, либо получен по договору.
+ * Всё, чего в этом списке нет, скрипт отклоняет.
+ */
+const OWN_RIGHTS = new Set([
+  'предоставлено героем',
+  'архив редакции',
+  'по договору с правообладателем',
+])
+
+/**
+ * Перевод поля `gravity` в то, что понимает sharp.
+ *
+ * Когда поле не задано, вернуть надо именно `undefined`, а не «сообразительный»
+ * `attention`: только на `undefined` включается редакционное кадрирование
+ * из lib/portrait — лицо на верхней трети, приближение, ограничение сдвига.
+ * Стратегия `attention` знает лишь, где в кадре больше деталей, и ставит эту
+ * область по центру — отсюда портреты с обрезанным лбом.
+ */
+function position(gravity?: string): string | number | undefined {
+  if (!gravity) return undefined
+  if (gravity === 'attention') return sharp.strategy.attention
   if (gravity === 'entropy') return sharp.strategy.entropy
   return gravity
 }
 
 /** Снимает разметку вики из полей атрибуции: там часто приходит HTML со ссылками. */
 function stripMarkup(value: string): string {
-  return value
+  const text = value
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+  return dedupe(text)
+}
+
+/**
+ * Шаблоны Викисклада часто дают имя дважды: один раз внутри ссылки, второй —
+ * запасным текстом рядом с ней. После снятия тегов остаётся «Unknown author
+ * Unknown author», и это уезжает в подпись под портретом. Схлопываем точное
+ * удвоение: если строка распадается на две одинаковые половины, берём одну.
+ */
+function dedupe(text: string): string {
+  const words = text.split(' ')
+  if (words.length < 2 || words.length % 2 !== 0) return text
+  const half = words.length / 2
+  const first = words.slice(0, half).join(' ')
+  return first === words.slice(half).join(' ') ? first : text
 }
 
 interface CommonsInfo {
@@ -232,12 +290,24 @@ async function resolveViaWikipedia(title: string, displayName: string): Promise<
   return `File:${file}`
 }
 
-async function download(url: string): Promise<Buffer> {
-  const response = await fetch(url, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
-  if (!response.ok) throw new Error(`${url} → ${response.status}`)
-  return Buffer.from(await response.arrayBuffer())
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+/**
+ * Скачивание с паузой между попытками. Викисклад отвечает 429, когда бот
+ * забирает файлы подряд без передышки, — и это его право: раздача больших
+ * оригиналов бесплатна для нас и не бесплатна для них.
+ */
+async function download(url: string, tries = 4): Promise<Buffer> {
+  for (let attempt = 1; ; attempt += 1) {
+    const response = await fetch(url, {
+      headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+    })
+    if (response.ok) return Buffer.from(await response.arrayBuffer())
+    if (response.status !== 429 || attempt === tries) {
+      throw new Error(`${url} → ${response.status}`)
+    }
+    await wait(2000 * attempt)
+  }
 }
 
 async function main() {
@@ -254,6 +324,7 @@ async function main() {
   const known: string[] = []
 
   for (const source of sources) {
+    if (only.size > 0 && !only.has(source.slug)) continue
     const personPath = path.join(root, 'content/persons', `${source.slug}.json`)
     if (!fs.existsSync(personPath)) {
       problems.push(`${source.slug}: нет такой персоны`)
@@ -293,7 +364,7 @@ async function main() {
         }
         console.log(`  ${source.slug}: ${info.width}×${info.height}, ${info.license}`)
       } else {
-        if (!isFreeLicense(source.license) && source.license !== 'предоставлено героем') {
+        if (!isFreeLicense(source.license) && !OWN_RIGHTS.has(source.license)) {
           throw new Error(`лицензия «${source.license}» не разрешает публикацию`)
         }
         buffer = await download(source.url)
@@ -304,7 +375,13 @@ async function main() {
         }
       }
 
-      const result = await makePortrait(buffer, source.slug, root, position(source.gravity))
+      const result = await makePortrait(
+        buffer,
+        source.slug,
+        root,
+        position(source.gravity),
+        source.zoom,
+      )
       attachPortrait(personPath, source.slug, rights, source.caption)
       if (result.upscaled) {
         problems.push(
@@ -313,13 +390,14 @@ async function main() {
       }
       // Из широкого кадра портрет 4:5 вырезается по горизонтали, и автоматика
       // промахивается чаще всего именно тут. Такой кадр надо посмотреть глазами.
-      if (!source.gravity && result.sourceWidth > result.sourceHeight) {
+      if (!source.gravity && result.originalWidth > result.originalHeight) {
         problems.push(
-          `${source.slug}: исходник горизонтальный (${result.sourceWidth}×${result.sourceHeight}) — ` +
+          `${source.slug}: исходник горизонтальный (${result.originalWidth}×${result.originalHeight}) — ` +
             'проверьте кадр, при промахе задайте gravity',
         )
       }
       done += 1
+      await wait(700) // передышка между файлами, чтобы не упереться в 429
     } catch (error) {
       problems.push(`${source.slug}: ${error instanceof Error ? error.message : String(error)}`)
     }

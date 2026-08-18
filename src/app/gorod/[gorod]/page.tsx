@@ -15,7 +15,10 @@ import styles from './page.module.css'
 
 /** География — вторая ось рубрикации (§4.1). */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 export function generateStaticParams() {
   return getPopulatedCities().map((city) => ({ gorod: city.slug }))
@@ -30,10 +33,18 @@ export async function generateMetadata({
   const city = getCity(gorod)
   if (!city) return {}
 
+  // Города заведены в справочник заранее, и часть из них пока пуста. Из карты
+  // сайта такие уже исключены, но страница остаётся доступной по прямому адресу
+  // и по фильтру. Пустой список — не то, что стоит предлагать поиску: это
+  // страница без содержимого, и от неё в выдаче один вред. Как только в городе
+  // появляется первая персона, запрет снимается сам.
+  const empty = getPersonsByCity(city.slug).length === 0
+
   return {
     title: `Биографии: ${city.name}`,
     description: `Персоны, живущие и работающие в ${city.name_prepositional}: биографии с проверяемыми фактами и датой обновления.`,
     alternates: { canonical: `${SITE.url}/gorod/${city.slug}/` },
+    robots: empty ? { index: false, follow: true } : undefined,
   }
 }
 

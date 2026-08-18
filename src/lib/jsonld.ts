@@ -1,6 +1,6 @@
-import { getCity, getSpheres } from './content'
+import { getCity, getEditor, getSpheres } from './content'
 import { SITE } from './site'
-import type { Article, Editor, Person } from './types'
+import type { Article, Person } from './types'
 
 /**
  * Микроразметка (§10.2). На странице персоны — `ProfilePage` с вложенным `Person`.
@@ -25,6 +25,9 @@ export function personJsonLd(person: Person) {
 
   if (person.birth_date && person.birth_date_public !== false) {
     node.birthDate = person.birth_date
+  }
+  if (person.death_date) {
+    node.deathDate = person.death_date
   }
   if (birthPlace) {
     node.birthPlace = { '@type': 'Place', name: birthPlace.name }
@@ -51,18 +54,71 @@ export function personJsonLd(person: Person) {
   if (spheres.length || person.occupations.length) {
     node.knowsAbout = [...new Set([...person.occupations, ...spheres.map((s) => s.name)])]
   }
-  // sameAs — только подтверждённые ссылки самой персоны (§2.1.1).
-  if (person.links?.length) {
-    node.sameAs = person.links.map((l) => l.url)
+  // sameAs — адреса, по которым поисковик опознаёт того же человека.
+  //
+  // Два источника, и они разной природы. Первый — подтверждённые ссылки самой
+  // персоны (§2.1.1): их даёт герой, и ручаемся за них мы. Второй —
+  // энциклопедические статьи из списка источников биографии: Википедия
+  // и Викиданные для поисковых систем работают как удостоверение личности,
+  // и без такой ссылки страница про однофамильца и страница про известного
+  // человека для робота выглядят одинаково. Ссылку на статью мы и так уже
+  // проверили — по ней писался текст.
+  const encyclopedic = (person.sources ?? [])
+    .map((s) => s.url)
+    .filter(
+      (url): url is string =>
+        !!url && /^https:\/\/(ru\.|www\.)?(wikipedia\.org|wikidata\.org)/.test(url),
+    )
+
+  const sameAs = [...new Set([...(person.links ?? []).map((l) => l.url), ...encyclopedic])]
+  if (sameAs.length) {
+    node.sameAs = sameAs
   }
 
-  return {
+  // Источники биографии — в `citation`. Для поисковика это подтверждение того,
+  // что страница написана по проверяемым материалам, а для ИИ-ассистента —
+  // готовая цепочка «утверждение → откуда взято», которую он может показать
+  // вместе с ответом.
+  const citation = (person.sources ?? [])
+    .filter((s) => s.url)
+    .map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url }))
+
+  const page: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
+    '@id': url,
+    url,
+    name: `${person.display_name} — ${person.tagline}`,
+    description: person.tagline,
+    inLanguage: 'ru-RU',
     dateCreated: person.published_at,
     dateModified: person.updated_at,
+    isAccessibleForFree: true,
+    // Условия использования, в том числе ИИ-системами (§10.4). `usageInfo` —
+    // именно то поле, в котором schema.org ждёт ссылку на правила
+    // переиспользования; без него разрешение существует только в тексте.
+    usageInfo: `${SITE.url}/ispolzovanie-ii/`,
+    publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url },
     mainEntity: node,
   }
+
+  if (citation.length) {
+    page.citation = citation
+  }
+
+  // Подпись редактора. Ассистент, отвечающий про человека, охотнее ссылается
+  // на материал, у которого есть названный автор и дата, чем на анонимный текст.
+  const editor = getEditor(person.editor)
+  if (editor) {
+    page.author = {
+      '@type': 'Person',
+      name: editor.name,
+      jobTitle: editor.role,
+      url: `${SITE.url}/redakciya/`,
+    }
+  }
+
+  return page
 }
 
 /** В карточке занятия пишутся строчными, а в `jobTitle` уходят с заглавной. */
@@ -81,6 +137,15 @@ export function siteJsonLd() {
         name: SITE.name,
         url: SITE.url,
         email: SITE.email,
+        // Логотип нужен, чтобы поисковик мог показать значок издания рядом
+        // с выдачей и в карточке организации. Требование к файлу — растр
+        // не меньше 112 px по короткой стороне; берём готовую иконку 512×512.
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE.url}/icon-512.png`,
+          width: 512,
+          height: 512,
+        },
       },
       {
         '@type': 'WebSite',
@@ -119,12 +184,13 @@ export function itemListJsonLd(persons: Person[], name: string) {
 }
 
 /**
- * `Article` для редакционного материала (§10.2).
+ * `Article` для редакционных материалов (§10.2).
  *
- * `author` — живой человек из редакции, а не сайт: поисковые системы оценивают
- * авторство отдельно от издателя, и материал без имени автора для них слабее.
+ * `mentions` перечисляет персон, о которых текст: это связывает статью с
+ * карточками каталога в глазах поисковика — те же сущности, что и в
+ * `personJsonLd`, только с другой стороны.
  */
-export function articleJsonLd(article: Article, url: string, author?: Editor) {
+export function articleJsonLd(article: Article, url: string, authorName: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -135,13 +201,16 @@ export function articleJsonLd(article: Article, url: string, author?: Editor) {
     datePublished: article.published_at,
     dateModified: article.updated_at,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    ...(author
-      ? { author: { '@type': 'Person', name: author.name, url: `${SITE.url}/redakciya/` } }
-      : {}),
+    author: { '@type': 'Person', name: authorName },
     publisher: { '@id': `${SITE.url}/#organization` },
     ...(article.cover ? { image: `${SITE.url}${article.cover.src}` } : {}),
     ...(article.mentions.length
-      ? { about: article.mentions.map((slug) => ({ '@id': `${SITE.url}/${slug}/#person` })) }
+      ? {
+          mentions: article.mentions.map((slug) => ({
+            '@type': 'Person',
+            '@id': `${SITE.url}/${slug}/#person`,
+          })),
+        }
       : {}),
   }
 }

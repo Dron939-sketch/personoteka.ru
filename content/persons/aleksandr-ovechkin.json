@@ -128,7 +128,7 @@
   "links": [],
   "photos": [
     {
-      "src": "/media/aleksandr-ovechkin.jpg",
+      "src": "/media/vad7e3bb2/aleksandr-ovechkin.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
@@ -160,7 +160,7 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-04T11:24:38.022Z",
+  "updated_at": "2026-08-04T23:42:18.022Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false

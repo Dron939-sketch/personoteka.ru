@@ -1,0 +1,84 @@
+.form {
+  display: grid;
+  gap: var(--sp-4);
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  max-width: 720px;
+}
+
+.row {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: var(--sp-1);
+}
+
+.label {
+  font-size: var(--small);
+  color: var(--ink-2);
+}
+
+.field input {
+  padding: var(--sp-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: var(--paper);
+  font-size: var(--body);
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--ink-3);
+}
+
+.done {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--success);
+}
+
+.error {
+  margin: 0;
+  font-size: var(--small);
+  color: var(--danger);
+}
+
+.submit {
+  justify-self: start;
+  padding: var(--sp-3) var(--sp-8);
+  border: 0;
+  border-radius: var(--radius-s);
+  background: var(--accent-600);
+  color: #fff;
+  font-size: var(--body);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+[data-theme='dark'] .submit {
+  color: #14181e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .submit {
+    color: #14181e;
+  }
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

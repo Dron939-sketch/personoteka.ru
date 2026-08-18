@@ -27,6 +27,44 @@ const cities = new Set(read<City[]>('content/cities.json').map((c) => c.slug))
 const editors = new Set(read<Editor[]>('content/editors.json').map((e) => e.slug))
 const redirects = read<{ from: string; to: string }[]>('content/redirects.json')
 
+/**
+ * Латиница внутри кириллического слова — «vыживания», «Аттaчмент», «досталcя».
+ * Глазами такое не ловится, а стоять может прямо в заголовке; поиск по такому
+ * слову не находит ничего, потому что для машины это другое слово.
+ *
+ * Отдельно ловятся посторонние письменности: иероглиф или деванагари попадают
+ * в текст при копировании и в кириллице не имеют никаких оснований.
+ *
+ * Псевдонимы вроде «МакSим» и «Яndex» пишутся так намеренно — они в списке
+ * исключений, и список пополняется руками: молча пропускать нельзя.
+ */
+const DELIBERATE = new Set([
+  'ПроStandUp',
+  'Духless',
+  'CraЗy',
+  'Sпарте',
+  'Zомбоящик',
+  'Zомбоящике',
+  'Zемфира',
+  'МакSим',
+  'МегаPolice',
+  'ВИD',
+  'REDЯUM',
+  'Яndex',
+])
+const MIXED = /[\p{Script=Cyrillic}\p{Script=Latin}\d_]*(?:\p{Script=Cyrillic}\p{Script=Latin}|\p{Script=Latin}\p{Script=Cyrillic})[\p{Script=Cyrillic}\p{Script=Latin}\d_]*/gu
+const FOREIGN = /[\p{Script=Han}\p{Script=Devanagari}\p{Script=Greek}\p{Script=Armenian}\p{Script=Arabic}\p{Script=Hebrew}]/u
+
+function mixedAlphabet(text: string): string[] {
+  const found = new Set<string>()
+  for (const match of text.matchAll(MIXED)) {
+    if (!DELIBERATE.has(match[0])) found.add(match[0])
+  }
+  const foreign = text.match(FOREIGN)
+  if (foreign) found.add(foreign[0])
+  return [...found]
+}
+
 const errors: string[] = []
 const warnings: string[] = []
 
@@ -77,6 +115,10 @@ for (const { file, data: person } of persons) {
     errors.push(`${where}: лид длиннее 600 знаков (${person.lead.length})`)
   }
 
+  for (const word of mixedAlphabet(JSON.stringify(person))) {
+    errors.push(`${where}: смешаны алфавиты в слове «${word}»`)
+  }
+
   if (person.status !== 'published') continue
 
   // Дальше — требования к опубликованному материалу (§5.1, §5.3).
@@ -122,9 +164,8 @@ for (const { file, data: person } of persons) {
   // материалов свой, более широкий коридор: там объём диктует материал, а не тариф.
   const limits: Record<string, [number, number]> = {
     editorial: [1200, 12000],
-    free: [0, 600],
     base: [2500, 4000],
-    extended: [6000, 10000],
+    agency: [2500, 10000],
     dossier: [6000, 20000],
   }
   const [min, max] = limits[person.plan] ?? [0, Infinity]
@@ -138,10 +179,14 @@ for (const { file, data: person } of persons) {
     )
   }
 
-  if (person.plan === 'extended' && !person.sources?.length) {
-    errors.push(`${where}: расширенный тариф без блока «Источники» (§5.3)`)
+  // Агентство публикует само, поэтому источники с него спрашиваются строже,
+  // а не мягче: проверять текст постфактум не по чему.
+  if ((person.plan === 'agency' || person.plan === 'dossier') && !person.sources?.length) {
+    errors.push(`${where}: тариф «${person.plan}» без блока «Источники» (§5.3)`)
   }
+
 }
+
 
 // §4.1 и критерий приёмки: смена слага создаёт 301, старый URL не отдаёт 404.
 for (const redirect of redirects) {

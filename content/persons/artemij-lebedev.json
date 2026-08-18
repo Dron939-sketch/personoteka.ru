@@ -104,7 +104,7 @@
   "links": [],
   "photos": [
     {
-      "src": "/media/artemij-lebedev.jpg",
+      "src": "/media/vb10ac0dc/artemij-lebedev.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
@@ -136,7 +136,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-04T11:24:41.609Z",
+  "updated_at": "2026-08-04T23:42:25.646Z",
   "foreign_agent": {
     "checked_at": "2026-08-03",
     "listed": false

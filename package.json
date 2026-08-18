@@ -10,7 +10,7 @@
     "dev": "npm run build:search && next dev",
     "prebuild": "npm run build:search",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "build:search": "tsx scripts/build-search-index.ts",
@@ -19,19 +19,28 @@
     "check:contrast": "tsx scripts/check-contrast.ts",
     "check": "npm run check:content && npm run check:contrast && npm run typecheck",
     "queue": "tsx scripts/build-queue.ts",
+    "agentstvo": "tsx scripts/add-agency.ts",
     "photo": "tsx scripts/add-photo.ts",
     "icons": "tsx scripts/make-icons.ts",
-    "photos:fetch": "tsx scripts/fetch-photos.ts"
+    "photos:fetch": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-photos.ts",
+    "proverka": "NODE_USE_ENV_PROXY=1 tsx scripts/proverka.ts",
+    "photo:pick": "NODE_USE_ENV_PROXY=1 tsx scripts/pick-portrait.ts",
+    "import:lich": "NODE_USE_ENV_PROXY=1 tsx scripts/import-lichnosty.ts",
+    "indexnow": "NODE_USE_ENV_PROXY=1 tsx scripts/indexnow.ts",
+    "photo:commons": "NODE_USE_ENV_PROXY=1 tsx scripts/fetch-commons.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "next": "16.3.0",
+    "nodemailer": "^9.0.4",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "server-only": "^0.0.1",
+    "sharp": "^0.35.3",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }

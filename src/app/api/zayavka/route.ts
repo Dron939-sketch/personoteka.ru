@@ -1,5 +1,7 @@
 import { buildConsentRecords } from '@/lib/consent'
-import { clientIp, rateLimit, verifyCaptcha } from '@/lib/request'
+import { notify } from '@/lib/mail'
+import { clientIp, looksAutomated, rateLimit, verifyCaptcha } from '@/lib/request'
+import { addLead } from '@/lib/tickets'
 
 /**
  * Приём заявки с лендинга (§8.4) с фиксацией согласий (§11.1).
@@ -44,6 +46,14 @@ export async function POST(request: Request) {
   if (!(await verifyCaptcha(str(payload.captcha_token)))) {
     return Response.json({ error: 'Не пройдена проверка «я не робот»' }, { status: 400 })
   }
+  // Тихий отсев роботов, когда капча не подключена (§9.4). Отвечаем как при
+  // успехе и ничего не записываем: робот, получивший внятную ошибку, подберёт
+  // обход, а получивший «спасибо» — уйдёт довольным. В лог пишем, чтобы
+  // отличать тишину «никто не пишет» от тишины «всех отсеяли».
+  if (looksAutomated(payload)) {
+    console.info('[zayavka] отсеяна как автоматическая', ip)
+    return Response.json({ ok: true })
+  }
 
   const consents = buildConsentRecords({
     kinds: ['processing', 'distribution'],
@@ -53,16 +63,40 @@ export async function POST(request: Request) {
     source: 'lead',
   })
 
-  // TODO(этап 4): записать заявку и согласия в БД и создать сделку в CRM.
-  // Журнал согласий обязан пережить перезапуск приложения — консоль тут временная.
-  console.info('[zayavka]', {
+  const lead = {
     name,
     email,
     sphere,
     contact: str(payload.contact),
     message: str(payload.message)?.slice(0, 2000),
+    ip,
     consents,
-  })
+  }
+
+  try {
+    const ticket = addLead(lead)
+    // В лог — только идентификатор: сами ПДн лежат в реестре, дублировать их
+    // в потоке логов незачем.
+    console.info('[zayavka] принята', ticket.id)
+    // Письмо после записи и без ожидания: заявка уже сохранена, и почта
+    // не должна ни задерживать ответ формы, ни ломать его своей ошибкой.
+    void notify(`Заявка на размещение: ${name}`, [
+      `Имя: ${name}`,
+      `Почта: ${email}`,
+      `Сфера: ${sphere}`,
+      lead.contact ? `Ещё контакт: ${lead.contact}` : '',
+      lead.message ? `\nСообщение:\n${lead.message}` : '',
+      `\nЗаявка в кабинете: /lk/zayavki/`,
+    ].filter(Boolean))
+  } catch (error) {
+    // Реестр недоступен. Заявку нельзя подтвердить молча: человек решит, что
+    // она принята, и будет ждать ответа, которого никто не увидит.
+    console.error('[zayavka] не записана', error, lead)
+    return Response.json(
+      { error: 'Не удалось сохранить заявку. Напишите, пожалуйста, на почту редакции.' },
+      { status: 500 },
+    )
+  }
 
   return Response.json({ ok: true })
 }

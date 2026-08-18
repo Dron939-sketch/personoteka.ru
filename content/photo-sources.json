@@ -1,45 +1,2486 @@
 [
-  { "slug": "sergej-lavrov", "wikipedia": "Лавров, Сергей Викторович" },
-  { "slug": "mihail-mishustin", "wikipedia": "Мишустин, Михаил Владимирович" },
-  { "slug": "sergej-shojgu", "wikipedia": "Шойгу, Сергей Кужугетович" },
-  { "slug": "valentina-matvienko", "wikipedia": "Матвиенко, Валентина Ивановна" },
-  { "slug": "vyacheslav-volodin", "wikipedia": "Володин, Вячеслав Викторович" },
-  { "slug": "elvira-nabiullina", "wikipedia": "Набиуллина, Эльвира Сахипзадовна" },
-  { "slug": "gennadij-zyuganov", "wikipedia": "Зюганов, Геннадий Андреевич" },
-  { "slug": "sergej-mironov", "wikipedia": "Миронов, Сергей Михайлович" },
-  { "slug": "aleksandr-ovechkin", "wikipedia": "Овечкин, Александр Михайлович" },
-  { "slug": "daniil-medvedev", "wikipedia": "Медведев, Даниил Сергеевич" },
-  { "slug": "german-gref", "wikipedia": "Греф, Герман Оскарович" },
-  { "slug": "evgenij-kasperskij", "wikipedia": "Касперский, Евгений Валентинович" },
-  { "slug": "artemij-lebedev", "wikipedia": "Лебедев, Артемий Андреевич" },
-  { "slug": "nikolaj-drozdov", "wikipedia": "Дроздов, Николай Николаевич" },
-
-  { "slug": "yurij-dud", "wikipedia": "Дудь, Юрий Александрович" },
-  { "slug": "anton-lapenko", "wikipedia": "Лапенко, Антон Вячеславович" },
-  { "slug": "sergej-druzhko", "wikipedia": "Дружко, Сергей Евгеньевич" },
-  { "slug": "valentin-petuhov", "wikipedia": "Wylsacom" },
-
+  {
+    "slug": "sergej-lavrov",
+    "wikipedia": "Лавров, Сергей Викторович"
+  },
+  {
+    "slug": "mihail-mishustin",
+    "wikipedia": "Мишустин, Михаил Владимирович"
+  },
+  {
+    "slug": "sergej-shojgu",
+    "wikipedia": "Шойгу, Сергей Кужугетович"
+  },
+  {
+    "slug": "valentina-matvienko",
+    "wikipedia": "Матвиенко, Валентина Ивановна"
+  },
+  {
+    "slug": "vyacheslav-volodin",
+    "wikipedia": "Володин, Вячеслав Викторович"
+  },
+  {
+    "slug": "elvira-nabiullina",
+    "wikipedia": "Набиуллина, Эльвира Сахипзадовна"
+  },
+  {
+    "slug": "gennadij-zyuganov",
+    "wikipedia": "Зюганов, Геннадий Андреевич"
+  },
+  {
+    "slug": "sergej-mironov",
+    "wikipedia": "Миронов, Сергей Михайлович"
+  },
+  {
+    "slug": "aleksandr-ovechkin",
+    "wikipedia": "Овечкин, Александр Михайлович"
+  },
+  {
+    "slug": "daniil-medvedev",
+    "wikipedia": "Медведев, Даниил Сергеевич"
+  },
+  {
+    "slug": "german-gref",
+    "wikipedia": "Греф, Герман Оскарович"
+  },
+  {
+    "slug": "evgenij-kasperskij",
+    "wikipedia": "Касперский, Евгений Валентинович"
+  },
+  {
+    "slug": "artemij-lebedev",
+    "wikipedia": "Лебедев, Артемий Андреевич"
+  },
+  {
+    "slug": "nikolaj-drozdov",
+    "wikipedia": "Дроздов, Николай Николаевич"
+  },
+  {
+    "slug": "yurij-dud",
+    "wikipedia": "Дудь, Юрий Александрович"
+  },
+  {
+    "slug": "anastasiya-ivleeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anastasiya_ivleeva.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anastasiya-ivleeva/"
+  },
+  {
+    "slug": "anton-lapenko",
+    "wikipedia": "Лапенко, Антон Вячеславович"
+  },
+  {
+    "slug": "sergej-druzhko",
+    "wikipedia": "Дружко, Сергей Евгеньевич"
+  },
+  {
+    "slug": "dmitrij-kuplinov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dmitrij_kuplinov.webp",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-kuplinov/"
+  },
+  {
+    "slug": "valentin-petuhov",
+    "wikipedia": "Wylsacom"
+  },
   {
     "slug": "sasha-spilberg",
     "wikipedia": "Спилберг, Саша",
-    "gravity": "west"
+    "gravity": "centre"
   },
   {
     "slug": "maksim-golopolosov",
     "commons": "File:Maksim Golopolosov.jpg"
   },
   {
+    "slug": "anton-shastun",
+    "commons": "File:Антон Шастун.jpg"
+  },
+  {
+    "slug": "regina-todorenko",
+    "wikipedia": "Тодоренко, Регина Петровна"
+  },
+  {
+    "slug": "klava-koka",
+    "commons": "File:Клава Кока (пресс-подход) (2) на VK Fest 5 (cropped).jpg"
+  },
+  {
+    "slug": "slava-marlou",
+    "wikipedia": "Slava Marlow"
+  },
+  {
+    "slug": "aleksej-scherbakov",
+    "wikipedia": "Щербаков, Алексей Сергеевич (комик)"
+  },
+  {
+    "slug": "ida-galich",
+    "wikipedia": "Галич, Ида Васильевна"
+  },
+  {
+    "slug": "dima-maslennikov",
+    "wikipedia": "Масленников, Дима"
+  },
+  {
+    "slug": "maryana-ro",
+    "wikipedia": "Ро, Марьяна"
+  },
+  {
+    "slug": "david-manukyan",
+    "wikipedia": "Дава"
+  },
+  {
+    "slug": "nikolaj-sobolev",
+    "wikipedia": "Соболев, Николай Юрьевич"
+  },
+  {
+    "slug": "anya-pokrov",
+    "wikipedia": "Покров, Аня"
+  },
+  {
+    "slug": "habib",
+    "wikipedia": "Хабиб (певец)"
+  },
+  {
+    "slug": "miya-bojko",
+    "wikipedia": "Mia Boyka"
+  },
+  {
+    "slug": "slava-buster",
+    "wikipedia": "Бустер (стример)"
+  },
+  {
+    "slug": "aleksandr-zubarev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/05/zubchik.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/aleksandr-zubarev/"
+  },
+  {
+    "slug": "alina-levda",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/botanovna-2.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/alina-levda/"
+  },
+  {
+    "slug": "denis-kukoyaka",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/kukoyaka-e1742325654642.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/denis-kukoyaka/"
+  },
+  {
+    "slug": "dmitrij-kravchenko",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/dmitriy-kravchenko.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-kravchenko/"
+  },
+  {
+    "slug": "erik-davidych",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/davidych-e1743599717418.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/erik-davidych/"
+  },
+  {
+    "slug": "mihail-sizokrylov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/06/mihail-aleksandrovich-kuleshov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/kuleshov-mihail-aleksandrovich/"
+  },
+  {
     "slug": "amiran-sardarov",
-    "commons": "File:K7o8220.jpg",
-    "caption": "На съёмке футбольного матча, июль 2017 года"
-  },
-
-  {
-    "slug": "anastasiya-ivleeva",
-    "skip": "на Викискладе нет ни одного файла — ни снимка, ни категории; у элемента Викиданных Q48948659 нет свойства P18. Свободного портрета не существует, нужен снимок от героя или по договору"
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/08/amiran-sardarov-3.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/amiran-sardarov/"
   },
   {
-    "slug": "dmitrij-kuplinov",
-    "skip": "единственный свободный файл — File:Kuplinov animated.jpg, кадр мультипликации, а не фотография; у элемента Q110218511 нет свойства P18. Рисунок вместо портрета вводит читателя в заблуждение"
+    "slug": "nikolaj-baskov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/nikolaj_baskov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nikolay-baskov/"
+  },
+  {
+    "slug": "dima-bilan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/dima_bilan.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dima-bilan/"
+  },
+  {
+    "slug": "olga-buzova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/buzova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/olga-buzova/"
+  },
+  {
+    "slug": "maksim-galkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/maksim_galkin.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-galkin/"
+  },
+  {
+    "slug": "polina-gagarina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/gagarina-e1739973332558.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/polina-gagarina/"
+  },
+  {
+    "slug": "valeriya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/valeriya.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/valeriya/"
+  },
+  {
+    "slug": "alsu",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/alsu.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/alsu/"
+  },
+  {
+    "slug": "andrej-malahov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/malahov-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/andrey-malahov/"
+  },
+  {
+    "slug": "basta",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/basta-e1739705630967.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/basta/"
+  },
+  {
+    "slug": "anatolij-vasserman",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/vasserman.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anatoliy-vasserman/"
+  },
+  {
+    "slug": "nikas-safronov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/safronov-e1741627116279.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nikas-safronov/"
+  },
+  {
+    "slug": "diana-arbenina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/diana_arbenina.webp",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/diana-arbenina/"
+  },
+  {
+    "slug": "pavel-priluchnyj",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/priluchnyy-e1741537912345.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/pavel-priluchnyy/"
+  },
+  {
+    "slug": "maksim-averin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/averin-maksim-biografiya-aktera.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-averin/"
+  },
+  {
+    "slug": "marina-kravec",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kravets-e1739195004550.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/marina-kravets/"
+  },
+  {
+    "slug": "ekaterina-klimova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/klimova-e1740585277419.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/ekaterina-klimova/"
+  },
+  {
+    "slug": "oksana-akinshina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/oksana-akinshina-biografiya.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/oksana-akinshina/"
+  },
+  {
+    "slug": "konstantin-ivlev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/ivlev-scaled-e1740157720357.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/konstantin-ivlev/"
+  },
+  {
+    "slug": "yura-borisov",
+    "wikipedia": "Борисов, Юра"
+  },
+  {
+    "slug": "sergej-burunov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/burunov-e1740426271828.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-burunov/"
+  },
+  {
+    "slug": "nurlan-saburov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/saburov1-scaled-e1744276882678.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nurlan-saburov/",
+    "zoom": 1.4
+  },
+  {
+    "slug": "irina-dubcova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dubtsova-scaled-e1741016228569.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/irina-dubtsova/"
+  },
+  {
+    "slug": "marina-aleksandrova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/marina-aleksandrova-2.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/marina-aleksandrova/"
+  },
+  {
+    "slug": "dzhigan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/dzhigan-e1742992676101.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dzhigan/"
+  },
+  {
+    "slug": "renat-agzamov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/agzamov-e1740817166300.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/renat-agzamov/"
+  },
+  {
+    "slug": "anastasiya-volochkova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/volochkova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anastasiya-volochkova/"
+  },
+  {
+    "slug": "lyubov-aksenova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/aksenova-e1739608127902.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lyubov-aksenova/"
+  },
+  {
+    "slug": "mari-kraimbreri",
+    "wikipedia": "Мари Краймбрери"
+  },
+  {
+    "slug": "lyusya-chebotina",
+    "wikipedia": "Чеботина, Людмила Андреевна"
+  },
+  {
+    "slug": "paulina-andreeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/paulina-andreeva-biografiya.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/paulina-andreeva/"
+  },
+  {
+    "slug": "kseniya-borodina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/kseniya_borodina.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/kseniya-borodina/"
+  },
+  {
+    "slug": "yurij-antonov",
+    "wikipedia": "Антонов, Юрий Михайлович"
+  },
+  {
+    "slug": "ekaterina-andreeva",
+    "wikipedia": "Андреева, Екатерина Сергеевна"
+  },
+  {
+    "slug": "zhanna-friske",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/friske-e1739190332163.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/zhanna-friske/"
+  },
+  {
+    "slug": "bari-alibasov",
+    "wikipedia": "Алибасов, Бари Каримович"
+  },
+  {
+    "slug": "tambi-masaev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/masaev-e1744281549938.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/tambi-masaev/"
+  },
+  {
+    "slug": "guram-amaryan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/amaryang-e1742918392861.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/guram-amaryan/"
+  },
+  {
+    "slug": "vladimir-potanin",
+    "wikipedia": "Потанин, Владимир Олегович"
+  },
+  {
+    "slug": "sergej-galickij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/sergej_galickij.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-nikolaevich-galitskiy/"
+  },
+  {
+    "slug": "igor-rybakov",
+    "wikipedia": "Рыбаков, Игорь Владимирович"
+  },
+  {
+    "slug": "aleksej-mordashov",
+    "wikipedia": "Мордашов, Алексей Александрович"
+  },
+  {
+    "slug": "leonid-mihelson",
+    "wikipedia": "Михельсон, Леонид Викторович"
+  },
+  {
+    "slug": "tatyana-bakalchuk",
+    "wikipedia": "Бакальчук, Татьяна Владимировна"
+  },
+  {
+    "slug": "pavel-durov",
+    "wikipedia": "Дуров, Павел Валерьевич"
+  },
+  {
+    "slug": "arkadij-volozh",
+    "wikipedia": "Волож, Аркадий Юрьевич"
+  },
+  {
+    "slug": "arkadij-novikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/novikov-e1739093392728.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/arkadiy-novikov/"
+  },
+  {
+    "slug": "nikolaj-storonskij",
+    "wikipedia": "Сторонский, Николай Николаевич"
+  },
+  {
+    "slug": "andrej-romanenko",
+    "wikipedia": "Романенко, Андрей Николаевич"
+  },
+  {
+    "slug": "vladimir-melnikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/melnikov-e1740425064987.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vladimir-melnikov/"
+  },
+  {
+    "slug": "oleg-tinkov",
+    "wikipedia": "Тиньков, Олег Юрьевич"
+  },
+  {
+    "slug": "oleg-deripaska",
+    "wikipedia": "Дерипаска, Олег Владимирович"
+  },
+  {
+    "slug": "arkadij-rotenberg",
+    "wikipedia": "Ротенберг, Аркадий Романович"
+  },
+  {
+    "slug": "sergej-brin",
+    "wikipedia": "Брин, Сергей Михайлович"
+  },
+  {
+    "slug": "anatolij-karachinskij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/anatolij_karachinskij.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anatoliy-mihaylovich-karachinskiy/"
+  },
+  {
+    "slug": "andrej-belousov",
+    "wikipedia": "Белоусов, Андрей Рэмович"
+  },
+  {
+    "slug": "tatyana-golikova",
+    "wikipedia": "Голикова, Татьяна Алексеевна"
+  },
+  {
+    "slug": "vladimir-zhirinovskij",
+    "wikipedia": "Жириновский, Владимир Вольфович"
+  },
+  {
+    "slug": "sergej-kirienko",
+    "wikipedia": "Кириенко, Сергей Владиленович"
+  },
+  {
+    "slug": "denis-manturov",
+    "wikipedia": "Мантуров, Денис Валентинович"
+  },
+  {
+    "slug": "aleksandr-novak",
+    "wikipedia": "Новак, Александр Валентинович"
+  },
+  {
+    "slug": "dmitrij-patrushev",
+    "wikipedia": "Патрушев, Дмитрий Николаевич"
+  },
+  {
+    "slug": "sergej-kravcov",
+    "wikipedia": "Кравцов, Сергей Сергеевич"
+  },
+  {
+    "slug": "aleksandr-beglov",
+    "wikipedia": "Беглов, Александр Дмитриевич"
+  },
+  {
+    "slug": "anton-alihanov",
+    "wikipedia": "Алиханов, Антон Андреевич"
+  },
+  {
+    "slug": "vitalij-milonov",
+    "wikipedia": "Милонов, Виталий Валентинович",
+    "gravity": "east"
+  },
+  {
+    "slug": "viktoriya-abramchenko",
+    "wikipedia": "Абрамченко, Виктория Валериевна"
+  },
+  {
+    "slug": "fedor-emelyanenko",
+    "wikipedia": "Емельяненко, Фёдор Владимирович"
+  },
+  {
+    "slug": "elena-isinbaeva",
+    "wikipedia": "Исинбаева, Елена Гаджиевна"
+  },
+  {
+    "slug": "evgenij-plyushchenko",
+    "wikipedia": "Плющенко, Евгений Викторович",
+    "zoom": 3
+  },
+  {
+    "slug": "igor-akinfeev",
+    "wikipedia": "Акинфеев, Игорь Владимирович"
+  },
+  {
+    "slug": "aleksandr-bolshunov",
+    "wikipedia": "Большунов, Александр Александрович"
+  },
+  {
+    "slug": "mirra-andreeva",
+    "wikipedia": "Андреева, Мирра Александровна",
+    "zoom": 1.7
+  },
+  {
+    "slug": "grigorij-perelman",
+    "wikipedia": "Перельман, Григорий Яковлевич",
+    "caption": "Снимок 1993 года: свободных фотографий Григория Перельмана последних лет не существует — он не фотографируется."
+  },
+  {
+    "slug": "vitalij-ginzburg",
+    "wikipedia": "Гинзбург, Виталий Лазаревич"
+  },
+  {
+    "slug": "andrej-zaliznyak",
+    "wikipedia": "Зализняк, Андрей Анатольевич",
+    "gravity": "north"
+  },
+  {
+    "slug": "stanislav-drobyshevskij",
+    "wikipedia": "Дробышевский, Станислав Владимирович"
+  },
+  {
+    "slug": "vladimir-surdin",
+    "wikipedia": "Сурдин, Владимир Георгиевич"
+  },
+  {
+    "slug": "artem-oganov",
+    "wikipedia": "Оганов, Артём Ромаевич"
+  },
+  {
+    "slug": "olga-ladyzhenskaya",
+    "wikipedia": "Ладыженская, Ольга Александровна"
+  },
+  {
+    "slug": "maksim-koncevich",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kontsevich-e1740685408112.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/maksim-lvovich-kontsevich/"
+  },
+  {
+    "slug": "genrih-altshuller",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/altshuller-e1738954288859.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/genrih-saulovich-altshuller/"
+  },
+  {
+    "slug": "lyudmila-petranovskaya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/photo_02.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lyudmila-petranovskaya/"
+  },
+  {
+    "slug": "georgij-schedrovickij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/01/schedrovitskiy.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/georgiy-petrovich-schedrovitskiy/"
+  },
+  {
+    "slug": "mihail-gelfand",
+    "wikipedia": "Гельфанд, Михаил Сергеевич",
+    "gravity": "east"
+  },
+  {
+    "slug": "vyacheslav-fetisov",
+    "wikipedia": "Фетисов, Вячеслав Александрович"
+  },
+  {
+    "slug": "aleksej-yagudin",
+    "wikipedia": "Ягудин, Алексей Константинович"
+  },
+  {
+    "slug": "kamila-valieva",
+    "wikipedia": "Валиева, Камила Валерьевна"
+  },
+  {
+    "slug": "alina-kabaeva",
+    "wikipedia": "Кабаева, Алина Маратовна"
+  },
+  {
+    "slug": "marat-safin",
+    "wikipedia": "Сафин, Марат Мубинович"
+  },
+  {
+    "slug": "svetlana-horkina",
+    "wikipedia": "Хоркина, Светлана Васильевна"
+  },
+  {
+    "slug": "mariya-dugina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/03/mariya-dugina-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/mariya-dugina/"
+  },
+  {
+    "slug": "egorkina-arina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/arina-egorkina-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/egorkina-arina/"
+  },
+  {
+    "slug": "mariya-belyaeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/mariya-belayaeva.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/belyaeva-mariya/"
+  },
+  {
+    "slug": "palageya-krylova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/palageya-krylova-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/palageya-krylova/"
+  },
+  {
+    "slug": "vasilya-hadeeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/11/hadeeva-vasilya-zufarovna.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/hadeeva-vasilya-zufarovna/"
+  },
+  {
+    "slug": "olga-smirnova",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/05/smirnova.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/smirnova-olga-vyacheslavovna/"
+  },
+  {
+    "slug": "elizaveta-medvedeva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/medvedeva1-scaled-e1742831783192.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/medvedeva-elizaveta-andreevna/"
+  },
+  {
+    "slug": "natalya-lapina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/lapina-e1741174155671.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/natalya-lapina/"
+  },
+  {
+    "slug": "aleksej-nemov",
+    "wikipedia": "Немов, Алексей Юрьевич"
+  },
+  {
+    "slug": "irina-sluckaya",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/slutskaya-e1740586356204.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/irina-slutskaya/"
+  },
+  {
+    "slug": "mariya-kiseleva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kiseleva-e1740424092253.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/mariya-kiseleva/"
+  },
+  {
+    "slug": "sofya-velikaya",
+    "wikipedia": "Великая, Софья Александровна"
+  },
+  {
+    "slug": "elena-vyalbe",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/vyalbe-scaled-e1739091145948.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/elena-vyalbe/"
+  },
+  {
+    "slug": "nikolaj-valuev",
+    "wikipedia": "Валуев, Николай Сергеевич"
+  },
+  {
+    "slug": "andrej-arshavin",
+    "wikipedia": "Аршавин, Андрей Сергеевич"
+  },
+  {
+    "slug": "andrej-kirilenko",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kirilenko-e1739293927963.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/andrey-kirilenko/"
+  },
+  {
+    "slug": "roman-kostomarov",
+    "wikipedia": "Костомаров, Роман Сергеевич"
+  },
+  {
+    "slug": "oksana-lut",
+    "wikipedia": "Лут, Оксана Николаевна"
+  },
+  {
+    "slug": "aleksandr-bogomaz",
+    "wikipedia": "Богомаз, Александр Васильевич"
+  },
+  {
+    "slug": "andrej-lugovoj",
+    "wikipedia": "Луговой, Андрей Константинович"
+  },
+  {
+    "slug": "boris-gryzlov",
+    "wikipedia": "Грызлов, Борис Вячеславович"
+  },
+  {
+    "slug": "aleksandr-grechischev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/12/grechischev-aleksandr-2.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/grechischev-aleksandr-vladimirovich/"
+  },
+  {
+    "slug": "elchin-safarov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/safarov-elchin-alekper-ogly.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/safarov-elchin-alekper-ogly-2/"
+  },
+  {
+    "slug": "evgenij-danchikov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/danchikov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgeniy-danchikov/"
+  },
+  {
+    "slug": "aleksandr-vyatkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/2024-10-27-11.30.43.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vyatkin-aleksandr-igorevich/"
+  },
+  {
+    "slug": "dmitrij-hurtov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/07/dmitrij_hurtov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/dmitriy-nikolaevich-hurtov/"
+  },
+  {
+    "slug": "evgenij-kunin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/kunin-scaled-e1740815739627.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgeniy-viktorovich-kunin/"
+  },
+  {
+    "slug": "milica-nechkina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/nechkina.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/militsa-vasilevna-nechkina/"
+  },
+  {
+    "slug": "valentin-kumarin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kumarin.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/valentin-vasilevich-kumarin/"
+  },
+  {
+    "slug": "valentin-gaponcev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/gapontsev-e1739886288759.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/valentin-pavlovich-gapontsev/"
+  },
+  {
+    "slug": "evgenij-satanovskij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/satanovskiy-e1739443859242.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgeniy-yanovich-satanovskiy/"
+  },
+  {
+    "slug": "viktor-shatalov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/shatalovvf-e1739088885271.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/viktor-fedorovich-shatalov/"
+  },
+  {
+    "slug": "boris-velichkovskij",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/velichkovskiybm.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/boris-mitrofanovich-velichkovskiy/"
+  },
+  {
+    "slug": "farman-salmanov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/farman_salmanov-1.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/farman-kurban-ogly-salmanov/"
+  },
+  {
+    "slug": "iosif-sternin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/iosif_sternin.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/iosif-abramovich-sternin/"
+  },
+  {
+    "slug": "lyudmila-peterson",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/lyudmila_peterson.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lyudmila-georgievna-peterson/"
+  },
+  {
+    "slug": "vladimir-korovin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/vladimir_korovin-1.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vladimir-leonidovich-korovin/"
+  },
+  {
+    "slug": "ivan-hickov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/ivan_hickov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/ivan-fedorovich-hitskov/"
+  },
+  {
+    "slug": "valerij-artyuhov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/valerij_artyuhov.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/valeriy-grigorevich-artyuhov/"
+  },
+  {
+    "slug": "sergej-sergeev",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/sergej_sergeev.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-mihaylovich-sergeev/"
+  },
+  {
+    "slug": "vladimir-plohov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/10/plohov-v.n-scaled.jpeg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/plohov-vladimir-nikolaevich/"
+  },
+  {
+    "slug": "boris-listov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/08/boris-listov-e1755326987208.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/boris-pavlovich-listov/"
+  },
+  {
+    "slug": "nataliya-fileva",
+    "url": "https://lichnosty.ru/wp-content/uploads/2024/06/fileva.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/nataliya-valerevna-filyova/"
+  },
+  {
+    "slug": "anton-belov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/belov-e1739703258796.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anton-belov/"
+  },
+  {
+    "slug": "vlad-bumaga",
+    "wikipedia": "Влад А4"
+  },
+  {
+    "slug": "evgenij-bazhenov",
+    "wikipedia": "BadComedian"
+  },
+  {
+    "slug": "dmitrij-puchkov",
+    "wikipedia": "Пучков, Дмитрий Юрьевич"
+  },
+  {
+    "slug": "gusejn-gasanov",
+    "wikipedia": "Гасанов, Гусейн Саттар оглы"
+  },
+  {
+    "slug": "eldar-dzharahov",
+    "wikipedia": "Джарахов, Эльдар Казанфарович"
+  },
+  {
+    "slug": "valya-karnaval",
+    "wikipedia": "Валя Карнавал"
+  },
+  {
+    "slug": "artur-babich",
+    "wikipedia": "Бабич, Артур Самвелович"
+  },
+  {
+    "slug": "matvej-safonov",
+    "commons": "File:Matvei Safonov 2020.jpg"
+  },
+  {
+    "slug": "dmitrij-bivol",
+    "wikipedia": "Бивол, Дмитрий Юрьевич"
+  },
+  {
+    "slug": "diana-shnajder",
+    "wikipedia": "Шнайдер, Диана Максимовна",
+    "zoom": 2.2
+  },
+  {
+    "slug": "habib-nurmagomedov",
+    "wikipedia": "Нурмагомедов, Хабиб Абдулманапович"
+  },
+  {
+    "slug": "artem-dzyuba",
+    "wikipedia": "Дзюба, Артём Сергеевич",
+    "gravity": "north"
+  },
+  {
+    "slug": "pavel-krasheninnikov",
+    "wikipedia": "Крашенинников, Павел Владимирович"
+  },
+  {
+    "slug": "valerij-zorkin",
+    "wikipedia": "Зорькин, Валерий Дмитриевич"
+  },
+  {
+    "slug": "genri-reznik",
+    "wikipedia": "Резник, Генри Маркович"
+  },
+  {
+    "slug": "leonid-roshal",
+    "wikipedia": "Рошаль, Леонид Михайлович"
+  },
+  {
+    "slug": "denis-procenko",
+    "wikipedia": "Проценко, Денис Николаевич"
+  },
+  {
+    "slug": "danila-kozlovskij",
+    "commons": "File:Danila Kozlovsky 2016.jpg"
+  },
+  {
+    "slug": "aleksandr-petrov",
+    "wikipedia": "Петров, Александр Андреевич (актёр)"
+  },
+  {
+    "slug": "yuliya-peresild",
+    "commons": "File:Пересильд Юлия Сергеевна.jpg"
+  },
+  {
+    "slug": "sergej-bezrukov",
+    "wikipedia": "Безруков, Сергей Витальевич"
+  },
+  {
+    "slug": "ivan-yankovskij",
+    "wikipedia": "Янковский, Иван Филиппович"
+  },
+  {
+    "slug": "shaman",
+    "wikipedia": "Shaman"
+  },
+  {
+    "slug": "dmitrij-nagiev",
+    "commons": "File:Дмитрий Нагиев на финале Голос. Дети 5 (cropped).jpg",
+    "caption": "Нагиев почти на всех свободных снимках в тёмных очках — это его сценический образ, а не промах кадра"
+  },
+  {
+    "slug": "filipp-kirkorov",
+    "wikipedia": "Киркоров, Филипп Бедросович"
+  },
+  {
+    "slug": "nikita-mihalkov",
+    "wikipedia": "Михалков, Никита Сергеевич"
+  },
+  {
+    "slug": "roman-abramovich",
+    "commons": "File:Romanchelseaaug2014 (cropped).jpg"
+  },
+  {
+    "slug": "garik-harlamov",
+    "commons": "File:Kharlamov 2020.jpg"
+  },
+  {
+    "slug": "kseniya-sobchak",
+    "wikipedia": "Собчак, Ксения Анатольевна"
+  },
+  {
+    "slug": "vladimir-solovyov",
+    "wikipedia": "Соловьёв, Владимир Рудольфович"
+  },
+  {
+    "slug": "ramzan-kadyrov",
+    "wikipedia": "Кадыров, Рамзан Ахматович"
+  },
+  {
+    "slug": "viktoriya-isakova",
+    "wikipedia": "Исакова, Виктория Евгеньевна"
+  },
+  {
+    "slug": "zivert",
+    "wikipedia": "Zivert"
+  },
+  {
+    "slug": "sergej-lazarev",
+    "wikipedia": "Лазарев, Сергей Вячеславович"
+  },
+  {
+    "slug": "vladimir-mashkov",
+    "commons": "File:Владимир Машков.jpg"
+  },
+  {
+    "slug": "sergej-sobyanin",
+    "wikipedia": "Собянин, Сергей Семёнович"
+  },
+  {
+    "slug": "alla-pugacheva",
+    "commons": "File:Alla Pugacheva on Slavianski Bazaar in Vitebsk 01 (cropped).jpg"
+  },
+  {
+    "slug": "islam-mahachev",
+    "commons": "File:Islam Makhachev and Sergey Melikov 2025 (cropped).jpg"
+  },
+  {
+    "slug": "dmitrij-peskov",
+    "commons": "File:Dmitry Peskov portrait.jpg"
+  },
+  {
+    "slug": "marina-neelova",
+    "commons": "File:Марина Неёлова (2026-06-12) - 02 (cropped).jpg"
+  },
+  {
+    "slug": "grigorij-leps",
+    "commons": "File:Grigorij Leps ya nravlyus zhenshhinam 2024 (cropped).jpg"
+  },
+  {
+    "slug": "mariya-zaharova",
+    "wikipedia": "Захарова, Мария Владимировна"
+  },
+  {
+    "slug": "sulejman-kerimov",
+    "wikipedia": "Керимов, Сулейман Абусаидович"
+  },
+  {
+    "slug": "darya-doncova",
+    "wikipedia": "Донцова, Дарья Аркадьевна"
+  },
+  {
+    "slug": "egor-krid",
+    "commons": "File:Yegor Creed (cropped).jpg"
+  },
+  {
+    "slug": "ivan-urgant",
+    "commons": "File:IvanUrgant25 (cropped).jpg"
+  },
+  {
+    "slug": "igor-sechin",
+    "wikipedia": "Сечин, Игорь Иванович"
+  },
+  {
+    "slug": "alisher-usmanov",
+    "wikipedia": "Усманов, Алишер Бурханович"
+  },
+  {
+    "slug": "valerij-meladze",
+    "wikipedia": "Меладзе, Валерий Шотаевич"
+  },
+  {
+    "slug": "tina-kandelaki",
+    "wikipedia": "Канделаки, Тина"
+  },
+  {
+    "slug": "aleksandr-karelin",
+    "wikipedia": "Карелин, Александр Александрович"
+  },
+  {
+    "slug": "aleksandra-trusova",
+    "commons": "File:Alexandra Trusova in 2022 2.jpg"
+  },
+  {
+    "slug": "andrej-melnichenko",
+    "wikipedia": "Мельниченко, Андрей Игоревич"
+  },
+  {
+    "slug": "aleksej-nechaev",
+    "wikipedia": "Нечаев, Алексей Геннадьевич"
+  },
+  {
+    "slug": "vasilij-palatkin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/07/palatkin-vasiliy-serafimovich.png",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/palatkin-vasiliy-serafimovich/"
+  },
+  {
+    "slug": "denis-bikchurin",
+    "url": "https://lichnosty.ru/wp-content/uploads/2026/04/denis-bikchurin-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/denis-bikchurin/"
+  },
+  {
+    "slug": "migel-markaryanc",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/07/vt2_1480-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/migel-rubenovich-markaryants/"
+  },
+  {
+    "slug": "roman-chichkanov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/09/roman-chichkanov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/roman-chichkanov/"
+  },
+  {
+    "slug": "natalya-sinyutkina",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/06/img_20231220_232500_0599.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sinyutkina-natalya-nikolaevna/"
+  },
+  {
+    "slug": "sergej-gerasimov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/06/bz6a2213-1-scaled.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/gerasimov-sergey-vladimirovich/"
+  },
+  {
+    "slug": "vladimir-sokolov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/sokolov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/vladimir-sokolov/"
+  },
+  {
+    "slug": "anatolij-sulyanov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/04/sulyanov-e1743601158846.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/anatoliy-sulyanov/"
+  },
+  {
+    "slug": "lev-mazaraki",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/03/2025-03-20-21.39.41.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/lev-borisovich-mazaraki/"
+  },
+  {
+    "slug": "sergej-amaryan",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/amaryan-scaled-e1739610573406.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/sergey-amaryan/"
+  },
+  {
+    "slug": "evgenij-kolesov",
+    "url": "https://lichnosty.ru/wp-content/uploads/2025/02/kolesov.jpg",
+    "license": "архив редакции",
+    "source_url": "https://lichnosty.ru/bio/evgeniy-kolesov/"
+  },
+  {
+    "slug": "mihail-barschevskij",
+    "wikipedia": "Барщевский, Михаил Юрьевич"
+  },
+  {
+    "slug": "genrih-padva",
+    "wikipedia": "Падва, Генрих Павлович"
+  },
+  {
+    "slug": "tamara-morschakova",
+    "commons": "File:Council for Civil Society and Human Rights (2016-12-08) 09.jpg"
+  },
+  {
+    "slug": "aleksandr-gincburg",
+    "wikipedia": "Гинцбург, Александр Леонидович"
+  },
+  {
+    "slug": "sergej-gote",
+    "wikipedia": "Готье, Сергей Владимирович"
+  },
+  {
+    "slug": "anatolij-kucherena",
+    "wikipedia": "Кучерена, Анатолий Григорьевич"
+  },
+  {
+    "slug": "yurij-pilipenko",
+    "wikipedia": "Пилипенко, Юрий Сергеевич"
+  },
+  {
+    "slug": "evgenij-shlyahto",
+    "wikipedia": "Шляхто, Евгений Владимирович"
+  },
+  {
+    "slug": "aleksandr-rumyancev",
+    "wikipedia": "Румянцев, Александр Григорьевич"
+  },
+  {
+    "slug": "vladimir-porhanov",
+    "wikipedia": "Порханов, Владимир Алексеевич"
+  },
+  {
+    "slug": "mihail-fedotov",
+    "commons": "File:Mikhail Aleksandrovich Fedotov (cropped).jpg"
+  },
+  {
+    "slug": "pavel-astahov",
+    "wikipedia": "Астахов, Павел Алексеевич"
+  },
+  {
+    "slug": "veniamin-yakovlev",
+    "wikipedia": "Яковлев, Вениамин Фёдорович"
+  },
+  {
+    "slug": "konstantin-chuychenko",
+    "commons": "File:Konstantin Chuychenko official portrait.png"
+  },
+  {
+    "slug": "leo-bokeriya",
+    "commons": "File:Leo Bokeria (2017-06-20) 2.jpg"
+  },
+  {
+    "slug": "renat-akchurin",
+    "wikipedia": "Акчурин, Ренат Сулейманович"
+  },
+  {
+    "slug": "mihail-murashko",
+    "wikipedia": "Мурашко, Михаил Альбертович"
+  },
+  {
+    "slug": "anna-popova",
+    "wikipedia": "Попова, Анна Юрьевна"
+  },
+  {
+    "slug": "elena-kamburova",
+    "wikipedia": "Камбурова, Елена Антоновна"
+  },
+  {
+    "slug": "oleg-gazmanov",
+    "wikipedia": "Газманов, Олег Михайлович"
+  },
+  {
+    "slug": "ekaterina-mizulina",
+    "wikipedia": "Мизулина, Екатерина Михайловна"
+  },
+  {
+    "slug": "tatyana-vasileva",
+    "wikipedia": "Васильева, Татьяна Григорьевна"
+  },
+  {
+    "slug": "vanya-dmitrienko",
+    "wikipedia": "Дмитриенко, Ваня"
+  },
+  {
+    "slug": "vladislav-bakalchuk",
+    "wikipedia": "Бакальчук, Владислав Сергеевич"
+  },
+  {
+    "slug": "diana-vishneva",
+    "wikipedia": "Вишнёва, Диана Викторовна"
+  },
+  {
+    "slug": "fedor-dobronravov",
+    "wikipedia": "Добронравов, Фёдор Викторович"
+  },
+  {
+    "slug": "vitalij-kanevskij",
+    "wikipedia": "Каневский, Виталий Евгеньевич"
+  },
+  {
+    "slug": "boris-nadezhdin",
+    "commons": "File:Boris Nadezhdin.jpg"
+  },
+  {
+    "slug": "andrej-rubanov",
+    "wikipedia": "Рубанов, Андрей Викторович"
+  },
+  {
+    "slug": "andrej-konchalovskij",
+    "wikipedia": "Кончаловский, Андрей Сергеевич"
+  },
+  {
+    "slug": "ekaterina-guseva",
+    "wikipedia": "Гусева, Екатерина Константиновна"
+  },
+  {
+    "slug": "leonid-kanevskij",
+    "wikipedia": "Каневский, Леонид Семёнович"
+  },
+  {
+    "slug": "aleksej-dyumin",
+    "wikipedia": "Дюмин, Алексей Геннадьевич"
+  },
+  {
+    "slug": "ravshana-kurkova",
+    "wikipedia": "Куркова, Равшана Бахрамовна"
+  },
+  {
+    "slug": "olga-budina",
+    "wikipedia": "Будина, Ольга Александровна"
+  },
+  {
+    "slug": "lyubov-tolkalina",
+    "wikipedia": "Толкалина, Любовь Николаевна"
+  },
+  {
+    "slug": "lidiya-fedoseeva-shukshina",
+    "wikipedia": "Федосеева-Шукшина, Лидия Николаевна"
+  },
+  {
+    "slug": "yana-lantratova",
+    "wikipedia": "Лантратова, Яна Валерьевна"
+  },
+  {
+    "slug": "ivan-ohlobystin",
+    "wikipedia": "Охлобыстин, Иван Иванович"
+  },
+  {
+    "slug": "aleksej-zhuravlev",
+    "wikipedia": "Журавлёв, Алексей Александрович"
+  },
+  {
+    "slug": "vasilij-livanov",
+    "wikipedia": "Ливанов, Василий Борисович"
+  },
+  {
+    "slug": "evgenij-cyganov",
+    "wikipedia": "Цыганов, Евгений Эдуардович"
+  },
+  {
+    "slug": "yuliya-snigir",
+    "wikipedia": "Снигирь, Юлия Викторовна"
+  },
+  {
+    "slug": "yuliya-menshova",
+    "wikipedia": "Меньшова, Юлия Владимировна"
+  },
+  {
+    "slug": "mariya-aronova",
+    "wikipedia": "Аронова, Мария Валерьевна"
+  },
+  {
+    "slug": "nadezhda-babkina",
+    "wikipedia": "Бабкина, Надежда Георгиевна"
+  },
+  {
+    "slug": "natalya-andrejchenko",
+    "wikipedia": "Андрейченко, Наталья Эдуардовна"
+  },
+  {
+    "slug": "natalya-zabiyako",
+    "wikipedia": "Забияко, Наталья Александровна"
+  },
+  {
+    "slug": "ekaterina-gordon",
+    "wikipedia": "Гордон, Екатерина Викторовна"
+  },
+  {
+    "slug": "aleksej-rybnikov",
+    "wikipedia": "Рыбников, Алексей Львович"
+  },
+  {
+    "slug": "elena-malysheva",
+    "wikipedia": "Малышева, Елена Васильевна"
+  },
+  {
+    "slug": "lajma-vajkule",
+    "wikipedia": "Вайкуле, Лайма Станиславовна"
+  },
+  {
+    "slug": "oleg-basilashvili",
+    "wikipedia": "Басилашвили, Олег Валерианович"
+  },
+  {
+    "slug": "aleksandr-ustyugov",
+    "wikipedia": "Устюгов, Александр Сергеевич"
+  },
+  {
+    "slug": "anna-hilkevich",
+    "commons": "File:Хилькевич Анна (cropped).jpg"
+  },
+  {
+    "slug": "vladimir-kuzmin",
+    "commons": "File:Владимир Кузьмин.jpg"
+  },
+  {
+    "slug": "margarita-simonyan",
+    "wikipedia": "Симоньян, Маргарита Симоновна"
+  },
+  {
+    "slug": "leonid-yakubovich",
+    "wikipedia": "Якубович, Леонид Аркадьевич"
+  },
+  {
+    "slug": "igor-krutoj",
+    "wikipedia": "Крутой, Игорь Яковлевич"
+  },
+  {
+    "slug": "nikolaj-ciskaridze",
+    "wikipedia": "Цискаридзе, Николай Максимович"
+  },
+  {
+    "slug": "yurij-stoyanov",
+    "commons": "File:Yuri Stoyanov (2017, cropped).jpg"
+  },
+  {
+    "slug": "lyubov-uspenskaya",
+    "wikipedia": "Успенская, Любовь Залмановна"
+  },
+  {
+    "slug": "sergej-zhukov",
+    "wikipedia": "Жуков, Сергей Евгеньевич"
+  },
+  {
+    "slug": "murat-gassiev",
+    "wikipedia": "Гассиев, Мурат Георгиевич"
+  },
+  {
+    "slug": "tatyana-navka",
+    "wikipedia": "Навка, Татьяна Александровна"
+  },
+  {
+    "slug": "aglaya-shilovskaya",
+    "wikipedia": "Шиловская, Аглая Ильинична"
+  },
+  {
+    "slug": "aleksandr-usik",
+    "wikipedia": "Усик, Александр Александрович"
+  },
+  {
+    "slug": "anna-kikina",
+    "wikipedia": "Кикина, Анна Юрьевна"
+  },
+  {
+    "slug": "tatyana-bulanova",
+    "commons": "File:Tatjana Bulanowa.jpg"
+  },
+  {
+    "slug": "pavel-derevyanko",
+    "wikipedia": "Деревянко, Павел Юрьевич"
+  },
+  {
+    "slug": "kristina-orbakajte",
+    "wikipedia": "Орбакайте, Кристина Эдмундовна"
+  },
+  {
+    "slug": "magomed-ankalaev",
+    "wikipedia": "Анкалаев, Магомед Алибулатович"
+  },
+  {
+    "slug": "roman-safiullin",
+    "commons": "File:Roman Safiullin (2023 US Open) 04 (cropped).jpg"
+  },
+  {
+    "slug": "sergej-brylin",
+    "wikipedia": "Брылин, Сергей Владимирович"
+  },
+  {
+    "slug": "elena-borscheva",
+    "wikipedia": "Борщёва, Елена Сергеевна"
+  },
+  {
+    "slug": "gagik-carukyan",
+    "wikipedia": "Царукян, Гагик Коляевич"
+  },
+  {
+    "slug": "egor-konchalovskij",
+    "wikipedia": "Кончаловский, Егор Андреевич"
+  },
+  {
+    "slug": "aleksandr-gordon",
+    "wikipedia": "Гордон, Александр Гарриевич"
+  },
+  {
+    "slug": "aleksej-vorobev",
+    "wikipedia": "Воробьёв, Алексей Владимирович (артист)"
+  },
+  {
+    "slug": "boris-ejfman",
+    "wikipedia": "Эйфман, Борис Яковлевич"
+  },
+  {
+    "slug": "alisa-frejndlih",
+    "wikipedia": "Фрейндлих, Алиса Бруновна"
+  },
+  {
+    "slug": "garik-sukachev",
+    "wikipedia": "Сукачёв, Гарик"
+  },
+  {
+    "slug": "aleksej-guskov",
+    "commons": "File:Alexei Guskov in Kazan 01.jpg"
+  },
+  {
+    "slug": "mariya-sittel",
+    "wikipedia": "Ситтель, Мария Эдуардовна"
+  },
+  {
+    "slug": "irina-rozanova",
+    "commons": "File:Ирина Розанова (2) на BUBBLE Comics Con 2023.jpg"
+  },
+  {
+    "slug": "igor-kostolevskij",
+    "wikipedia": "Костолевский, Игорь Матвеевич"
+  },
+  {
+    "slug": "aleksandr-zbruev",
+    "wikipedia": "Збруев, Александр Викторович"
+  },
+  {
+    "slug": "svetlana-nemolyaeva",
+    "wikipedia": "Немоляева, Светлана Владимировна"
+  },
+  {
+    "slug": "edita-peha",
+    "wikipedia": "Пьеха, Эдита Станиславовна"
+  },
+  {
+    "slug": "milla-jovovich",
+    "wikipedia": "Йовович, Милла"
+  },
+  {
+    "slug": "andrej-gajdulyan",
+    "wikipedia": "Гайдулян, Андрей Сергеевич"
+  },
+  {
+    "slug": "aleksandr-brechalov",
+    "wikipedia": "Бречалов, Александр Владимирович"
+  },
+  {
+    "slug": "aleksandr-rozenbaum",
+    "wikipedia": "Розенбаум, Александр Яковлевич"
+  },
+  {
+    "slug": "larisa-dolina",
+    "wikipedia": "Долина, Лариса Александровна"
+  },
+  {
+    "slug": "leonid-agutin",
+    "wikipedia": "Агутин, Леонид Николаевич"
+  },
+  {
+    "slug": "viktor-drobysh",
+    "wikipedia": "Дробыш, Виктор Яковлевич"
+  },
+  {
+    "slug": "anton-makarskij",
+    "wikipedia": "Макарский, Антон Александрович"
+  },
+  {
+    "slug": "sofiya-rotaru",
+    "wikipedia": "Ротару, София Михайловна"
+  },
+  {
+    "slug": "irina-allegrova",
+    "wikipedia": "Аллегрова, Ирина Александровна"
+  },
+  {
+    "slug": "igor-nikolaev",
+    "wikipedia": "Николаев, Игорь Юрьевич"
+  },
+  {
+    "slug": "lolita-milyavskaya",
+    "wikipedia": "Милявская, Лолита Марковна"
+  },
+  {
+    "slug": "vyacheslav-butusov",
+    "wikipedia": "Бутусов, Вячеслав Геннадьевич"
+  },
+  {
+    "slug": "ilya-lagutenko",
+    "wikipedia": "Лагутенко, Илья Игоревич"
+  },
+  {
+    "slug": "sergej-shnurov",
+    "wikipedia": "Шнуров, Сергей Владимирович"
+  },
+  {
+    "slug": "valeriya-perfilova",
+    "wikipedia": "Валерия (певица)"
+  },
+  {
+    "slug": "aleksandr-marshal",
+    "wikipedia": "Маршал, Александр Витальевич"
+  },
+  {
+    "slug": "andrej-makarevich",
+    "wikipedia": "Макаревич, Андрей Вадимович"
+  },
+  {
+    "slug": "yurij-shevchuk",
+    "wikipedia": "Шевчук, Юрий Юлианович"
+  },
+  {
+    "slug": "zemfira",
+    "wikipedia": "Земфира"
+  },
+  {
+    "slug": "garik-martirosyan",
+    "wikipedia": "Мартиросян, Гарик Юрьевич"
+  },
+  {
+    "slug": "emin-agalarov",
+    "commons": "File:Эмин (Белые ночи Санкт-Петербурга — 2021. Григорий Лепс собирает друзей).jpg"
+  },
+  {
+    "slug": "dmitrij-malikov",
+    "wikipedia": "Маликов, Дмитрий Юрьевич"
+  },
+  {
+    "slug": "vladimir-presnyakov",
+    "wikipedia": "Пресняков, Владимир Владимирович"
+  },
+  {
+    "slug": "anita-coj",
+    "wikipedia": "Цой, Анита Сергеевна"
+  },
+  {
+    "slug": "evgenij-petrosyan",
+    "wikipedia": "Петросян, Евгений Ваганович"
+  },
+  {
+    "slug": "natasha-koroleva",
+    "commons": "File:Наташа Королёва.jpg"
+  },
+  {
+    "slug": "konstantin-habenskij",
+    "wikipedia": "Хабенский, Константин Юрьевич"
+  },
+  {
+    "slug": "evgenij-mironov",
+    "wikipedia": "Миронов, Евгений Витальевич"
+  },
+  {
+    "slug": "mihail-porechenkov",
+    "wikipedia": "Пореченков, Михаил Евгеньевич"
+  },
+  {
+    "slug": "gosha-kucenko",
+    "commons": "File:Gosha Kutsenko.jpg"
+  },
+  {
+    "slug": "nonna-grishaeva",
+    "commons": "File:20121210 Grishaeva.jpg"
+  },
+  {
+    "slug": "sergej-garmash",
+    "wikipedia": "Гармаш, Сергей Леонидович"
+  },
+  {
+    "slug": "viktor-suhorukov",
+    "wikipedia": "Сухоруков, Виктор Иванович"
+  },
+  {
+    "slug": "timur-bekmambetov",
+    "wikipedia": "Бекмамбетов, Тимур Нуруахитович"
+  },
+  {
+    "slug": "fedor-bondarchuk",
+    "wikipedia": "Бондарчук, Фёдор Сергеевич"
+  },
+  {
+    "slug": "valerij-todorovskij",
+    "wikipedia": "Тодоровский, Валерий Петрович"
+  },
+  {
+    "slug": "aleksandr-panchin",
+    "wikipedia": "Панчин, Александр Юрьевич"
+  },
+  {
+    "slug": "ian-nepomnyashchij",
+    "wikipedia": "Непомнящий, Ян Александрович"
+  },
+  {
+    "slug": "anna-shcherbakova",
+    "commons": "File:2020 12 27 anna shcherbakova (cropped).jpg"
+  },
+  {
+    "slug": "evgenij-malkin",
+    "wikipedia": "Малкин, Евгений Владимирович"
+  },
+  {
+    "slug": "vladimir-pozner",
+    "wikipedia": "Познер, Владимир Владимирович"
+  },
+  {
+    "slug": "leonid-parfenov",
+    "wikipedia": "Парфёнов, Леонид Геннадьевич"
+  },
+  {
+    "slug": "valdis-pelsh",
+    "wikipedia": "Пельш, Валдис Евгеньевич"
+  },
+  {
+    "slug": "mihail-labkovskij",
+    "wikipedia": "Лабковский, Михаил Александрович"
+  },
+  {
+    "slug": "evgenij-komarovskij",
+    "wikipedia": "Комаровский, Евгений Олегович"
+  },
+  {
+    "slug": "aleksej-vodovozov",
+    "wikipedia": "Водовозов, Алексей Валерьевич"
+  },
+  {
+    "slug": "ilya-novikov",
+    "wikipedia": "Новиков, Илья Сергеевич"
+  },
+  {
+    "slug": "sergej-popov",
+    "wikipedia": "Попов, Сергей Борисович (астрофизик)"
+  },
+  {
+    "slug": "aleksandr-markov",
+    "wikipedia": "Марков, Александр Владимирович (биолог)"
+  },
+  {
+    "slug": "aleksandr-auzan",
+    "wikipedia": "Аузан, Александр Александрович"
+  },
+  {
+    "slug": "viktor-sadovnichij",
+    "wikipedia": "Садовничий, Виктор Антонович"
+  },
+  {
+    "slug": "milosh-bikovich",
+    "commons": "File:Milos Bikovic 2019 (cropped).jpg"
+  },
+  {
+    "slug": "irina-gorbacheva",
+    "commons": "File:Irina Gorbacheva 06.jpg"
+  },
+  {
+    "slug": "instasamka",
+    "wikipedia": "Инстасамка"
+  },
+  {
+    "slug": "dora",
+    "wikipedia": "Дора (певица)"
+  },
+  {
+    "slug": "alina-zagitova",
+    "commons": "File:Alina Zagitova in 2023.jpg"
+  },
+  {
+    "slug": "evgeniya-medvedeva",
+    "wikipedia": "Медведева, Евгения Армановна"
+  },
+  {
+    "slug": "adelina-sotnikova",
+    "wikipedia": "Сотникова, Аделина Дмитриевна"
+  },
+  {
+    "slug": "nikita-nagornyj",
+    "wikipedia": "Нагорный, Никита Владимирович"
+  },
+  {
+    "slug": "abdulrashid-sadulaev",
+    "commons": "File:Abdulrashid Sadulaev 2021.jpg"
+  },
+  {
+    "slug": "anton-siluanov",
+    "wikipedia": "Силуанов, Антон Германович"
+  },
+  {
+    "slug": "marat-husnullin",
+    "wikipedia": "Хуснуллин, Марат Шакирзянович"
+  },
+  {
+    "slug": "maksut-shadaev",
+    "wikipedia": "Шадаев, Максут Игоревич"
+  },
+  {
+    "slug": "dmitrij-chernyshenko",
+    "wikipedia": "Чернышенко, Дмитрий Николаевич"
+  },
+  {
+    "slug": "olga-lyubimova",
+    "wikipedia": "Любимова, Ольга Борисовна"
+  },
+  {
+    "slug": "dmitrij-kiselyov",
+    "wikipedia": "Киселёв, Дмитрий Константинович"
+  },
+  {
+    "slug": "olga-skabeeva",
+    "wikipedia": "Скабеева, Ольга Владимировна"
+  },
+  {
+    "slug": "dmitrij-guberniev",
+    "commons": "File:Дмитрий Губерниев в пресс-центреЧМ2018 07.jpg"
+  },
+  {
+    "slug": "yana-churikova",
+    "wikipedia": "Чурикова, Яна Алексеевна"
+  },
+  {
+    "slug": "dmitrij-borisov",
+    "wikipedia": "Борисов, Дмитрий Дмитриевич"
+  },
+  {
+    "slug": "aleksej-semihatov",
+    "wikipedia": "Семихатов, Алексей Михайлович"
+  },
+  {
+    "slug": "aleksandr-sokolov",
+    "wikipedia": "Соколов, Александр Борисович (научный журналист)"
+  },
+  {
+    "slug": "vladimir-arnold",
+    "wikipedia": "Арнольд, Владимир Игоревич"
+  },
+  {
+    "slug": "danila-poperechnyj",
+    "wikipedia": "Поперечный, Данила Алексеевич"
+  },
+  {
+    "slug": "ruslan-usachev",
+    "wikipedia": "Усачев, Руслан"
+  },
+  {
+    "slug": "ivangaj",
+    "wikipedia": "Ивангай"
+  },
+  {
+    "slug": "ilya-maddison",
+    "commons": "File:Ilya Maddyson.png"
+  },
+  {
+    "slug": "valerij-karpin",
+    "wikipedia": "Карпин, Валерий Георгиевич"
+  },
+  {
+    "slug": "sergej-semak",
+    "wikipedia": "Семак, Сергей Богданович"
+  },
+  {
+    "slug": "mariya-mironova",
+    "wikipedia": "Миронова, Мария Андреевна"
+  },
+  {
+    "slug": "pavel-tabakov",
+    "wikipedia": "Табаков, Павел Олегович"
+  },
+  {
+    "slug": "david-yan",
+    "wikipedia": "Ян, Давид Евгеньевич"
+  },
+  {
+    "slug": "vagit-alekperov",
+    "commons": "File:Vahid Alakbarov and German Khan, February 2010.jpeg"
+  },
+  {
+    "slug": "andrej-kostin",
+    "wikipedia": "Костин, Андрей Леонидович"
+  },
+  {
+    "slug": "mihail-fridman",
+    "wikipedia": "Фридман, Михаил Маратович"
+  },
+  {
+    "slug": "sergej-chemezov",
+    "wikipedia": "Чемезов, Сергей Викторович"
+  },
+  {
+    "slug": "aleksandr-shohin",
+    "wikipedia": "Шохин, Александр Николаевич"
+  },
+  {
+    "slug": "aleksandr-bastrykin",
+    "wikipedia": "Бастрыкин, Александр Иванович"
+  },
+  {
+    "slug": "igor-krasnov",
+    "wikipedia": "Краснов, Игорь Викторович"
+  },
+  {
+    "slug": "viktoriya-tolstoganova",
+    "commons": "File:V tolstoganova.jpg"
+  },
+  {
+    "slug": "elizaveta-boyarskaya",
+    "commons": "File:Боярская Елизавета Михайловна 2017 (cropped).jpg"
+  },
+  {
+    "slug": "anna-mihalkova",
+    "commons": "File:Anna Mikhalkova on Masterskaya 12.jpg"
+  },
+  {
+    "slug": "svetlana-hodchenkova",
+    "commons": "File:Ходченкова Светлана Викторовна 2017.jpg"
+  },
+  {
+    "slug": "aleksandr-domogarov",
+    "commons": "File:Александр Домогаров (2018-09-16).jpg"
+  },
+  {
+    "slug": "mihail-boyarskij",
+    "commons": "File:Михаил Боярский. Фото Анастасии Федоренко.jpg"
+  },
+  {
+    "slug": "aleksandr-zacepin",
+    "commons": "File:Александр Зацепин (2025-06-12).jpg"
+  },
+  {
+    "slug": "fedor-smolov",
+    "commons": "File:Fedor Smolov 2017.jpg"
+  },
+  {
+    "slug": "irina-shejk",
+    "commons": "File:Irina Shayk Lisbon.jpg"
+  },
+  {
+    "slug": "grigorij-yavlinskij",
+    "commons": "File:Yavlinsky 2023.jpg"
+  },
+  {
+    "slug": "darya-kasatkina",
+    "commons": "File:Daria Kasatkina 2025.jpg"
+  },
+  {
+    "slug": "natalya-varley",
+    "commons": "File:Natalya Varley 03.jpg"
+  },
+  {
+    "slug": "eduard-spercyan",
+    "commons": "File:Eduard Spertsyan YantsImages - Asatur Yesayants 632.jpg"
+  },
+  {
+    "slug": "aleksandr-oleshko",
+    "commons": "File:Александр Олешко — ведущий церемонии.jpg"
+  },
+  {
+    "slug": "anastasiya-nemolyaeva",
+    "commons": "File:Anastasiya Nemolyaeva (cropped).jpg"
+  },
+  {
+    "slug": "tatyana-pileckaya",
+    "commons": "File:Tatyana Piletskaya 02.jpg"
+  },
+  {
+    "slug": "denis-klyaver",
+    "commons": "File:Денис Клявер (2) (Белые ночи Санкт-Петербурга — 2021. Хит на все времена).jpg"
+  },
+  {
+    "slug": "irakli-pirchalava",
+    "commons": "File:IraklyP.JPG"
+  },
+  {
+    "slug": "artur-dmitriev",
+    "commons": "File:Artur Dmitriev.JPG"
+  },
+  {
+    "slug": "vera-alentova",
+    "commons": "File:Menshov Alentova (cropped).jpg"
+  },
+  {
+    "slug": "lyudmila-chursina",
+    "commons": "File:Ludmila Chursina, 2016-2.jpg"
+  },
+  {
+    "slug": "maksim-abrosimova",
+    "commons": "File:MakSim (2024; 2) (cropped).png"
+  },
+  {
+    "slug": "nikolaj-patrushev",
+    "commons": "File:Patrushev 2023.jpg"
+  },
+  {
+    "slug": "tatyana-moskvina",
+    "commons": "File:Moskvina.jpg"
+  },
+  {
+    "slug": "stas-mihajlov",
+    "commons": "File:Stas Mihaylov and Vladimir Putin (cropped).jpg"
+  },
+  {
+    "slug": "anatolij-vasilev",
+    "commons": "File:VasilievANATOLY.jpg"
+  },
+  {
+    "slug": "anna-peresild",
+    "commons": "File:Анна Пересильд 2024.jpg"
+  },
+  {
+    "slug": "vladimir-menshov",
+    "commons": "File:Владимир Меньшов (2019-10-17).jpg"
+  },
+  {
+    "slug": "lev-yashin",
+    "commons": "File:Lev Yashin.jpg"
+  },
+  {
+    "slug": "viktor-coj",
+    "commons": "File:Victor Tsoi 1986 cropped.jpg"
+  },
+  {
+    "slug": "faina-ranevskaya",
+    "commons": "File:Фаина Раневская в Баку.jpg"
+  },
+  {
+    "slug": "aleksandr-maslyakov",
+    "commons": "File:2011-02-03 Александр Масляков.jpg"
+  },
+  {
+    "slug": "lyudmila-gurchenko",
+    "commons": "File:Gurchenko 1980s.jpg"
+  },
+  {
+    "slug": "dmitrij-medvedev",
+    "commons": "File:Dmitry Medvedev (2026-02-06).jpg"
+  },
+  {
+    "slug": "mihail-zadornov",
+    "commons": "File:Mikhail Zadornov on stage, 2007 (cropped).jpg"
+  },
+  {
+    "slug": "oleg-yankovskij",
+    "commons": "File:Oleg Yankovsky2.jpg"
+  },
+  {
+    "slug": "yurij-shatunov",
+    "commons": "File:Shatunov (Laskoviy May).jpg"
+  },
+  {
+    "slug": "andrej-mironov",
+    "commons": "File:Андрей Миронов (cropped).jpg"
+  },
+  {
+    "slug": "vera-glagoleva",
+    "commons": "File:Vera Glagoleva at a screening of \"Two Women\" in Vienna, October 2015.jpg"
+  },
+  {
+    "slug": "aleksandr-abdulov",
+    "commons": "File:Alexander Abdulov 1988 (cropped).jpg"
+  },
+  {
+    "slug": "mihail-gorshenev",
+    "commons": "File:Король и Шут на Доброфест 2011.jpg"
+  },
+  {
+    "slug": "petr-yan",
+    "commons": "File:Vladimir Putin at award ceremonies (2026-04-22) 24(cropped).jpg"
+  },
+  {
+    "slug": "aleksandr-volkov",
+    "commons": "File:Alexander Volkov in M-1 (cropped).jpg"
+  },
+  {
+    "slug": "timur-batrutdinov",
+    "commons": "File:Batrutdinov Timur.jpg"
+  },
+  {
+    "slug": "arsenij-popov",
+    "commons": "File:Арсений Попов (Импровизаторы) на VK Fest 2025 в СПб.jpg"
+  },
+  {
+    "slug": "sergej-orlov",
+    "commons": "File:Орлов Серёга.jpg"
+  },
+  {
+    "slug": "andrej-beburishvili",
+    "commons": "File:Андрей Бебуришвили.jpg"
+  },
+  {
+    "slug": "mihail-galustyan",
+    "commons": "File:Michail Galustian at Army-2016 (2016-09-08) - 1 (cropped).jpg"
+  },
+  {
+    "slug": "aleksandr-revva",
+    "commons": "File:Артур Пирожков (Александр Ревва) (2) (Белые ночи Санкт-Петербурга — 2021. Хит на все времена).jpg"
+  },
+  {
+    "slug": "natan",
+    "commons": "File:Natan (Белые ночи Санкт-Петербурга - 2023, день 2).jpg"
+  },
+  {
+    "slug": "pharaoh",
+    "commons": "File:Pharaoh на фестивале Маятник Фуко в СПб (07.09.2019) (3) (cropped).jpg"
+  },
+  {
+    "slug": "big-russian-boss",
+    "commons": "File:Big Russian Boss на VK Fest 2018.jpg"
+  },
+  {
+    "slug": "sergej-sholohov",
+    "wikipedia": "Шолохов, Сергей Леонидович"
+  },
+  {
+    "slug": "zhanna-badoeva",
+    "wikipedia": "Бадоева, Жанна Осиповна"
+  },
+  {
+    "slug": "larisa-guzeeva",
+    "wikipedia": "Гузеева, Лариса Андреевна"
+  },
+  {
+    "slug": "mariya-shukshina",
+    "wikipedia": "Шукшина, Мария Васильевна"
+  },
+  {
+    "slug": "egor-beroev",
+    "wikipedia": "Бероев, Егор Вадимович"
+  },
+  {
+    "slug": "yulij-gusman",
+    "wikipedia": "Гусман, Юлий Соломонович"
+  },
+  {
+    "slug": "anzhelika-varum",
+    "wikipedia": "Варум, Анжелика"
+  },
+  {
+    "slug": "aleksandr-shirvindt",
+    "wikipedia": "Ширвиндт, Александр Анатольевич"
+  },
+  {
+    "slug": "anastasiya-zavorotnyuk",
+    "wikipedia": "Заворотнюк, Анастасия Юрьевна"
+  },
+  {
+    "slug": "anna-samohina",
+    "wikipedia": "Самохина, Анна Владленовна"
+  },
+  {
+    "slug": "vladislav-galkin",
+    "wikipedia": "Галкин, Владислав Борисович"
+  },
+  {
+    "slug": "tatyana-tolstaya",
+    "commons": "File:03 Tatiana Tolstaja.jpg"
+  },
+  {
+    "slug": "andrej-krasko",
+    "wikipedia": "Краско, Андрей Иванович"
+  },
+  {
+    "slug": "kseniya-alferova",
+    "wikipedia": "Алфёрова, Ксения Александровна"
+  },
+  {
+    "slug": "aleksandr-myasnikov",
+    "wikipedia": "Мясников, Александр Леонидович (врач, 1953)"
+  },
+  {
+    "slug": "lyudmila-narusova",
+    "wikipedia": "Нарусова, Людмила Борисовна"
+  },
+  {
+    "slug": "leonid-filatov",
+    "wikipedia": "Филатов, Леонид Алексеевич"
+  },
+  {
+    "slug": "edvard-radzinskij",
+    "wikipedia": "Радзинский, Эдвард Станиславович"
+  },
+  {
+    "slug": "andrej-merzlikin",
+    "wikipedia": "Мерзликин, Андрей Ильич"
+  },
+  {
+    "slug": "anna-sedokova",
+    "wikipedia": "Седокова, Анна Владимировна"
+  },
+  {
+    "slug": "nikita-panfilov",
+    "wikipedia": "Панфилов, Никита Владиславович"
+  },
+  {
+    "slug": "yuliya-baranovskaya",
+    "wikipedia": "Барановская, Юлия Геннадьевна"
+  },
+  {
+    "slug": "nastasya-samburskaya",
+    "wikipedia": "Самбурская, Настасья Аниславовна"
+  },
+  {
+    "slug": "yulianna-karaulova",
+    "wikipedia": "Караулова, Юлианна Юрьевна"
+  },
+  {
+    "slug": "donk",
+    "wikipedia": "Donk"
+  },
+  {
+    "slug": "m0nesy",
+    "wikipedia": "M0NESY"
+  },
+  {
+    "slug": "sh1ro",
+    "wikipedia": "Sh1ro"
+  },
+  {
+    "slug": "ramzes666",
+    "wikipedia": "RAMZES666"
+  },
+  {
+    "slug": "boombl4",
+    "wikipedia": "Boombl4"
+  },
+  {
+    "slug": "dyrachyo",
+    "wikipedia": "Dyrachyo"
+  },
+  {
+    "slug": "collapse",
+    "wikipedia": "Collapse (киберспортсмен)"
+  },
+  {
+    "slug": "dmitrij-zhuravlev",
+    "wikipedia": "Журавлёв, Дмитрий Вячеславович"
+  },
+  {
+    "slug": "ajza-lilluna-aj",
+    "wikipedia": "Ай, Айза-Лилуна Хамзатовна"
+  },
+  {
+    "slug": "igor-livanov",
+    "wikipedia": "Ливанов, Игорь Евгеньевич"
+  },
+  {
+    "slug": "ekaterina-shpica",
+    "wikipedia": "Шпица, Екатерина Анатольевна"
+  },
+  {
+    "slug": "mot",
+    "wikipedia": "Мот (рэпер)"
+  },
+  {
+    "slug": "big-baby-tape",
+    "wikipedia": "Big Baby Tape"
+  },
+  {
+    "slug": "icegergert",
+    "wikipedia": "Icegergert"
+  },
+  {
+    "slug": "saluki",
+    "wikipedia": "Saluki"
+  },
+  {
+    "slug": "10age",
+    "wikipedia": "10AGE"
+  },
+  {
+    "slug": "evelone",
+    "wikipedia": "Evelone (стример)"
+  },
+  {
+    "slug": "exile",
+    "wikipedia": "Exile (блогер)"
+  },
+  {
+    "slug": "ruslan-gitelman",
+    "wikipedia": "Гительман, Руслан Георгиевич"
+  },
+  {
+    "slug": "igor-vihorkov",
+    "wikipedia": "Вихорьков, Игорь Иванович"
+  },
+  {
+    "slug": "mihey",
+    "wikipedia": "Михей (певец)"
+  },
+  {
+    "slug": "1klas",
+    "wikipedia": "1.Kla$"
+  },
+  {
+    "slug": "shalva-amonashvili",
+    "wikipedia": "Амонашвили, Шалва Александрович"
+  },
+  {
+    "slug": "evgenij-yamburg",
+    "wikipedia": "Ямбург, Евгений Александрович"
+  },
+  {
+    "slug": "vladimir-karakovskij",
+    "wikipedia": "Караковский, Владимир Абрамович"
+  },
+  {
+    "slug": "aleksandr-tubelskij",
+    "wikipedia": "Тубельский, Александр Наумович"
+  },
+  {
+    "slug": "efim-rachevskij",
+    "wikipedia": "Рачевский, Ефим Лазаревич"
+  },
+  {
+    "slug": "yurij-zavelskij",
+    "wikipedia": "Завельский, Юрий Владимирович"
+  },
+  {
+    "slug": "leonid-milgram",
+    "wikipedia": "Мильграм, Леонид Исидорович"
+  },
+  {
+    "slug": "lyudmila-bosova",
+    "wikipedia": "Босова, Людмила Леонидовна"
+  },
+  {
+    "slug": "oleg-gabrielyan",
+    "wikipedia": "Габриелян, Олег Сергеевич"
+  },
+  {
+    "slug": "boris-gejdman",
+    "wikipedia": "Гейдман, Борис Петрович"
+  },
+  {
+    "slug": "leonid-zvavich",
+    "wikipedia": "Звавич, Леонид Исаакович"
+  },
+  {
+    "slug": "sofya-lysenkova",
+    "wikipedia": "Лысенкова, Софья Николаевна"
+  },
+  {
+    "slug": "kasym-zhomart-tokaev",
+    "commons": "File:Kassym-Jomart Tokayev (2020-02-01).jpg"
+  },
+  {
+    "slug": "aziza",
+    "commons": "File:Aziza1.jpg"
+  },
+  {
+    "slug": "boris-nuraliev",
+    "commons": "File:Boris Nuraliev 09.2024.jpg"
+  },
+  {
+    "slug": "dmitrij-grishin",
+    "commons": "File:Dmitry Grishin.jpeg"
+  },
+  {
+    "slug": "aleksandr-luriya",
+    "commons": "File:Alexander Luria.jpg"
+  },
+  {
+    "slug": "gavriil-ilizarov",
+    "commons": "File:G.A. Ilisarow (1991).jpg"
+  },
+  {
+    "slug": "valerij-shumakov",
+    "commons": "File:Шумаков валерий иванович 2004 апрель 01.jpg"
+  },
+  {
+    "slug": "lev-vygotskij",
+    "commons": "File:Lev-Semyonovich-Vygotsky-1896-1934.jpg"
+  },
+  {
+    "slug": "blyuma-zejgarnik",
+    "commons": "File:Bluma Zeigarnik, 1970-1980s.jpg"
+  },
+  {
+    "slug": "vladimir-behterev",
+    "commons": "File:W. bechterew.jpg"
+  },
+  {
+    "slug": "sergej-lebedev",
+    "wikipedia": "Лебедев, Сергей Алексеевич"
+  },
+  {
+    "slug": "andrej-ershov",
+    "wikipedia": "Ершов, Андрей Петрович"
+  },
+  {
+    "slug": "ilya-segalovich",
+    "wikipedia": "Сегалович, Илья Валентинович"
+  },
+  {
+    "slug": "aleksej-pazhitnov",
+    "commons": "File:Alexey Pajitnov GDC 2024 (cropped).jpg"
+  },
+  {
+    "slug": "natalya-kasperskaya",
+    "commons": "File:Nkasperskaya-front.jpg"
+  },
+  {
+    "slug": "anatolij-koni",
+    "wikipedia": "Кони, Анатолий Фёдорович"
+  },
+  {
+    "slug": "nikolaj-pirogov",
+    "wikipedia": "Пирогов, Николай Иванович"
+  },
+  {
+    "slug": "ivan-pavlov",
+    "wikipedia": "Павлов, Иван Петрович"
+  },
+  {
+    "slug": "ilya-mechnikov",
+    "wikipedia": "Мечников, Илья Ильич"
+  },
+  {
+    "slug": "fyodor-gaaz",
+    "wikipedia": "Гааз, Фёдор Петрович"
+  },
+  {
+    "slug": "mihail-speranskij",
+    "wikipedia": "Сперанский, Михаил Михайлович"
+  },
+  {
+    "slug": "vladimir-spasovich",
+    "wikipedia": "Спасович, Владимир Данилович"
+  },
+  {
+    "slug": "vladimir-demihov",
+    "wikipedia": "Демихов, Владимир Петрович"
+  },
+  {
+    "slug": "georgij-chelpanov",
+    "wikipedia": "Челпанов, Георгий Иванович"
+  },
+  {
+    "slug": "aleksandr-zaporozhec",
+    "wikipedia": "Запорожец, Александр Владимирович"
+  },
+  {
+    "slug": "lidiya-bozhovich",
+    "wikipedia": "Божович, Лидия Ильинична"
+  },
+  {
+    "slug": "yuliya-gippenrejter",
+    "wikipedia": "Гиппенрейтер, Юлия Борисовна"
+  },
+  {
+    "slug": "tatyana-chernigovskaya",
+    "wikipedia": "Черниговская, Татьяна Владимировна"
+  },
+  {
+    "slug": "bashir-rameev",
+    "commons": "File:Bashir Rameev.jpg",
+    "caption": "Архивный снимок 1980 года, зернистый: свободных фотографий Рамеева на Викискладе всего две",
+    "gravity": "east"
+  },
+  {
+    "slug": "nikolaj-brusencov",
+    "commons": "File:Пионер советской вычислительной техники Н.П.Брусенцов, 10.2009.jpg"
+  },
+  {
+    "slug": "aleksandr-chuchalin",
+    "commons": "File:Chuchalin1.jpg",
+    "zoom": 2.5,
+    "gravity": "north",
+    "caption": "Снимок с выступления: свободных портретных фотографий Чучалина на Викискладе нет"
+  },
+  {
+    "slug": "azamat-musagaliev",
+    "commons": "File:Азамат Мусагалиев.jpg"
+  },
+  {
+    "slug": "fedor-plevako",
+    "commons": "File:Plevako F N.jpg"
+  },
+  {
+    "slug": "hamzat-chimaev",
+    "commons": "File:Khamzat Chimaev 2022.png"
+  },
+  {
+    "slug": "mihail-efremov",
+    "commons": "File:Mikhail Yefremov.jpg"
+  },
+  {
+    "slug": "pavel-volya",
+    "commons": "File:Pavel Volya.jpg"
+  },
+  {
+    "slug": "umar-nurmagomedov",
+    "commons": "File:UmarNurmagomedov.png"
+  },
+  {
+    "slug": "yuliya-ahmedova",
+    "commons": "File:Юлия Ахмедова.jpg"
+  },
+  {
+    "slug": "yurij-kolokolnikov",
+    "commons": "File:Колокольников Юрий Андреевич.jpg"
   }
 ]

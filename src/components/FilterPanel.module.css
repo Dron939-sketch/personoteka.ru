@@ -74,6 +74,14 @@
   color: var(--ink-3);
 }
 
+@media (pointer: coarse) {
+  .reset {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 @media (min-width: 1024px) {
   .panel {
     position: sticky;

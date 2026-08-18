@@ -19,6 +19,15 @@
   flex: none;
 }
 
+/* Логотип — это ссылка на главную, самая частая цель после «назад». */
+@media (pointer: coarse) {
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 .desktopNav {
   flex: 1;
 }
@@ -95,6 +104,16 @@
   background: none;
   color: var(--ink-2);
   cursor: pointer;
+}
+
+/* Пальцем в 36 px не попасть: на тач-устройствах кнопка вырастает до 44×44.
+   Это три главных контрола шапки — поиск, тема и меню, — и промах по ним
+   означает случайное переключение темы вместо открытия меню. */
+@media (pointer: coarse) {
+  .iconButton {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .iconButton:hover {

@@ -13,6 +13,7 @@ import {
   View,
   renderToBuffer,
 } from '@react-pdf/renderer'
+import sharp from 'sharp'
 
 import { foreignAgentNoticeText } from './foreign-agent'
 import { formatDate } from './format'
@@ -29,6 +30,7 @@ import type { City, Person, Photo, RatingEntry, Sphere } from './types'
  */
 
 const fontDir = path.join(process.cwd(), 'src/assets/fonts')
+const mediaDir = path.join(process.cwd(), 'public/media')
 
 Font.register({ family: 'Literata', src: path.join(fontDir, 'Literata-SemiBold.ttf') })
 Font.register({ family: 'Inter', src: path.join(fontDir, 'Inter-Regular.ttf') })
@@ -80,19 +82,15 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   hero: { flexDirection: 'row', gap: 20, marginBottom: 20 },
-  heroAside: { width: 96 },
+  heroPortrait: { width: 96 },
   portrait: {
     width: 96,
     height: 120,
-    borderWidth: 1,
-    borderColor: COLORS.line,
     borderRadius: 4,
-    // Портрет обрезан в 4:5 ещё при загрузке, но кадр из другого источника
-    // мог прийти иным — cover не даёт растянуть лицо по горизонтали.
     objectFit: 'cover',
   },
-  /** Автор и лицензия под снимком — условие свободной лицензии, а не подпись для красоты. */
-  photoCredit: { fontSize: 6, lineHeight: 1.3, color: COLORS.ink3, marginTop: 4 },
+  // Подпись об авторе снимка — условие свободных лицензий, а не украшение.
+  credit: { width: 96, marginTop: 4, fontSize: 6, lineHeight: 1.3, color: COLORS.ink3 },
   monogram: {
     width: 96,
     height: 120,
@@ -162,18 +160,37 @@ function SectionTitle({ children }: { children: string }) {
   )
 }
 
+/** Ширина портрета в документе — 96 пунктов; берём вчетверо больше на печать. */
+const PDF_PORTRAIT_WIDTH = 384
+const PDF_PORTRAIT_HEIGHT = 480
+
 /**
- * Файл портрета на диске — или `undefined`, если снимка нет.
+ * Портрет для досье — файл с диска, а не адрес.
  *
- * Досье собирается статически на сервере, поэтому картинка берётся из `public`
- * напрямую: тянуть её по сети с собственного же сайта во время сборки незачем.
- * Отсутствие файла не должно валить генерацию — досье остаётся с монограммой,
- * как страница персоны без портрета.
+ * В `photo.src` адрес содержит версию отдельным сегментом пути
+ * (`/media/v1a2b3c4d/ivanov.jpg`) — так браузер кэширует картинку навсегда,
+ * а при замене снимка получает новую. На диске файл лежит без версии, поэтому
+ * берётся только имя. Читаем содержимое сами: рендерер иначе полез бы
+ * за файлом по сети, а досье собирается на этапе сборки.
+ *
+ * Снимок ужимается до 384×480. Каталожный файл — 1200×1500, и в документе он
+ * занял бы полтора десятка мегабайт на каждую сотню персон, тогда как в макете
+ * портрет размером 96×120 пунктов: 384 точки по ширине дают около 290 dpi,
+ * то есть запас даже для печати. Без этого досье весило бы 200 КБ вместо сорока.
  */
-function portraitFile(photo: Photo | undefined): string | undefined {
-  if (!photo?.src.startsWith('/')) return undefined
-  const file = path.join(process.cwd(), 'public', photo.src)
-  return fs.existsSync(file) ? file : undefined
+async function loadPortrait(person: Person): Promise<{ data: Buffer; photo: Photo } | null> {
+  const photo = person.photos?.find((p) => p.portrait) ?? person.photos?.[0]
+  if (!photo) return null
+
+  const file = path.join(mediaDir, path.basename(photo.src))
+  if (!file.startsWith(mediaDir) || !fs.existsSync(file)) return null
+
+  const data = await sharp(file)
+    .resize(PDF_PORTRAIT_WIDTH, PDF_PORTRAIT_HEIGHT, { fit: 'cover' })
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toBuffer()
+
+  return { data, photo }
 }
 
 export interface DossierInput {
@@ -187,8 +204,6 @@ export interface DossierInput {
 export async function renderDossier(input: DossierInput): Promise<Buffer> {
   const { person, spheres, city, birthPlace, rating } = input
   const url = `${SITE.url}/${person.slug}/`
-  // Фирменный бланк — признак платного тарифа (§6.3).
-  const branded = person.plan !== 'free'
 
   const initials = person.display_name
     .split(/\s+/)
@@ -196,15 +211,17 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
     .map((w) => w.charAt(0).toUpperCase())
     .join('')
 
-  const portrait = person.photos?.find((p) => p.portrait) ?? person.photos?.[0]
-  const portraitPath = portraitFile(portrait)
-  const credit = [portrait?.author, portrait?.license].filter(Boolean).join(' · ')
+  // Без портрета — монограмма из инициалов, как на карточке каталога.
+  const portrait = await loadPortrait(person)
+  const credit = portrait
+    ? [portrait.photo.author, portrait.photo.license].filter(Boolean).join(' · ')
+    : ''
   const foreignAgentNotice = foreignAgentNoticeText(person)
 
   const meta: [string, string][] = []
   if (person.birth_date && person.birth_date_public !== false) {
     meta.push([
-      'Родился',
+      'Дата рождения',
       formatDate(person.birth_date, { withYear: person.birth_year_public !== false }) +
         (birthPlace ? `, ${birthPlace.name}` : ''),
     ])
@@ -231,26 +248,25 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
       creator={SITE.name}
     >
       <Page size="A4" style={styles.page}>
-        {branded && (
-          <View style={styles.header}>
-            <View style={styles.headerRule} />
-            <Text style={styles.headerText}>{SITE.name.toUpperCase()}</Text>
-          </View>
-        )}
+        {/* Фирменный бланк — на всех досье: бесплатного тарифа больше нет (§6.3). */}
+        <View style={styles.header}>
+          <View style={styles.headerRule} />
+          <Text style={styles.headerText}>{SITE.name.toUpperCase()}</Text>
+        </View>
 
         {foreignAgentNotice && <Text style={styles.foreignAgent}>{foreignAgentNotice}</Text>}
 
         <View style={styles.hero}>
-          <View style={styles.heroAside}>
-            {portraitPath ? (
-              <Image style={styles.portrait} src={portraitPath} />
-            ) : (
-              <View style={styles.monogram}>
-                <Text style={styles.initials}>{initials}</Text>
-              </View>
-            )}
-            {portraitPath && credit && <Text style={styles.photoCredit}>{credit}</Text>}
-          </View>
+          {portrait ? (
+            <View style={styles.heroPortrait}>
+              <Image style={styles.portrait} src={{ data: portrait.data, format: 'jpg' }} />
+              {credit && <Text style={styles.credit}>Фото: {credit}</Text>}
+            </View>
+          ) : (
+            <View style={styles.monogram}>
+              <Text style={styles.initials}>{initials}</Text>
+            </View>
+          )}
           <View style={styles.heroBody}>
             <Text style={styles.name}>{person.display_name}</Text>
             <Text style={styles.tagline}>{person.tagline}</Text>

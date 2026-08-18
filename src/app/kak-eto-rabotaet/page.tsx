@@ -9,18 +9,24 @@ import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
 
-export const metadata: Metadata = {
-  title: 'Как это работает',
-  description:
-    'Разборы механизмов, которыми на человека действуют деньги, влияние, отношения и собственные эмоции. Без новостного повода — материалы, которые не устаревают.',
-  alternates: {
-    canonical: `${SITE.url}/kak-eto-rabotaet/`,
-    types: { 'application/rss+xml': `${SITE.url}/feed.xml` },
-  },
+/**
+ * Раздел объясняющих статей (§5.2). Отдельно от новостей и интервью: у этих
+ * материалов нет повода и нет собеседника — они отвечают на вопрос, который
+ * человек задаёт поиску сам, — см. `content/KONTENT-STRATEGIYA.md`.
+ */
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Как это работает',
+    description:
+      'Разборы того, как устроены публичность, репутация и цифровой след: что видно о человеке в интернете, кто это решает и что с этим можно сделать.',
+    alternates: { canonical: `${SITE.url}/kak-eto-rabotaet/` },
+    // Пустой раздел в индексе не нужен — та же логика, что в /novosti/.
+    robots: getArticles('guide').length ? undefined : { index: false, follow: true },
+  }
 }
 
-export default function HowItWorksPage() {
-  const articles = getArticles('how')
+export default function GuidesPage() {
+  const articles = getArticles('guide')
 
   return (
     <div className="container">
@@ -28,17 +34,16 @@ export default function HowItWorksPage() {
 
       <PageHeader
         title="Как это работает"
-        lead="Разборы устройства: деньги, влияние, отношения, решения. Не новости и не советы — механика того, что происходит с человеком каждый день."
-        meta={<a href="/feed.xml">RSS-лента</a>}
+        lead="Разборы механизмов, которые определяют, что о человеке знают: поисковая выдача, цифровой след, редакционные правила, деньги медиа."
       />
 
       {articles.length === 0 ? (
         <EmptyState
-          title="Разборов пока нет"
+          title="Раздел готовится"
           hint={
             <>
-              Первые материалы появятся вместе с редакционной лентой. Пока актуальное — в{' '}
-              <Link href="/katalog/">каталоге</Link>.
+              Пока актуальное — в <Link href="/katalog/">каталоге</Link> и{' '}
+              <Link href="/rejting/">рейтинге</Link>.
             </>
           }
         />
@@ -49,6 +54,23 @@ export default function HowItWorksPage() {
           ))}
         </div>
       )}
+
+      {/*
+        Инструмент стоит после разборов, а не перед ними: сначала читатель
+        понимает, из чего состоит цифровой след, и только потом ему есть смысл
+        проверять свой. Обратный порядок превращает проверку в тест ради теста.
+      */}
+      <aside className={styles.tool}>
+        <h2>Проверить на себе</h2>
+        <p>
+          Пять вопросов о том, что происходит с вашим именем, — и разбор, на каком звене рвётся
+          путь от события до прочитанной биографии. Без регистрации: ответы остаются в адресе
+          страницы.
+        </p>
+        <Link className={styles.toolLink} href="/proverka-cifrovogo-sleda/">
+          Проверка цифрового следа
+        </Link>
+      </aside>
     </div>
   )
 }

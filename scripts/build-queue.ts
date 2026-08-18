@@ -156,8 +156,14 @@ for (const line of text.split('\n')) {
     continue
   }
 
-  const { full, display } = parseName(trimmed)
-  let slug = slugify(display)
+  // «Ярослав Юрьевич Дронов = shaman»: герой известен под псевдонимом, и адрес
+  // страницы не выводится из ФИО. Без такой пометки очередь считала бы персону
+  // ненаписанной вечно — слаг из имени не совпадает с именем файла.
+  const alias = /^(.*?)\s*=\s*([a-z0-9-]+)$/.exec(trimmed)
+  const rawName = alias ? alias[1].trim() : trimmed
+
+  const { full, display } = parseName(rawName)
+  let slug = alias ? alias[2] : slugify(display)
 
   if (RESERVED_SLUGS.has(slug)) {
     problems.push(`слаг «${slug}» (${display}) зарезервирован — нужен суффикс сферы`)

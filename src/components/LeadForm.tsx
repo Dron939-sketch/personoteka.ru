@@ -27,6 +27,9 @@ export function LeadForm({
 }) {
   const [state, setState] = useState<State>('idle')
   const [error, setError] = useState<string | null>(null)
+  // Время первой отрисовки. `useState` с функцией, а не `Date.now()` в теле:
+  // иначе значение пересчитывалось бы на каждом рендере и порог не работал бы.
+  const [openedAt] = useState(() => Date.now())
 
   const isRemoval = kind === 'removal'
 
@@ -70,7 +73,7 @@ export function LeadForm({
   }
 
   return (
-    <form className={styles.form} onSubmit={onSubmit} noValidate={false}>
+    <form className={`${styles.form} ym-hide-content`} onSubmit={onSubmit} noValidate={false}>
       {title && <h2 className={styles.title}>{title}</h2>}
 
       <label className={styles.field}>
@@ -151,8 +154,31 @@ export function LeadForm({
       </fieldset>
 
       {/* Капча (Yandex SmartCaptcha, §9.4) подключается здесь: виджет отдаёт токен
-          в скрытое поле, серверный обработчик проверяет его до записи заявки. */}
+          в скрытое поле, серверный обработчик проверяет его до записи заявки.
+          Пока ключ не задан, проверка пропускается — вместо неё работают два
+          поля ниже. */}
       <input type="hidden" name="captcha_token" value="" />
+
+      {/*
+        Ловушка для автозаполнения. Поле спрятано стилями, убрано из порядка
+        обхода клавиатурой и из дерева доступности: человек его не видит и
+        попасть в него не может ни мышью, ни табом, ни экранным диктором.
+        Робот, идущий по DOM, заполняет всё подряд — непустое значение здесь
+        и означает робота. `autoComplete="off"` нужен, чтобы браузер не
+        подставил в него сохранённый адрес и не подвёл живого посетителя.
+      */}
+      <input
+        className={styles.trap}
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        defaultValue=""
+      />
+
+      {/* Момент отрисовки формы: обработчик отсеет отправку быстрее трёх секунд. */}
+      <input type="hidden" name="form_opened_at" value={openedAt} />
 
       {error && (
         <p className={styles.error} role="alert">

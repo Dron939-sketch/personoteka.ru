@@ -8,6 +8,15 @@
   flex: none;
 }
 
+/* На тач-устройствах — 44×44, как остальные кнопки шапки (§5.6). */
+@media (pointer: coarse) {
+  .button,
+  .placeholder {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .button {
   padding: 0;
   border: 1px solid transparent;

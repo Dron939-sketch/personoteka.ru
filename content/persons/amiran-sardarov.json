@@ -74,15 +74,13 @@
   "links": [],
   "photos": [
     {
-      "src": "/media/amiran-sardarov.jpg",
+      "src": "/media/v63f21cee/amiran-sardarov.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
       "alt": "Портрет: Амиран Сардаров, видеоблогер, автор канала «Дневник Хача»",
-      "caption": "На съёмке футбольного матча, июль 2017 года",
-      "author": "Елена Рыбакова",
-      "license": "CC BY-SA 3.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:K7o8220.jpg"
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/amiran-sardarov/"
     }
   ],
   "sources": [
@@ -102,7 +100,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-07T20:11:03.311282Z",
+  "updated_at": "2026-08-18T13:43:06.826157Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

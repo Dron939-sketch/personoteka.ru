@@ -1,0 +1,116 @@
+.block {
+  margin-bottom: var(--sp-12);
+}
+
+.agencies {
+  display: grid;
+  gap: var(--sp-2);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.agency {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  font-size: var(--small);
+}
+
+.agencyName {
+  font-weight: 500;
+}
+
+.paused {
+  margin-left: var(--sp-2);
+  padding: 1px var(--sp-2);
+  border: 1px solid color-mix(in srgb, var(--warning) 45%, transparent);
+  border-radius: 999px;
+  font-size: var(--caption);
+  font-weight: 400;
+  color: var(--warning);
+}
+
+.agencyCount {
+  color: var(--ink-3);
+}
+
+.list {
+  display: grid;
+  gap: var(--sp-4);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface-alt);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.name {
+  margin: 0;
+  font-weight: 500;
+}
+
+.tagline {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: var(--caption);
+  color: var(--ink-3);
+}
+
+.live {
+  padding: 2px var(--sp-2);
+  border: 1px solid color-mix(in srgb, var(--success) 40%, transparent);
+  border-radius: 999px;
+  font-size: var(--caption);
+  color: var(--success);
+  white-space: nowrap;
+}
+
+.hiddenMark {
+  padding: 2px var(--sp-2);
+  border: 1px solid color-mix(in srgb, var(--warning) 45%, transparent);
+  border-radius: 999px;
+  font-size: var(--caption);
+  color: var(--warning);
+  white-space: nowrap;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3) var(--sp-6);
+  margin: 0;
+  font-size: var(--small);
+}
+
+.meta dt {
+  font-size: var(--caption);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.meta dd {
+  margin: 2px 0 0;
+}

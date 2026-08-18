@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
 import { PersonCard } from '@/components/PersonCard'
+import { PromoBanner } from '@/components/PromoBanner'
 import { getCities, getPersonsBySphere, getSphere, getSpheres } from '@/lib/content'
 import { personsCount } from '@/lib/format'
 import { itemListJsonLd } from '@/lib/jsonld'
@@ -18,7 +19,13 @@ import styles from './page.module.css'
  * вынесенный в статическую SEO-страницу (§8.3).
  */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
+
+/** Рубрики, где промо-полоса Лектория уместна по теме. */
+const PROMO_SPHERES = new Set(['obrazovanie', 'psihologiya', 'nauka'])
 
 export function generateStaticParams() {
   return getSpheres().map((sphere) => ({ sfera: sphere.slug }))
@@ -89,6 +96,16 @@ export default async function SpherePage({ params }: { params: Promise<{ sfera: 
             <PersonCard key={person.slug} person={person} size="m" priority={i < 4} />
           ))}
         </div>
+      )}
+
+      {/* Полоса показывается там, где проекты по теме, а какой именно из двух —
+          решает близость рубрики: на «Психологии» это почти всегда Фреди,
+          на «Образовании» и «Науке» — Лекторий (веса в content/banners.json). */}
+      {PROMO_SPHERES.has(sphere.slug) && (
+        <PromoBanner
+          context={{ slug: `sfera:${sphere.slug}`, spheres: [sphere.slug] }}
+          placement="sfera"
+        />
       )}
 
       {sphere.seo_text && (

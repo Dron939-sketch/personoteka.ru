@@ -5,6 +5,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
 import { PersonCard } from '@/components/PersonCard'
+import { PromoBanner } from '@/components/PromoBanner'
 import { RatingTable } from '@/components/RatingTable'
 import { SearchBar } from '@/components/SearchBar'
 import { SphereGrid } from '@/components/SphereGrid'
@@ -14,6 +15,7 @@ import {
   getNewestPersons,
   getPerson,
   getPersons,
+  getShowcasePersons,
   getRating,
   getSpheres,
 } from '@/lib/content'
@@ -22,17 +24,6 @@ import { siteJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
-
-/**
- * Канонический адрес главной. Остальные страницы задают его сами, а главная
- * своих метаданных не имела и оставалась единственной страницей без canonical.
- * Для неё это чувствительнее прочих: на главную ведут ссылки с параметрами
- * (метки кампаний, реферальные хвосты), и без канонического адреса каждый
- * такой хвост поисковик вправе счесть отдельной страницей.
- */
-export const metadata: Metadata = {
-  alternates: { canonical: '/' },
-}
 
 /**
  * Главная — §8.2. Порядок блоков задан ТЗ и менять его нельзя без пересогласования:
@@ -44,6 +35,12 @@ export const metadata: Metadata = {
 // поэтому страница пересобирается раз в час, а не замораживается на билде.
 export const revalidate = 3600
 
+/** Канонический адрес главной. Без него в индекс попадают `/?utm_…` и `/?from=…`
+ *  как отдельные документы: у главной больше всего входящих ссылок с метками. */
+export const metadata: Metadata = {
+  alternates: { canonical: `${SITE.url}/` },
+}
+
 export default function HomePage() {
   const persons = getPersons()
   const rating = getRating()
@@ -52,10 +49,21 @@ export default function HomePage() {
   // «Персона недели» — верх рейтинга: витрина строится на собственных данных (§2.1.6).
   // Пока рейтинг пуст (аналитика не набрана), показываем самую свежую биографию —
   // блок не должен исчезать с главной из-за отсутствия статистики.
+  //
+  // Но свежая — обязательно с портретом. Это самый крупный блок страницы, и
+  // монограмма во всю его высоту — первое, что видит посетитель. Портрет есть
+  // не у всех: в нишах вроде ММА и телеюмора свободных снимков почти нет,
+  // и без этого условия главную открывали две буквы на сером поле.
   const featuredEntry = rating.entries[0]
-  const featured = featuredEntry ? getPerson(featuredEntry.slug) : getNewestPersons(1)[0]
+  const featured = featuredEntry
+    ? getPerson(featuredEntry.slug)
+    : (getNewestPersons(40).find((p) => p.photos?.length) ?? getNewestPersons(1)[0])
 
-  const newest = getNewestPersons(8).filter((p) => p.slug !== featured?.slug)
+  // Витрина — ручной порядок из content/home-vitrina.txt. Пока рейтинг пуст,
+  // любая автосортировка вырождается в алфавит, а главной нужны чередование
+  // сфер и узнаваемые лица подряд. Если файла нет, показываем свежие, как раньше.
+  const showcase = getShowcasePersons(8)
+  const newest = showcase.length > 0 ? showcase : getNewestPersons(8).filter((p) => p.slug !== featured?.slug)
 
   const topRows = rating.entries.slice(0, 10).flatMap((entry) => {
     const person = getPerson(entry.slug)
@@ -107,7 +115,7 @@ export default function HomePage() {
       {newest.length > 0 && (
         <section className="container section">
           <div className={styles.sectionHead}>
-            <h2 className="ruled">Новые в «Персонотеке»</h2>
+            <h2 className="ruled">{showcase.length > 0 ? 'Выбор редакции' : 'Новые в «Персонотеке»'}</h2>
             <Link href="/katalog/?sort=novye" className={styles.more}>
               Все новые
             </Link>
@@ -144,6 +152,11 @@ export default function HomePage() {
         <h2 className="ruled">Сферы деятельности</h2>
         <SphereGrid spheres={spheres} persons={persons} />
       </section>
+
+      {/* 5а. Собственные проекты издателя — не реклама, см. PromoBanner. */}
+      <div className="container deferred">
+        <PromoBanner context={{ slug: 'home' }} placement="home" />
+      </div>
 
       {/* 6. Родились сегодня */}
       <section className="container section deferred">

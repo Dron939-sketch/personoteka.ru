@@ -72,7 +72,17 @@
   ],
   "achievements": [],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/vfa9626f9/dmitrij-kuplinov.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Дмитрий Куплинов, летсплеер, автор канала Kuplinov Play",
+      "license": "архив редакции",
+      "source_url": "https://lichnosty.ru/bio/dmitriy-kuplinov/"
+    }
+  ],
   "sources": [
     {
       "title": "Русская Википедия: статья о персоне",
@@ -88,7 +98,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T10:00:00+03:00",
+  "updated_at": "2026-08-04T23:42:37.114Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

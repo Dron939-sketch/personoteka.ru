@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 
 import { ArticlePage } from '@/components/ArticlePage'
-import { articleMetadata, articleParams, findArticle } from '@/lib/article-route'
+import { getArticle, getArticles } from '@/lib/content'
+import { truncateForMeta } from '@/lib/format'
+import { SITE } from '@/lib/site'
 
-/** Материал рубрики. Вёрстка общая — см. `ArticlePage`. */
-
-export const dynamic = 'force-static'
+export const dynamicParams = false
 
 export function generateStaticParams() {
-  return articleParams('interview')
+  return getArticles('interview').map((a) => ({ slug: a.slug }))
 }
 
 export async function generateMetadata({
@@ -17,11 +16,25 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  return articleMetadata('interview', (await params).slug)
+  const { slug } = await params
+  const article = getArticle(slug)
+  if (!article) return {}
+
+  return {
+    title: article.title,
+    description: truncateForMeta(article.lead),
+    alternates: { canonical: `${SITE.url}/interv-yu/${article.slug}/` },
+    openGraph: {
+      type: 'article',
+      title: article.title,
+      description: truncateForMeta(article.lead),
+      publishedTime: article.published_at,
+      modifiedTime: article.updated_at,
+    },
+  }
 }
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
-  const article = findArticle('interview', (await params).slug)
-  if (!article) notFound()
-  return <ArticlePage article={article} />
+export default async function ArticleRoute({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  return <ArticlePage slug={slug} kind="interview" />
 }

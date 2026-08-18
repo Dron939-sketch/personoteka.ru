@@ -15,7 +15,10 @@ import { SITE } from '@/lib/site'
  * текущий срез и говорит об этом прямо.
  */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 /** Итоги ведутся с года запуска портала. */
 const FIRST_YEAR = 2026

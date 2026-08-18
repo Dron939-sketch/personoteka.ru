@@ -27,6 +27,51 @@ import sharp from 'sharp'
 /** Графит из палитры — подложка для маскируемой иконки (§7.2, --ink). */
 const BACKGROUND = { r: 0x14, g: 0x18, b: 0x1e, alpha: 1 }
 
+/**
+ * Размеры внутри favicon.ico. Шестнадцать — вкладка браузера и выдача
+ * поисковика, тридцать два — панель закладок и экран с высокой плотностью,
+ * сорок восемь — ярлык на рабочем столе Windows.
+ */
+const ICO_SIZES = [16, 32, 48]
+
+/**
+ * Сборка ICO из готовых PNG.
+ *
+ * Формат старый и простой: шапка на шесть байт, потом по шестнадцать байт
+ * описания на каждый размер, потом сами картинки подряд. Внутрь можно класть
+ * либо BMP, либо PNG — второе понимают все браузеры начиная с Vista и все
+ * поисковые роботы, а весит оно втрое меньше.
+ *
+ * Отдельная тонкость: размер стороны записан одним байтом, поэтому 256
+ * обозначается нулём. Нам это не нужно — больше 48 в ICO класть незачем, —
+ * но правило соблюдаем, чтобы файл не оказался битым, если размеры поменяют.
+ */
+function buildIco(images: Buffer[], sizes: number[]): Buffer {
+  const HEADER = 6
+  const ENTRY = 16
+  const header = Buffer.alloc(HEADER)
+  header.writeUInt16LE(0, 0) // зарезервировано
+  header.writeUInt16LE(1, 2) // тип: 1 — иконка
+  header.writeUInt16LE(images.length, 4)
+
+  const entries = Buffer.alloc(ENTRY * images.length)
+  let offset = HEADER + ENTRY * images.length
+  images.forEach((png, i) => {
+    const at = i * ENTRY
+    entries.writeUInt8(sizes[i] >= 256 ? 0 : sizes[i], at)
+    entries.writeUInt8(sizes[i] >= 256 ? 0 : sizes[i], at + 1)
+    entries.writeUInt8(0, at + 2) // палитра не используется
+    entries.writeUInt8(0, at + 3) // зарезервировано
+    entries.writeUInt16LE(1, at + 4) // цветовых плоскостей
+    entries.writeUInt16LE(32, at + 6) // бит на пиксель
+    entries.writeUInt32LE(png.length, at + 8)
+    entries.writeUInt32LE(offset, at + 12)
+    offset += png.length
+  })
+
+  return Buffer.concat([header, entries, ...images])
+}
+
 const TARGETS = [
   { file: 'src/app/icon.png', size: 32 },
   { file: 'src/app/apple-icon.png', size: 180 },
@@ -81,6 +126,28 @@ async function main() {
     .png({ compressionLevel: 9 })
     .toFile(maskable)
   console.log('  public/icon-maskable.png — 512×512, безопасная зона 80 %')
+
+  // Классический favicon.ico. Next сам его не делает, а он нужен: поисковые
+  // роботы — в том числе яндексовский, который рисует иконку в выдаче, —
+  // запрашивают `/favicon.ico` напрямую, не читая <link rel="icon"> в разметке.
+  // Пока файла не было, сайт в выдаче стоял с пустым серым значком.
+  const favicon = path.join(root, 'src/app/favicon.ico')
+  await sharp(srcPath).metadata()
+  // ensureAlpha и palette: false — не украшательство. sharp по умолчанию
+  // выбрасывает пустой альфа-канал и переводит мелкие картинки в палитру,
+  // а сборщик Next разбирает ICO строго и отказывается от всего, что внутри
+  // не восьмибитная RGBA: «The PNG is not in RGBA format».
+  const pngs = await Promise.all(
+    ICO_SIZES.map((size) =>
+      sharp(srcPath)
+        .resize(size, size, { fit: 'cover', position: 'centre' })
+        .ensureAlpha()
+        .png({ compressionLevel: 9, palette: false })
+        .toBuffer(),
+    ),
+  )
+  fs.writeFileSync(favicon, buildIco(pngs, ICO_SIZES))
+  console.log(`  src/app/favicon.ico — ${ICO_SIZES.join(', ')} px в одном файле`)
 
   console.log('\nГотово. Ссылки в <head> Next проставит сам.')
 }

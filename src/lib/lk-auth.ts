@@ -1,13 +1,18 @@
 /**
  * Доступ в личный кабинет.
  *
- * Кабинет показывает редакционную очередь, а в ней есть имена частных лиц —
- * тех, кто ещё не дал согласия на публикацию. Отдавать это без проверки нельзя,
- * поэтому раздел закрыт паролем.
+ * Ролей две. **Редакция** входит по общему паролю `LK_PASSWORD` и видит очередь,
+ * качество карточек, обращения и материалы агентств. **Агентство** входит по
+ * своему логину и паролю (`src/lib/agencies.ts`) и видит только своё: лимит
+ * подписки, свои страницы, свои просмотры и форму публикации.
  *
- * Это временное решение на один общий пароль: полноценные роли из §8.5
- * (владелец профиля, агентство, редактор) появятся вместе с базой пользователей
- * на этапе 6. Пока задача скромнее — не дать посторонним увидеть очередь.
+ * Роль зашита в подписанный токен, а не в отдельную куку: иначе её можно было бы
+ * подменить, оставив подпись сессии в силе.
+ *
+ * Общий пароль редакции — по-прежнему временное решение: персональные учётки
+ * редакторов появятся вместе с полной базой пользователей (§8.5). Задача пока
+ * скромнее — развести два кабинета и не дать посторонним увидеть очередь, где
+ * есть имена людей, ещё не давших согласия на публикацию.
  *
  * Если `LK_PASSWORD` не задан, кабинет выключен целиком: неподготовленный
  * деплой не должен открывать данные по умолчанию.
@@ -56,15 +61,40 @@ export function passwordMatches(input: string): boolean {
   return safeEqual(input, expected)
 }
 
-export async function issueToken(now = Date.now()): Promise<string> {
-  const expires = String(now + TTL_MS)
-  return `${expires}.${await sign(expires)}`
+export type LkRole = 'editor' | 'agency'
+
+export interface LkSession {
+  role: LkRole
+  /** Слаг агентства — только для роли `agency`. */
+  agency?: string
 }
 
+/**
+ * Токен: `срок.роль.агентство.подпись`. Подписывается всё вместе, поэтому роль
+ * нельзя поднять до редакционной, не сломав подпись. Пустое поле агентства
+ * помечается прочерком: пустая часть между точками читалась бы неоднозначно.
+ */
+export async function issueToken(session: LkSession, now = Date.now()): Promise<string> {
+  const payload = `${now + TTL_MS}.${session.role}.${session.agency ?? '-'}`
+  return `${payload}.${await sign(payload)}`
+}
+
+export async function readToken(
+  token: string | undefined,
+  now = Date.now(),
+): Promise<LkSession | null> {
+  if (!token) return null
+  const parts = token.split('.')
+  if (parts.length !== 4) return null
+  const [expires, role, agency, mac] = parts
+  if (role !== 'editor' && role !== 'agency') return null
+  if (!Number(expires) || Number(expires) < now) return null
+  if (!safeEqual(mac, await sign(`${expires}.${role}.${agency}`))) return null
+  if (role === 'agency' && agency === '-') return null
+  return { role, agency: agency === '-' ? undefined : agency }
+}
+
+/** Есть ли вообще действующая сессия — для мест, где роль не важна. */
 export async function verifyToken(token: string | undefined, now = Date.now()): Promise<boolean> {
-  if (!token) return false
-  const [expires, mac] = token.split('.')
-  if (!expires || !mac) return false
-  if (Number(expires) < now) return false
-  return safeEqual(mac, await sign(expires))
+  return (await readToken(token, now)) !== null
 }

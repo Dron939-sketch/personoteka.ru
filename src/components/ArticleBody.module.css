@@ -1,0 +1,113 @@
+.section {
+  margin-top: var(--sp-8);
+}
+
+.section h2 {
+  margin: 0 0 var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  scroll-margin-top: var(--sp-8);
+}
+
+.section h3 {
+  margin: var(--sp-6) 0 var(--sp-3);
+  font-size: 1.125rem;
+}
+
+.section p {
+  margin: 0 0 var(--sp-4);
+  max-width: 68ch;
+}
+
+/*
+ * Врезка. Воздух вокруг неё больше межабзацного отступа — иначе она читается
+ * как очередной абзац покрупнее, а не как остановка в тексте.
+ */
+.pullquote {
+  margin: var(--sp-8) 0 var(--sp-8);
+  padding: 0 0 0 var(--sp-6);
+  max-width: 56ch;
+  border-left: 3px solid var(--accent-500);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.pullquote strong {
+  font-weight: inherit;
+}
+
+@media (max-width: 640px) {
+  .pullquote {
+    margin: var(--sp-6) 0;
+    font-size: 1.15rem;
+    padding-left: var(--sp-4);
+  }
+}
+
+.figure {
+  margin: var(--sp-6) 0;
+  padding: var(--sp-6) var(--sp-6) var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.figure svg,
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure img {
+  border-radius: calc(var(--radius) / 2);
+}
+
+.figcaption {
+  margin: var(--sp-4) 0 0;
+  max-width: 68ch;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.credit {
+  display: block;
+  margin-top: var(--sp-2);
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.credit a {
+  color: inherit;
+}
+
+.mentions {
+  margin-top: var(--sp-12);
+  padding: var(--sp-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.mentions h2 {
+  margin: 0 0 var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.mentions ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.tagline {
+  color: var(--ink-3);
+}

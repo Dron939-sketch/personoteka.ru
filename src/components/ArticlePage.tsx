@@ -1,109 +1,81 @@
-import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
+import { AdDisclosure } from '@/components/AdSlot'
+import { ArticleBody, ArticleMentions } from '@/components/ArticleBody'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
-import { PersonCard } from '@/components/PersonCard'
-import { RichText } from '@/components/RichText'
-import { ARTICLE_KINDS } from '@/lib/articles'
-import { getEditor, getPerson } from '@/lib/content'
+import { PageHeader } from '@/components/PageHeader'
+import { PromoBanner } from '@/components/PromoBanner'
+import { SourceList } from '@/components/SourceList'
+import { ARTICLE_ROOT, articleHref } from '@/lib/article-href'
+import { getArticle, getEditor } from '@/lib/content'
 import { formatDate } from '@/lib/format'
 import { articleJsonLd } from '@/lib/jsonld'
 import { SITE } from '@/lib/site'
 import type { Article } from '@/lib/types'
 
-import styles from './ArticlePage.module.css'
+export const SECTION_LABEL: Record<Article['kind'], string> = {
+  interview: 'Интервью',
+  news: 'Новости',
+  guide: 'Как это работает',
+}
 
 /**
- * Страница редакционного материала.
- *
- * Одна на все рубрики: новость, интервью и разбор отличаются адресом и
- * хлебными крошками, но не вёрсткой. Три копии этой страницы разошлись бы
- * при первой же правке.
+ * Страница редакционного материала. Одна на все три вида: различаются только
+ * корень адреса и подпись раздела, всё остальное — общая верстка и разметка.
  */
-export function ArticlePage({ article }: { article: Article }) {
-  const kind = ARTICLE_KINDS[article.kind]
-  const url = `${SITE.url}/${kind.segment}/${article.slug}/`
+export function ArticlePage({ slug, kind }: { slug: string; kind: Article['kind'] }) {
+  const article = getArticle(slug)
+  // Материал другого вида по этому адресу — не наша страница: у него свой
+  // канонический адрес, и отдавать его копию в чужом разделе значит плодить
+  // дубли (§4.1).
+  if (!article || article.kind !== kind) notFound()
+
+  const url = `${SITE.url}${articleHref(article)}`
   const author = getEditor(article.author)
-  const mentioned = article.mentions.map((slug) => getPerson(slug)).filter((p) => p !== undefined)
+  const authorName = author?.name ?? 'Редакция «Персонотеки»'
 
   return (
     <div className="container">
+      <JsonLd data={articleJsonLd(article, url, authorName)} />
+
       <Breadcrumbs
-        items={[{ label: kind.title, href: `/${kind.segment}/` }, { label: article.title }]}
+        items={[
+          { href: ARTICLE_ROOT[kind], label: SECTION_LABEL[kind] },
+          { label: article.title },
+        ]}
       />
 
-      <article className={styles.article}>
-        <header className={styles.header}>
-          <p className={styles.kind}>{kind.one}</p>
-          <h1 className={styles.title}>{article.title}</h1>
-          <p className={styles.lead}>{article.lead}</p>
-          <p className={styles.meta}>
-            {author ? (
-              <>
-                <Link href="/redakciya/">{author.name}</Link>
-                {' · '}
-              </>
-            ) : null}
+      <PageHeader
+        title={article.title}
+        lead={article.lead}
+        meta={
+          <>
             <time dateTime={article.published_at}>{formatDate(article.published_at)}</time>
-          </p>
-        </header>
+            {' · '}
+            {authorName}
+          </>
+        }
+      />
 
-        <div className={`prose ${styles.body}`}>
-          {article.body.map((block) => (
-            <section key={block.heading}>
-              <h2>{block.heading}</h2>
-              {block.paragraphs.map((p, i) => (
-                <p key={i}>
-                  <RichText text={p} />
-                </p>
-              ))}
-              {block.subsections?.map((sub) => (
-                <div key={sub.heading}>
-                  <h3>{sub.heading}</h3>
-                  {sub.paragraphs.map((p, i) => (
-                    <p key={i}>
-                      <RichText text={p} />
-                    </p>
-                  ))}
-                </div>
-              ))}
-            </section>
-          ))}
-        </div>
+      {article.sponsored && <AdDisclosure erid={article.erid} />}
 
-        {article.sources?.length ? (
-          <section className={styles.sources}>
-            <h2>Источники</h2>
-            <ul>
-              {article.sources.map((source) => (
-                <li key={source.title}>
-                  {source.url ? (
-                    <a href={source.url} rel="noopener" target="_blank">
-                      {source.title}
-                    </a>
-                  ) : (
-                    source.title
-                  )}
-                  {source.note ? <span className={styles.note}> — {source.note}</span> : null}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
+      <ArticleBody body={article.body} />
+      {article.sources?.length ? (
+        <>
+          <h2>Источники</h2>
+          <SourceList sources={article.sources} />
+        </>
+      ) : null}
 
-        {mentioned.length ? (
-          <section className={styles.mentions}>
-            <h2>Персоны в материале</h2>
-            <div className={styles.mentionGrid}>
-              {mentioned.map((person) => (
-                <PersonCard key={person.slug} person={person} />
-              ))}
-            </div>
-          </section>
-        ) : null}
-      </article>
+      <ArticleMentions slugs={article.mentions} />
 
-      <JsonLd data={articleJsonLd(article, url, author)} />
+      {/* Промо собственных проектов — на статьях, а не на страницах персон:
+          там страница оплачена героем (§2.2), и это отдельное решение владельца. */}
+      <PromoBanner context={{ slug: `article:${article.slug}` }} placement="article" />
+
+      <CTAStrip />
     </div>
   )
 }

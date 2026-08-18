@@ -1,9 +1,9 @@
 [
   {
-    "slug": "vladivostok",
-    "name": "Владивосток",
-    "name_prepositional": "Владивостоке",
-    "region": "Приморский край"
+    "slug": "chelyabinsk",
+    "name": "Челябинск",
+    "name_prepositional": "Челябинске",
+    "region": "Челябинская область"
   },
   {
     "slug": "ekaterinburg",
@@ -90,9 +90,15 @@
     "region": "Башкортостан"
   },
   {
-    "slug": "chelyabinsk",
-    "name": "Челябинск",
-    "name_prepositional": "Челябинске",
-    "region": "Челябинская область"
+    "slug": "vladivostok",
+    "name": "Владивосток",
+    "name_prepositional": "Владивостоке",
+    "region": "Приморский край"
+  },
+  {
+    "slug": "voronezh",
+    "name": "Воронеж",
+    "name_prepositional": "Воронеже",
+    "region": "Воронежская область"
   }
 ]

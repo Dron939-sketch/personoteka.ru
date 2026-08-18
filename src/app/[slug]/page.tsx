@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { AdDisclosure, AdSlot } from '@/components/AdSlot'
+import { AdDisclosure } from '@/components/AdSlot'
+import { ViewBeacon } from '@/components/ViewBeacon'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { CTAStrip } from '@/components/CTAStrip'
 import { FactCards } from '@/components/FactCards'
@@ -20,7 +21,9 @@ import { Timeline } from '@/components/Timeline'
 import { Toc, type TocItem } from '@/components/Toc'
 import { VerifiedBadge } from '@/components/VerifiedBadge'
 import { VideoEmbed } from '@/components/VideoEmbed'
+import { articleHref } from '@/lib/article-href'
 import {
+  getArticlesForPerson,
   getCity,
   getEditor,
   getPerson,
@@ -29,8 +32,16 @@ import {
   getRelatedPersons,
   getSpheres,
 } from '@/lib/content'
-import { calcAge, formatDate, lowerFirst, personTitle, truncateForMeta } from '@/lib/format'
+import {
+  calcAge,
+  calcLifespan,
+  formatDate,
+  lowerFirst,
+  plural,
+  truncateForMeta,
+} from '@/lib/format'
 import { personJsonLd } from '@/lib/jsonld'
+import { citationLine } from '@/lib/person-markdown'
 import { SITE } from '@/lib/site'
 import { slugify } from '@/lib/translit'
 import type { Person } from '@/lib/types'
@@ -44,10 +55,42 @@ import styles from './page.module.css'
  * а реестр зарезервированных слов (§4.1) не даёт создать персону с таким слагом.
  */
 
-export const dynamicParams = false
+// Неизвестный параметр рендерится по запросу и упирается в notFound() ниже — это
+// честная 404. С `false` Next вместо неё пишет в лог NoFallbackError на каждый
+// битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
+export const dynamicParams = true
 
 export function generateStaticParams() {
   return getPersons().map((person) => ({ slug: person.slug }))
+}
+
+/**
+ * Заголовок страницы персоны.
+ *
+ * Прежний шаблон — «Имя — весь tagline: биография, карьера, достижения» — давал
+ * в среднем 114 знаков при максимуме 155. Выдача обрезает заголовок примерно на
+ * шестидесятом, то есть у всех страниц каталога до читателя доходила половина, а
+ * обрыв приходился на середину профессии. «Карьера, достижения» при этом ничего
+ * не добавляли: по таким словам никто не ищет, а место они занимали.
+ *
+ * Теперь берётся род занятий — одно-два слова из выверенного поля `occupations`,
+ * а не первое попавшееся начало tagline. Полная формулировка никуда не делась:
+ * она стоит в H1, в лиде и в описании страницы.
+ *
+ * Бюджет — 60 знаков вместе с « — Персонотека», которое подставляет макет.
+ * Если имя длинное и род занятий не помещается, он отбрасывается целиком:
+ * обрезанное на полуслове слово хуже, чем его отсутствие.
+ */
+const TITLE_BUDGET = 60
+const TITLE_SUFFIX = ` — ${SITE.name}`.length
+
+export function pageTitle(person: Person): string {
+  const bare = `${person.display_name}: биография`
+  const occupation = person.occupations?.[0]
+  if (!occupation) return bare
+
+  const full = `${person.display_name} — ${lowerFirst(occupation)}: биография`
+  return full.length + TITLE_SUFFIX <= TITLE_BUDGET ? full : bare
 }
 
 export async function generateMetadata({
@@ -63,10 +106,15 @@ export async function generateMetadata({
   const description = truncateForMeta(person.lead)
 
   return {
-    // §10.1: «Иван Иванов — врач-кардиолог: биография, карьера, достижения»
-    title: personTitle(person.display_name, person.tagline, ` — ${SITE.name}`),
+    title: pageTitle(person),
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      // Markdown-версия той же страницы (§10.4). Ассистент, разобравший HTML,
+      // находит по этой ссылке текст без разметки — и вместе с ним условие
+      // атрибуции, которое в нём написано прямым текстом.
+      types: { 'text/markdown': `${url}llms.txt` },
+    },
     robots: person.noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: 'profile',
@@ -97,8 +145,10 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
   const hasPublications =
     (person.publications?.length ?? 0) + (person.media_mentions?.length ?? 0) > 0
 
+  // Для умершего человека считается не возраст «на сегодня», а прожитые годы:
+  // иначе метаданные утверждали бы, что человеку сейчас столько-то лет.
   const age = person.birth_date && person.birth_date_public !== false
-    ? calcAge(person.birth_date)
+    ? (person.death_date ? calcLifespan(person.birth_date, person.death_date) : calcAge(person.birth_date))
     : null
 
   return (
@@ -145,7 +195,9 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
               <MetaList
                 items={[
                   {
-                    label: 'Родился',
+                    // Нейтральная формулировка вместо «Родился»: пола в модели нет,
+                    // а «Родился» на биографии женщины — брак, заметный с первого взгляда.
+                    label: 'Дата рождения',
                     value: person.birth_date && person.birth_date_public !== false && (
                       <>
                         <time dateTime={person.birth_date}>
@@ -153,8 +205,19 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                             withYear: person.birth_year_public !== false,
                           })}
                         </time>
-                        {age !== null && person.birth_year_public !== false ? ` · ${age} лет` : ''}
+                        {age !== null && person.birth_year_public !== false && !person.death_date
+                          ? ` · ${age} лет`
+                          : ''}
                         {birthPlace ? `, ${birthPlace.name}` : ''}
+                      </>
+                    ),
+                  },
+                  {
+                    label: 'Дата смерти',
+                    value: person.death_date && (
+                      <>
+                        <time dateTime={person.death_date}>{formatDate(person.death_date)}</time>
+                        {age !== null ? ` · ${age} ${plural(age, 'год', 'года', 'лет')} жизни` : ''}
                       </>
                     ),
                   },
@@ -230,7 +293,25 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                 </section>
               ))}
 
-              <AdSlot plan={person.plan} />
+              {/* ---------- Как ссылаться (§10.4) ----------
+                  Готовая строка нужна двоим. Читателю — чтобы сослаться
+                  правильно, не выдумывая формат. ИИ-ассистенту — чтобы он
+                  привёл адрес страницы, а не пересказал биографию без
+                  источника: разобранная страница даёт ему и требование
+                  атрибуции, и уже собранную ссылку. */}
+              <aside className={styles.cite} aria-labelledby="kak-ssylatsya">
+                <p id="kak-ssylatsya">
+                  <strong>Как ссылаться на этот материал</strong>
+                </p>
+                <p className={styles.citeLine}>{citationLine(person)}</p>
+                <p>
+                  Материал можно цитировать и пересказывать, в том числе в ответах
+                  ИИ-ассистентов, при указании названия «{SITE.name}» и ссылки на эту
+                  страницу. <Link href="/ispolzovanie-ii/">Условия использования</Link>
+                  {' · '}
+                  <a href={`/${person.slug}/llms.txt`}>Версия в Markdown</a>
+                </p>
+              </aside>
 
               {/* ---------- Подпись редакции (§3.2, §10.3) ---------- */}
               <footer className={styles.colophon}>
@@ -246,6 +327,16 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                   {' · Опубликовано '}
                   <time dateTime={person.published_at}>{formatDate(person.published_at)}</time>
                 </p>
+                {/* Происхождение материала. Агентская страница написана
+                    представителем героя, а не редакцией, и читатель должен
+                    видеть это рядом с подписью, а не догадываться. */}
+                {person.agency && (
+                  <p className={styles.colophonOrigin}>
+                    Материал подготовлен агентством «{person.agency.name}» по подписке и
+                    опубликован без предварительной проверки редакцией.{' '}
+                    <Link href="/redpolitika/">Как мы проверяем такие страницы</Link>
+                  </p>
+                )}
                 <p className={styles.colophonLinks}>
                   <Link href={`/udalenie-dannyh/?page=/${person.slug}/`}>Сообщить об ошибке</Link>
                   {' · '}
@@ -258,6 +349,8 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           </div>
         </article>
       </div>
+
+      <ViewBeacon slug={person.slug} />
 
       {/* ---------- Похожие персоны ---------- */}
       {related.length > 0 && (
@@ -280,10 +373,35 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
         </section>
       )}
 
+      <RelatedArticles slug={person.slug} />
+
       <div className="container section">
         <CTAStrip />
       </div>
     </>
+  )
+}
+
+/**
+ * Материалы, в которых упомянута персона (§5.2). Обратная сторона ссылки из
+ * статьи в каталог: страница с одним именем получает связь с темой, по которой
+ * её иначе никто не найдёт.
+ */
+function RelatedArticles({ slug }: { slug: string }) {
+  const articles = getArticlesForPerson(slug)
+  if (!articles.length) return null
+
+  return (
+    <section className="container section">
+      <h2>Материалы о герое</h2>
+      <ul>
+        {articles.map((article) => (
+          <li key={article.slug}>
+            <Link href={articleHref(article)}>{article.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 
@@ -371,7 +489,10 @@ function buildSections(person: Person): Section[] {
   }
 
   // Портрет уже показан в герое — в галерею идут остальные снимки (§8.1).
-  const galleryPhotos = person.photos.filter((photo) => !photo.portrait).slice(0, 12)
+  // Поле необязательное на практике: у персоны без снимков его может не быть
+  // вовсе, и остальные обращения к `photos` в проекте это учитывают. Здесь
+  // защиты не было, и один такой герой ронял сборку всего каталога.
+  const galleryPhotos = (person.photos ?? []).filter((photo) => !photo.portrait).slice(0, 12)
   if (galleryPhotos.length || person.video?.length) {
     sections.push({
       id: 'galereya',

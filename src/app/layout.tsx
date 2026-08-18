@@ -3,15 +3,16 @@ import type { Metadata, Viewport } from 'next'
 import { CookieBanner } from '@/components/CookieBanner'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { Metrika } from '@/components/Metrika'
+import { MetrikaScript } from '@/components/MetrikaScript'
 import { ThemeScript } from '@/components/ThemeScript'
-import { lowerFirst } from '@/lib/format'
-import { SITE } from '@/lib/site'
+import { SITE, YANDEX_VERIFICATION } from '@/lib/site'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${lowerFirst(SITE.tagline)}`,
+    default: `${SITE.name} — ${SITE.tagline.toLowerCase()}`,
     template: `%s — ${SITE.name}`,
   },
   description:
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { types: { 'application/rss+xml': `${SITE.url}/feed.xml` } },
+  // Коды подтверждения прав в Яндекс.Вебмастере и Google Search Console.
+  // Яндексовский код зашит в `site.ts` — он не секрет и виден в исходном коде
+  // страницы, зато переживает перенос хостинга. Гугловского пока нет: до
+  // регистрации ресурса тег просто не выводится, и это нормально.
+  verification: {
+    yandex: YANDEX_VERIFICATION || undefined,
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+  },
 }
 
 export const viewport: Viewport = {
@@ -38,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" suppressHydrationWarning>
       <body>
         <ThemeScript />
+        <MetrikaScript />
         <a className="skip-link" href="#content">
           Перейти к содержанию
         </a>
@@ -45,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="content">{children}</main>
         <Footer />
         <CookieBanner />
+        <Metrika />
       </body>
     </html>
   )

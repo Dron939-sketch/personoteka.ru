@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 
 import { ArticlePage } from '@/components/ArticlePage'
-import { articleMetadata, articleParams, findArticle } from '@/lib/article-route'
+import { getArticle, getArticles } from '@/lib/content'
+import { truncateForMeta } from '@/lib/format'
+import { SITE } from '@/lib/site'
 
-/** Разбор из рубрики «Как это работает». Вёрстка общая — см. `ArticlePage`. */
-
-export const dynamic = 'force-static'
+export const dynamicParams = false
 
 export function generateStaticParams() {
-  return articleParams('how')
+  return getArticles('guide').map((a) => ({ slug: a.slug }))
 }
 
 export async function generateMetadata({
@@ -17,11 +16,36 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  return articleMetadata('how', (await params).slug)
+  const { slug } = await params
+  const article = getArticle(slug)
+  if (!article) return {}
+
+  return {
+    title: article.title,
+    description: truncateForMeta(article.lead),
+    alternates: { canonical: `${SITE.url}/kak-eto-rabotaet/${article.slug}/` },
+    openGraph: {
+      type: 'article',
+      title: article.title,
+      description: truncateForMeta(article.lead),
+      publishedTime: article.published_at,
+      modifiedTime: article.updated_at,
+      // Явный блок `openGraph` перекрывает картинку, унаследованную от корня,
+      // поэтому её приходится называть здесь: без этой строки все разборы
+      // расходились по мессенджерам без превью.
+      images: [
+        {
+          url: `/kak-eto-rabotaet/${article.slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: { card: 'summary_large_image' },
+  }
 }
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
-  const article = findArticle('how', (await params).slug)
-  if (!article) notFound()
-  return <ArticlePage article={article} />
+export default async function GuideArticle({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  return <ArticlePage slug={slug} kind="guide" />
 }

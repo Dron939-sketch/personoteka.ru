@@ -51,6 +51,16 @@
   font-size: var(--small);
 }
 
+/* Ссылка «смотреть все» рядом с заголовком раздела — самостоятельное
+   действие, а не часть текста. */
+@media (pointer: coarse) {
+  .more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

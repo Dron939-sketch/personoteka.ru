@@ -29,6 +29,15 @@
   color: var(--ink-2);
 }
 
+/* Ссылка-кнопка: на тач-устройствах доводим до 44 px, как настоящие кнопки. */
+@media (pointer: coarse) {
+  .action {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 .action {
   flex: none;
   display: inline-flex;
