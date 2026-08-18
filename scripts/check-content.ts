@@ -142,8 +142,15 @@ for (const { file, data: person } of persons) {
   // без записи о проверке неизвестно, нужна маркировка или нет.
   if (!person.foreign_agent) {
     warnings.push(`${where}: нет отметки о сверке с реестром иностранных агентов`)
-  } else if (person.foreign_agent.listed && !person.foreign_agent.registry_url) {
-    errors.push(`${where}: пометка об иностранном агенте без ссылки на запись реестра`)
+  } else if (person.foreign_agent.listed) {
+    if (!person.foreign_agent.registry_url) {
+      errors.push(`${where}: пометка об иностранном агенте без ссылки на запись реестра`)
+    }
+    // Дата включения — часть записи реестра. Без неё нельзя проверить, что сверяли
+    // именно этого человека и что запись не была снята: реестр меняется.
+    if (!person.foreign_agent.listed_at) {
+      errors.push(`${where}: пометка об иностранном агенте без даты включения в реестр`)
+    }
   }
 
   const bodyLength = person.body.reduce(

@@ -107,9 +107,10 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T23:42:40.488Z",
+  "updated_at": "2026-08-18T13:43:06.826157Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false
-  }
+  },
+  "birth_date": "1985-07-06"
 }

@@ -120,19 +120,21 @@
     },
     {
       "title": "Реестр иностранных агентов Министерства юстиции России",
-      "url": "https://minjust.gov.ru/ru/activity/directions/998/",
-      "note": "Основание для обязательной маркировки материала"
+      "url": "https://minjust.gov.ru/ru/pages/reestr-inostryannykh-agentov/",
+      "note": "Основание для обязательной маркировки; включён в реестр 15 апреля 2022 года"
     }
   ],
   "verified": false,
   "plan": "editorial",
-  "status": "review",
+  "status": "published",
   "editor": "a-mejster",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-04T23:42:28.744Z",
+  "updated_at": "2026-08-18T13:43:06.826157Z",
   "foreign_agent": {
-    "checked_at": "2026-08-04",
+    "checked_at": "2026-08-18",
     "listed": true,
-    "registry_url": "https://minjust.gov.ru/ru/activity/directions/998/"
+    "registry_name": "Дудь Юрий Александрович",
+    "listed_at": "2022-04-15",
+    "registry_url": "https://minjust.gov.ru/ru/pages/reestr-inostryannykh-agentov/"
   }
 }

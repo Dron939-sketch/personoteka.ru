@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 
+import { lowerFirst } from '@/lib/format'
 import { SITE } from '@/lib/site'
 
 /**
@@ -11,7 +12,7 @@ import { SITE } from '@/lib/site'
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE.name} — ${SITE.tagline.toLowerCase()}`,
+    name: `${SITE.name} — ${lowerFirst(SITE.tagline)}`,
     short_name: SITE.name,
     description: SITE.promise,
     start_url: '/',

@@ -15,6 +15,7 @@ import {
 } from '@react-pdf/renderer'
 import sharp from 'sharp'
 
+import { foreignAgentNoticeText } from './foreign-agent'
 import { formatDate } from './format'
 import { SITE } from './site'
 import type { City, Person, Photo, RatingEntry, Sphere } from './types'
@@ -64,6 +65,22 @@ const styles = StyleSheet.create({
   },
   headerRule: { width: 28, height: 2, backgroundColor: COLORS.accent, marginRight: 8 },
   headerText: { fontSize: 8, letterSpacing: 1.6, color: COLORS.ink3 },
+  /**
+   * Пометка об иностранном агенте: перед основным содержанием, заметно выделена,
+   * не мельче основного текста. Досье уходит третьим лицам отдельным файлом —
+   * пометка обязана уехать вместе с ним, а не остаться на странице сайта.
+   */
+  foreignAgent: {
+    fontSize: 10,
+    lineHeight: 1.35,
+    color: COLORS.ink,
+    backgroundColor: '#F5EFE0',
+    borderWidth: 1,
+    borderColor: COLORS.accent,
+    borderRadius: 3,
+    padding: 8,
+    marginBottom: 18,
+  },
   hero: { flexDirection: 'row', gap: 20, marginBottom: 20 },
   heroPortrait: { width: 96 },
   portrait: {
@@ -109,7 +126,10 @@ const styles = StyleSheet.create({
   bullet: { width: 10, color: COLORS.accent },
   factText: { flex: 1, fontSize: 9.5, color: COLORS.ink2 },
   timelineRow: { flexDirection: 'row', marginBottom: 7 },
-  timelineYear: { width: 42, fontSize: 9, color: COLORS.ink3 },
+  // Ширина под самую длинную датировку: год — не всегда четыре цифры, в хронологии
+  // встречаются «середина 2010-х» и «2008, 2009, 2013». При width: 42 такая запись
+  // переносилась и вплотную упиралась в заголовок события.
+  timelineYear: { width: 74, paddingRight: 8, fontSize: 9, color: COLORS.ink3 },
   timelineBody: { flex: 1 },
   timelineTitle: { fontSize: 9.5, color: COLORS.ink },
   timelineText: { fontSize: 9, color: COLORS.ink3 },
@@ -196,6 +216,7 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
   const credit = portrait
     ? [portrait.photo.author, portrait.photo.license].filter(Boolean).join(' · ')
     : ''
+  const foreignAgentNotice = foreignAgentNoticeText(person)
 
   const meta: [string, string][] = []
   if (person.birth_date && person.birth_date_public !== false) {
@@ -232,6 +253,8 @@ export async function renderDossier(input: DossierInput): Promise<Buffer> {
           <View style={styles.headerRule} />
           <Text style={styles.headerText}>{SITE.name.toUpperCase()}</Text>
         </View>
+
+        {foreignAgentNotice && <Text style={styles.foreignAgent}>{foreignAgentNotice}</Text>}
 
         <View style={styles.hero}>
           {portrait ? (

@@ -7,6 +7,7 @@ import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
 import { PageHeader } from '@/components/PageHeader'
 import { PromoBanner } from '@/components/PromoBanner'
+import { SourceList } from '@/components/SourceList'
 import { ARTICLE_ROOT, articleHref } from '@/lib/article-href'
 import { getArticle, getEditor } from '@/lib/content'
 import { formatDate } from '@/lib/format'
@@ -61,6 +62,13 @@ export function ArticlePage({ slug, kind }: { slug: string; kind: Article['kind'
       {article.sponsored && <AdDisclosure erid={article.erid} />}
 
       <ArticleBody body={article.body} />
+      {article.sources?.length ? (
+        <>
+          <h2>Источники</h2>
+          <SourceList sources={article.sources} />
+        </>
+      ) : null}
+
       <ArticleMentions slugs={article.mentions} />
 
       {/* Промо собственных проектов — на статьях, а не на страницах персон:

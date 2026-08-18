@@ -109,7 +109,9 @@
   "foreign_agent": {
     "checked_at": "2026-08-08",
     "listed": true,
-    "registry_url": "https://minjust.gov.ru/ru/pages/reestr-inostryannykh-agentov/"
+    "registry_url": "https://minjust.gov.ru/ru/pages/reestr-inostryannykh-agentov/",
+    "listed_at": "2022-09-02",
+    "registry_name": "Макаревич Андрей Вадимович"
   },
   "photos": [
     {
@@ -123,5 +125,5 @@
       "source_url": "https://commons.wikimedia.org/wiki/File:Andrey_Makarevich_Hockenheim_-_1.jpg"
     }
   ],
-  "updated_at": "2026-08-08T12:55:17.827Z"
+  "updated_at": "2026-08-18T13:45:34.866075Z"
 }

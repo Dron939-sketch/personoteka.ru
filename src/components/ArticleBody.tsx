@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { getPerson } from '@/lib/content'
+import { SITE } from '@/lib/site'
 import type { Article, SectionFigure } from '@/lib/types'
 
 import styles from './ArticleBody.module.css'
@@ -100,7 +101,18 @@ function Figure({ figure }: { figure: SectionFigure }) {
  *
  * Внутренние адреса (`/…`) идут через `Link`, внешние — обычной ссылкой
  * с `nofollow`: портал не торгует ссылочным весом (см. `SourceList`).
+ * Исключение — свои же площадки из `SITE.ownDomains`: ссылка на собственный
+ * первоисточник ничего не продаёт, и закрывать её от поисковика значит
+ * прятать авторство.
  */
+/** Свои площадки — без `nofollow`, чужие — с ним. */
+function externalRel(href: string): string {
+  const own = SITE.ownDomains.some(
+    (domain) => href.includes(`//${domain}`) || href.includes(`//www.${domain}`),
+  )
+  return own ? 'noopener' : 'nofollow noopener'
+}
+
 const MARKUP = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*/g
 
 export function withLinks(text: string): React.ReactNode {
@@ -121,7 +133,7 @@ export function withLinks(text: string): React.ReactNode {
             {label}
           </Link>
         ) : (
-          <a key={start} href={href} rel="nofollow noopener" target="_blank">
+          <a key={start} href={href} rel={externalRel(href)} target="_blank">
             {label}
           </a>
         ),

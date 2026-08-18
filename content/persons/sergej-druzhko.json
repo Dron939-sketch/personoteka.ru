@@ -108,9 +108,10 @@
   "status": "published",
   "editor": "i-shmid",
   "published_at": "2026-08-04T10:00:00+03:00",
-  "updated_at": "2026-08-06T23:45:00.000Z",
+  "updated_at": "2026-08-18T13:43:06.826157Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false
-  }
+  },
+  "birth_date": "1968-11-03"
 }
