@@ -74,7 +74,17 @@
     "Ювелирное направление ведёт с 2013 года."
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/vc0ddc894/anastasiya-ester.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Анастасия Эстэр, психотерапевт, писатель, основатель ювелирного дома LA ESSTER",
+      "caption": "Анастасия Эстэр",
+      "license": "предоставлено героем публикации"
+    }
+  ],
   "sources": [
     {
       "title": "ЛитРес: книги Анастасии Эстэр",
@@ -94,7 +104,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-19T00:00:00Z",
-  "updated_at": "2026-08-19T00:00:00Z",
+  "updated_at": "2026-08-19T22:05:54.038Z",
   "foreign_agent": {
     "checked_at": "2026-08-19",
     "listed": false
