@@ -5,10 +5,12 @@ import { notFound } from 'next/navigation'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { PageHeader } from '@/components/PageHeader'
+import { Pagination } from '@/components/Pagination'
 import { PersonCard } from '@/components/PersonCard'
 import { getCity, getPersons, getSphere, getSpheres } from '@/lib/content'
 import { personsCount } from '@/lib/format'
 import { itemListJsonLd } from '@/lib/jsonld'
+import { paginate } from '@/lib/pagination'
 import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
@@ -56,10 +58,12 @@ export async function generateMetadata({
   }
 }
 
-export default async function SphereCityPage({
+export async function SphereCityView({
   params,
+  page = 1,
 }: {
   params: Promise<{ sfera: string; gorod: string }>
+  page?: number
 }) {
   const { sfera, gorod } = await params
   const sphere = getSphere(sfera)
@@ -71,10 +75,14 @@ export default async function SphereCityPage({
   )
   if (persons.length === 0) notFound()
 
+  // Тот же срез, что в каталоге: пара «сфера + город» тоже вырастает.
+  const paged = paginate(persons, page)
+  if (page < 1 || page > paged.pages) notFound()
+
   return (
     <div className="container">
       <JsonLd
-        data={itemListJsonLd(persons, `${sphere.name} в ${city.name_prepositional}`)}
+        data={itemListJsonLd(paged.items, `${sphere.name} в ${city.name_prepositional}`)}
       />
 
       <Breadcrumbs
@@ -88,14 +96,21 @@ export default async function SphereCityPage({
       <PageHeader
         title={`${sphere.name} в ${city.name_prepositional}`}
         lead={`Биографии специалистов сферы «${sphere.name}», работающих в ${city.name_prepositional}.`}
-        meta={personsCount(persons.length)}
+        meta={personsCount(paged.total)}
       />
 
       <div className={styles.grid}>
-        {persons.map((person, i) => (
+        {paged.items.map((person, i) => (
           <PersonCard key={person.slug} person={person} size="m" priority={i < 4} />
         ))}
       </div>
+
+      <Pagination
+        base={`/sfera/${sphere.slug}/${city.slug}/`}
+        page={paged.page}
+        pages={paged.pages}
+        total={paged.total}
+      />
 
       <p className={styles.links}>
         <Link href={`/sfera/${sphere.slug}/`}>Вся сфера «{sphere.name}»</Link>
@@ -104,4 +119,9 @@ export default async function SphereCityPage({
       </p>
     </div>
   )
+}
+
+/** Первая страница раздела; остальные — на `stranica/N/`, тем же видом. */
+export default function SphereCityPage({ params }: { params: Promise<{ sfera: string; gorod: string }> }) {
+  return <SphereCityView params={params} page={1} />
 }

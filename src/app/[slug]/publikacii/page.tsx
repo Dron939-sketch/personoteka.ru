@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { Breadcrumbs } from '@/components/Breadcrumbs'
-import { EmptyState, PageHeader } from '@/components/PageHeader'
+import { PageHeader } from '@/components/PageHeader'
 import { PublicationList } from '@/components/PublicationList'
 import { getPerson, getPersons } from '@/lib/content'
 import { lowerFirst } from '@/lib/format'
@@ -49,6 +49,13 @@ export default async function PublicationsPage({
 
   const own = person.publications ?? []
   const mentions = person.media_mentions ?? []
+  // Без единого материала страницы нет — ровно то условие, по которому её
+  // собирает `generateStaticParams` и по которому на неё ставится ссылка
+  // с биографии. Раньше здесь рисовалась заглушка «Публикаций пока нет», и
+  // маршрут отдавал 200: на каждую персону приходилась пустая страница,
+  // открытая для индексации. Поисковики считают такое малополезным контентом
+  // и понижают оценку всего раздела.
+  if (own.length === 0 && mentions.length === 0) notFound()
 
   return (
     <div className="container">
@@ -64,27 +71,20 @@ export default async function PublicationsPage({
         }
       />
 
-      {own.length === 0 && mentions.length === 0 ? (
-        <EmptyState
-          title="Публикаций пока нет"
-          hint="Раздел заполняется редакцией по мере появления материалов."
-        />
-      ) : (
-        <div style={{ display: 'grid', gap: 'var(--sp-12)', paddingBottom: 'var(--sp-12)' }}>
-          {own.length > 0 && (
-            <section>
-              <h2 className="ruled">Собственные публикации</h2>
-              <PublicationList items={own} />
-            </section>
-          )}
-          {mentions.length > 0 && (
-            <section>
-              <h2 className="ruled">Упоминания в СМИ</h2>
-              <PublicationList items={mentions} />
-            </section>
-          )}
-        </div>
-      )}
+      <div style={{ display: 'grid', gap: 'var(--sp-12)', paddingBottom: 'var(--sp-12)' }}>
+        {own.length > 0 && (
+          <section>
+            <h2 className="ruled">Собственные публикации</h2>
+            <PublicationList items={own} />
+          </section>
+        )}
+        {mentions.length > 0 && (
+          <section>
+            <h2 className="ruled">Упоминания в СМИ</h2>
+            <PublicationList items={mentions} />
+          </section>
+        )}
+      </div>
     </div>
   )
 }

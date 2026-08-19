@@ -5,11 +5,13 @@ import { notFound } from 'next/navigation'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { EmptyState, PageHeader } from '@/components/PageHeader'
+import { Pagination } from '@/components/Pagination'
 import { PersonCard } from '@/components/PersonCard'
 import { PromoBanner } from '@/components/PromoBanner'
 import { getCities, getPersonsBySphere, getSphere, getSpheres } from '@/lib/content'
 import { personsCount } from '@/lib/format'
 import { itemListJsonLd } from '@/lib/jsonld'
+import { paginate } from '@/lib/pagination'
 import { SITE } from '@/lib/site'
 
 import styles from './page.module.css'
@@ -47,12 +49,26 @@ export async function generateMetadata({
   }
 }
 
-export default async function SpherePage({ params }: { params: Promise<{ sfera: string }> }) {
+export async function SphereView({
+  params,
+  page = 1,
+}: {
+  params: Promise<{ sfera: string }>
+  page?: number
+}) {
   const { sfera } = await params
   const sphere = getSphere(sfera)
   if (!sphere) notFound()
 
   const persons = getPersonsBySphere(sphere.slug)
+
+  // Список режется на страницы: цельный вывод давал до 1,6 МБ разметки
+
+  // на один адрес. Номер вне диапазона — 404, а не пустая страница.
+
+  const paged = paginate(persons, page)
+
+  if (page < 1 || page > paged.pages) notFound()
 
   // Города, где в этой сфере есть персоны, — второй уровень фильтра
   // и одновременно набор статических страниц `/sfera/<sfera>/<gorod>/`.
@@ -64,14 +80,14 @@ export default async function SpherePage({ params }: { params: Promise<{ sfera: 
 
   return (
     <div className="container">
-      <JsonLd data={itemListJsonLd(persons, `Персоны в сфере «${sphere.name}»`)} />
+      <JsonLd data={itemListJsonLd(paged.items, `Персоны в сфере «${sphere.name}»`)} />
 
       <Breadcrumbs items={[{ href: '/katalog/', label: 'Каталог' }, { label: sphere.name }]} />
 
       <PageHeader
         title={`${sphere.name}: биографии`}
         lead={sphere.description}
-        meta={personsCount(persons.length)}
+        meta={personsCount(paged.total)}
       />
 
       {cities.length > 0 && (
@@ -92,7 +108,7 @@ export default async function SpherePage({ params }: { params: Promise<{ sfera: 
         />
       ) : (
         <div className={styles.grid}>
-          {persons.map((person, i) => (
+          {paged.items.map((person, i) => (
             <PersonCard key={person.slug} person={person} size="m" priority={i < 4} />
           ))}
         </div>
@@ -114,6 +130,18 @@ export default async function SpherePage({ params }: { params: Promise<{ sfera: 
           <p className="prose">{sphere.seo_text}</p>
         </section>
       )}
+
+    <Pagination
+      base={`/sfera/${sphere.slug}/`}
+      page={paged.page}
+      pages={paged.pages}
+      total={paged.total}
+    />
     </div>
   )
+}
+
+/** Первая страница раздела; остальные — на `stranica/N/`, тем же видом. */
+export default function SpherePage({ params }: { params: Promise<{ sfera: string }> }) {
+  return <SphereView params={params} page={1} />
 }

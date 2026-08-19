@@ -2,10 +2,14 @@ import {
   RU_ALPHABET,
   getArticles,
   getPersons,
+  getPersonsByCity,
+  getPersonsByLetter,
+  getPersonsBySphere,
   getPopulatedCities,
   getSpheres,
   personLetter,
 } from '@/lib/content'
+import { pageParams } from '@/lib/pagination'
 import { SITE } from '@/lib/site'
 import { XML_HEADERS, urlset, type SitemapUrl } from '@/lib/sitemap'
 import { translit } from '@/lib/translit'
@@ -81,6 +85,27 @@ export function GET() {
 
   for (const city of getPopulatedCities()) {
     urls.push({ loc: `${SITE.url}/gorod/${city.slug}/`, changefreq: 'weekly', priority: 0.7 })
+  }
+
+  // Вторые и дальше страницы списков. Без них в карте виден только первый
+  // экран каждого раздела: хвост каталога робот нашёл бы лишь по ссылкам
+  // пагинации, то есть на несколько переходов глубже и много позже.
+  const paged = (base: string, count: number, priority: number) => {
+    for (const { page } of pageParams(count)) {
+      urls.push({ loc: `${SITE.url}${base}stranica/${page}/`, changefreq: 'weekly', priority })
+    }
+  }
+
+  paged('/katalog/', persons.length, 0.6)
+  for (const letter of RU_ALPHABET) {
+    if (!usedLetters.has(letter)) continue
+    paged(`/katalog/${translit(letter)}/`, getPersonsByLetter(letter).length, 0.4)
+  }
+  for (const sphere of getSpheres()) {
+    paged(`/sfera/${sphere.slug}/`, getPersonsBySphere(sphere.slug).length, 0.5)
+  }
+  for (const city of getPopulatedCities()) {
+    paged(`/gorod/${city.slug}/`, getPersonsByCity(city.slug).length, 0.5)
   }
 
   return new Response(urlset(urls), { headers: XML_HEADERS })
