@@ -6,7 +6,7 @@ import { Header } from '@/components/Header'
 import { Metrika } from '@/components/Metrika'
 import { MetrikaScript } from '@/components/MetrikaScript'
 import { ThemeScript } from '@/components/ThemeScript'
-import { SITE, YANDEX_VERIFICATION } from '@/lib/site'
+import { GOOGLE_VERIFICATION, SITE, YANDEX_VERIFICATION } from '@/lib/site'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -26,12 +26,13 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { types: { 'application/rss+xml': `${SITE.url}/feed.xml` } },
   // Коды подтверждения прав в Яндекс.Вебмастере и Google Search Console.
-  // Яндексовский код зашит в `site.ts` — он не секрет и виден в исходном коде
-  // страницы, зато переживает перенос хостинга. Гугловского пока нет: до
-  // регистрации ресурса тег просто не выводится, и это нормально.
+  // Оба зашиты в `site.ts`: секретом они не являются — поисковики сами
+  // публикуют их мета-тегом на каждой странице, — зато переживают перенос
+  // хостинга. Права перепроверяются периодически, и код, заданный только
+  // переменной окружения, слетел бы вместе с ней молча.
   verification: {
     yandex: YANDEX_VERIFICATION || undefined,
-    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    google: GOOGLE_VERIFICATION || undefined,
   },
 }
 

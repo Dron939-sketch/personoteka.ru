@@ -49,6 +49,17 @@ export const METRIKA_ID = Number(process.env.NEXT_PUBLIC_METRIKA_ID ?? 111742977
 export const YANDEX_VERIFICATION = process.env.YANDEX_VERIFICATION ?? 'd3cdb8df76f8c5c3'
 
 /**
+ * Код подтверждения прав в Google Search Console.
+ *
+ * Лежит в репозитории по той же причине, что и яндексовский: секретом он не
+ * является — Google сам публикует его мета-тегом на каждой странице, — зато
+ * переживает перенос хостинга. Права Google тоже перепроверяет, и код,
+ * заданный только переменной окружения, слетел бы вместе с ней молча.
+ */
+export const GOOGLE_VERIFICATION =
+  process.env.GOOGLE_SITE_VERIFICATION ?? 'ubKptLGqp_0UP0ltbrRyGZ0jp6i1X-M4THdvrxPvF4k'
+
+/**
  * §4.1 — реестр зарезервированных слов. Персона не может занять слаг из этого списка:
  * иначе она перекроет системный раздел (слаги персон живут в корне).
  * Проверяется скриптом `npm run check:content` и функцией `isReservedSlug`.
