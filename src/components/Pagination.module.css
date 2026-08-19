@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin: var(--sp-10) 0 var(--sp-12);
+}
+
+.page,
+.current,
+.step {
+  font-size: var(--small);
+  text-decoration: none;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.page,
+.step {
+  color: var(--ink-3);
+}
+
+.page:hover,
+.step:hover {
+  color: var(--ink);
+  border-color: var(--rule);
+}
+
+.current {
+  color: var(--ink);
+  border-color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Многоточие — не кнопка: убираем у него отступы цели и курсор ссылки. */
+.gap {
+  color: var(--ink-3);
+  padding: 0 var(--sp-1);
+}
+
+.counter {
+  width: 100%;
+  text-align: center;
+  font-size: var(--small);
+  color: var(--ink-3);
+  margin-top: var(--sp-2);
+}
+
+/* Промах по номеру страницы перезагружает выдачу, поэтому на тач-устройствах
+   поднимаем высоту цели до 44 px — тем же приёмом, что у ряда сортировок. */
+@media (pointer: coarse) {
+  .page,
+  .current,
+  .step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
