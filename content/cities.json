@@ -12,6 +12,12 @@
     "region": "Свердловская область"
   },
   {
+    "slug": "kamensk-uralskij",
+    "name": "Каменск-Уральский",
+    "name_prepositional": "Каменске-Уральском",
+    "region": "Свердловская область"
+  },
+  {
     "slug": "kazan",
     "name": "Казань",
     "name_prepositional": "Казани",
