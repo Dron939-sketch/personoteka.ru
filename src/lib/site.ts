@@ -35,7 +35,7 @@ export const SITE = {
  * `0` выключает аналитику целиком; счётчик работает только на своём домене
  * и только после согласия на аналитические cookie (см. `components/Metrika`).
  */
-export const METRIKA_ID = Number(process.env.NEXT_PUBLIC_METRIKA_ID ?? 111362348)
+export const METRIKA_ID = Number(process.env.NEXT_PUBLIC_METRIKA_ID ?? 111742977)
 
 /**
  * Код подтверждения прав в Яндекс.Вебмастере.
