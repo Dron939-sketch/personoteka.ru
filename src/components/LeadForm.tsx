@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import { CONSENT_VERSION } from '@/lib/consent'
+import { METRIKA_ID } from '@/lib/site'
 
 import styles from './LeadForm.module.css'
 
@@ -52,6 +53,17 @@ export function LeadForm({
         throw new Error(body.error ?? 'Не удалось отправить форму')
       }
       setState('sent')
+      // Отправленная заявка — единственная конверсия портала, и до сих пор
+      // она нигде не отмечалась: Метрика видела только заходы, а кампания
+      // Директа не могла отличить читателя от обратившегося.
+      try {
+        const ym = (window as unknown as { ym?: (id: number, m: string, g: string) => void }).ym
+        if (ym && METRIKA_ID > 0) {
+          ym(METRIKA_ID, 'reachGoal', isRemoval ? 'udalenie_zayavka' : 'razmestit_zayavka')
+        }
+      } catch {
+        // Метрика не должна ломать отправку формы.
+      }
       form.reset()
     } catch (err) {
       setState('error')
