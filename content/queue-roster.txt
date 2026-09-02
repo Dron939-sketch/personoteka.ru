@@ -531,3 +531,7 @@ Mikolas Hard
 Старыгин Игорь Владимирович = igor-starygin
 Янковский Ростислав Иванович = rostislav-yankovskij
 Тактаров Олег Николаевич = oleg-taktarov
+Корчевников Борис Вячеславович = boris-korchevnikov
+Максимов Андрей Маркович = andrej-maksimov
+Буслов Пётр Викторович = petr-buslov
+Спивак Марьяна Тимофеевна = maryana-spivak

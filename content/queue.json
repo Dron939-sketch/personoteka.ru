@@ -4507,5 +4507,41 @@
     "name_latin": "Oleg Taktarov",
     "sphere": "nauka",
     "status": "published"
+  },
+  {
+    "slug": "boris-korchevnikov",
+    "source_name": "Корчевников Борис Вячеславович = boris-korchevnikov",
+    "full_name": "Корчевников Борис Вячеславович",
+    "display_name": "Борис Корчевников",
+    "name_latin": "Boris Korchevnikov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-maksimov",
+    "source_name": "Максимов Андрей Маркович = andrej-maksimov",
+    "full_name": "Максимов Андрей Маркович",
+    "display_name": "Андрей Максимов",
+    "name_latin": "Andrej Maksimov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "petr-buslov",
+    "source_name": "Буслов Пётр Викторович = petr-buslov",
+    "full_name": "Буслов Пётр Викторович",
+    "display_name": "Пётр Буслов",
+    "name_latin": "Petr Buslov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "maryana-spivak",
+    "source_name": "Спивак Марьяна Тимофеевна = maryana-spivak",
+    "full_name": "Спивак Марьяна Тимофеевна",
+    "display_name": "Марьяна Спивак",
+    "name_latin": "Maryana Spivak",
+    "sphere": "nauka",
+    "status": "published"
   }
 ]
