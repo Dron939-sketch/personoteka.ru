@@ -521,3 +521,13 @@ Mikolas Hard
 Зиновьев Александр Александрович = aleksandr-zinovev
 Кузнецов Анатолий Борисович = anatolij-kuznecov
 Ростоцкий Андрей Станиславович = andrej-rostockij
+Симонова Евгения Павловна = evgeniya-simonova
+Овчинникова Люсьена Ивановна = lyusena-ovchinnikova
+Кононов Михаил Иванович = mihail-kononov
+Михайловский Никита Викторович = nikita-mihajlovskij
+Марьянов Дмитрий Юрьевич = dmitrij-maryanov
+Артемьева Людмила Викторовна = lyudmila-artemeva
+Антипенко Григорий Александрович = grigorij-antipenko
+Старыгин Игорь Владимирович = igor-starygin
+Янковский Ростислав Иванович = rostislav-yankovskij
+Тактаров Олег Николаевич = oleg-taktarov
