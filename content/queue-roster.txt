@@ -516,3 +516,8 @@ Mikolas Hard
 Александр Борисович Соколов = aleksandr-sokolov
 Михаил Александрович Никитин = mihail-nikitin
 Владимир Игоревич Арнольд = vladimir-arnold
+Гундарева Наталья Георгиевна = natalya-gundareva
+Евстигнеев Евгений Александрович = evgenij-evstigneev
+Зиновьев Александр Александрович = aleksandr-zinovev
+Кузнецов Анатолий Борисович = anatolij-kuznecov
+Ростоцкий Андрей Станиславович = andrej-rostockij
