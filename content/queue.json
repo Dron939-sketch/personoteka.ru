@@ -4417,5 +4417,50 @@
     "name_latin": "Andrej Rostockij",
     "sphere": "nauka",
     "status": "published"
+  },
+  {
+    "slug": "evgeniya-simonova",
+    "source_name": "Симонова Евгения Павловна = evgeniya-simonova",
+    "full_name": "Симонова Евгения Павловна",
+    "display_name": "Евгения Симонова",
+    "name_latin": "Evgeniya Simonova",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "lyusena-ovchinnikova",
+    "source_name": "Овчинникова Люсьена Ивановна = lyusena-ovchinnikova",
+    "full_name": "Овчинникова Люсьена Ивановна",
+    "display_name": "Люсьена Овчинникова",
+    "name_latin": "Lyusena Ovchinnikova",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "mihail-kononov",
+    "source_name": "Кононов Михаил Иванович = mihail-kononov",
+    "full_name": "Кононов Михаил Иванович",
+    "display_name": "Михаил Кононов",
+    "name_latin": "Mihail Kononov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "nikita-mihajlovskij",
+    "source_name": "Михайловский Никита Викторович = nikita-mihajlovskij",
+    "full_name": "Михайловский Никита Викторович",
+    "display_name": "Никита Михайловский",
+    "name_latin": "Nikita Mihajlovskij",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "dmitrij-maryanov",
+    "source_name": "Марьянов Дмитрий Юрьевич = dmitrij-maryanov",
+    "full_name": "Марьянов Дмитрий Юрьевич",
+    "display_name": "Дмитрий Марьянов",
+    "name_latin": "Dmitrij Maryanov",
+    "sphere": "nauka",
+    "status": "published"
   }
 ]
