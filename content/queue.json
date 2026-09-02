@@ -2346,7 +2346,7 @@
     "display_name": "Юрий Дудь",
     "name_latin": "Yurij Dud",
     "sphere": "blogery",
-    "status": "drafting"
+    "status": "published"
   },
   {
     "slug": "slava-buster",
@@ -4370,6 +4370,51 @@
     "full_name": "Владимир Игоревич Арнольд",
     "display_name": "Владимир Арнольд",
     "name_latin": "Vladimir Arnold",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "natalya-gundareva",
+    "source_name": "Гундарева Наталья Георгиевна = natalya-gundareva",
+    "full_name": "Гундарева Наталья Георгиевна",
+    "display_name": "Наталья Гундарева",
+    "name_latin": "Natalya Gundareva",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "evgenij-evstigneev",
+    "source_name": "Евстигнеев Евгений Александрович = evgenij-evstigneev",
+    "full_name": "Евстигнеев Евгений Александрович",
+    "display_name": "Евгений Евстигнеев",
+    "name_latin": "Evgenij Evstigneev",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "aleksandr-zinovev",
+    "source_name": "Зиновьев Александр Александрович = aleksandr-zinovev",
+    "full_name": "Зиновьев Александр Александрович",
+    "display_name": "Александр Зиновьев",
+    "name_latin": "Aleksandr Zinovev",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "anatolij-kuznecov",
+    "source_name": "Кузнецов Анатолий Борисович = anatolij-kuznecov",
+    "full_name": "Кузнецов Анатолий Борисович",
+    "display_name": "Анатолий Кузнецов",
+    "name_latin": "Anatolij Kuznecov",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "andrej-rostockij",
+    "source_name": "Ростоцкий Андрей Станиславович = andrej-rostockij",
+    "full_name": "Ростоцкий Андрей Станиславович",
+    "display_name": "Андрей Ростоцкий",
+    "name_latin": "Andrej Rostockij",
     "sphere": "nauka",
     "status": "published"
   }
