@@ -161,9 +161,16 @@ async function fetchCommons(title: string): Promise<CommonsInfo> {
   api.searchParams.set('prop', 'imageinfo')
   api.searchParams.set('iiprop', 'url|size|extmetadata')
 
-  const response = await fetch(api, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
+  // Ретраи на 429 — как у wikiApi/download: серия запросов без передышки
+  // валила весь прогон.
+  let response!: Response
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    response = await fetch(api, {
+      headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+    })
+    if (response.ok || response.status !== 429 || attempt === 4) break
+    await wait(3000 * attempt)
+  }
   if (!response.ok) throw new Error(`Викисклад ответил ${response.status}`)
 
   const data = (await response.json()) as {
@@ -184,16 +191,25 @@ async function fetchCommons(title: string): Promise<CommonsInfo> {
   }
 }
 
-async function wikiApi(params: Record<string, string>): Promise<unknown> {
+async function wikiApi(params: Record<string, string>, tries = 4): Promise<unknown> {
   const api = new URL('https://ru.wikipedia.org/w/api.php')
   api.searchParams.set('format', 'json')
   for (const [key, value] of Object.entries(params)) api.searchParams.set(key, value)
 
-  const response = await fetch(api, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
-  if (!response.ok) throw new Error(`Википедия ответила ${response.status}`)
-  return response.json()
+  // Тот же урок, что у download(): Википедия отвечает 429 на серию запросов
+  // без передышки, и одна ошибка раньше валила ВСЕ ожидающие портреты за
+  // прогон (2 сентября 14 персон подряд получили «Википедия ответила 429»).
+  // Ретраи с нарастающей паузой переживают короткий лимит.
+  for (let attempt = 1; ; attempt += 1) {
+    const response = await fetch(api, {
+      headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+    })
+    if (response.ok) return response.json()
+    if (response.status !== 429 || attempt === tries) {
+      throw new Error(`Википедия ответила ${response.status}`)
+    }
+    await wait(3000 * attempt)
+  }
 }
 
 async function wikibaseItem(title: string): Promise<string | undefined> {
@@ -277,9 +293,14 @@ async function resolveViaWikipedia(title: string, displayName: string): Promise<
   wd.searchParams.set('entity', qid)
   wd.searchParams.set('property', 'P18')
 
-  const wdResponse = await fetch(wd, {
-    headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
-  })
+  let wdResponse!: Response
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    wdResponse = await fetch(wd, {
+      headers: { 'User-Agent': 'personoteka-photo-bot/1.0 (https://personoteka.ru)' },
+    })
+    if (wdResponse.ok || wdResponse.status !== 429 || attempt === 4) break
+    await wait(3000 * attempt)
+  }
   if (!wdResponse.ok) throw new Error(`Викиданные ответили ${wdResponse.status}`)
   const wdData = (await wdResponse.json()) as {
     claims?: { P18?: { mainsnak?: { datavalue?: { value?: string } } }[] }
