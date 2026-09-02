@@ -4462,5 +4462,50 @@
     "name_latin": "Dmitrij Maryanov",
     "sphere": "nauka",
     "status": "published"
+  },
+  {
+    "slug": "lyudmila-artemeva",
+    "source_name": "Артемьева Людмила Викторовна = lyudmila-artemeva",
+    "full_name": "Артемьева Людмила Викторовна",
+    "display_name": "Людмила Артемьева",
+    "name_latin": "Lyudmila Artemeva",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "grigorij-antipenko",
+    "source_name": "Антипенко Григорий Александрович = grigorij-antipenko",
+    "full_name": "Антипенко Григорий Александрович",
+    "display_name": "Григорий Антипенко",
+    "name_latin": "Grigorij Antipenko",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "igor-starygin",
+    "source_name": "Старыгин Игорь Владимирович = igor-starygin",
+    "full_name": "Старыгин Игорь Владимирович",
+    "display_name": "Игорь Старыгин",
+    "name_latin": "Igor Starygin",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "rostislav-yankovskij",
+    "source_name": "Янковский Ростислав Иванович = rostislav-yankovskij",
+    "full_name": "Янковский Ростислав Иванович",
+    "display_name": "Ростислав Янковский",
+    "name_latin": "Rostislav Yankovskij",
+    "sphere": "nauka",
+    "status": "published"
+  },
+  {
+    "slug": "oleg-taktarov",
+    "source_name": "Тактаров Олег Николаевич = oleg-taktarov",
+    "full_name": "Тактаров Олег Николаевич",
+    "display_name": "Олег Тактаров",
+    "name_latin": "Oleg Taktarov",
+    "sphere": "nauka",
+    "status": "published"
   }
 ]

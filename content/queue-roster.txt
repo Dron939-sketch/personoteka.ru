@@ -526,3 +526,8 @@ Mikolas Hard
 Кононов Михаил Иванович = mihail-kononov
 Михайловский Никита Викторович = nikita-mihajlovskij
 Марьянов Дмитрий Юрьевич = dmitrij-maryanov
+Артемьева Людмила Викторовна = lyudmila-artemeva
+Антипенко Григорий Александрович = grigorij-antipenko
+Старыгин Игорь Владимирович = igor-starygin
+Янковский Ростислав Иванович = rostislav-yankovskij
+Тактаров Олег Николаевич = oleg-taktarov
