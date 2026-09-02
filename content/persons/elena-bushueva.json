@@ -72,13 +72,23 @@
     }
   ],
   "links": [],
-  "photos": [],
+  "photos": [
+    {
+      "src": "/media/vcce4206b/elena-bushueva.jpg",
+      "portrait": true,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Портрет: Елена Бушуева, юрист, антикризисный менеджер, владелец золотодобывающей группы компаний «Север»",
+      "license": "предоставлено героем",
+      "source_url": "https://lichnosty.ru/bio/bushueva-elena-georgievna/"
+    }
+  ],
   "verified": false,
   "plan": "editorial",
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-09-02T00:00:00Z",
-  "updated_at": "2026-09-02T00:00:00Z",
+  "updated_at": "2026-09-02T18:42:04.696Z",
   "foreign_agent": {
     "checked_at": "2026-09-02",
     "listed": false
