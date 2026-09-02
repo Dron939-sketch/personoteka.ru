@@ -535,3 +535,4 @@ Mikolas Hard
 Максимов Андрей Маркович = andrej-maksimov
 Буслов Пётр Викторович = petr-buslov
 Спивак Марьяна Тимофеевна = maryana-spivak
+Бушуева Елена Георгиевна = elena-bushueva
