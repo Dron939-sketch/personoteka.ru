@@ -69,6 +69,26 @@
       "kind": "site",
       "url": "https://meysternlp.ru/fredi/",
       "label": "Проект «Фреди»"
+    },
+    {
+      "kind": "vk",
+      "url": "https://vk.com/meysternlp",
+      "label": "ВКонтакте"
+    },
+    {
+      "kind": "tg",
+      "url": "https://t.me/meysternlp",
+      "label": "Telegram"
+    },
+    {
+      "kind": "rutube",
+      "url": "https://rutube.ru/channel/29916593/",
+      "label": "Rutube"
+    },
+    {
+      "kind": "other",
+      "url": "https://lichnosty.ru/bio/andrey-yurevich-meyster/",
+      "label": "Биография на Личности.ру"
     }
   ],
   "photos": [
@@ -94,7 +114,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-03T10:00:00+03:00",
-  "updated_at": "2026-08-10T09:55:39.877Z",
+  "updated_at": "2026-09-04T21:00:00Z",
   "foreign_agent": {
     "checked_at": "2026-08-04",
     "listed": false

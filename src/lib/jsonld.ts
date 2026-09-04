@@ -6,6 +6,32 @@ import type { Article, Person } from './types'
  * Микроразметка (§10.2). На странице персоны — `ProfilePage` с вложенным `Person`.
  * Пустые поля не выводим: неполные узлы валидатор помечает предупреждениями.
  */
+/** «Фамилия Имя Отчество» → части; undefined, если имя не трёхчастное кириллическое. */
+function nameParts(person: Person) {
+  const parts = person.full_name.trim().split(/\s+/)
+  if (parts.length !== 3 || !parts.every((p) => /^[А-ЯЁа-яё][А-ЯЁа-яё-]*$/.test(p))) return undefined
+  const [last, first, middle] = parts
+  return { last, first, middle }
+}
+
+/**
+ * Формы имени, по которым человека ищут и цитируют. Запрос «Мейстер А. Ю.»
+ * или «Мейстер Андрей Юрьевич» без этих форм для поисковика — другой
+ * человек, и страница с фото не показывается. Латиница — из name_latin,
+ * остальное выводится из full_name механически, ничего не придумывается.
+ */
+function nameForms(person: Person): string[] {
+  const forms = new Set<string>([person.name_latin, person.full_name])
+  const p = nameParts(person)
+  if (p) {
+    forms.add(`${p.first} ${p.middle} ${p.last}`)
+    forms.add(`${p.last} ${p.first[0]}. ${p.middle[0]}.`)
+    forms.add(`${p.last} ${p.first[0]}.${p.middle[0]}.`)
+  }
+  forms.delete(person.display_name)
+  return [...forms].filter(Boolean)
+}
+
 export function personJsonLd(person: Person) {
   const url = `${SITE.url}/${person.slug}/`
   const spheres = getSpheres().filter((s) => person.spheres.includes(s.slug))
@@ -17,10 +43,20 @@ export function personJsonLd(person: Person) {
     '@type': 'Person',
     '@id': `${url}#person`,
     name: person.display_name,
-    alternateName: person.name_latin,
+    alternateName: nameForms(person),
     description: person.tagline,
     jobTitle: capitalize(person.occupations[0]),
     url,
+  }
+
+  // Части имени — поисковику, чтобы склеить «Мейстер А. Ю.» и «Андрей Мейстер»
+  // в одного человека. Только для трёхчастных кириллических имён: у «1.Kla$»
+  // и у иностранцев отчества нет, и раскладывать их по полям — врать.
+  const parts = nameParts(person)
+  if (parts) {
+    node.familyName = parts.last
+    node.givenName = parts.first
+    node.additionalName = parts.middle
   }
 
   if (person.birth_date && person.birth_date_public !== false) {
