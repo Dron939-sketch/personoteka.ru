@@ -7,11 +7,13 @@ import { CTAStrip } from '@/components/CTAStrip'
 import { JsonLd } from '@/components/JsonLd'
 import { PageHeader } from '@/components/PageHeader'
 import { PromoBanner } from '@/components/PromoBanner'
+import { ReadNext } from '@/components/ReadNext'
 import { SourceList } from '@/components/SourceList'
 import { ARTICLE_ROOT, articleHref } from '@/lib/article-href'
 import { getArticle, getEditor } from '@/lib/content'
 import { formatDate } from '@/lib/format'
 import { articleJsonLd } from '@/lib/jsonld'
+import { getReadNext } from '@/lib/read-next'
 import { SITE } from '@/lib/site'
 import type { Article } from '@/lib/types'
 
@@ -74,6 +76,8 @@ export function ArticlePage({ slug, kind }: { slug: string; kind: Article['kind'
       {/* Промо собственных проектов — на статьях, а не на страницах персон:
           там страница оплачена героем (§2.2), и это отдельное решение владельца. */}
       <PromoBanner context={{ slug: `article:${article.slug}` }} placement="article" />
+
+      <ReadNext articles={getReadNext(article.slug)} />
 
       <CTAStrip />
     </div>
