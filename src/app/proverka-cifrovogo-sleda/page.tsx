@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { PageHeader } from '@/components/PageHeader'
+import { ReadNext } from '@/components/ReadNext'
+import { getArticlesBySlugs } from '@/lib/read-next'
 import { QUESTIONS, STATE_LABEL, verdict } from '@/lib/sled'
 import { SITE } from '@/lib/site'
 
@@ -167,6 +169,15 @@ export default async function SledPage({
           </div>
         </section>
       )}
+
+      <ReadNext
+        articles={getArticlesBySlugs([
+          'chto-takoe-cifrovoj-sled',
+          'precedent-kak-sdelat-chtoby-vas-iskali',
+          'gde-opublikovat-biografiyu-o-sebe',
+        ])}
+        title="Разобраться дальше"
+      />
 
       <JsonLd
         data={{
