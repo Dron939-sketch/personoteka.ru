@@ -1,7 +1,7 @@
 import { buildConsentRecords } from '@/lib/consent'
 import { notify } from '@/lib/mail'
 import { clientIp, looksAutomated, rateLimit, verifyCaptcha } from '@/lib/request'
-import { addLead } from '@/lib/tickets'
+import { addLead, type LeadSource } from '@/lib/tickets'
 
 /**
  * Приём заявки с лендинга (§8.4) с фиксацией согласий (§11.1).
@@ -63,6 +63,8 @@ export async function POST(request: Request) {
     source: 'lead',
   })
 
+  const source = leadSource(payload.source)
+
   const lead = {
     name,
     email,
@@ -71,6 +73,7 @@ export async function POST(request: Request) {
     message: str(payload.message)?.slice(0, 2000),
     ip,
     consents,
+    source,
   }
 
   try {
@@ -86,6 +89,7 @@ export async function POST(request: Request) {
       `Сфера: ${sphere}`,
       lead.contact ? `Ещё контакт: ${lead.contact}` : '',
       lead.message ? `\nСообщение:\n${lead.message}` : '',
+      ...sourceLines(source),
       `\nЗаявка в кабинете: /lk/zayavki/`,
     ].filter(Boolean))
   } catch (error) {
@@ -107,4 +111,39 @@ function str(value: unknown): string | undefined {
 
 function isEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)
+}
+
+/** Источник заявки из формы: только строки, по 500 символов, без лишних ключей. */
+function leadSource(raw: unknown): LeadSource | undefined {
+  if (!raw || typeof raw !== 'object') return undefined
+  const keys: (keyof LeadSource)[] = ['page', 'referrer', 'first_url', 'first_referrer', 'first_at']
+  const out: LeadSource = {}
+  for (const k of keys) {
+    const v = (raw as Record<string, unknown>)[k]
+    if (typeof v === 'string' && v.trim()) out[k] = v.trim().slice(0, 500)
+  }
+  return Object.keys(out).length ? out : undefined
+}
+
+function sourceLines(source?: LeadSource): string[] {
+  if (!source) return ['\nОткуда: не определено (хранилище недоступно)']
+  const utm = (u?: string) => {
+    try {
+      const q = new URL(u ?? '').searchParams
+      const parts = ['utm_source', 'utm_campaign', 'utm_content', 'etext']
+        .map((k) => (q.get(k) ? `${k}=${q.get(k)}` : ''))
+        .filter(Boolean)
+      return parts.length ? ` (${parts.join(', ')})` : ''
+    } catch {
+      return ''
+    }
+  }
+  return [
+    '\nОткуда:',
+    source.first_url ? `Первая страница: ${source.first_url}${utm(source.first_url)}` : '',
+    source.first_referrer ? `Пришёл с: ${source.first_referrer}` : '',
+    source.first_at ? `Первый заход: ${source.first_at}` : '',
+    source.page ? `Страница формы: ${source.page}${utm(source.page)}` : '',
+    source.referrer && source.referrer !== source.first_referrer ? `Реферер формы: ${source.referrer}` : '',
+  ].filter(Boolean)
 }

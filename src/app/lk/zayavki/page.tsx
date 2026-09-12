@@ -188,6 +188,15 @@ export default function TicketsPage() {
                         <dd>{ticket.contact}</dd>
                       </div>
                     )}
+                    {ticket.source && (ticket.source.first_url || ticket.source.page) && (
+                      <div>
+                        <dt>Откуда</dt>
+                        <dd style={{ wordBreak: 'break-all' }}>
+                          {ticket.source.first_url ?? ticket.source.page}
+                          {ticket.source.first_referrer ? ` ← ${ticket.source.first_referrer}` : ''}
+                        </dd>
+                      </div>
+                    )}
                   </dl>
 
                   <TicketStateSwitch ticket={ticket.id} kind="lead" state={state} />
