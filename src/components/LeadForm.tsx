@@ -17,6 +17,27 @@ type State = 'idle' | 'sending' | 'sent' | 'error'
  * распространение (ст. 10.1 152-ФЗ). Оба обязательны, оба фиксируются в журнале
  * вместе с версией текста, датой и IP (это делает серверный обработчик).
  */
+// Откуда пришёл человек: страница формы, реферер и первое касание
+// (FirstTouch). Без этого источник заявки было не восстановить — см.
+// комментарий в FirstTouch.tsx.
+function leadSource(): Record<string, string> {
+  const out: Record<string, string> = {}
+  try {
+    out.page = window.location.href.slice(0, 500)
+    out.referrer = document.referrer.slice(0, 500)
+    const raw = window.localStorage.getItem('pt_first_touch')
+    if (raw) {
+      const first = JSON.parse(raw) as { url?: string; referrer?: string; ts?: number }
+      if (first.url) out.first_url = String(first.url).slice(0, 500)
+      if (first.referrer) out.first_referrer = String(first.referrer).slice(0, 500)
+      if (first.ts) out.first_at = new Date(first.ts).toISOString()
+    }
+  } catch {
+    /* хранилище недоступно — отправляем что есть */
+  }
+  return out
+}
+
 export function LeadForm({
   kind = 'lead',
   title,
@@ -46,7 +67,7 @@ export function LeadForm({
       const response = await fetch(kind === 'removal' ? '/api/udalenie' : '/api/zayavka', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, consent_version: CONSENT_VERSION }),
+        body: JSON.stringify({ ...data, consent_version: CONSENT_VERSION, source: leadSource() }),
       })
       if (!response.ok) {
         const body = (await response.json().catch(() => ({}))) as { error?: string }

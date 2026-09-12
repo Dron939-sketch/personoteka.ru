@@ -41,10 +41,20 @@ interface TicketBase {
   consents: ConsentRecord[]
 }
 
+/** Откуда пришла заявка: страница формы, реферер, первое касание с utm. */
+export interface LeadSource {
+  page?: string
+  referrer?: string
+  first_url?: string
+  first_referrer?: string
+  first_at?: string
+}
+
 export interface LeadTicket extends TicketBase {
   sphere: string
   contact?: string
   message?: string
+  source?: LeadSource
 }
 
 export interface RemovalTicket extends TicketBase {
