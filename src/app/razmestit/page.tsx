@@ -6,7 +6,7 @@ import { LeadForm } from '@/components/LeadForm'
 import { PageHeader } from '@/components/PageHeader'
 import { PersonCard } from '@/components/PersonCard'
 import { PricingTable } from '@/components/PricingTable'
-import { getPersons } from '@/lib/content'
+import { getEditors, getPersons } from '@/lib/content'
 import { PLANS, WORKFLOW_STEPS } from '@/lib/plans'
 import { SITE } from '@/lib/site'
 
@@ -29,6 +29,7 @@ export default function PlacementPage() {
   const examples = getPersons()
     .filter((p) => p.plan === 'agency' || p.plan === 'base')
     .slice(0, 3)
+  const editors = getEditors()
 
   return (
     <div className="container">
@@ -116,11 +117,37 @@ export default function PlacementPage() {
       {examples.length > 0 && (
         <section className="section">
           <h2 className="ruled">Примеры страниц</h2>
+          <p className={styles.pricingNote}>
+            Так выглядит готовая страница: структура по редполитике, источники, дата обновления
+            и подпись редактора внизу. Откройте любую и проверьте.
+          </p>
           <div className={styles.examples}>
             {examples.map((person) => (
               <PersonCard key={person.slug} person={person} size="m" />
             ))}
           </div>
+        </section>
+      )}
+
+      {/* Кто пишет. За 7 500 ₽ без имени редактора не платят: до 13.09.2026
+          на странице не было ни одного человека, только «редакция». */}
+      {editors.length > 0 && (
+        <section className="section">
+          <h2 className="ruled">Кто пишет и проверяет</h2>
+          <ul className={styles.benefits}>
+            {editors.map((editor) => (
+              <li key={editor.slug}>
+                <h3>
+                  {editor.name} — {editor.role.toLowerCase()}
+                </h3>
+                <p>{editor.bio}</p>
+              </li>
+            ))}
+          </ul>
+          <p className={styles.pricingNote}>
+            Подпись редактора стоит под каждой страницей, вместе с датой обновления. Подробнее —
+            на странице <Link href="/redakciya/">редакции</Link>.
+          </p>
         </section>
       )}
 

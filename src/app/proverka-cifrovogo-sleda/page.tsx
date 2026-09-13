@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { JsonLd } from '@/components/JsonLd'
 import { PageHeader } from '@/components/PageHeader'
+import { RazborForm } from '@/components/RazborForm'
 import { ReadNext } from '@/components/ReadNext'
 import { getArticlesBySlugs } from '@/lib/read-next'
 import { QUESTIONS, STATE_LABEL, verdict } from '@/lib/sled'
@@ -31,7 +32,7 @@ export async function generateMetadata({
   return {
     title: 'Что находят по вашему имени: проверка цифрового следа',
     description:
-      'Пять вопросов о себе — и разбор, на каком звене рвётся путь от события до прочитанной биографии. Без регистрации и без сбора почты.',
+      'Пять вопросов о себе — и разбор, на каком звене рвётся путь от события до прочитанной биографии. Без регистрации; почта — только если хотите получить разбор письмом.',
     alternates: { canonical: URL },
     robots: withAnswers ? { index: false, follow: true } : undefined,
     openGraph: {
@@ -81,7 +82,8 @@ export default async function SledPage({
 
       <p className={styles.honest}>
         Проверка ничего о вас не ищет и никуда не отправляет: все ответы остаются в адресе этой
-        страницы. Ни регистрации, ни почты не нужно.
+        страницы. Ни регистрации, ни почты не нужно; разбор можно по желанию прислать себе
+        письмом — после ответов.
       </p>
 
       <form className={styles.form} method="get" action="/proverka-cifrovogo-sleda/">
@@ -167,6 +169,10 @@ export default async function SledPage({
               .
             </p>
           </div>
+
+          {/* Разбор письмом — по желанию. Самая посещаемая страница портала
+              заканчивалась ссылкой на статью, и человек уходил без следа. */}
+          <RazborForm answers={answers} />
         </section>
       )}
 

@@ -58,3 +58,27 @@ export async function notify(subject: string, lines: string[]): Promise<void> {
     console.error('[mail] не отправлено', subject, error)
   }
 }
+
+/**
+ * Письмо человеку, а не редакции: разбор цифрового следа по его просьбе.
+ * Тот же транспорт; без SMTP — предупреждение в лог, заявка при этом уже в
+ * реестре, и редактор отправит разбор руками.
+ */
+export async function sendTo(to: string, subject: string, text: string): Promise<boolean> {
+  if (!mailConfigured()) {
+    console.warn('[mail] SMTP не настроен, письмо получателю не отправлено:', subject)
+    return false
+  }
+  try {
+    await transport().sendMail({
+      from: process.env.MAIL_FROM ?? process.env.SMTP_USER,
+      to,
+      subject,
+      text,
+    })
+    return true
+  } catch (error) {
+    console.error('[mail] не отправлено получателю', subject, error)
+    return false
+  }
+}
