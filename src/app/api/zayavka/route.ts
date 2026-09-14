@@ -130,7 +130,12 @@ function sourceLines(source?: LeadSource): string[] {
   const utm = (u?: string) => {
     try {
       const q = new URL(u ?? '').searchParams
-      const parts = ['utm_source', 'utm_campaign', 'utm_content', 'etext']
+      // utm_term — поисковая фраза, её Директ подставляет макросом {keyword}
+      // (14.09.2026 добавлен во все объявления Персонотеки и Личностей).
+      // Без неё письмо называло кампанию и группу, но не запрос, и понять,
+      // какая фраза привела заплатившего человека, было нельзя. Пустой
+      // utm_term — тоже ответ: значит показ пришёл от автотаргетинга.
+      const parts = ['utm_source', 'utm_campaign', 'utm_content', 'utm_term', 'etext']
         .map((k) => (q.get(k) ? `${k}=${q.get(k)}` : ''))
         .filter(Boolean)
       return parts.length ? ` (${parts.join(', ')})` : ''
