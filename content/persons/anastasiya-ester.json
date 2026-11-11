@@ -101,11 +101,20 @@
   "links": [],
   "photos": [
     {
-      "src": "/media/v75db5bf0/anastasiya-ester.jpg",
+      "src": "/media/anastasiya-ester-1.jpg",
       "portrait": true,
       "width": 1200,
       "height": 1500,
-      "alt": "Портрет: Анастасия Дмитриевна Эстэр, психотерапевт, писатель, основатель ювелирного дома LA ESSTER",
+      "alt": "Портрет: Анастасия Дмитриевна Эстэр",
+      "caption": "Анастасия Эстэр",
+      "license": "предоставлено героем публикации"
+    },
+    {
+      "src": "/media/anastasiya-ester-2.jpg",
+      "portrait": false,
+      "width": 1200,
+      "height": 1500,
+      "alt": "Анастасия Дмитриевна Эстэр",
       "caption": "Анастасия Эстэр",
       "license": "предоставлено героем публикации"
     }
@@ -138,7 +147,7 @@
   "status": "published",
   "editor": "e-medvedeva",
   "published_at": "2026-08-19T00:00:00Z",
-  "updated_at": "2026-11-11T19:41:09.000Z",
+  "updated_at": "2026-11-11T19:48:40.000Z",
   "foreign_agent": {
     "checked_at": "2026-08-19",
     "listed": false
