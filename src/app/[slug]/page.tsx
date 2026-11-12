@@ -60,8 +60,12 @@ import styles from './page.module.css'
 // битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
 export const dynamicParams = true
 
+/** ISR: страница кэшируется на час, затем пересобирается по запросу. */
+export const revalidate = 3600
+
 export function generateStaticParams() {
-  return getPersons().map((person) => ({ slug: person.slug }))
+  return []
+}))
 }
 
 /**
