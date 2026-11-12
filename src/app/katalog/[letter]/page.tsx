@@ -23,11 +23,12 @@ import styles from './page.module.css'
 // битый адрес: страница всё равно отдаётся, но лог засоряется, а причину не видно.
 export const dynamicParams = true
 
+/** ISR: страница кэшируется на час, затем пересобирается по запросу. */
+export const revalidate = 3600
+
 export function generateStaticParams() {
-  const used = new Set(getPersons().map(personLetter))
-  return RU_ALPHABET.filter((letter) => used.has(letter)).map((letter) => ({
-    letter: translit(letter),
-  }))
+  return []
+}))
 }
 
 /** Слаг буквы — её транслитерация: «Я» → `ya`, «Ш» → `sh`. */
